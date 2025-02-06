@@ -2,9 +2,10 @@
 title: Componenti cloud per Commerce
 description: Consulta un elenco degli ultimi miglioramenti apportati al pacchetto Componenti cloud.
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,16 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v1.1.0 {#latest}
+## v1.1.1 {#latest}
+
+
+Data di rilascio: 6 febbraio 2025
+
+- ![nuova icona](../../assets/new.svg) **PHP 8.4**—Aggiunto supporto per PHP 8.4.<!-- MCLOUD-13148	 - -->
+- ![icona di correzione](../../assets/fix.svg) **Correzione per il riscaldamento della cache**—È stato risolto un problema relativo agli URL delle categorie durante il riscaldamento della cache.<!-- MCLOUD-12454 - -->
+
+
+## v1.1.0
 
 Data di rilascio: 7 ottobre 2024
 
