@@ -1,12 +1,12 @@
 ---
-user-guide-title: Guida di Commerce su Cloud
+user-guide-title: Guida di Commerce sul cloud
 user-guide-description: Scopri come gestire l’applicazione Adobe Commerce sull’infrastruttura cloud.
 product: magento
 feature: Cloud
 source-git-commit: 4e107bb8696c3c7cb76a0a702624aeb754648f70
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
