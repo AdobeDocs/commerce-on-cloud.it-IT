@@ -2,16 +2,17 @@
 title: Eseguire il backup del database
 description: Scopri come utilizzare gli strumenti ECE per creare un backup del database per un progetto di infrastruttura cloud di Adobe Commerce.
 feature: Cloud, Iaas, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 351f7691-3153-4b8a-83af-8b8895b93d98
+source-git-commit: 3a3b0cd6e28f3e6ed3521a86f7c7c8868be0cf83
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
 
 # Eseguire il backup del database
 
-È possibile creare una copia del database utilizzando il comando `ece-tools db-dump` senza acquisire tutti i dati dell&#39;ambiente da servizi e installazioni. Per impostazione predefinita, questo comando crea backup nella directory `/app/var/dump-main` per tutte le connessioni al database specificate nella configurazione dell&#39;ambiente. L&#39;operazione di dump del database passa alla modalità di manutenzione dell&#39;applicazione, interrompe i processi della coda del consumatore e disattiva i processi cron prima dell&#39;inizio del dump.
+È possibile creare una copia del database utilizzando il comando `ece-tools db-dump` senza acquisire tutti i dati dell&#39;ambiente da servizi e installazioni. Per impostazione predefinita, questo comando crea backup nella directory `app/var/` per tutte le connessioni al database specificate nella configurazione dell&#39;ambiente. L&#39;operazione di dump del database passa alla modalità di manutenzione dell&#39;applicazione, interrompe i processi della coda del consumatore e disattiva i processi cron prima dell&#39;inizio del dump.
 
 Considera le seguenti linee guida per l’immagine del database:
 
@@ -28,8 +29,8 @@ php vendor/bin/ece-tools db-dump main sales
 
 Usa il comando `php vendor/bin/ece-tools db-dump --help` per altre opzioni:
 
-- `--dump-directory=<dir>` - Scegliere una directory di destinazione per il dump del database
-- `--remove-definers` - Rimuovi istruzioni DEFINER dal dump del database
+- `--dump-directory=<dir>` - Scegliere una directory di destinazione per il dump del database. **Non scegliere directory Web pubbliche come `pub/media` o`pub/static`**.
+- `--remove-definers` - Rimuovere le istruzioni DEFINER dal dump del database.
 
 **Per creare un&#39;immagine del database nell&#39;ambiente di staging o di produzione**:
 
@@ -49,6 +50,10 @@ Usa il comando `php vendor/bin/ece-tools db-dump --help` per altre opzioni:
 
 1. Crea un backup del database. Per scegliere una directory di destinazione per il dump del database, utilizzare l&#39;opzione `--dump-directory`.
 
+   >[!WARNING]
+   >
+   >Se si specifica una directory di destinazione, non scegliere directory Web pubbliche come `pub/media` o `pub/static`.
+
    ```bash
    php vendor/bin/ece-tools db-dump -- main
    ```
@@ -65,7 +70,7 @@ Usa il comando `php vendor/bin/ece-tools db-dump --help` per altre opzioni:
    [2020-01-28 16:38:10] INFO: Running Magento cron and consumers processes were not found.
    [2020-01-28 16:38:10] INFO: Waiting for lock on db dump.
    [2020-01-28 16:38:10] INFO: Start creation DB dump for main database...
-   [2020-01-28 16:38:10] INFO: Finished DB dump for main database, it can be found here: /tmp/qxmtlseakof6y/dump-main-1580229490.sql.gz
+   [2020-01-28 16:38:10] INFO: Finished DB dump for main database, it can be found here: /app/qxmtlseakof6y/var/dump-main-1580229490.sql.gz
    [2020-01-28 16:38:10] INFO: Backup completed.
    [2020-01-28 16:38:11] NOTICE: Maintenance mode is disabled.
    ```
