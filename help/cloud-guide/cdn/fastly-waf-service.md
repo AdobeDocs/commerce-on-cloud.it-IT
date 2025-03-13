@@ -2,7 +2,8 @@
 title: Firewall applicazione Web (WAF)
 description: Scopri in che modo il servizio Fastly WAF rileva, registra e blocca il traffico di richieste dannoso prima che possa danneggiare la rete o i siti Adobe Commerce.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f00e35f2-9800-4e24-a4d0-d36fde59a003
+source-git-commit: 7e61673b343fb954b53bf7cbae88efaf7bbfab4c
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 0%
@@ -20,7 +21,7 @@ Il servizio WAF offre i seguenti vantaggi:
 - **Onboarding e abilitazione di WAF**: Adobe implementa e abilita i criteri predefiniti di WAF nell&#39;ambiente di produzione entro 2-3 settimane dal completamento del provisioning.
 - **Supporto operazioni e manutenzione**—
    - Adobe e Fastly configurano e gestiscono registri, regole e avvisi per il servizio WAF.
-   - Adobe di ticket di assistenza clienti relativi a problemi di servizio WAF che bloccano il traffico legittimo come problemi con priorità 1.
+   - Adobe valuta i ticket di assistenza clienti relativi ai problemi del servizio WAF che bloccano il traffico legittimo come problemi con priorità 1.
    - Gli aggiornamenti automatizzati alla versione del servizio WAF garantiscono una copertura immediata per gli exploit nuovi o in evoluzione. Consulta [Manutenzione e aggiornamenti di WAF](#waf-maintenance-and-updates).
 
 >[!TIP]
@@ -49,7 +50,7 @@ Quando il servizio WAF è abilitato, analizza tutto il traffico web e di amminis
 
 Puoi personalizzare questa pagina di risposta all’errore dall’Amministratore. Consulta [Personalizzare la pagina di risposta di WAF](fastly-custom-response.md#customize-the-waf-error-page).
 
-Se la pagina di amministrazione o la vetrina di Adobe Commerce restituisce una pagina di errore `403 Forbidden` in risposta a una richiesta URL legittima, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Copia l’ID di riferimento dalla pagina di risposta dell’errore e incollalo nella descrizione del ticket.
+Se la pagina di amministrazione o la vetrina di Adobe Commerce restituisce una pagina di errore `403 Forbidden` in risposta a una richiesta URL legittima, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case). Copia l’ID di riferimento dalla pagina di risposta dell’errore e incollalo nella descrizione del ticket.
 
 Per identificare la risposta di WAF per una particolare richiesta utilizzando New Relic, consulta quanto segue:
 
