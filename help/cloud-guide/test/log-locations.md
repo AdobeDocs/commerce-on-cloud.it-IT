@@ -2,7 +2,8 @@
 title: Visualizzare e gestire i registri
 description: Comprendi i tipi di file di registro disponibili nell’infrastruttura cloud e dove trovarli.
 last-substantial-update: 2023-05-23T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
+source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -111,7 +112,7 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->Quando configuri l&#39;ambiente Cloud, puoi impostare [notifiche di Slack e e-mail basate su log](../environment/set-up-notifications.md) per generare e distribuire azioni.
+>Quando configuri l&#39;ambiente Cloud, puoi impostare [notifiche e-mail e Slack basate sul registro](../environment/set-up-notifications.md) per generare e distribuire azioni.
 
 I seguenti registri hanno una posizione comune per tutti i progetti Cloud:
 
@@ -208,13 +209,13 @@ Per gli ambienti di staging e produzione Pro, i registri di distribuzione, post-
 
 | File di registro | Pro Staging | Produzione Pro |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **Registro distribuzione** | Solo primo nodo:<br>`/var/log/platform/<project-ID>_stg/deploy.log` | Solo primo nodo:<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **Registro post-distribuzione** | Solo primo nodo:<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | Solo primo nodo:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
-| **Registro Cron** | Solo primo nodo:<br>`/var/log/platform/<project-ID>_stg/cron.log` | Solo primo nodo:<br>`/var/log/platform/<project-ID>/cron.log` |
-| **Registro accessi Nginx** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
-| **Registro errori Nginx** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **Registro di accesso PHP** | `/var/log/platform/<project-ID>_stg/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
-| **Registro FPM PHP** | `/var/log/platform/<project-ID>_stg/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
+| **Registro distribuzione** | Solo primo nodo:<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | Solo primo nodo:<br>`/var/log/platform/<project-ID>/deploy.log` |
+| **Registro post-distribuzione** | Solo primo nodo:<br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | Solo primo nodo:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **Registro Cron** | Solo primo nodo:<br>`/var/log/platform/<project-ID>_stg*/cron.log` | Solo primo nodo:<br>`/var/log/platform/<project-ID>/cron.log` |
+| **Registro accessi Nginx** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
+| **Registro errori Nginx** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
+| **Registro di accesso PHP** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **Registro FPM PHP** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
 ### File di registro archiviati
 
@@ -234,7 +235,7 @@ I file di registro archiviati vengono sempre memorizzati nella directory in cui 
 
 Poiché ogni servizio viene eseguito in un contenitore separato, i registri del servizio non sono disponibili nell’ambiente di integrazione. Adobe Commerce su infrastruttura cloud fornisce l’accesso al contenitore del server web solo nell’ambiente di integrazione. Le seguenti posizioni dei log di servizio sono per gli ambienti Pro Production e Staging:
 
-- **Registro Redis**: `/var/log/platform/<project-ID>_stg/redis-server-<project-ID>_stg.log`
+- **Registro Redis**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
 - **Registro Elasticsearch**: `/var/log/elasticsearch/elasticsearch.log`
 - **Registro raccolta oggetti inattivi Java**: `/var/log/elasticsearch/gc.log`
 - **Registro posta**: `/var/log/mail.log`
