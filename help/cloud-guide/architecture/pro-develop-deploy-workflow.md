@@ -2,9 +2,10 @@
 title: Flusso di lavoro di un progetto professionale
 description: Scopri come utilizzare i flussi di lavoro di sviluppo e distribuzione Pro.
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efe41991-8940-4d5c-a720-80369274bee3
+source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ L’immagine seguente illustra il flusso di lavoro di sviluppo e distribuzione d
 
 ## Flusso di lavoro di sviluppo
 
-L&#39;ambiente di integrazione fornisce un singolo ramo `integration` di base contenente il codice di infrastruttura cloud di Adobe Commerce. Puoi creare un ulteriore ramo dell’ambiente attivo. Questo consente di implementare fino a due rami attivi nei contenitori Platform as a service (PaaS). Non esiste alcun limite al numero di ambienti inattivi.
+L&#39;ambiente di integrazione fornisce un singolo ramo `integration` di base contenente il codice di infrastruttura cloud di Adobe Commerce. Puoi creare un ulteriore ramo dell’ambiente attivo. Questo consente di implementare fino a due rami attivi nei contenitori Platform as a service (PaaS). Non esiste alcun limite al numero di ambienti inattivi, tuttavia, più gli ambienti inattivi sono presenti, più tempo sarà necessario per caricare la console Cloud.
 
 {{enhanced-integration-envs}}
 
