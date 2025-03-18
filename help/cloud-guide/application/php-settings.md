@@ -2,9 +2,10 @@
 title: Impostazioni PHP
 description: Scopri le impostazioni PHP ottimali per la configurazione delle applicazioni Commerce nell’infrastruttura cloud.
 feature: Cloud, Configuration, Extensions
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
+source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -66,10 +67,16 @@ Queste impostazioni consentono ai processi PHP di memorizzare nella cache i perc
 
 ### Controllare le impostazioni PHP personalizzate
 
-Dopo aver inviato le modifiche di `php.ini` all&#39;ambiente Cloud, puoi verificare che la configurazione PHP personalizzata sia stata aggiunta all&#39;ambiente. Ad esempio, utilizza SSH per accedere all’ambiente remoto e visualizzare il file utilizzando un metodo simile al seguente:
+Dopo aver inviato le modifiche di `php.ini` all&#39;ambiente Cloud, puoi verificare che la configurazione PHP personalizzata sia stata aggiunta all&#39;ambiente. Ad esempio, utilizzare SSH per accedere all&#39;ambiente remoto, visualizzare le informazioni di configurazione PHP e filtrare per la direttiva `register_argc_argv`:
 
 ```bash
-cat /etc/php/<php-version>/fpm/php.ini
+php -i | grep register_argc_ar
+```
+
+Output di esempio:
+
+```text
+register_argc_argv => On => On
 ```
 
 >[!WARNING]
