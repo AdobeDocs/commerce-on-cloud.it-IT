@@ -2,11 +2,11 @@
 title: Note sulla versione di ECE-Tools
 description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchetto ECE-Strumenti.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-03T00:00:00Z
+last-substantial-update: 2024-04-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
+source-git-commit: 2522e606aebac79285793cd40428d3e064a3c1db
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3065'
 ht-degree: 0%
 
 ---
@@ -30,17 +30,17 @@ Le note sulla versione includono:
 
 ## v2002.2.2 {#latest}
 
-Data di rilascio: 3 aprile 2025
+Data di rilascio: 7 aprile 2025
 
-- ![nuova icona](../../assets/new.svg) **Valkey**—Aggiunto supporto per un nuovo servizio (Valkey), che sostituisce Redis.<!-- MCLOUD-13455	 - -->
-- ![icona correzione](../../assets/fix.svg) **Opensearch2 per 2.4.4/2.4.5**—È stato aggiunto il supporto per `opensearch2` nelle versioni di Adobe Commerce 2.4.4/2.4.5. <!-- MCLOUD-13493	 - -->
+- ![nuova icona](../../assets/new.svg) **Valkey**—Aggiunto supporto per un nuovo servizio (Valkey), che sostituisce Redis.&lt;!— MCLOUD-13455 —>
+- ![icona correzione](../../assets/fix.svg) **Opensearch2 per 2.4.4/2.4.5**—È stato aggiunto il supporto per `opensearch2` nelle versioni di Adobe Commerce 2.4.4/2.4.5. &lt;!— MCLOUD-13493 —>
 
 ## v2002.2.1
 
 Data di rilascio: 6 febbraio 2024
 
-- ![nuova icona](../../assets/new.svg) **PHP 8.4**—Aggiunto supporto per PHP 8.4.<!-- MCLOUD-13145	 - -->
-- ![icona correzione](../../assets/fix.svg) **Convalida per Opensearch**-È stato corretto il messaggio di convalida che ha generato un messaggio fuorviante sulla versione errata del servizio.<!-- MCLOUD-13184	 - -->
+- ![nuova icona](../../assets/new.svg) **PHP 8.4**—Aggiunto supporto per PHP 8.4.<!-- MCLOUD-13145     - -->
+- ![icona correzione](../../assets/fix.svg) **Convalida per Opensearch**-È stato corretto il messaggio di convalida che ha generato un messaggio fuorviante sulla versione errata del servizio.&lt;!— MCLOUD-13184 —>
 
 
 ## v2002.2.0
