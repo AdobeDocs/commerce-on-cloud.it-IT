@@ -2,11 +2,11 @@
 title: Note sulla versione di ECE-Tools
 description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchetto ECE-Strumenti.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-02-06T00:00:00Z
+last-substantial-update: 2024-04-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3059'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,14 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v2002.2.1 {#latest}
+## v2002.2.2 {#latest}
 
+Data di rilascio: 3 aprile 2025
+
+- ![nuova icona](../../assets/new.svg) **Valkey**—Aggiunto supporto per un nuovo servizio (Valkey), che sostituisce Redis.<!-- MCLOUD-13455	 - -->
+- ![icona correzione](../../assets/fix.svg) **Opensearch2 per 2.4.4/2.4.5**—È stato aggiunto il supporto per `opensearch2` nelle versioni di Adobe Commerce 2.4.4/2.4.5. <!-- MCLOUD-13493	 - -->
+
+## v2002.2.1
 
 Data di rilascio: 6 febbraio 2024
 
@@ -44,7 +50,7 @@ Data di rilascio: 7 ottobre 2024
 - ![nuova icona](../../assets/new.svg) **MariaDB 11.4**-Aggiunto supporto di MariaDB 11.4.
 - ![icona correzione](../../assets/fix.svg) **Codice refactoring**-Rimosso il supporto delle versioni precedenti di PHP 7.4, 7.3, 7.2 e delle librerie correlate.<!-- MCLOUD-9278 -->
 - ![icona correzione](../../assets/fix.svg) **Versione monolog aggiornata**-Aggiunto supporto per monolog 3.6.<!-- MCLOUD-12855 -->
-- ![icona di correzione](../../assets/fix.svg) **Convalida per RabbitMQ, MariaDB e PHP**-È stato corretto il messaggio di convalida che indicava la versione errata del servizio.
+- ![icona di correzione](../../assets/fix.svg) **Convalida per RabbitMQ, MariaDB e PHP**-È stato corretto il messaggio di convalida che ha generato un messaggio fuorviante sulla versione errata del servizio.
 
 ## v2002.1.19
 
@@ -64,7 +70,7 @@ Data di rilascio: 8 aprile 2024
 
 Data di rilascio: 16 gennaio 2024
 
-- ![icona correzione](../../assets/fix.svg) **Convalida per Elasticsearch &amp; OpenSearch**—È stato corretto il messaggio di convalida che generava un messaggio fuorviante per installare un servizio di ricerca quando LiveSearch è abilitato.<!-- MCLOUD-10167 -->
+- ![icona correzione](../../assets/fix.svg) **Convalida per Elasticsearch e OpenSearch**—È stato corretto il messaggio di convalida che generava un messaggio fuorviante per installare un servizio di ricerca quando LiveSearch è abilitato.<!-- MCLOUD-10167 -->
 - ![icona di correzione](../../assets/fix.svg) **Avviso di distribuzione**—È stato risolto un problema che causava avvisi di distribuzione per le cartelle non vuote.<!-- MCLOUD-8958 -->
 
 ## v2002.1.16
@@ -117,7 +123,7 @@ Data di rilascio: 4 agosto 2022
 
 Data di rilascio: 31 marzo 2022
 
-- ![icona correzione](../../assets/fix.svg) **Elasticsearch 7.10**—Sono state aggiornate le convalide per supportare la versione 7.10 di Elasticsearch.<!-- MCLOUD-8548 -->
+- ![icona di correzione](../../assets/fix.svg) **Elasticsearch 7.10**: le convalide sono state aggiornate per supportare la versione 7.10 di Elasticsearch.<!-- MCLOUD-8548 -->
 
 ## v2002.1.9
 
@@ -128,7 +134,7 @@ Data di rilascio: 10 marzo 2022
 - ![icona correzione](../../assets/fix.svg) **symfony/process**—Aggiunta compatibilità con symfony/process ^5.3.<!-- MCLOUD-8283 -->
 
 - ![nuova icona](../../assets/new.svg) **Processi multipli consumer**—Aggiunta di un&#39;opzione `multiple_processes` che consente di specificare il numero di processi da generare per ogni consumer. Vedi la descrizione della variabile `CRON_CONSUMERS_RUNNER` nelle [Variabili di distribuzione](../environment/variables-deploy.md#cron_consumers_runner).<!-- MCLOUD-8295 -->
-- ![nuova icona](../../assets/new.svg) **Schema OpenSearch e percorso host completo**. È stata aggiunta la possibilità di configurare uno schema di Elasticsearch e un percorso host completo.
+- ![nuova icona](../../assets/new.svg) **Schema OpenSearch e percorso host completo**. È stata aggiunta la possibilità di configurare uno schema Elasticsearch e un percorso host completo.
 - ![icona correzione](../../assets/fix.svg) **AWS S3**: metodo di abilitazione di AWS S3 modificato.
 - ![icona correzione](../../assets/fix.svg) **Correggi lettore driver_options**—Aggiunta della configurazione driver_options di lettura per la connessione DB dal file `env.php` da parte di `ece-tools` per i validatori.<!-- MCLOUD-8420 -->
 
@@ -151,7 +157,7 @@ Data di rilascio: 29 luglio 2021
 
 - ![icona correzione](../../assets/fix.svg) **Requisiti compositore aggiornati per`symphony/console`**—Sono stati aggiornati i requisiti di versione `composer.json` degli strumenti ECE per il pacchetto `symphony/console` per risolvere un problema che ha causato l&#39;errore seguente ai comandi `di:compile`: `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
-- ![icona correzione](../../assets/fix.svg) Aggiornamento dei controlli software di fine del ciclo di vita (`eol.yaml`) per includere l&#39;Elasticsearch 7.9.x.<!--MCLOUD-7938-->
+- ![icona correzione](../../assets/fix.svg) Aggiornamento dei controlli software di fine del ciclo di vita (`eol.yaml`) per includere Elasticsearch 7.9.x.<!--MCLOUD-7938-->
 
 ## v2002.1.6
 
@@ -159,13 +165,13 @@ Data di rilascio: 20 aprile 2021
 
 - ![nuova icona](../../assets/new.svg) **Credenziali di autenticazione Redis**—Aggiunta la possibilità di leggere le credenziali di autorizzazione Redis dalla proprietà `relationships` durante la fase di distribuzione.<!--MCLOUD-7694-->
 
-- ![nuova icona](../../assets/new.svg) **Credenziali di autorizzazione dell&#39;Elasticsearch**—Aggiunta la possibilità di leggere le credenziali di autorizzazione dell&#39;Elasticsearch dalla proprietà `relationships` durante la fase di distribuzione.<!--MCLOUD-7695-->
+- ![nuova icona](../../assets/new.svg) **Credenziali di autorizzazione Elasticsearch**—Aggiunta la possibilità di leggere le credenziali di autorizzazione Elasticsearch dalla proprietà `relationships` durante la fase di distribuzione.<!--MCLOUD-7695-->
 
 - ![nuova icona](../../assets/new.svg) **Servizio di archiviazione delle sessioni dedicato**. Aggiunta di `redis-session` come seconda opzione per l&#39;archiviazione delle sessioni. È possibile utilizzare il servizio `redis-session` per archiviare le informazioni sulla sessione e utilizzare il servizio `redis` per la cache per fornire prestazioni migliori.<!--MCLOUD-7698-->
 
 - ![nuova icona](../../assets/new.svg) **Messaggi SPLIT_DB obsoleti**—Aggiunti avvisi di convalida e messaggi critici per l&#39;opzione `SPLIT_DB` obsoleta per Adobe Commerce 2.4.2 e la sua rimozione in Adobe Commerce 2.5.0.<!--MCLOUD-7806-->
 
-- ![icona correzione](../../assets/fix.svg) **versione Elasticsearch da relazioni**—È stato corretto il modulo di convalida del servizio per recuperare la versione corretta dell&#39;Elasticsearch dalle proprietà `relationships` in Cloud Docker e negli ambienti di integrazione.<!--MCLOUD-7572-->
+- ![icona di correzione](../../assets/fix.svg) **Versione di Elasticsearch dalle relazioni**—È stato corretto il modulo di convalida del servizio per recuperare la versione corretta di Elasticsearch dalle proprietà `relationships` in Cloud Docker e negli ambienti di integrazione.<!--MCLOUD-7572-->
 
 - ![icona correzione](../../assets/fix.svg) **Convalida porta Redis flessibile**. Redis può ora convalidare la porta in una connessione alla cache personalizzata dall&#39;URL `server`. Ad esempio, è possibile aggiungere il numero di porta all&#39;URL del server come segue: `server: 'tcp://rfs-store-simple-page-cache:26379'`. Ciò consente di evitare errori di convalida in cui l&#39;opzione `port` è mancante o non corretta.<!--MCLOUD-7722-->
 
@@ -217,9 +223,9 @@ Data di rilascio: 9 novembre 2020
 
 - ![nuova icona](../../assets/new.svg) Aggiunta della convalida del motore di ricerca per garantire che `elasticsearch` sia impostato per Adobe Commerce sull&#39;infrastruttura cloud 2.4 e versioni successive. Se la convalida non riesce, la distribuzione viene interrotta con un messaggio di errore critico che suggerisce correzioni per il problema. Vedi [Errori critici, fase di distribuzione](../dev-tools/error-reference.md#deploy-stage).<!--MCLOUD-6937-->
 
-- ![nuova icona](../../assets/new.svg) Aggiunta della convalida dell&#39;Elasticsearch per verificare la compatibilità tra la versione del servizio Elasticsearch e la versione di Adobe Commerce.<!--MCLOUD-7193-->
+- ![nuova icona](../../assets/new.svg) Aggiunta della convalida Elasticsearch per verificare la compatibilità tra la versione del servizio Elasticsearch e la versione di Adobe Commerce.<!--MCLOUD-7193-->
 
-- ![nuova icona](../../assets/new.svg) Il messaggio di errore di compatibilità dell&#39;Elasticsearch è stato aggiornato in modo da visualizzare le versioni di Elasticsearch compatibili con il modulo Adobe Commerce Elasticsearch. Il messaggio di errore fornisce ora le versioni specifiche dell’Elasticsearch da installare nell’infrastruttura Cloud, in modo che siano compatibili con il modulo di Elasticsearch utilizzato dalla versione di Adobe Commerce in uso. Vedi [Errori di avviso, fase di distribuzione](../dev-tools/error-reference.md#deploy-stage-1).<!--MCLOUD-6698-->
+- ![nuova icona](../../assets/new.svg) Il messaggio di errore di compatibilità di Elasticsearch è stato aggiornato in modo da visualizzare le versioni di Elasticsearch compatibili con il modulo Elasticsearch di Adobe Commerce. Il messaggio di errore fornisce ora le versioni specifiche di Elasticsearch da installare nell’infrastruttura Cloud in modo che siano compatibili con il modulo Elasticsearch utilizzato dalla versione di Adobe Commerce in uso. Vedi [Errori di avviso, fase di distribuzione](../dev-tools/error-reference.md#deploy-stage-1).<!--MCLOUD-6698-->
 
 - ![nuova icona](../../assets/new.svg) Sono stati aggiunti errori di avviso `2026` e `2027` per un&#39;impostazione non valida della variabile di ambiente `MAGE_MODE`. L&#39;unico valore valido è `production`. Prima di questa correzione, è possibile impostare `MAGE_MODE` su `developer` senza errori di distribuzione, solo per causare errori in un secondo momento quando si tenta di scrivere in file di sola lettura. Vedi [Errori di avviso](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->
 
@@ -253,7 +259,7 @@ Data di rilascio: 5 agosto 2020
 
    - Codice errore 102 - Sono state aggiunte ulteriori verifiche per i problemi che si verificano quando il file `env.php` non è scrivibile <!--MCLOUD-6221-->
 
-- ![nuova icona](../../assets/new.svg) Aggiunta della variabile di ambiente **QUALITY_PATCH** per specificare una o più patch di qualità da applicare durante il processo di distribuzione. Vedi [Variabili di compilazione](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
+- ![nuova icona](../../assets/new.svg) Aggiunta della variabile di ambiente **QUALITY_PATCHES** per specificare una o più patch di qualità da applicare durante il processo di distribuzione. Vedi [Variabili di compilazione](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
 
 ## v2002.1.1
 
@@ -293,7 +299,7 @@ Data di rilascio: 25 giugno 2020
 
 - ![nuova icona](../../assets/new.svg) **Miglioramenti alla convalida**—
 
-   - ![nuova icona](../../assets/new.svg) **Verifica compatibilità Elasticsearch 7.x**—Convalida Elasticsearch aggiornata per i controlli compatibilità software Elasticsearch 7.x.<!--MCLOUD-5542-->
+   - ![nuova icona](../../assets/new.svg) **Controlli di compatibilità di Elasticsearch 7.x**—È stata aggiornata la convalida di Elasticsearch per i controlli di compatibilità del software Elasticsearch 7.x.<!--MCLOUD-5542-->
 
    - ![nuova icona](../../assets/new.svg) **Versioni del servizio aggiornate e controlli di convalida EOL**—Convalida aggiornata per verificare le versioni del servizio installate rispetto ai requisiti di Adobe Commerce 2.4.<!--MCLOUD-6144-->
 
@@ -361,7 +367,7 @@ Data di rilascio: 6 febbraio 2020
 
    - ![nuova icona](../../assets/new.svg) Aggiunta della convalida per verificare le versioni del servizio installate rispetto alla data di fine del ciclo di vita per ogni servizio. Ora i clienti ricevono una notifica se la versione di un servizio è entro tre mesi dalla data di fine del ciclo di vita e un avviso se la data di fine del ciclo di vita è nel passato.<!--MAGECLOUD-4076-->
 
-   - ![icona di correzione](../../assets/fix.svg) È stato risolto un problema di configurazione dell&#39;Elasticsearch per garantire che le impostazioni di Elasticsearch corrette siano configurate in tutti gli ambienti.<!--MAGECLOUD-4474-->
+   - ![icona di correzione](../../assets/fix.svg) È stato risolto un problema di configurazione di Elasticsearch per garantire che in tutti gli ambienti siano configurate le impostazioni Elasticsearch corrette.<!--MAGECLOUD-4474-->
 
 >[!NOTE]
 >

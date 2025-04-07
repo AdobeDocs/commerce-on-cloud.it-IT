@@ -3,7 +3,7 @@ title: Note sulla versione della suite di strumenti cloud
 description: Scopri gli ultimi miglioramenti alla suite di strumenti cloud per Adobe Commerce.
 feature: Cloud, Release Notes
 exl-id: ee2bc2e9-bdf4-4f7b-9724-8f4dd1e61378
-source-git-commit: 126514af11498758036455580d5cab5037dc9bf3
+source-git-commit: 750c3f461d87f8b507bd37f85dab8acad1a14e2d
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 1%
@@ -16,9 +16,9 @@ Queste informazioni sulla versione descrivono gli ultimi miglioramenti apportati
 
 | Note sulla versione | Versione | Descrizione | Source |
 | ----------------- |-----------| ---------------------------------------- | --------------------------- |
-| [`ece-tools` pacchetto](ece-tools-package.md) | 2002.2.1 | Un set di script e strumenti progettati per gestire e distribuire progetti Cloud | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.1) |
+| [`ece-tools` pacchetto](ece-tools-package.md) | 2002.2. | Un set di script e strumenti progettati per gestire e distribuire progetti Cloud | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.1) |
 | [Patch cloud per Commerce](cloud-patches.md) | 1.1.4. | Un set di patch che migliorano l’integrazione di tutte le versioni di Adobe Commerce con gli ambienti Cloud. Questo pacchetto include patch di Adobe Commerce e hotfix disponibili applicati quando si utilizza `ece-tools` per la distribuzione | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.4) |
-| [Docker cloud per Commerce](cloud-docker.md) | 1.4.1. | Funzionalità e file di configurazione per le immagini Docker per distribuire Adobe Commerce in un ambiente cloud locale | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.1) |
+| [Docker cloud per Commerce](cloud-docker.md) | 1.4.2. | Funzionalità e file di configurazione per le immagini Docker per distribuire Adobe Commerce in un ambiente cloud locale | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.1) |
 | [Componenti cloud di Commerce](cloud-components.md) | 1.1.1. | Funzionalità Adobe Commerce di base estesa per i siti distribuiti nell’infrastruttura Cloud | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.1) |
 
 Quando si esegue l&#39;aggiornamento a ECE-Tools 2002.1.0 o versione successiva, si esegue automaticamente l&#39;aggiornamento alle versioni più recenti degli altri pacchetti, che rappresentano le dipendenze per il pacchetto `ece-tools`. Per un elenco delle dipendenze, consulta [Cloud metapackage](../development/overview.md#cloud-metapackage).
