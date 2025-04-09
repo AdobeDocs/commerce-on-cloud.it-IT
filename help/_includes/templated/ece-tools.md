@@ -1,5 +1,5 @@
 ---
-source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
+source-git-commit: 9fbcca6f545276e7afedcdb6e6061a87dd8f2dd9
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # strumenti ece
 
-**Versione**: 2002.2.1
+**Versione**: 2002.2.2
 
 Questo riferimento contiene 34 comandi disponibili tramite lo strumento della riga di comando `ece-tools`.
 L&#39;elenco iniziale viene generato automaticamente utilizzando il comando `ece-tools list` in Adobe Commerce sull&#39;infrastruttura cloud.
@@ -27,7 +27,7 @@ Visualizza la Guida per il comando specificato. Se non viene assegnato alcun com
 
 #### `--quiet`, `-q`
 
-Non inviare messaggi
+Non emettere alcun messaggio
 
 - Predefinito: `false`
 - Non accetta un valore
@@ -427,7 +427,7 @@ Un percorso di ripristino file specifico
 ece-tools build:generate
 ```
 
-Genera tutti i file necessari per la fase di build.
+Genera tutti i file necessari per versione fase.
 
 ### Opzioni
 
@@ -486,7 +486,7 @@ Configurazione in formato JSON
 
 ### Opzioni
 
-Per le opzioni globali, vedi [Opzioni globali](#global-options).
+Per le opzioni globali, vedere [Opzioni](#global-options) globali.
 
 
 ## `cloud:config:validate`
@@ -495,7 +495,7 @@ Per le opzioni globali, vedi [Opzioni globali](#global-options).
 ece-tools cloud:config:validate
 ```
 
-Convalida il file di configurazione `.magento.env.yaml`
+Convalida il file di `.magento.env.yaml` configurazione
 
 ### Opzioni
 
@@ -547,7 +547,7 @@ Per le opzioni globali, vedi [Opzioni globali](#global-options).
 ece-tools cron:kill
 ```
 
-Termina tutti i processi cron del Magento.
+Termina tutti i processi cron di Magento.
 
 ### Opzioni
 
@@ -654,7 +654,7 @@ Utilizzato per ottenere risultati in formato JSON
 ece-tools module:refresh
 ```
 
-Aggiorna la configurazione per abilitare i moduli appena aggiunti.
+Aggiorna la configurazione per abilitare i nuovi moduli aggiunti.
 
 ### Opzioni
 
@@ -719,11 +719,11 @@ Per le opzioni globali, vedi [Opzioni globali](#global-options).
 ece-tools wizard:scd-on-demand
 ```
 
-Verifica la configurazione di SCD su richiesta.
+Verifica la configurazione del on-demand SCD.
 
 ### Opzioni
 
-Per le opzioni globali, vedi [Opzioni globali](#global-options).
+Per le opzioni globali, vedere [Opzioni](#global-options) globali.
 
 
 ## `wizard:scd-on-deploy`
