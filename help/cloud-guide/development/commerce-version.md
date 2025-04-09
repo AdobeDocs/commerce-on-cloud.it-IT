@@ -2,7 +2,8 @@
 title: Aggiorna versione Commerce
 description: Scopri come aggiornare la versione di Adobe Commerce nel progetto di infrastruttura cloud.
 feature: Cloud, Upgrade
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
@@ -17,7 +18,7 @@ A seconda della configurazione del progetto, le attività di aggiornamento posso
 
 - I servizi di aggiornamento, come MariaDB (MySQL), OpenSearch, RabbitMQ e Redis, sono compatibili con le nuove versioni di Adobe Commerce.
 - Convertire un file di gestione della configurazione precedente.
-- Aggiornare il file `.magento.app.yaml` con le nuove impostazioni per hook e variabili di ambiente.
+- Aggiorna il file con le `.magento.app.yaml` nuove impostazioni per gli hook e le variabili d&#39;ambiente.
 - Aggiorna le estensioni di terze parti alla versione più recente supportata.
 - Aggiornare il file `.gitignore`.
 
@@ -60,11 +61,11 @@ Quando si esegue l&#39;aggiornamento da una versione precedente, è necessario m
 
 >[!WARNING]
 >
->Dopo l&#39;upgrade, è possibile rimuovere il file `config.php` e generare un nuovo file completo. Puoi eliminare questo file solo una volta per sostituirlo. Dopo aver generato un nuovo file `config.php` completo, non è possibile eliminare il file per generarne uno nuovo. Consulta [Gestione della configurazione e distribuzione della pipeline](../store/store-settings.md).
+>Dopo l&#39;aggiornamento, è possibile rimuovere il `config.php` file e generare un nuovo file completo. È possibile eliminare questo file solo per sostituirlo questa volta. Dopo aver generato un nuovo file completo `config.php` , non è possibile eliminare il file per generarne uno nuovo. Vedere [Gestione della configurazione e distribuzione](../store/store-settings.md) della pipeline.
 
-### Verificare le dipendenze del compositore Zend Framework
+### Verifica le dipendenze del compositore di Zend Framework
 
-Durante l&#39;aggiornamento a **2.3.x o versione successiva dalla versione 2.2.x**, verificare che le dipendenze di Zend Framework siano state aggiunte alla proprietà `autoload` del file `composer.json` per supportare Laminas. Questo plug-in supporta i nuovi requisiti per Zend Framework, che è migrato al progetto Laminas. Vedi [Migrazione di Zend Framework al progetto Laminas](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251) nel _DevBlog Magento_.
+Quando si esegue l&#39;aggiornamento a **2.3.x o versioni successive dalla 2.2.x**, verificare che le dipendenze di Zend Framework siano state aggiunte alla `autoload` proprietà del file per supportare Laminas `composer.json` . Questo plugin supporta i nuovi requisiti per Zend Framework, che è migrato al progetto Laminas. Vedi [Migrazione di Zend Framework al progetto Laminas](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251) in _Magento DevBlog_.
 
 **Per controllare la configurazione `auto-load:psr-4`**:
 
@@ -119,13 +120,13 @@ Durante l&#39;aggiornamento a **2.3.x o versione successiva dalla versione 2.2.x
 
 ## File di configurazione
 
-Prima di aggiornare l’applicazione, è necessario aggiornare i file di configurazione del progetto per tenere conto delle modifiche alle impostazioni di configurazione predefinite per Adobe Commerce sull’infrastruttura cloud o l’applicazione. Le impostazioni predefinite più recenti si trovano nell&#39;archivio GitHub [magento-cloud](https://github.com/magento/magento-cloud).
+Prima di aggiornare il applicazione, è necessario aggiornare i file di configurazione del progetto per account per le modifiche alle impostazioni di configurazione predefinite per Adobe Systems Commerce in infrastruttura cloud o applicazione. Le impostazioni predefinite più recenti sono disponibili nel [archivio](https://github.com/magento/magento-cloud) GitHub cloud magento-.
 
 ### .magento.app.yaml
 
-Controlla sempre i valori contenuti nel file [.magento.app.yaml](../application/configure-app-yaml.md) per la versione installata, in quanto controlla il modo in cui l&#39;applicazione viene generata e distribuita nell&#39;infrastruttura cloud. L’esempio seguente è per la versione 2.4.7 e utilizza Composer 2.7.2. La proprietà `build: flavor:` non è utilizzata per Composer 2.x; vedere [Installazione e utilizzo di Composer 2](../application/properties.md#installing-and-using-composer-2).
+Controlla sempre i [valori contenuti nel file .magento.app.yaml](../application/configure-app-yaml.md) per la versione installata, perché controlla il modo in cui il applicazione viene compilato e distribuito nel infrastruttura cloud. L&#39;esempio seguente si riferisce alla versione 2.4.8 e utilizza Composer 2.8.4. La `build: flavor:` proprietà non viene utilizzata per Composer 2.x; vedere [Installazione e utilizzo di Composer 2](../application/properties.md#installing-and-using-composer-2).
 
-**Per aggiornare il file `.magento.app.yaml`**:
+**Per aggiornare il `.magento.app.yaml` file**:
 
 1. Sulla workstation locale, passa alla directory del progetto.
 
@@ -134,13 +135,13 @@ Controlla sempre i valori contenuti nel file [.magento.app.yaml](../application/
 1. Aggiornare le opzioni PHP.
 
    ```yaml
-   type: php:8.3
+   type: php:8.4
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.7.2'
+           composer/composer: '2.8.4'
    ```
 
 1. Modificare la proprietà `hooks` `build` e i comandi `deploy`.
@@ -188,7 +189,7 @@ Controlla sempre i valori contenuti nel file [.magento.app.yaml](../application/
 
 ### composer.json
 
-Prima di eseguire l&#39;aggiornamento, verificare sempre che le dipendenze nel file `composer.json` siano compatibili con la versione di Adobe Commerce.
+Prima di eseguire l&#39;aggiornamento `composer.json` , verifica sempre che le dipendenze nel file siano compatibili con la versione di Adobe Systems Commerce.
 
 **Per aggiornare il file `composer.json` per Adobe Commerce versione 2.4.4 e successive**:
 
@@ -331,19 +332,19 @@ Come indicato in [Gestione configurazione](#configuration-management), dopo l&#3
 
 **Per creare un file di configurazione specifico del sistema**:
 
-1. Dal terminale, utilizzare un comando SSH per generare il file `/app/etc/config.php` per l&#39;ambiente.
+1. Dal terminale, utilizzare un comando SSH per generare il `/app/etc/config.php` file per l&#39;ambiente.
 
    ```bash
    ssh <SSH-URL> "<Command>"
    ```
 
-   Ad esempio, per Pro, per eseguire `scd-dump` sul ramo `integration`:
+   Ad esempio per Pro, per eseguire il `scd-dump` `integration` sul ramo:
 
    ```bash
    ssh <project-id-integration>@ssh.us.magentosite.cloud "php vendor/bin/ece-tools config:dump"
    ```
 
-1. Trasferire il file `config.php` nelle workstation locali utilizzando `rsync` o `scp`. Puoi aggiungere questo file al ramo solo localmente.
+1. Trasferire il `config.php` file alle workstation locali utilizzando `rsync` o `scp`. È possibile aggiungere questo file al ramo solo localmente.
 
    ```bash
    rsync <SSH-URL>:app/etc/config.php ./app/etc/config.php
@@ -355,7 +356,7 @@ Come indicato in [Gestione configurazione](#configuration-management), dopo l&#3
    git add app/etc/config.php && git commit -m "Add system-specific configuration" && git push origin master
    ```
 
-   Viene generato un file `/app/etc/config.php` aggiornato con un elenco di moduli e impostazioni di configurazione.
+   Questo genera un file aggiornato con un elenco di `/app/etc/config.php` moduli e impostazioni di configurazione.
 
 >[!WARNING]
 >
@@ -379,11 +380,11 @@ Controlla le pagine delle estensioni e dei moduli di terze parti nel Marketplace
 
 1. Aggiungi, esegui il commit e invia le modifiche al codice in remoto.
 
-1. Effettua il push e il test nell’ambiente di integrazione.
+1. Esegui il push e il test nell&#39;ambiente di integrazione.
 
-1. Effettua il push all’ambiente di staging per il test in un ambiente di pre-produzione.
+1. Esegui il push nell&#39;ambiente di staging per eseguire il test in un ambiente di pre-produzione.
 
-Adobe consiglia vivamente di aggiornare l&#39;ambiente di produzione _prima_, incluse le estensioni aggiornate nella procedura di avvio del sito.
+Adobe consiglia vivamente di aggiornare l&#39;ambiente di produzione _prima_, incluse le estensioni aggiornate nel processo di avvio del sito.
 
 >[!NOTE]
 >

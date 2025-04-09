@@ -1,8 +1,9 @@
 ---
 title: Proprietà
-description: Utilizzare l'elenco delle proprietà come riferimento durante la configurazione dell'applicazione  [!DNL Commerce]  per la compilazione e la distribuzione nell'infrastruttura cloud.
+description: Utilizzare l'elenco delle proprietà come riferimento quando si configura il [!DNL Commerce] applicazione per versione e distribuire al infrastruttura cloud.
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Proprietà per la configurazione dell&#39;applicazione
 
-Il file `.magento.app.yaml` utilizza le proprietà per gestire il supporto dell&#39;ambiente per l&#39;applicazione [!DNL Commerce].
+Il `.magento.app.yaml` file utilizza le proprietà per gestire il supporto dell&#39;ambiente per il [!DNL Commerce] applicazione.
 
 | Nome | Descrizione | Predefinito | Obbligatorio |
 | ------ | --------------------------------- | ------- | -------- |
@@ -25,7 +26,7 @@ Il file `.magento.app.yaml` utilizza le proprietà per gestire il supporto dell&
 | [`name`](#name) | Definisci il nome dell’applicazione | `mymagento` | Sì |
 | [`relationships`](#relationships) | Servizi mappa | Servizi:<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | No |
 | [`runtime`](#runtime) | La proprietà runtime include le estensioni richieste dall&#39;applicazione [!DNL Commerce]. | Estensioni:<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | Sì |
-| [`type`](#type-and-build) | Impostare l&#39;immagine contenitore di base | `php:8.3` | Sì |
+| [`type`](#type-and-build) | Imposta l&#39;immagine del contenitore di base | `php:8.3` | Sì |
 | [`variables`](variables-property.md) | Applicare una variabile di ambiente per una versione specifica di Commerce | — | No |
 | [`web`](web-property.md) | Gestire le richieste esterne | — | Sì |
 | [`workers`](workers-property.md) | Gestire le richieste esterne | — | Sì, se non si utilizza la proprietà web |
@@ -54,7 +55,7 @@ La proprietà `build` determina ciò che accade per impostazione predefinita dur
 
 ```yaml
 # The toolstack used to build the application.
-type: php:8.3
+type: php:8.4
 build:
     flavor: none
 
@@ -67,11 +68,11 @@ dependencies:
 
 La proprietà `build: flavor:` non è utilizzata per Composer 2.x; pertanto, è necessario installare manualmente Composer durante la fase di build. Per installare e utilizzare Composer 2.x nei progetti Starter e Pro, è necessario apportare tre modifiche alla configurazione di `.magento.app.yaml`:
 
-1. Rimuovi `composer` come `build: flavor:` e aggiungi `none`. Questa modifica impedisce a Cloud di utilizzare la versione predefinita 1.x di Composer per eseguire attività di build.
-1. Aggiungi `composer/composer: '^2.0'` come dipendenza `php` per l&#39;installazione di Composer 2.x.
-1. Aggiungere le attività di compilazione `composer` a un hook `build` per eseguire le attività di compilazione tramite Composer 2.x.
+1. Rimuovi `composer` come `build: flavor:` e aggiungi `none`. Questa modifica impedisce a Cloud di utilizzare la versione 1.x predefinita di Composer per eseguire versione attività.
+1. Aggiungi `composer/composer: '^2.0'` come dipendenza per l&#39;installazione `php` di Composer 2.x.
+1. Aggiungi le `composer` attività versione a un `build` hook per eseguire le attività versione utilizzando Composer 2.x.
 
-Utilizza i seguenti frammenti di configurazione nella tua configurazione di `.magento.app.yaml`:
+Utilizzare i seguenti frammenti di configurazione nella propria `.magento.app.yaml` configurazione:
 
 ```yaml
 # 1. Change flavor to none.
@@ -90,19 +91,19 @@ hooks:
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 ```
 
-Per ulteriori informazioni su Composer, vedere [Pacchetti richiesti](../development/overview.md#required-packages).
+Per ulteriori informazioni su Composer, vedere [Pacchetti](../development/overview.md#required-packages) richiesti.
 
 ## `dependencies`
 
 Specifica le dipendenze che potrebbero essere necessarie all&#39;applicazione durante il processo di compilazione.
 
-Adobe Commerce supporta le dipendenze dalle seguenti lingue:
+Adobe Systems Commerce supporta le dipendenze dalle seguenti lingue:
 
 - PHP
 - Rubino
 - Node.js
 
-Tali dipendenze sono indipendenti dalle dipendenze finali dell&#39;applicazione e sono disponibili in `PATH`, durante il processo di compilazione e nell&#39;ambiente di esecuzione dell&#39;applicazione.
+Tali dipendenze sono indipendenti dalle eventuali dipendenze del applicazione e sono disponibili nel `PATH`, durante il processo di versione e nell&#39;ambiente di runtime del applicazione.
 
 È possibile specificare tali dipendenze nel modo seguente:
 
@@ -203,10 +204,10 @@ Il formato per l&#39;aggiunta del montaggio all&#39;elenco è il seguente:
 La proprietà `access` indica un livello di ruolo utente minimo che può accedere SSH agli ambienti. I ruoli utente disponibili sono:
 
 - `admin`—Può modificare le impostazioni ed eseguire azioni nell&#39;ambiente; dispone di _diritti per collaboratori_ e _visualizzatori_.
-- `contributor` - Può inviare il codice a questo ambiente e diramarlo dall&#39;ambiente; dispone dei diritti di _visualizzatore_.
-- `viewer` - Può visualizzare solo l&#39;ambiente.
+- `contributor`- Può inviare codice a questo ambiente e diramarsi dall&#39;ambiente; ha _visualizzatore_ diritti.
+- `viewer`- Consente di visualizzare solo l&#39;ambiente.
 
-Il ruolo utente predefinito è `contributor`, che limita l&#39;accesso SSH agli utenti con soli diritti di _visualizzatore_. È possibile modificare il ruolo utente in `viewer` per consentire l&#39;accesso SSH agli utenti con soli _diritti visualizzatore_:
+Il ruolo utente predefinito è `contributor`, che limita il accesso SSH agli utenti con soli _diritti visualizzatore_ . È possibile modificare il ruolo utente in `viewer` per consentire l&#39;accesso SSH agli utenti con soli _diritti visualizzatore_:
 
 ```yaml
 access:
