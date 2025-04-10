@@ -2,11 +2,11 @@
 title: Note sulla versione di ECE-Tools
 description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchetto ECE-Strumenti.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-07T00:00:00Z
+last-substantial-update: 2024-04-09T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 2522e606aebac79285793cd40428d3e064a3c1db
+source-git-commit: 933e0c1b8bfbafeb6a477ec7bba7dcf7667dc6ec
 workflow-type: tm+mt
-source-wordcount: '3065'
+source-wordcount: '3092'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,23 @@ Il pacchetto `ece-tools` utilizza la seguente sequenza di versioni di rilascio: 
 
 Le note sulla versione includono:
 
-- ![nuova icona](../../assets/new.svg) Nuove funzioni
-- ![icona correzione](../../assets/fix.svg) Correzioni e miglioramenti
+- ![Nuova icona](../../assets/new.svg) Nuovo funzioni
+- ![Icona](../../assets/fix.svg) di correzione Correzioni e miglioramenti
 
 <!--Add release notes below-->
 
-## v2002.2.2 {#latest}
+## v2002.2.3 {#latest}
+
+Data di rilascio: 9 aprile 2025
+
+- ![icona di correzione](../../assets/fix.svg) **Correzione di Valkey**&#x200B;È stato risolto un problema con la configurazione personalizzata di Valkey.<!-- MCLOUD-13569	 - -->
+- ![icona correzione](../../assets/fix.svg) **Correzione convalida**-Correzione convalida per RabbitMQ 4.0.<!-- MCLOUD-13560	 - -->
+
+## v2002.2.2
+
+Data di rilascio: 7 aprile 2025
+
+## v2002.2.2
 
 Data di rilascio: 7 aprile 2025
 
@@ -108,8 +119,8 @@ Data di rilascio: 27 ottobre 2022
 
 Data di rilascio: 13 settembre 2022
 
-- ![nuova icona](../../assets/new.svg) **Abilita`synchronous_replication`**—ECE-Tools imposta `synchronous_replication=>true` nel file `app/etc/env.php` quando `MYSQL_USE_SLAVE_CONNECTION` è abilitato. Questa configurazione interessa solo Commerce 2.4.6+. Vedi la descrizione della variabile `MYSQL_USE_SLAVE_CONNECTION` nelle [Variabili di distribuzione](../environment/variables-deploy.md#mysql_use_slave_connection).<!-- MCLOUD-9142 -->
-- ![nuova icona](../../assets/new.svg) **OpenSearch**—Aggiunta della funzionalità per configurare e impostare il motore `opensearch` per la prossima versione di Adobe Commerce 2.4.6. Vedere [Configurazione del servizio OpenSearch](../services/opensearch.md).<!-- MCLOUD-9236 -->
+- ![Nuova icona](../../assets/new.svg) **Attiva`synchronous_replication`**- ECE-Strumenti viene impostato `synchronous_replication=>true` nel `app/etc/env.php` file quando `MYSQL_USE_SLAVE_CONNECTION` è attivato. Questa configurazione interessa solo Commerce 2.4.6+. Per vedere la descrizione della `MYSQL_USE_SLAVE_CONNECTION` variabile, vedere Distribuire le [variabili](../environment/variables-deploy.md#mysql_use_slave_connection).<!-- MCLOUD-9142 -->
+- ![nuova icona](../../assets/new.svg) **OpenSearch** - Aggiunta di funzionalità per configurare e impostare il `opensearch` motore per la prossima versione 2.4.6 di Adobe Systems Commerce. Vedere [Configurare il servizio](../services/opensearch.md) OpenSearch.<!-- MCLOUD-9236 -->
 
 ## v2002.1.11
 
@@ -205,15 +216,15 @@ Data di rilascio: 1 febbraio 2021
 
 Data di rilascio: 19 novembre 2020
 
-- ![icona correzione](../../assets/fix.svg) È stato risolto un problema che causava un errore di distribuzione quando il motore di ricerca specificato nella variabile di ambiente `SEARCH_CONFIGURATION` è un valore diverso da `elasticsearch`.<!--MCLOUD-7283-->
+- ![Icona](../../assets/fix.svg) di correzione È stato risolto un problema che causava un `SEARCH_CONFIGURATION` errore di distribuzione quando il motore di ricerca specificato nella variabile di ambiente è un valore diverso da `elasticsearch`.<!--MCLOUD-7283-->
 
 ## v2002.1.3
 
 Data di rilascio: 9 novembre 2020
 
-**Aggiornamenti dell&#39;infrastruttura**—
+**Aggiornamenti** dell&#39;infrastruttura—
 
-- ![nuova icona](../../assets/new.svg) Aggiunta del supporto ECE-Tools per la directory `pub/static` di sola lettura quando il contenuto statico è impostato per la distribuzione nella fase di compilazione.<!--MC-37699-->
+- ![Nuova icona](../../assets/new.svg) Aggiunta del supporto ECE-Strumenti per la directory di sola `pub/static` lettura quando l&#39;contenuto statico è impostato su distribuire nella fase versione.<!--MC-37699-->
 
 - ![nuova icona](../../assets/new.svg) Aggiunto supporto per Elasticsearch 7.9 e Redis 6 per compatibilità con le prossime versioni di Adobe Commerce.<!--MCLOUD-7191-->
 
@@ -311,7 +322,7 @@ Data di rilascio: 25 giugno 2020
 
      <!--MCLOUD-4077-->
 
-   - ![nuova icona](../../assets/new.svg) **Aggiunta della convalida per le dipendenze di Zend Framework** - Aggiunta della convalida delle dipendenze del compositore per Zend Framework migrato al progetto Laminas. Se mancano le dipendenze richieste, durante il processo di compilazione viene visualizzato il seguente messaggio di errore.
+   - ![nuova icona](../../assets/new.svg) **Aggiunta della convalida per le dipendenze di Zend Framework** - Aggiunta della convalida delle dipendenze del compositore per Zend Framework migrato al progetto Laminas. Se mancano le dipendenze necessarie, durante il processo di versione viene visualizzato il seguente messaggio di errore.
 
      ```text
      Required configuration is missing from the autoload section of the composer.json file.
@@ -320,17 +331,17 @@ Data di rilascio: 25 giugno 2020
      commit the updated composer.json and composer.lock files.
      ```
 
-     Vedere [Verificare le dipendenze di Zend Framework](../development/commerce-version.md#verify-zend-framework-composer-dependencies).<!--MCLOUD-4094-->
+     Vedere [Verificare le dipendenze](../development/commerce-version.md#verify-zend-framework-composer-dependencies) di Zend Framework.<!--MCLOUD-4094-->
 
-   - ![nuova icona](../../assets/new.svg) **Aggiunta della convalida per `env.php` file e dati** - Aggiunta delle verifiche per il file `env.php` e i dati durante il processo di installazione e aggiornamento.<!--MCLOUD-5991-->
+   - ![Nuova icona](../../assets/new.svg) **Aggiunta convalida per `env.php` file e dati**: aggiunte verifiche per il file e i `env.php` dati durante il processo di installazione e aggiornamento.<!--MCLOUD-5991-->
 
-      - Se il file `env.php` non è presente nell&#39;installazione e il valore `crypt/key` non è specificato nel file `.magento.app.yaml`, la distribuzione non riesce e viene visualizzata la seguente notifica:
+      - Se il `env.php` file non è presente nell&#39;installazione e il `crypt/key` valore non è specificato nel `.magento.app.yaml` file, la distribuzione non riesce con le seguenti notifica:
 
         ```text
         The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
         ```
 
-      - Se l&#39;installazione non include il file `env.php` o la configurazione contiene un solo tipo di cache, il comando `cron:enable` viene eseguito durante il processo di aggiornamento per ripristinare il file con tutti i `cache_types`. Al registro viene aggiunta la seguente notifica:
+      - Se l&#39;installazione non include il `env.php` file o la configurazione contiene un solo tipo di cache, il `cron:enable` comando viene eseguito durante il processo di aggiornamento per ripristinare il file con tutti `cache_types`i file . Al registro viene aggiunta la seguente notifica:
 
         ```text
         Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
