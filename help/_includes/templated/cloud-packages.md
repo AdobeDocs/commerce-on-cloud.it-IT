@@ -1,7 +1,7 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 5567f425f28cb4d19aaa0db80f0ede1fd525a686
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2275'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ Adobe Commerce sull’infrastruttura cloud utilizza Composer per gestire i pacch
 
 Il file `composer.json` dichiara l&#39;elenco dei pacchetti, mentre il file `composer.lock` memorizza un elenco completo dei pacchetti (una versione completa di ciascun pacchetto e delle relative dipendenze) utilizzati per creare un&#39;installazione di Adobe Commerce.
 
-La seguente documentazione di riferimento è generata dal file `composer.lock` e riguarda i pacchetti richiesti inclusi in Adobe Commerce sull&#39;infrastruttura cloud 2.4.7.
+La seguente documentazione di riferimento è generata dal file `composer.lock` e riguarda i pacchetti richiesti inclusi in Adobe Commerce su infrastruttura cloud 2.4.8-p1.
 
 ## Dipendenze
 
-`magento/magento-cloud-metapackage 2.4.7` ha le seguenti dipendenze:
+`magento/magento-cloud-metapackage 2.4.8-p1` ha le seguenti dipendenze:
 
 ```config
 fastly/magento2: ^1.2.34
-magento/ece-tools: ^2002.1.0
+magento/ece-tools: ^2002.2.0
 magento/module-paypal-on-boarding: ~100.5.0
-magento/product-enterprise-edition: >=2.4.7 <2.4.8
+magento/product-enterprise-edition: >=2.4.8 <2.4.9
 ```
 
 ## Licenze di terze parti
@@ -49,13 +49,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>
-      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
-    </td>
-    <td>libreria</td>
-    <td>Client PHP, ad Elasticsearch</td>
-  </tr>
   <tr>
     <td>
       <a href="https://github.com/opensearch-project/opensearch-php.git">opensearch-project/opensearch-php</a>
@@ -97,6 +90,20 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>libreria</td>
     <td>AWS SDK per PHP - Utilizzare Amazon Web Services nel progetto PHP</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opentelemetry-php/api.git">open-telemetry/api</a>
+    </td>
+    <td>libreria</td>
+    <td>API per OpenTelemetry PHP.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opentelemetry-php/context.git">telemetria aperta/contesto</a>
+    </td>
+    <td>libreria</td>
+    <td>Implementazione contestuale per OpenTelemetry PHP.</td>
   </tr>
   <tr>
     <td>
@@ -177,10 +184,17 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/duosecurity/duo_universal_php.git">duosecurity/duo_universal_php</a>
+    </td>
+    <td>libreria</td>
+    <td>Un'implementazione PHP del Duo Universal SDK.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/fastly/fastly-magento2.git">velocemente/magento2</a>
     </td>
     <td>modulo magento2</td>
-    <td>Modulo CDN Fastly per il Magento 2.4.x</td>
+    <td>Modulo CDN Fastly per Magento 2.4.x</td>
   </tr>
   <tr>
     <td>
@@ -188,13 +202,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>libreria</td>
     <td>Una semplice libreria per codificare e decodificare i token web JSON (JWT) in PHP. Deve essere conforme alla specifica corrente.</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/google/recaptcha.git">google/recaptcha</a>
-    </td>
-    <td>libreria</td>
-    <td>Libreria client per reCAPTCHA, un servizio gratuito che protegge i siti web da spam e utilizzo non corretto.</td>
   </tr>
   <tr>
     <td>
@@ -219,20 +226,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">laminas/laminas-crypt</a>
-    </td>
-    <td>libreria</td>
-    <td>Potenti strumenti di crittografia e hashing delle password</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-db.git">laminas/laminas-db</a>
-    </td>
-    <td>libreria</td>
-    <td>Livello di astrazione del database, astrazione SQL, astrazione del set di risultati e implementazioni RowDataGateway e TableDataGateway</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
     </td>
     <td>libreria</td>
@@ -243,7 +236,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
       <a href="https://github.com/laminas/laminas-escaper.git">laminas/laminas-escape</a>
     </td>
     <td>libreria</td>
-    <td>Escape sicuro di HTML, attributi HTML, JavaScript, CSS e URL</td>
+    <td>Escape sicuro e protetto di HTML, attributi HTML, JavaScript, CSS e URL</td>
   </tr>
   <tr>
     <td>
@@ -258,13 +251,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>libreria</td>
     <td>fornisce funzionalità per creare e utilizzare feed RSS e Atom</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
-    </td>
-    <td>libreria</td>
-    <td>Individuazione dei file di classe PHP</td>
   </tr>
   <tr>
     <td>
@@ -303,27 +289,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">laminas/laminas-mail</a>
-    </td>
-    <td>libreria</td>
-    <td>Fornisce funzionalità generalizzate per la composizione e l'invio di messaggi di posta elettronica in più parti sia di testo che compatibili con MIME</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-math.git">laminas/laminas-math</a>
-    </td>
-    <td>libreria</td>
-    <td>Creazione di numeri pseudo-casuali protetti da crittografia e gestione di numeri interi di grandi dimensioni</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-mime.git">laminas/laminas-mime</a>
-    </td>
-    <td>libreria</td>
-    <td>Creare e analizzare parti e messaggi MIME</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-modulemanager.git">laminas/laminas-modulemanager</a>
     </td>
     <td>libreria</td>
@@ -335,13 +300,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>libreria</td>
     <td>Livello MVC basato su eventi di Laminas, incluse applicazioni MVC, controller e plug-in</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-oauth.git">laminas/laminas-oauth</a>
-    </td>
-    <td>libreria</td>
-    <td></td>
   </tr>
   <tr>
     <td>
@@ -408,6 +366,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/laminas/laminas-translator.git">laminas/laminas-translator</a>
+    </td>
+    <td>libreria</td>
+    <td>Interfacce per il componente Translator del laminas-i18n</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/laminas/laminas-uri.git">laminas/laminas-uri</a>
     </td>
     <td>libreria</td>
@@ -429,10 +394,24 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/marc-mabe/php-enum.git">marc-mabe/php-enum</a>
+    </td>
+    <td>libreria</td>
+    <td>Implementazione semplice e rapida delle enumerazioni con PHP nativo</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/nikic/PHP-Parser.git">nikic/php-parser</a>
     </td>
     <td>libreria</td>
     <td>Un parser PHP scritto in PHP</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/phpfui/recaptcha.git">phpfui/recaptcha</a>
+    </td>
+    <td>libreria</td>
+    <td>Libreria client per reCAPTCHA di Google per PHP 8.4 e versioni successive</td>
   </tr>
   <tr>
     <td>
@@ -537,7 +516,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
       <a href="https://github.com/braintree/braintree_php.git">albero del cervello/albero del cervello_php</a>
     </td>
     <td>libreria</td>
-    <td>Braintree libreria client PHP</td>
+    <td>Libreria client Braintree PHP</td>
   </tr>
   <tr>
     <td>
@@ -632,6 +611,34 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/doctrine/lexer.git">dottrina/lexer</a>
+    </td>
+    <td>libreria</td>
+    <td>Libreria parser PHP Doctrine Lexer che può essere utilizzata nei parser discendenti ricorsivi top-down.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/egulias/EmailValidator.git">egulias/email-validator</a>
+    </td>
+    <td>libreria</td>
+    <td>Libreria per la convalida delle e-mail rispetto a diverse RFC</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elastic-transport-php.git">elastico/trasporto</a>
+    </td>
+    <td>libreria</td>
+    <td>Libreria PHP per trasporto HTTP per prodotti elastici</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
+    </td>
+    <td>libreria</td>
+    <td>Client PHP per Elasticsearch</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
     <td>libreria</td>
@@ -695,6 +702,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/illuminate/conditionable.git">illuminato/condizionale</a>
+    </td>
+    <td>libreria</td>
+    <td>Il pacchetto Illuminare condizionale.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/illuminate/config.git">illumina/config</a>
     </td>
     <td>libreria</td>
@@ -737,6 +751,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/thephpleague/flysystem-local.git">lega/flysystem-locale</a>
+    </td>
+    <td>libreria</td>
+    <td>Adattatore di file system locale per Flysystem.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/thephpleague/mime-type-detection.git">league/mime-type-detection</a>
     </td>
     <td>libreria</td>
@@ -758,7 +779,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/briannesbitt/Carbon.git">nesbot/carbonio</a>
+      <a href="https://github.com/CarbonPHP/carbon.git">nesbot/carbonio</a>
     </td>
     <td>libreria</td>
     <td>Estensione API per DateTime che supporta 281 lingue diverse.</td>
@@ -783,6 +804,27 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>libreria</td>
     <td>Converte gli stili CSS in attributi di stile in linea nel codice HTML</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/discovery.git">php-http/discovery</a>
+    </td>
+    <td>compositore-plugin</td>
+    <td>Trova e installa le implementazioni PSR-7, PSR-17, PSR-18 e HTTPlug</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/httplug.git">php-http/httplug</a>
+    </td>
+    <td>libreria</td>
+    <td>HTTPlug, astrazione del client HTTP per PHP</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/promise.git">php-http/promise</a>
+    </td>
+    <td>libreria</td>
+    <td>Promessa utilizzata per le richieste HTTP asincrone</td>
   </tr>
   <tr>
     <td>
@@ -961,6 +1003,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/clock.git">symfony/clock</a>
+    </td>
+    <td>libreria</td>
+    <td>Separazione delle applicazioni dall'orologio di sistema</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/config.git">symfony/config</a>
     </td>
     <td>libreria</td>
@@ -1066,6 +1115,20 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/mailer.git">symfony/mailer</a>
+    </td>
+    <td>libreria</td>
+    <td>Aiuta a inviare e-mail</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/mime.git">symfony/mime</a>
+    </td>
+    <td>libreria</td>
+    <td>Consente la manipolazione dei messaggi MIME</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-ctype</a>
     </td>
     <td>libreria</td>
@@ -1101,13 +1164,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-php72.git">symfony/polyfill-php72</a>
-    </td>
-    <td>libreria</td>
-    <td>Symfony polyfill supporta alcune funzioni PHP 7.2+ per ridurre le versioni PHP</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/symfony/polyfill-php73.git">symfony/polyfill-php73</a>
     </td>
     <td>libreria</td>
@@ -1126,6 +1182,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>libreria</td>
     <td>Symfony polyfill supporta alcune funzioni PHP 8.1+ per ridurre le versioni PHP</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-php82.git">symfony/polyfill-php82</a>
+    </td>
+    <td>libreria</td>
+    <td>Symfony polyfill supporta alcune funzioni PHP 8.2+ per ridurre le versioni PHP</td>
   </tr>
   <tr>
     <td>
@@ -1213,13 +1276,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/webmozarts/assert.git">webmozart/assert</a>
-    </td>
-    <td>libreria</td>
-    <td>Asserzioni per convalidare l’input/output del metodo con messaggi di errore validi.</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/webonyx/graphql-php.git">webonyx/graphql-php</a>
     </td>
     <td>libreria</td>
@@ -1255,6 +1311,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      paypal/module-braintree-gift-card
+    </td>
+    <td>modulo magento2</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>
       paypal/module-braintree-gift-card-account
     </td>
     <td>modulo magento2</td>
@@ -1270,6 +1333,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   <tr>
     <td>
       paypal/module-braintree-graph-ql
+    </td>
+    <td>modulo magento2</td>
+    <td>N/D</td>
+  </tr>
+  <tr>
+    <td>
+      paypal/module-braintree-reward
     </td>
     <td>modulo magento2</td>
     <td>N/D</td>
@@ -1342,7 +1412,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
       paypal/module-braintree-core
     </td>
     <td>modulo magento2</td>
-    <td>Fork dal modulo Magento Braintree 2.2.0 di Gene Commerce per PayPal.</td>
+    <td>Effettua il forking dal modulo Magento Braintree 2.2.0 di Gene Commerce per PayPal.</td>
   </tr>
   </tbody>
 </table>
