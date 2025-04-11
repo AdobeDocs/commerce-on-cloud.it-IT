@@ -1,5 +1,5 @@
 ---
-source-git-commit: 9fbcca6f545276e7afedcdb6e6061a87dd8f2dd9
+source-git-commit: 713008d26d05f05e3e39e33c0d0df766f4dbe0b0
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # strumenti ece
 
-**Versione**: 2002.2.2
+**Versione**: 2002.2.3
 
 Questo riferimento contiene 34 comandi disponibili tramite lo strumento della riga di comando `ece-tools`.
 L&#39;elenco iniziale viene generato automaticamente utilizzando il comando `ece-tools list` in Adobe Commerce sull&#39;infrastruttura cloud.
@@ -27,7 +27,7 @@ Visualizza la Guida per il comando specificato. Se non viene assegnato alcun com
 
 #### `--quiet`, `-q`
 
-Non emettere alcun messaggio
+Non inviare messaggi
 
 - Predefinito: `false`
 - Non accetta un valore
@@ -427,7 +427,7 @@ Un percorso di ripristino file specifico
 ece-tools build:generate
 ```
 
-Genera tutti i file necessari per versione fase.
+Genera tutti i file necessari per la fase di build.
 
 ### Opzioni
 
@@ -486,7 +486,7 @@ Configurazione in formato JSON
 
 ### Opzioni
 
-Per le opzioni globali, vedere [Opzioni](#global-options) globali.
+Per le opzioni globali, vedi [Opzioni globali](#global-options).
 
 
 ## `cloud:config:validate`
@@ -495,7 +495,7 @@ Per le opzioni globali, vedere [Opzioni](#global-options) globali.
 ece-tools cloud:config:validate
 ```
 
-Convalida il file di `.magento.env.yaml` configurazione
+Convalida il file di configurazione `.magento.env.yaml`
 
 ### Opzioni
 
@@ -654,7 +654,7 @@ Utilizzato per ottenere risultati in formato JSON
 ece-tools module:refresh
 ```
 
-Aggiorna la configurazione per abilitare i nuovi moduli aggiunti.
+Aggiorna la configurazione per abilitare i moduli appena aggiunti.
 
 ### Opzioni
 
@@ -719,11 +719,11 @@ Per le opzioni globali, vedi [Opzioni globali](#global-options).
 ece-tools wizard:scd-on-demand
 ```
 
-Verifica la configurazione del on-demand SCD.
+Verifica la configurazione di SCD su richiesta.
 
 ### Opzioni
 
-Per le opzioni globali, vedere [Opzioni](#global-options) globali.
+Per le opzioni globali, vedi [Opzioni globali](#global-options).
 
 
 ## `wizard:scd-on-deploy`
