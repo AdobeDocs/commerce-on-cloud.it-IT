@@ -2,9 +2,10 @@
 title: Personalizza configurazione cache
 description: Scopri come rivedere e personalizzare le impostazioni di configurazione della cache al termine della configurazione del servizio Fastly.
 feature: Cloud, Configuration, Iaas, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
+source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 
 Dopo aver configurato e testato il servizio Fastly negli ambienti di staging e produzione, rivedi e personalizza le impostazioni di configurazione della cache. Ad esempio, puoi aggiornare le impostazioni per forzare TLS a reindirizzare le richieste HTTP a Fastly, aggiornare le impostazioni di rimozione e abilitare l’autenticazione di base per proteggere il sito tramite password durante lo sviluppo.
 
-Le sezioni seguenti forniscono una panoramica e istruzioni per la configurazione di alcune impostazioni della cache. Per ulteriori informazioni sulle opzioni di configurazione disponibili, consulta la sezione Modulo CDN [Fastly nella documentazione del Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation).
+Le sezioni seguenti forniscono una panoramica e istruzioni per la configurazione di alcune impostazioni della cache. Per ulteriori informazioni sulle opzioni di configurazione disponibili, consulta la documentazione del [modulo CDN Fastly per Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation).
 
 ## Forza TLS
 
-Fastly fornisce l&#39;opzione _Force TLS_ per reindirizzare le richieste non crittografate (HTTP) a Fastly. Dopo aver eseguito il provisioning dell&#39;ambiente di staging o produzione con un [certificato SSL/TLS valido](fastly-configuration.md#provision-ssltls-certificates), puoi aggiornare la configurazione Fastly per l&#39;archivio per abilitare l&#39;opzione Force TLS. Consulta la [Guida di Force TLS](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md) in _Fastly CDN Module per la documentazione del Magento 2_.
+Fastly fornisce l&#39;opzione _Force TLS_ per reindirizzare le richieste non crittografate (HTTP) a Fastly. Dopo aver eseguito il provisioning dell&#39;ambiente di staging o produzione con un [certificato SSL/TLS valido](fastly-configuration.md#provision-ssltls-certificates), puoi aggiornare la configurazione Fastly per l&#39;archivio per abilitare l&#39;opzione Force TLS. Consulta la [Guida di Force TLS](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md) in _Fastly CDN Module per Magento 2_.
 
 >[!NOTE]
 >
@@ -30,6 +31,8 @@ La configurazione del servizio Fastly specifica un periodo di timeout predefinit
 Per completare le azioni in blocco che richiedono più di 3 minuti, modifica _Admin path timeout_ value_ per evitare errori 503.
 
 >[!NOTE]
+>
+>Se hai specificato un endpoint percorso amministratore personalizzato nel campo **Percorso amministratore personalizzato** in **Archivi** > **Configurazione** > **Avanzate** > **Amministratore** > **URL base amministratore**, dovrai impostare anche la [Variabile ADMIN_URL](../environment/variables-admin.md#change-the-admin-url) in tale ambiente sullo stesso valore. Se le impostazioni sono diverse, il timeout non funzionerà.
 >
 >Per estendere i parametri di timeout Fastly per utenti diversi dall&#39;amministratore nell&#39;interfaccia utente Fastly, vedere [Aumentare i timeout per i processi lunghi](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md).
 
@@ -218,4 +221,4 @@ Utilizzare l&#39;opzione _Modalità manutenzione_ per consentire l&#39;accesso a
 
    Dopo aver attivato la modalità di manutenzione, tutto il traffico viene bloccato, ad eccezione delle richieste provenienti dagli indirizzi IP nell&#39;ACL `maint_allowlist`. È possibile aggiornare `maint_allowlist` per modificare gli indirizzi IP nell&#39;ACL.
 
-   Per istruzioni di configurazione dettagliate, consulta la [guida alla modalità di manutenzione](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) nella rete CDN Fastly per la documentazione del modulo Magento 2.
+   Per istruzioni di configurazione dettagliate, consulta la [guida alla modalità di manutenzione](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) nella documentazione del modulo Fastly CDN per Magento 2.
