@@ -9,8 +9,8 @@ ht-degree: 0%
 
 Questo sito contiene la documentazione più recente per gli sviluppatori di Commerce on Cloud Infrastructure.
 
-- [Guida di Commerce sull&#39;infrastruttura cloud](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
-- [Introduzione a Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html) sull&#39;infrastruttura cloud
+- [Guida di Commerce sull&#39;infrastruttura cloud](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=it)
+- [Introduzione a Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=it) sull&#39;infrastruttura cloud
 
 ## Codice di condotta di Adobe Open Source
 
@@ -19,7 +19,7 @@ Consulta l&#39;articolo [Contribuzione](contributing.md).
 
 ### Modifiche minori
 
-Se stai contribuendo con aggiornamenti minori, apri l&#39;articolo e fai clic sul collegamento **Modifica**, che ti porta alla sorgente GitHub dell&#39;articolo. Utilizza l’interfaccia utente di GitHub per apportare modifiche. Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) generale.
+Se stai contribuendo con aggiornamenti minori, apri l&#39;articolo e fai clic sul collegamento **Modifica**, che ti porta alla sorgente GitHub dell&#39;articolo. Utilizza l’interfaccia utente di GitHub per apportare modifiche. Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it) generale.
 
 Le correzioni o i chiarimenti di minore entità inviati per la documentazione e gli esempi di codice in questo archivio sono coperti dalle condizioni d’uso dell’Adobe.
 
@@ -35,7 +35,7 @@ Se sei un autore tecnico, un responsabile di programma o uno sviluppatore di un 
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per apportare modifiche di base o eseguire il fork dell’archivio per apportare contributi principali.
 
-Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
 
 ## Markdown
 

@@ -18,7 +18,7 @@ Gli utenti con accesso amministrativo al progetto Adobe Commerce on Cloud Infras
 
 Durante l’installazione di Commerce, è possibile sovrascrivere le credenziali utente amministratore con le variabili ADMIN riportate nella tabella seguente.
 
-Se si desidera modificare i valori dopo l&#39;installazione, connettersi all&#39;ambiente utilizzando SSH e utilizzare il comando Adobe Commerce CLI [`admin:user`](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) per creare o modificare le credenziali utente amministratore.
+Se si desidera modificare i valori dopo l&#39;installazione, connettersi all&#39;ambiente utilizzando SSH e utilizzare il comando Adobe Commerce CLI [`admin:user`](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=it) per creare o modificare le credenziali utente amministratore.
 
 | Variabile | Predefinito | Descrizione |
 | -------------- | --------------------------- | ----------- |

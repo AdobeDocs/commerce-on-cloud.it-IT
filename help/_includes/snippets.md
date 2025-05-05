@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) nel _Centro assistenza Adobe Commerce_.
+>I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=it) nel _Centro assistenza Adobe Commerce_.
 
 ## Opzioni di unione {#merge-options}
 
@@ -38,15 +38,15 @@ Impostare l&#39;opzione `_merge` su una delle opzioni seguenti:
 
 >[!WARNING]
 >
->Alcuni **progetti Pro** richiedono un ticket di supporto per aggiornare la configurazione della route nel file `routes.yaml` e la configurazione cron nel file `.magento.app.yaml`. Adobe consiglia di aggiornare e testare i file di configurazione YAML in un ambiente di integrazione, quindi di distribuire le modifiche nell’ambiente di staging. Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e non sono presenti messaggi di errore correlati nel registro, è **NECESSARIO** [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) che descriva le modifiche di configurazione tentate. Includi nel ticket tutti i file di configurazione YAML aggiornati.
+>Alcuni **progetti Pro** richiedono un ticket di supporto per aggiornare la configurazione della route nel file `routes.yaml` e la configurazione cron nel file `.magento.app.yaml`. Adobe consiglia di aggiornare e testare i file di configurazione YAML in un ambiente di integrazione, quindi di distribuire le modifiche nell’ambiente di staging. Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e non sono presenti messaggi di errore correlati nel registro, è **NECESSARIO** [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) che descriva le modifiche di configurazione tentate. Includi nel ticket tutti i file di configurazione YAML aggiornati.
 
 ## Supporto dei servizi Pro {#pro-update-service}
 
 >[!TIP]
 >
->Per i progetti Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per installare o aggiornare [servizi](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html) solo negli ambienti `Staging` e `Production`.
+>Per i progetti Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per installare o aggiornare [servizi](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=it) solo negli ambienti `Staging` e `Production`.
 >
->Indicare le modifiche necessarie al servizio, includere i file `.magento.app.yaml` e `services.yaml` aggiornati e indicare la versione PHP nel ticket. Per le modifiche self-service alle impostazioni di versione PHP, estensioni o ambiente, vedere [Impostazioni PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html) in _Configurazione applicazione_.
+>Indicare le modifiche necessarie al servizio, includere i file `.magento.app.yaml` e `services.yaml` aggiornati e indicare la versione PHP nel ticket. Per le modifiche self-service alle impostazioni di versione PHP, estensioni o ambiente, vedere [Impostazioni PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=it) in _Configurazione applicazione_.
 >
 >Per le modifiche a un ambiente di produzione live (**Solo Pro**), è necessario un preavviso minimo di 48 ore. Questo consente al team dell’infrastruttura Cloud di disporre del tempo sufficiente per eseguire il marshalling delle risorse e eseguire un aggiornamento sicuro. Il periodo di preavviso inizia quando il team dell&#39;infrastruttura riconosce la richiesta e pianifica l&#39;aggiornamento, esclusi i fine settimana. Ad esempio, per completare gli aggiornamenti del servizio il lunedì, è necessario ricevere una conferma dell&#39;aggiornamento pianificato entro mercoledì. Durante i periodi di picco della domanda, l&#39;elaborazione della richiesta potrebbe richiedere più tempo.
 
@@ -54,9 +54,9 @@ Impostare l&#39;opzione `_merge` su una delle opzioni seguenti:
 
 >[!TIP]
 >
->Negli ambienti Pro Staging e Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per recuperare un backup specifico che rilevi la data, l&#39;ora e il fuso orario nel ticket.
+>Negli ambienti Pro Staging e Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per recuperare un backup specifico che rilevi la data, l&#39;ora e il fuso orario nel ticket.
 >
->Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html).
+>Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=it).
 
 ## Avviso di ridistribuzione {#redeploy-warning}
 
@@ -94,7 +94,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!NOTE]
 >
->[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per modificare la configurazione del servizio negli ambienti di produzione e staging di Pro.
+>[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per modificare la configurazione del servizio negli ambienti di produzione e staging di Pro.
 
 ## Modifica del servizio {#service-change-tip}
 
@@ -106,7 +106,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!TIP]
 >
->Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) nel _Centro assistenza di Commerce_.
+>Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=it) nel _Centro assistenza di Commerce_.
 
 ## Aggiornamento a ECE-Tools {#ece-tools-package}
 

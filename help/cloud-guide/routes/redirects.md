@@ -23,7 +23,7 @@ Di seguito viene illustrato come gestire le regole di reindirizzamento nei proge
 
 >[!WARNING]
 >
->Per i progetti Adobe Commerce su infrastrutture cloud, la configurazione di numerosi reindirizzamenti non regex e riscritture nel file `routes.yaml` può causare problemi di prestazioni. Se il file `routes.yaml` è di almeno 32 KB, scarica i reindirizzamenti non regex e riscrive in Fastly. Vedi [Offload dei reindirizzamenti non regex a Fastly invece di Nginx (route)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html) nel _Centro assistenza Adobe Commerce_.
+>Per i progetti Adobe Commerce su infrastrutture cloud, la configurazione di numerosi reindirizzamenti non regex e riscritture nel file `routes.yaml` può causare problemi di prestazioni. Se il file `routes.yaml` è di almeno 32 KB, scarica i reindirizzamenti non regex e riscrive in Fastly. Vedi [Offload dei reindirizzamenti non regex a Fastly invece di Nginx (route)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=it) nel _Centro assistenza Adobe Commerce_.
 
 ## Reindirizzamenti di intero percorso
 

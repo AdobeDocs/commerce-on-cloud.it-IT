@@ -15,14 +15,14 @@ Le configurazioni predefinite per l&#39;archivio sono archiviate in `config.xml`
 
 Le impostazioni dell&#39;archivio, che fanno riferimento alle configurazioni nella sezione **Archivi** > **Impostazioni** > **Configurazione** dell&#39;amministratore, vengono memorizzate nei file di configurazione della distribuzione in base al tipo di configurazione:
 
-- `app/etc/config.php`: impostazioni di configurazione per archivi, siti Web, moduli o estensioni, ottimizzazione di file statici e valori di sistema correlati alla distribuzione di contenuti statici. Vedere il riferimento a [config.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html) nella _Guida alla configurazione_.
-- `app/etc/env.php`—valori per le sostituzioni specifiche del sistema e le impostazioni sensibili che devono essere _NOT_ archiviate nel controllo del codice sorgente. Vedere il riferimento a [env.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html) nella _Guida alla configurazione_.
+- `app/etc/config.php`: impostazioni di configurazione per archivi, siti Web, moduli o estensioni, ottimizzazione di file statici e valori di sistema correlati alla distribuzione di contenuti statici. Vedere il riferimento a [config.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=it) nella _Guida alla configurazione_.
+- `app/etc/env.php`—valori per le sostituzioni specifiche del sistema e le impostazioni sensibili che devono essere _NOT_ archiviate nel controllo del codice sorgente. Vedere il riferimento a [env.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=it) nella _Guida alla configurazione_.
 
 >[!NOTE]
 >
 >Poiché l&#39;infrastruttura cloud di Adobe Commerce supporta solo le modalità di produzione e manutenzione, la sezione **Avanzate** > **Sviluppatori** non è accessibile in Amministrazione. Per completare le attività di gestione della configurazione è necessario disporre di [privilegi di amministratore dell&#39;ambiente](../project/user-access.md). È possibile configurare impostazioni aggiuntive utilizzando [variabili di ambiente](../environment/configure-env-yaml.md).
 
-La gestione della configurazione consente di implementare impostazioni di archiviazione coerenti negli ambienti con tempi di inattività minimi tramite l’implementazione della pipeline. Il progetto Adobe Commerce on cloud infrastructure include il server di compilazione, gli script di compilazione e distribuzione e gli ambienti di distribuzione progettati tenendo presente la [strategia di distribuzione della pipeline](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html).
+La gestione della configurazione consente di implementare impostazioni di archiviazione coerenti negli ambienti con tempi di inattività minimi tramite l’implementazione della pipeline. Il progetto Adobe Commerce on cloud infrastructure include il server di compilazione, gli script di compilazione e distribuzione e gli ambienti di distribuzione progettati tenendo presente la [strategia di distribuzione della pipeline](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=it).
 
 ## Schema di sostituzione configurazione
 
@@ -36,7 +36,7 @@ Per riepilogare, le variabili di ambiente sovrascrivono tutti gli altri valori.
 
 >[!TIP]
 >
->Per ulteriori informazioni sullo schema di sostituzione per la distribuzione della pipeline, vedere [Gestione della configurazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html) nella _Guida alla configurazione_.
+>Per ulteriori informazioni sullo schema di sostituzione per la distribuzione della pipeline, vedere [Gestione della configurazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=it) nella _Guida alla configurazione_.
 
 Se la stessa impostazione è configurata in più posizioni, l’applicazione si basa sulla seguente gerarchia di configurazione per determinare quale valore applicare all’ambiente:
 
@@ -69,7 +69,7 @@ I dati &quot;scaricati&quot; nel file `app/etc/config.php` diventano _bloccati_,
 
 Tutte le configurazioni sensibili vengono esportate nel file `app/etc/env.php` quando si utilizza il comando `bin/magento app:config:dump`. È possibile impostare valori sensibili utilizzando il comando CLI: `bin/magento config:sensitive:set`. Consulta [Impostazioni sensibili e specifiche dell&#39;ambiente](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/) nella _Guida delle estensioni Commerce PHP_ per scoprire come definire le impostazioni di configurazione sensibili o specifiche del sistema.
 
-Vedere un elenco di [impostazioni sensibili o specifiche del sistema](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html) nella _Guida alla configurazione_.
+Vedere un elenco di [impostazioni sensibili o specifiche del sistema](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=it) nella _Guida alla configurazione_.
 
 ### Prestazioni SCD
 

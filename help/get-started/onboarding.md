@@ -53,5 +53,5 @@ La pagina fornisce uno stato per i componenti e i servizi di Adobe Commerce segu
 <!-- link definitions -->
 
 [Vendite]: https://business.adobe.com/products/magento/get-demo.html
-[Accesso condiviso]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access
+[Accesso condiviso]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#shared-access
 [Pagina di stato]: https://status.adobe.com/products/503473

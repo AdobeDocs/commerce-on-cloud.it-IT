@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->Con la versione di `ece-tools` 2002.1.x, è disponibile un nuovo formato di [configurazione hook](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html). Il formato legacy delle versioni `ece-tools` 2002.0.x è ancora supportato. Tuttavia, è necessario eseguire l’aggiornamento al nuovo formato per utilizzare la funzione di distribuzione basata su scenari.
+>Con la versione di `ece-tools` 2002.1.x, è disponibile un nuovo formato di [configurazione hook](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=it). Il formato legacy delle versioni `ece-tools` 2002.0.x è ancora supportato. Tuttavia, è necessario eseguire l’aggiornamento al nuovo formato per utilizzare la funzione di distribuzione basata su scenari.
 
 ## Passaggi dello scenario di revisione
 

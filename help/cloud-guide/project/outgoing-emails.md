@@ -26,7 +26,7 @@ L&#39;aggiornamento del valore della proprietà `enable_smtp` da [riga di comand
 
 Utilizza l&#39;interruttore **[!UICONTROL Outgoing emails]** nella visualizzazione _Configura ambiente_ per abilitare o disabilitare il supporto e-mail.
 
-Se le e-mail in uscita devono essere disabilitate o riabilitate negli ambienti di produzione o staging di Pro, puoi inviare un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+Se le e-mail in uscita devono essere disabilitate o riabilitate negli ambienti di produzione o staging di Pro, puoi inviare un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
 
 >[!TIP]
 >

@@ -58,7 +58,7 @@ Per configurare PayPal Express Checkout:
    * **Modalità sandbox** selezionare Sì o No per indicare se le credenziali immesse sono per la sandbox. Se sono state immesse le credenziali di produzione, selezionare No.
    * **API Utilizza Proxy** selezionare Sì o No per impostare se il sistema utilizza un server proxy per stabilire una connessione tra Adobe Commerce e il sistema di pagamento PayPal. Se Sì, immettere l&#39;host e la porta proxy.
 
-1. Per informazioni dettagliate e passaggi per configurare l&#39;account, consulta [Pagamento PayPal Express](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) a partire dal passaggio 2 Completa le impostazioni richieste.
+1. Per informazioni dettagliate e passaggi per configurare l&#39;account, consulta [Pagamento PayPal Express](https://experienceleague.adobe.com/it/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) a partire dal passaggio 2 Completa le impostazioni richieste.
 
 Con l&#39;account configurato e autenticato, puoi abilitare e disabilitare le opzioni di pagamento PayPal in Impostazioni PayPal obbligatorie:
 

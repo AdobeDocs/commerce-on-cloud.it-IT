@@ -33,7 +33,7 @@ La strategia di diramazione utilizza un flusso di lavoro Git comune in cui puoi 
 
 Il tuo account supporta un numero limitato di ![rami attivi](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} (inattivi). Gestire i rami attivi e inattivi aggiungendo o eliminando un ramo utilizzando solo [!DNL Cloud Console] o Cloud CLI. Prima di eliminare un ramo, disattivalo, che rimane nell&#39;elenco _Ambienti_ come _inattivo_. Puoi riattivare il ramo in un secondo momento oppure [eliminare il ramo](../dev-tools/cloud-cli-overview.md#) nelle impostazioni dell&#39;ambiente o utilizzando Cloud CLI.
 
-Se hai bisogno di altri ambienti attivi per lo sviluppo, invia un [ticket di supporto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
+Se hai bisogno di altri ambienti attivi per lo sviluppo, invia un [ticket di supporto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket).
 
 **Per aggiungere un ramo**:
 

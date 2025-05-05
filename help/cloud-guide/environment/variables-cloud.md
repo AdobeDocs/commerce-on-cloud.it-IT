@@ -31,7 +31,7 @@ Le variabili di ambiente specifiche di Adobe Commerce sull&#39;infrastruttura cl
 
 >[!WARNING]
 >
->Per aggiungere variabili di ambiente a [sostituire le impostazioni di configurazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html) utilizzando [[!DNL Cloud Console]](../project/overview.md), è necessario anteporre al nome della variabile `env:` come nell&#39;esempio seguente:
+>Per aggiungere variabili di ambiente a [sostituire le impostazioni di configurazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=it) utilizzando [[!DNL Cloud Console]](../project/overview.md), è necessario anteporre al nome della variabile `env:` come nell&#39;esempio seguente:
 >
 >![Esempio di variabile di ambiente](../../assets/set-env-variable-ui.png)
 

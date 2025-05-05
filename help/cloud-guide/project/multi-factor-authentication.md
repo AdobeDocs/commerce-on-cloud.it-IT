@@ -18,7 +18,7 @@ Quando MFA è abilitato in un progetto, tutti gli account utente con accesso SSH
 
 >[!NOTE]
 >
->Per impostazione predefinita, l’autenticazione MFA non è abilitata nei progetti Cloud. Il proprietario dell&#39;account per il progetto di infrastruttura cloud di Adobe Commerce deve [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per abilitarlo. Quando MFA è abilitato, tutti gli utenti devono avere l’autenticazione a due fattori abilitata sul proprio account Adobe Commerce on Cloud Infrastructure per accedere SSH agli ambienti del progetto.
+>Per impostazione predefinita, l’autenticazione MFA non è abilitata nei progetti Cloud. Il proprietario dell&#39;account per il progetto di infrastruttura cloud di Adobe Commerce deve [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per abilitarlo. Quando MFA è abilitato, tutti gli utenti devono avere l’autenticazione a due fattori abilitata sul proprio account Adobe Commerce on Cloud Infrastructure per accedere SSH agli ambienti del progetto.
 
 ## Certificati per accesso SSH
 

@@ -27,7 +27,7 @@ Prima di impostare un’area di lavoro, raccogli le chiavi e l’accesso all’a
 
 - **Chiave di crittografia Adobe Commerce**
 
-  Quando si importa solo un sistema esistente, acquisire la chiave di crittografia utilizzata per proteggere l&#39;accesso e i dati per il database. Per informazioni dettagliate su questa chiave, vedere [Risoluzione dei problemi relativi alla chiave di crittografia](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)
+  Quando si importa solo un sistema esistente, acquisire la chiave di crittografia utilizzata per proteggere l&#39;accesso e i dati per il database. Per informazioni dettagliate su questa chiave, vedere [Risoluzione dei problemi relativi alla chiave di crittografia](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=it)
 
 ## Strumenti per sviluppatori
 

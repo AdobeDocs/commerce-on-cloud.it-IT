@@ -15,7 +15,7 @@ Il valore TTL della cache (time-to-live) per i file multimediali e statici è im
 
 >[!NOTE]
 >
->Prima di aggiornare l’ambiente di produzione, è importante testare le modifiche all’interno dell’ambiente di staging. [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per assistenza sull&#39;aggiornamento della configurazione in questi ambienti.
+>Prima di aggiornare l’ambiente di produzione, è importante testare le modifiche all’interno dell’ambiente di staging. [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per assistenza sull&#39;aggiornamento della configurazione in questi ambienti.
 
 1. Specificare il tempo TTL (in secondi) nella proprietà [`web`](web-property.md) del file `.magento.app.yaml`. È possibile aggiungere la chiave `expires` in `locations` o in `"/media"` e `"/static"`.
 

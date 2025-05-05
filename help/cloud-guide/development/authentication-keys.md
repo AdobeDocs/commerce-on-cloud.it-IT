@@ -14,7 +14,7 @@ ht-degree: 0%
 
 È necessario disporre di una chiave di autenticazione per accedere all’archivio di Adobe Commerce e abilitare i comandi di installazione e aggiornamento per il progetto di infrastruttura cloud Adobe Commerce. Esistono due metodi per specificare le credenziali di autorizzazione del Compositore.
 
-- **file di autenticazione**—Un file che contiene le [credenziali di autorizzazione](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html) di Adobe Commerce nella directory principale dell&#39;infrastruttura cloud di Adobe Commerce.
+- **file di autenticazione**—Un file che contiene le [credenziali di autorizzazione](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=it) di Adobe Commerce nella directory principale dell&#39;infrastruttura cloud di Adobe Commerce.
 - **variabile di ambiente**: variabile di ambiente per impostare le chiavi di autenticazione nel progetto Adobe Commerce on cloud infrastructure per evitare l&#39;esposizione accidentale.
 
 >[!BEGINSHADEBOX]

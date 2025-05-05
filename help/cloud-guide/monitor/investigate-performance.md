@@ -30,7 +30,7 @@ Tutti i dati raccolti descrivono il tempo impiegato per le azioni di trasmission
 
 >[!TIP]
 >
->Per informazioni dettagliate sull&#39;utilizzo di questi dati per la risoluzione dei problemi relativi alle prestazioni delle applicazioni, vedere [Risoluzione dei problemi relativi alle prestazioni tramite New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html) nel _Centro assistenza Adobe Commerce_.
+>Per informazioni dettagliate sull&#39;utilizzo di questi dati per la risoluzione dei problemi relativi alle prestazioni delle applicazioni, vedere [Risoluzione dei problemi relativi alle prestazioni tramite New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=it) nel _Centro assistenza Adobe Commerce_.
 
 ## Monitorare le prestazioni con avvisi gestiti
 
@@ -46,7 +46,7 @@ Adobe fornisce i _criteri di avviso gestiti per Adobe Commerce_ per tenere tracc
 | Caricamento query MariaDB | NRI | Pro |
 | Memoria Redis | NRI | Pro |
 
-Quando l’infrastruttura del sito o le condizioni dell’applicazione attivano una soglia di avviso, New Relic invia notifiche di avviso in modo da poter affrontare il problema in modo proattivo. Consulta [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) nel _Centro assistenza Adobe Commerce_ per informazioni dettagliate sulle soglie di avviso e sui passaggi di risoluzione dei problemi che hanno attivato l&#39;avviso.
+Quando l’infrastruttura del sito o le condizioni dell’applicazione attivano una soglia di avviso, New Relic invia notifiche di avviso in modo da poter affrontare il problema in modo proattivo. Consulta [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=it) nel _Centro assistenza Adobe Commerce_ per informazioni dettagliate sulle soglie di avviso e sui passaggi di risoluzione dei problemi che hanno attivato l&#39;avviso.
 
 >[!TIP]
 >
@@ -76,7 +76,7 @@ Quando l’infrastruttura del sito o le condizioni dell’applicazione attivano 
 
      >[!NOTE]
      >
-     >Se il criterio _Avvisi gestiti per Adobe Commerce_ non è disponibile, vedere [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) nel _Centro assistenza Adobe Commerce_.
+     >Se il criterio _Avvisi gestiti per Adobe Commerce_ non è disponibile, vedere [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=it) nel _Centro assistenza Adobe Commerce_.
 
 1. Fare clic sulla scheda **[!UICONTROL Alert conditions]** per esaminare le condizioni di avviso definite nel criterio.
 

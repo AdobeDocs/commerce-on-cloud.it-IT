@@ -31,7 +31,7 @@ Esempi per i domini Produzione e Staging:
 
 Per ulteriori informazioni su più domini o su domini univoci, consulta [Configurare più siti Web o store](../cloud-guide/store/multiple-sites.md) nella guida _Commerce on Cloud Infrastructure_.
 
-Se disponi di un account Fastly esistente che collega gli stessi domini APEX e secondari utilizzati sul tuo sito Adobe Commerce, consulta [Più account Fastly e domini assegnati](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}.
+Se disponi di un account Fastly esistente che collega gli stessi domini APEX e secondari utilizzati sul tuo sito Adobe Commerce, consulta [Più account Fastly e domini assegnati](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}.
 
 ## Dominio e-mail transazionale
 

@@ -27,7 +27,7 @@ Puoi configurare le impostazioni dell’applicazione, i percorsi, le azioni di b
 
 ## Aggiornamenti alla configurazione degli ambienti Pro
 
-Per gli ambienti di produzione e staging Pro di Adobe Commerce su infrastruttura cloud, puoi aggiornare molte opzioni di configurazione nell’ambiente di sviluppo locale e confermare le modifiche per applicarle a tali ambienti. È tuttavia necessario [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per aggiornare le seguenti opzioni di configurazione:
+Per gli ambienti di produzione e staging Pro di Adobe Commerce su infrastruttura cloud, puoi aggiornare molte opzioni di configurazione nell’ambiente di sviluppo locale e confermare le modifiche per applicarle a tali ambienti. È tuttavia necessario [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per aggiornare le seguenti opzioni di configurazione:
 
 - Installare o aggiornare i servizi nel file `.magento/services.yaml`.
 - Modificare la configurazione per le proprietà `mounts` e `disk` nel file `.magento.app.yaml`.

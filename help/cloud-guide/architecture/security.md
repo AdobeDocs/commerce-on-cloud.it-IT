@@ -66,9 +66,9 @@ Adobe verifica regolarmente il codice dell’applicazione principale per individ
 - OWASPZAP
 - eSqlMap
 
-La base di codice completa viene scansionata con questi strumenti su base bisettimanale. Le patch di sicurezza vengono notificate ai clienti tramite e-mail dirette, notifiche nell&#39;applicazione e nel [Centro sicurezza PC](https://helpx.adobe.com/security.html).
+La base di codice completa viene scansionata con questi strumenti su base bisettimanale. Le patch di sicurezza vengono notificate ai clienti tramite e-mail dirette, notifiche nell&#39;applicazione e nel [Centro sicurezza PC](https://helpx.adobe.com/it/security.html).
 
-I clienti devono assicurarsi che queste patch vengano applicate alla propria applicazione personalizzata entro 30 giorni dal rilascio, in conformità alle linee guida PCI. Adobe fornisce anche uno [strumento di analisi della sicurezza](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) che consente ai commercianti di monitorare regolarmente i propri siti e ricevere aggiornamenti sui rischi di sicurezza noti, il malware e l&#39;accesso non autorizzato. Lo strumento Security Scan è un servizio gratuito e può essere eseguito su qualsiasi versione di Adobe Commerce.
+I clienti devono assicurarsi che queste patch vengano applicate alla propria applicazione personalizzata entro 30 giorni dal rilascio, in conformità alle linee guida PCI. Adobe fornisce anche uno [strumento di analisi della sicurezza](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/security/security-scan) che consente ai commercianti di monitorare regolarmente i propri siti e ricevere aggiornamenti sui rischi di sicurezza noti, il malware e l&#39;accesso non autorizzato. Lo strumento Security Scan è un servizio gratuito e può essere eseguito su qualsiasi versione di Adobe Commerce.
 
 Per incoraggiare i ricercatori di sicurezza a identificare e segnalare le vulnerabilità, Adobe Commerce dispone di un [programma di bug-bounty](https://hackerone.com/magento) oltre a test interni. Inoltre, il cliente riceve il codice sorgente completo dell&#39;applicazione per la propria revisione, se desiderato.
 
@@ -108,7 +108,7 @@ Il RGPD richiede che tutte le informazioni personali identificabili (come nomi, 
 
 >[!NOTE]
 >
->Questa pagina fornisce una panoramica generale di cosa considerare per il RGPD. Per informazioni dettagliate su come Adobe Commerce archivia le informazioni personali, consulta la _[Guida alla sicurezza e alla conformità](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_. Per determinare in che modo la tua azienda deve conformarsi a qualsiasi obbligo legale, consulta il tuo consulente legale o fai riferimento al [testo ufficiale](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
+>Questa pagina fornisce una panoramica generale di cosa considerare per il RGPD. Per informazioni dettagliate su come Adobe Commerce archivia le informazioni personali, consulta la _[Guida alla sicurezza e alla conformità](https://experienceleague.adobe.com/it/docs/commerce-operations/security-and-compliance/overview)_. Per determinare in che modo la tua azienda deve conformarsi a qualsiasi obbligo legale, consulta il tuo consulente legale o fai riferimento al [testo ufficiale](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
 
 ## Backup
 

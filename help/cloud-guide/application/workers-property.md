@@ -17,7 +17,7 @@ ht-degree: 0%
 
 I processi di lavoro sono disponibili per l&#39;utilizzo solo con gli ambienti di staging e produzione Pro. Gli ambienti di integrazione Pro e Starter possono scegliere di utilizzare la variabile [CRON_CONSUMER_RUNNER](../environment/variables-deploy.md#cron_consumers_runner).
 
-Per configurare un lavoratore in Produzione o Staging, [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) e includere le seguenti informazioni:
+Per configurare un lavoratore in Produzione o Staging, [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) e includere le seguenti informazioni:
 
 - ID Progetto
 - ID ambiente

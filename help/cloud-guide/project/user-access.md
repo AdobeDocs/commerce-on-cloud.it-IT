@@ -231,7 +231,7 @@ Le istruzioni per l&#39;installazione dell&#39;applicazione di autenticazione e 
 
      >[!WARNING]
      >
-     >Se si perde l&#39;accesso a un account con TFA e non si dispone dell&#39;elenco dei codici di ripristino, è necessario contattare l&#39;amministratore del progetto o [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per reimpostare l&#39;applicazione TFA.
+     >Se si perde l&#39;accesso a un account con TFA e non si dispone dell&#39;elenco dei codici di ripristino, è necessario contattare l&#39;amministratore del progetto o [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per reimpostare l&#39;applicazione TFA.
 
 1. Dopo aver completato la configurazione TFA, fai clic su **Salva** per aggiornare l&#39;account.
 

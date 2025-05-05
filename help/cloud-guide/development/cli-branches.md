@@ -30,7 +30,7 @@ Le istruzioni seguenti utilizzano una combinazione di comandi CLI `magento-cloud
 
 **Per clonare un ambiente `master` del progetto**:
 
-1. Accedi alla tua workstation locale con un account [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html).
+1. Accedi alla tua workstation locale con un account [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=it).
 
 1. Passare alla directory _docroot_ del server Web o dell&#39;host virtuale.
 
