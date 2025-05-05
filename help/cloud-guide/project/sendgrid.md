@@ -62,7 +62,7 @@ Affinché SendGrid possa inviare e-mail transazionali per tuo conto dagli ambien
 
 >[!TIP]
 >
->Assicurarsi di configurare **[!UICONTROLSindirizzi e-mail dell&#39;archivio]** con il dominio corretto in **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. L’autenticazione del dominio viene eseguita sull’indirizzo e-mail del mittente. Se l&#39;impostazione predefinita (`example.com`) è configurata, le e-mail da `example.com` verrebbero bloccate da Sendgrid.
+>Assicurarsi di configurare **[!UICONTROL Sindirizzi e-mail dell&#39;archivio]** con il dominio corretto in **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. L’autenticazione del dominio viene eseguita sull’indirizzo e-mail del mittente. Se l&#39;impostazione predefinita (`example.com`) è configurata, le e-mail da `example.com` verrebbero bloccate da Sendgrid.
 
 **Per abilitare l&#39;autenticazione del dominio**:
 

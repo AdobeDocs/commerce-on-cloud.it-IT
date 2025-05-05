@@ -78,7 +78,7 @@ Se necessario, rivedere e aggiornare le impostazioni di configurazione I/O prede
 
    - **Ridimensiona filtro**. Lasciare l&#39;impostazione predefinita (`Lancsoz3`) o selezionare un&#39;alternativa. Questa impostazione specifica il filtro utilizzato per fornire un&#39;immagine ridimensionata. A seconda del filtro selezionato, l’immagine ridimensionata può avere un numero di pixel maggiore o minore.
 
-      - `Lanczos3` (impostazione predefinita) - Fornisce un&#39;immagine della migliore qualità. Aumenta la capacità di rilevare bordi e caratteristiche lineari all&#39;interno di un&#39;immagine e utilizza il ricampionamento _[!DNL sinc]_per fornire la migliore ricostruzione possibile.
+      - `Lanczos3` (impostazione predefinita) - Fornisce un&#39;immagine della migliore qualità. Aumenta la capacità di rilevare bordi e caratteristiche lineari all&#39;interno di un&#39;immagine e utilizza il ricampionamento _[!DNL sinc]_&#x200B;per fornire la migliore ricostruzione possibile.
       - `Lanczos2` - Utilizza lo stesso filtro di `Lancsoz3` ma con un&#39;approssimazione meno precisa della funzione di ricampionamento di _[!DNL sinc]_.
       - `Bicubic` - Ha un effetto di nitidezza naturale quando rimpicciolisce un&#39;immagine.
       - `Bilinear` - Ha un effetto di arrotondamento naturale quando si ingrandisce un&#39;immagine.

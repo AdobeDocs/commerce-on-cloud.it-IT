@@ -48,7 +48,7 @@ La pagina fornisce uno stato per i componenti e i servizi di Adobe Commerce segu
 >
 > Aprire il nuovo [!DNL Cloud Console] e visualizzare le attività di progetto e ambiente.
 >
->**Passaggio successivo**: [Accedi a Cl[!DNL ]oud Console](cloud-console.md)
+>**Passaggio successivo**: [Accedi a Cloud Console](cloud-console.md)
 
 <!-- link definitions -->
 

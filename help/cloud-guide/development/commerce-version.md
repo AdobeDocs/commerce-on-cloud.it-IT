@@ -255,7 +255,7 @@ Prima di eseguire l&#39;aggiornamento `composer.json` , verifica sempre che le d
 
 1. Utilizza SSH per accedere all’ambiente remoto.
 
-1. Crea un dump del database [](../storage/database-dump.md). Per scegliere una directory di destinazione per il dump del database, utilizzare l&#39;opzione `--dump-directory`.
+1. Crea un dump del database [&#128279;](../storage/database-dump.md). Per scegliere una directory di destinazione per il dump del database, utilizzare l&#39;opzione `--dump-directory`.
 
    ```bash
    vendor/bin/ece-tools db-dump

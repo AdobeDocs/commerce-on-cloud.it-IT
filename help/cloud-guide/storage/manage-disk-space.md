@@ -165,7 +165,7 @@ Il file `.magento/services.yaml` controlla lo spazio su disco disponibile per og
 
 1. Nell&#39;ambiente di sviluppo locale, aprire il file di configurazione `.magento/services.yaml`.
 
-1. Aggiungi o trova un servizio nel file. Per ulteriori informazioni sulla configurazione dei servizi, consulta [](../services/services-yaml.md).
+1. Aggiungi o trova un servizio nel file. Per ulteriori informazioni sulla configurazione dei servizi, consulta [&#128279;](../services/services-yaml.md).
 
 1. Impostare un nuovo valore per la proprietà del disco (in MB).
 
