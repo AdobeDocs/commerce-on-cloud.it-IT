@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Commerce su infrastruttura cloud
 
-Adobe Commerce su infrastruttura cloud fornisce una piattaforma di hosting automatizzata con un approccio **self-service** per la creazione, la distribuzione e la gestione dell&#39;applicazione [!DNL Commerce] in un ambiente nativo per il cloud. Adobe Commerce on cloud infrastructure è dotato di funzioni aggiuntive che lo distinguono dalle piattaforme locali Adobe Commerce e di Magento Open Source:
+Adobe Commerce su infrastruttura cloud fornisce una piattaforma di hosting automatizzata con un approccio **self-service** per la creazione, la distribuzione e la gestione dell&#39;applicazione [!DNL Commerce] in un ambiente nativo per il cloud. Adobe Commerce on cloud infrastructure è dotato di funzioni aggiuntive che lo distinguono dalle piattaforme Adobe Commerce e Magento Open Source on-premise:
 
 - Infrastruttura preconfigurata che include PHP, MySQL (MariaDB), Redis, [!DNL RabbitMQ] e tecnologie supportate per i motori di ricerca.
 - Flusso di lavoro basato su Git con generazione e distribuzione automatiche per uno sviluppo rapido e una distribuzione continua efficienti ogni volta che si inviano modifiche al codice in un ambiente Platform as a Service (PaaS).
@@ -23,7 +23,7 @@ Adobe Commerce su infrastruttura cloud fornisce una piattaforma di hosting autom
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulla protezione, fare riferimento all&#39;[elenco di controllo per l&#39;avvio della protezione](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Per ulteriori informazioni sulla protezione, fare riferimento all&#39;[elenco di controllo per l&#39;avvio della protezione](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Visualizza lo [stack di tecnologia](architecture/tech-stack.md) in dettaglio o scopri ulteriori informazioni sulle caratteristiche specifiche e sui prodotti supportati nell&#39;architettura [Cloud per Commerce](architecture/cloud-architecture.md).
 
@@ -60,5 +60,5 @@ La guida all’infrastruttura cloud di Commerce presuppone che tu abbia una cert
 
 - [Documentazione per gli sviluppatori di Adobe Commerce](https://developer.adobe.com/commerce/docs/) (sito Adobe Developer): sviluppo, personalizzazione, integrazione, estensione e utilizzo di funzionalità avanzate
 
-- [Documentazione di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html?lang=it) (Adobe Experience League): pianificazione, implementazione, gestione, aggiornamento e manutenzione dei [!DNL Commerce] progetti
+- [Documentazione di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League): pianificazione, implementazione, funzionamento, aggiornamento e manutenzione dei [!DNL Commerce] progetti
 
