@@ -3,10 +3,10 @@ user-guide-title: Guida di Commerce sul cloud
 user-guide-description: Scopri come gestire l’applicazione Adobe Commerce sull’infrastruttura cloud.
 product: magento
 feature: Cloud
-source-git-commit: fd7879e8f3c9e1965cf4aa3d99824e577971529d
+source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 7%
+source-wordcount: '359'
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
    + [Flusso di lavoro professionale](architecture/pro-develop-deploy-workflow.md)
    + [Architettura scalata](architecture/scaled-architecture.md)
    + [Ridimensionamento automatico](architecture/autoscaling.md)
-+ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=it)
++ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Note sulla versione {#release-notes}
    + [Suite di strumenti cloud](release-notes/cloud-tools-suite.md)
    + [Pacchetto ECE-Strumenti](release-notes/ece-tools-package.md)
@@ -46,11 +46,11 @@ ht-degree: 7%
    + [Indirizzi IP regionali](project/regional-ip-addresses.md)
 + Strumenti per sviluppatori {#dev-tools}
    + [Panoramica](dev-tools/overview.md)
-   + CLI cloud {#cloud-cli}
+   + Cloud CLI {#cloud-cli}
       + [Panoramica di CLI](dev-tools/cloud-cli-overview.md)
       + [Riferimento CLI](dev-tools/cloud-cli-reference.md)
    + [Docker cloud](dev-tools/cloud-docker.md)
-   + Strumenti ECE {#ece-tools}
+   + Utensili ECE {#ece-tools}
       + [Panoramica del pacchetto](dev-tools/package-overview.md)
       + [Aggiornamento una tantum per utilizzare gli strumenti ECE](dev-tools/install-package.md)
       + [Aggiorna pacchetto ECE-Tools](dev-tools/update-package.md)
@@ -77,7 +77,7 @@ ht-degree: 7%
       + [Procedure guidate intelligenti](deploy/smart-wizards.md)
       + [Distribuzione a staging e produzione](deploy/staging-production.md)
       + [Ripristino da guasto componente](deploy/recover-failed-deployment.md)
-   + Prova {#test}
+   + Test {#test}
       + [Linee guida per i test](test/guidance.md)
       + [Registri](test/log-locations.md)
       + [Xdebug](test/debug.md)
@@ -87,7 +87,7 @@ ht-degree: 7%
    + [Servizio PrivateLink](development/privatelink-service.md)
    + [Blocco protettivo](development/protective-block.md)
    + [Ripristina ambiente](development/restore-environment.md)
-   + Archiviazione {#storage}
+   + Storage {#storage}
       + [Gestione dello spazio su disco](storage/manage-disk-space.md)
       + [Query del database del profilo](storage/profile-database-queries.md)
       + [Eseguire il backup del database](storage/database-dump.md)
@@ -113,7 +113,7 @@ ht-degree: 7%
    + Ambiente {#env}
       + [Configurare l’implementazione dell’ambiente](environment/configure-env-yaml.md)
       + [Livelli e opzioni delle variabili](environment/variable-levels.md)
-      + Ignora variabili {#stage}
+      + Sostituisci variabili {#stage}
          + [Variabili di ambiente](environment/variables-intro.md)
          + [ADMIN](environment/variables-admin.md)
          + [Variabili cloud](environment/variables-cloud.md)
@@ -121,10 +121,10 @@ ht-degree: 7%
          + [Genera](environment/variables-build.md)
          + [Distribuisci](environment/variables-deploy.md)
          + [Post-distribuzione](environment/variables-post-deploy.md)
-      + Configura notifiche {#log}
+      + Configurare le notifiche {#log}
          + [Notifiche](environment/set-up-notifications.md)
          + [Gestori di registro](environment/log-handlers.md)
-   + Route {#routes}
+   + Percorsi {#routes}
       + [Configurare le route](routes/routes-yaml.md)
       + [Memorizzazione in cache](routes/caching.md)
       + [Reindirizzamenti](routes/redirects.md)
@@ -153,7 +153,7 @@ ht-degree: 7%
       + [INSERIRE NELL&#39;ELENCO BLOCCATI IP](cdn/fastly-vcl-blocking.md)
       + [Ignora Fastly Cache](cdn/fastly-vcl-bypass-to-origin.md)
    + [Risoluzione rapida dei problemi](cdn/fastly-troubleshooting.md)
-+ Impostazioni archivio {#configure-store}
++ Impostazioni store {#configure-store}
    + [Panoramica](store/overview.md)
    + [Best practice](store/best-practices.md)
    + [Tema personalizzato](store/custom-theme.md)
@@ -167,8 +167,9 @@ ht-degree: 7%
    + [Panoramica](launch/overview.md)
    + [Elenco di controllo di Launch](launch/checklist.md)
    + [Passaggi di avvio](launch/steps.md)
-+ Monitora sito {#monitor}
++ Monitorare il sito {#monitor}
    + [Prestazioni](monitor/performance.md)
+   + [Telemetria operativa](monitor/operational-telemetry.md)
    + servizio New Relic {#new-relic}
       + [Panoramica di New Relic](monitor/new-relic-service.md)
       + [Gestione di account e utenti](monitor/account-management.md)
