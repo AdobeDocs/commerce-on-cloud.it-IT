@@ -3,9 +3,9 @@ title: Componenti cloud per Commerce
 description: Consulta un elenco degli ultimi miglioramenti apportati al pacchetto Componenti cloud.
 recommendations: noDisplay, catalog
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,13 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v1.1.1 {#latest}
+## v1.1.2 {#latest}
 
+Data di rilascio: 03 giugno 2025
+
+- ![icona correzione](../../assets/fix.svg) **Compatibilità migliorata con le librerie di terze parti 2.4.8** aggiornate per una migliore compatibilità con 2.4.8<!-- MCLOUD-13707	 - -->
+
+## v1.1.1
 
 Data di rilascio: 6 febbraio 2025
 
@@ -55,7 +60,7 @@ Data di rilascio: 10 marzo 2023
 
 Data di rilascio: 13 settembre 2022
 
-- ![icona correzione](../../assets/fix.svg) **Errori durante il riscaldamento**—È stato risolto un problema che tentava di [riscaldamento](../environment/variables-post-deploy.md#warm_up_pages) quando la visibilità della pagina era impostata su [**Non visibile singolarmente**](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) nell&#39;amministratore, causando `ERROR: Warming up failed: <link to page>` errori nel registro di distribuzione.<!-- MCLOUD-9134 -->
+- ![icona correzione](../../assets/fix.svg) **Errori durante il riscaldamento**—È stato risolto un problema che tentava di [riscaldamento](../environment/variables-post-deploy.md#warm_up_pages) quando la visibilità della pagina era impostata su [**Non visibile singolarmente**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) nell&#39;amministratore, causando `ERROR: Warming up failed: <link to page>` errori nel registro di distribuzione.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

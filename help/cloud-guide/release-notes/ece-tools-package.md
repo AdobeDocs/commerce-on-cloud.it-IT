@@ -2,11 +2,11 @@
 title: Note sulla versione di ECE-Tools
 description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchetto ECE-Strumenti.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-27T00:00:00Z
+last-substantial-update: 2024-06-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 70664897a10a59668fad74565c04b4ad72474736
+source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
 workflow-type: tm+mt
-source-wordcount: '3166'
+source-wordcount: '3185'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,17 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v2002.2.5 {#latest}
+## v2002.2.6 {#latest}
+
+Data di rilascio: 03 giugno 2025
+
+- ![icona correzione](../../assets/fix.svg) **Compatibilità migliorata con le librerie di terze parti 2.4.8** aggiornate per una migliore compatibilità con 2.4.8<!-- MCLOUD-13707	 - -->
+
+## v2002.2.5
 
 Data di rilascio: 27 maggio 2025
 
-- ![icona correzione](../../assets/new.svg) **Compatibilità Extended Valkey**-Compatibilità Extended Valkey in Adobe Commerce.<!-- MCLOUD-13595	 - -->
+- ![nuova icona](../../assets/new.svg) **Compatibilità Extended Valkey**-Compatibilità Extended Valkey in Adobe Commerce.<!-- MCLOUD-13595	 - -->
 - ![icona correzione](../../assets/fix.svg) **Convalida RabbitMQ aggiornata**-Convalida aggiornata per RabbitMQ.<!-- MCLOUD-13589	 - -->
 - ![icona di correzione](../../assets/fix.svg) **Convalida MariaDB aggiornata**-Convalida ece-tools aggiornata per MariaDB 10.11.<!-- MCLOUD-13593	 - -->
 - ![icona di correzione](../../assets/fix.svg) **Compatibilità con Opensearch2 estesa**-Compatibilità con Opensearch2 resa compatibile con le versioni più recenti di 2.4.4.<!-- MCLOUD-13710	 - -->

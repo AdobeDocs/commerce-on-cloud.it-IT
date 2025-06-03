@@ -3,11 +3,11 @@ title: Pacchetto Docker cloud
 description: Consulta un elenco degli ultimi miglioramenti apportati al pacchetto Cloud Docker.
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-04-07T00:00:00Z
+last-substantial-update: 2025-06-03T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 5e991f974f33b35497b09c10fde36850c6279586
+source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3729'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,13 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v1.4.2 {#latest}
+## v1.4.3 {#latest}
+
+Data di rilascio: 03 giugno 2025
+
+- ![icona correzione](../../assets/fix.svg) **Compatibilità migliorata con le librerie di terze parti 2.4.8** aggiornate per una migliore compatibilità con 2.4.8<!-- MCLOUD-13707	 - -->
+
+## v1.4.2
 
 Data di rilascio: 7 aprile 2025
 
