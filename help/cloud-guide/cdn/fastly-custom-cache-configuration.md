@@ -3,9 +3,9 @@ title: Personalizza configurazione cache
 description: Scopri come rivedere e personalizzare le impostazioni di configurazione della cache al termine della configurazione del servizio Fastly.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
+source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ Per completare le azioni in blocco che richiedono più di 3 minuti, modifica _Ad
 1. Nella sezione _Fastly Configuration_, espandere **Advanced Configuration**.
 
 1. Imposta il valore **Timeout percorso amministratore** in secondi. Questo valore non può essere superiore a 10 minuti (600 secondi).
+
+>[!NOTE]
+>
+>L&#39;impostazione di configurazione **_Timeout percorso amministratore_** non controlla i valori di timeout al di fuori di Adobe Commerce, ad esempio Timeout Fastly WAF. Per regolare il valore di timeout Fastly WAF, è necessario aprire un ticket di supporto Adobe per aggiornarlo nel servizio Fastly.
 
 1. Fai clic su **Salva configurazione** nella parte superiore della pagina.
 
@@ -181,7 +185,7 @@ Per i progetti Starter e Pro è possibile utilizzare l&#39;opzione [!UICONTROL D
 
 - Per i progetti iniziali, vai all&#39;URL del progetto nella scheda [!UICONTROL Domains] in [!DNL Cloud Console] per aggiungere l&#39;URL del progetto.
 
-- Per i progetti Pro, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per aggiungere il dominio alla configurazione del progetto cloud. Il team di supporto aggiorna anche la configurazione dell’account Adobe Commerce Fastly per aggiungere il dominio.
+- Per i progetti Pro, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per aggiungere il dominio alla configurazione del progetto cloud. Il team di supporto aggiorna anche la configurazione dell’account Adobe Commerce Fastly per aggiungere il dominio.
 
 **Per gestire la configurazione Fastly Domain dall&#39;amministratore**:
 
