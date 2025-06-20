@@ -3,9 +3,9 @@ title: Gestione dei backup
 description: Scopri come creare e ripristinare manualmente un backup per il progetto di infrastruttura cloud di Adobe Commerce.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
+source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,18 @@ La funzionalità di backup/snapshot non è applicabile **not** agli ambienti di 
 
 È possibile creare un backup manuale di qualsiasi ambiente Starter attivo e dell&#39;ambiente di integrazione Pro da [!DNL Cloud Console] o creare un&#39;istantanea da Cloud CLI. Devi avere un [Ruolo amministratore](../project/user-access.md) per l&#39;ambiente.
 
+>[!NOTE]
+>
+>Puoi creare un backup del codice direttamente nei cluster Pro Production e Staging eseguendo il seguente comando nel terminale, adattandolo per tutte le cartelle/percorsi che desideri includere/escludere:
+>
+```bash
+>mkdir -p var/support
+>/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
+>```
+
 **Per creare un backup del database dell&#39;ambiente Pro**:
-Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+
+Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 **Per creare un backup di qualsiasi ambiente Starter utilizzando[!DNL Cloud Console]**:
 
@@ -140,10 +150,15 @@ I tempi di ripristino variano a seconda delle dimensioni del database:
 
 ## Ripristino di un&#39;istantanea di disaster recovery
 
-Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Codice di rollback
 
 I backup e gli snapshot non includono _not_ una copia del codice. Il codice è già archiviato nell’archivio basato su Git, pertanto puoi utilizzare i comandi basati su Git per eseguire il rollback (o il ripristino) del codice. Utilizzare ad esempio `git log --oneline` per scorrere i commit precedenti, quindi utilizzare [`git revert`](https://git-scm.com/docs/git-revert) per ripristinare il codice da un commit specifico.
 
 Inoltre, puoi scegliere di archiviare il codice in un ramo _inattivo_. Utilizza i comandi Git per creare un ramo anziché i comandi `magento-cloud`. Per informazioni sui [comandi Git](../dev-tools/cloud-cli-overview.md#git-commands), vedere l&#39;argomento CLI di Cloud.
+
+## Informazioni correlate
+
+- [Eseguire il backup del database](database-dump.md)
+- [Backup e disaster recovery](../architecture/pro-architecture.md#backup-and-disaster-recovery) per cluster Pro Production e Staging
