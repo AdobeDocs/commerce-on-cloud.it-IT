@@ -27,7 +27,7 @@ La funzionalità di backup/snapshot non è applicabile **not** agli ambienti di 
 È possibile creare un backup manuale di qualsiasi ambiente Starter attivo e dell&#39;ambiente di integrazione Pro da [!DNL Cloud Console] o creare un&#39;istantanea da Cloud CLI. Devi avere un [Ruolo amministratore](../project/user-access.md) per l&#39;ambiente.
 
 **Per creare un backup del database dell&#39;ambiente Pro**:
-Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 **Per creare un backup di qualsiasi ambiente Starter utilizzando[!DNL Cloud Console]**:
 
@@ -140,7 +140,7 @@ I tempi di ripristino variano a seconda delle dimensioni del database:
 
 ## Ripristino di un&#39;istantanea di disaster recovery
 
-Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Codice di rollback
 
