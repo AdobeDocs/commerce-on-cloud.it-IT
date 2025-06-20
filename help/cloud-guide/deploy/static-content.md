@@ -2,9 +2,10 @@
 title: Distribuzione di contenuti statici
 description: Scopri le strategie per la distribuzione di contenuti statici, come immagini, script e CSS, su Adobe Commerce nei progetti di infrastruttura cloud.
 feature: Cloud, Build, Deploy, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
+source-git-commit: 325b7584daa38ad788905a6124e6d037cf679332
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -29,15 +30,20 @@ Puoi utilizzare bundling e minimizzazione per creare contenuti JavaScript e HTML
 
 ## Scelta di una strategia di distribuzione
 
-Le strategie di distribuzione variano a seconda che si scelga di generare contenuto statico durante la fase _build_, _deploy_ o _on-demand_. Come mostrato nel grafico seguente, la generazione di contenuto statico durante la fase di distribuzione è la scelta meno ottimale. Anche con Minified HTML, ogni file di contenuto deve essere copiato nella directory `~/pub/static` montata, operazione che può richiedere molto tempo. La generazione di contenuti statici su richiesta sembra la scelta ottimale. Tuttavia, se il file di contenuto non esiste nella cache, viene generato nel momento in cui viene richiesto e questo aggiunge il tempo di caricamento all’esperienza utente. Pertanto, la generazione di contenuto statico durante la fase di build è la più ottimale.
+Le strategie di distribuzione variano a seconda che si scelga di generare contenuto statico durante la fase _build_, _deploy_ o _on-demand_. Come mostrato nel grafico seguente, la generazione di contenuto statico durante la fase di distribuzione è la scelta meno ottimale. Anche con HTML minimizzato, ogni file di contenuto deve essere copiato nella directory `~/pub/static` montata, operazione che può richiedere molto tempo. La generazione di contenuti statici su richiesta sembra la scelta ottimale. Tuttavia, se il file di contenuto non esiste nella cache, viene generato nel momento in cui viene richiesto e questo aggiunge il tempo di caricamento all’esperienza utente. Pertanto, la generazione di contenuto statico durante la fase di build è la più ottimale.
 
 ![Confronto caricamento SCD](../../assets/scd-load-times.png)
 
 ### Impostazione di SCD sulla build
 
-La generazione di contenuto statico durante la fase di build con minimified HTML rappresenta la configurazione ottimale per [**zero-downtime** implementazioni](reduce-downtime.md), noto anche come **stato ideale**. Anziché copiare i file in un&#39;unità montata, viene creato un collegamento simbolico dalla directory `./init/pub/static`.
+La generazione di contenuto statico durante la fase di build con HTML minimizzato rappresenta la configurazione ottimale per [**zero-downtime** implementazioni](reduce-downtime.md), noto anche come **stato ideale**. Anziché copiare i file in un&#39;unità montata, viene creato un collegamento simbolico dalla directory `./init/pub/static`.
 
 La generazione di contenuto statico richiede l’accesso a temi e impostazioni internazionali. Adobe Commerce memorizza i temi nel file system, che è accessibile durante la fase di build; tuttavia, Adobe Commerce memorizza le lingue nel database. Il database è _non_ disponibile durante la fase di compilazione. Per generare il contenuto statico durante la fase di compilazione, è necessario utilizzare il comando `config:dump` nel pacchetto `ece-tools` per spostare le impostazioni internazionali nel file system. Legge le impostazioni locali e le salva nel file `app/etc/config.php`.
+
+>[!NOTE]
+>Dopo aver eseguito il comando `config:dump` nel pacchetto `ece-tools`, le configurazioni scaricate nel file `config.php` [ sono bloccate (disattivate) nel dashboard di amministrazione](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). l’unico modo per aggiornare tali configurazioni nell’amministratore è eliminarle dal file localmente e ridistribuire il progetto.
+>>Inoltre, ogni volta che si aggiunge un nuovo store/gruppo di store/sito Web all&#39;istanza, è necessario ricordarsi di eseguire il comando `config:dump` per assicurarsi che il database sia sincronizzato. Puoi anche scegliere [quali configurazioni scaricare](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) nel file `config.php`.
+>>Se si elimina la configurazione del gruppo store/sito Web dal file `config.php` perché i campi sono disattivati ma non vengono eseguiti, le nuove entità che non sono state scaricate verranno eliminate dal database nella distribuzione successiva.
 
 **Per configurare il progetto in modo da generare SCD sulla build**:
 
