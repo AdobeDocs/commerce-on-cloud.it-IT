@@ -30,7 +30,7 @@ La funzionalità di backup/snapshot non è applicabile **not** agli ambienti di 
 >
 >Puoi creare un backup del codice direttamente nei cluster Pro Production e Staging eseguendo il seguente comando nel terminale, adattandolo per tutte le cartelle/percorsi che desideri includere/escludere:
 >
-```bash
+>```bash
 >mkdir -p var/support
 >/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
 >```
