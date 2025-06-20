@@ -1,9 +1,10 @@
 ---
 title: Lancio del sito
 description: Scopri come iniziare la preparazione per il lancio del sito.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
+source-git-commit: 38ac38d4edd0f317155d0d4537021a29a21d5761
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Come parte della sottoscrizione di Adobe Commerce sull’infrastruttura cloud, A
 
 >[!NOTE]
 >
->Se desideri distribuire il tuo certificato SSL di convalida estesa per la tua società invece di utilizzare il certificato Let&#39;s Encrypt, contatta il tuo CTA o [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket).
+>Se desideri distribuire il tuo certificato SSL di convalida estesa per la tua società invece di utilizzare il certificato Let&#39;s Encrypt, contatta il tuo CTA o [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
 
 ## Configurare lo strumento Security Scan
 
@@ -58,13 +59,17 @@ Come parte della sottoscrizione di Adobe Commerce sull’infrastruttura cloud, A
 >
 >Aggiungere questi indirizzi IP a un elenco Consentiti di protezione del firewall di rete per consentire allo strumento di eseguire la scansione del sito. Lo strumento invia richieste solo alle porte 80 e 443.
 
-Lo strumento di analisi della sicurezza consente di monitorare regolarmente i siti Web dei negozi e ricevere aggiornamenti per i rischi di sicurezza noti, malware e software obsoleto. Questo strumento è un servizio gratuito disponibile per tutte le implementazioni e le versioni di Adobe Commerce sull’infrastruttura cloud. Puoi accedere allo strumento tramite il tuo [account di Commerce Marketplace](https://account.magento.com/customer/account/login).
+Lo strumento di analisi della sicurezza consente di monitorare regolarmente i siti Web dei negozi e ricevere aggiornamenti per i rischi di sicurezza noti, malware e software obsoleto. Questo strumento è un servizio gratuito disponibile per tutte le implementazioni e le versioni di Adobe Commerce sull’infrastruttura cloud. Puoi accedere allo strumento tramite il tuo [account Commerce Marketplace](https://account.magento.com/customer/account/login).
 
 - Monitorare lo stato di protezione dei siti e gli aggiornamenti di protezione applicati
 
 - Ricevi aggiornamenti sulla sicurezza e notifiche specifiche per il sito
 
-Per informazioni sulla configurazione e l&#39;utilizzo dello strumento di analisi della sicurezza, consultare la [Guida utente](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/security/security-scan). In genere, si inizia a utilizzare questo strumento quando si inizia il test di accettazione utente (UAT).
+>[!NOTE]
+>
+>Adobe consiglia di utilizzare lo strumento di analisi della sicurezza rispetto ad altri strumenti di terze parti per garantire la migliore qualità del servizio durante l’analisi dei risultati.
+
+Per informazioni sulla configurazione e l&#39;utilizzo dello strumento di analisi della sicurezza, consultare la [Guida utente](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan). In genere, si inizia a utilizzare questo strumento quando si inizia il test di accettazione utente (UAT).
 
 Ogni sito digitalizzato deve essere registrato tramite la scheda Security Scan. Durante il processo di registrazione, è necessario accettare la liberatoria prima di poter iniziare la scansione. Puoi controllare sia la pianificazione che autorizzare l’utente a ricevere notifiche al termine di ogni scansione. È possibile pianificare scansioni per una data e un&#39;ora specifiche e ricorrenti oppure eseguire una scansione su richiesta in base alle esigenze.
 
@@ -79,7 +84,7 @@ Visbot/2.0 (+http://www.visvo.com/en/webmasters.jsp;bot@visvo.com)
 
 ## Analizzare il sito
 
-1. Accedi al tuo [account di Commerce Marketplace](https://account.magento.com/customer/account/login).
+1. Accedi al tuo [account Commerce Marketplace](https://account.magento.com/customer/account/login).
 
 1. Fare clic sulla scheda Analisi protezione e selezionare **Vai a Analisi protezione**.
 
