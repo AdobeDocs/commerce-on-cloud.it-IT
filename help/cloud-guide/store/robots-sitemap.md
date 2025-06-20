@@ -2,9 +2,10 @@
 title: Aggiungi mappa del sito e robot per motori di ricerca
 description: Scopri come aggiungere robot per mappe del sito e motori di ricerca ad Adobe Commerce su infrastrutture cloud.
 feature: Cloud, Configuration, Search, Site Navigation
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
+source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ A tal fine è necessario ECE-Tools versione 2002.0.12 e successive con un file `
 
 >[!NOTE]
 >
->Se il file `<domain.your.project>/robots.txt` genera un `404 error`, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per rimuovere il reindirizzamento da `/robots.txt` a `/media/robots.txt`.
+>Se il file `<domain.your.project>/robots.txt` genera un `404 error`, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per rimuovere il reindirizzamento da `/robots.txt` a `/media/robots.txt`.
 
 ## Riscrivi utilizzando lo snippet VCL Fastly
 
@@ -116,12 +117,19 @@ Nella configurazione dell&#39;amministratore `sitemap`, è necessario specificar
 
 ### Configurare l’indicizzazione per motore di ricerca
 
-Per attivare le personalizzazioni di `robots.txt` in Produzione, è necessario abilitare l&#39;opzione **Indicizzazione tramite motori di ricerca attivata per`<environment-name>`** nelle impostazioni del progetto.
+Per attivare le personalizzazioni di `robots.txt` in Produzione, devi abilitare l&#39;opzione **Indicizzazione tramite motori di ricerca attivata per`<environment-name>`** nelle impostazioni del progetto nella console cloud:
 
 ![Utilizza [!DNL Cloud Console] per gestire gli ambienti](../../assets/robots-indexing-by-search-engine.png)
+
+Puoi anche utilizzare la CLI di Magento-Cloud per aggiornare questa impostazione:
+
+```bash
+magento-cloud environment:info -p <project_id> -e production restrict_robots false
+```
 
 >[!NOTE]
 >
 >- L’indicizzazione tramite motori di ricerca può essere abilitata solo in Produzione, ma non in nessuno degli ambienti inferiori.
 >
->- Se utilizzi PWA Studio e non riesci ad accedere al file `robots.txt` configurato, aggiungi `robots.txt` al [Inserisco nell&#39;elenco Consentiti di dei nomi anteriori](https://github.com/magento/magento2-upward-connector#front-name-allowlist) in **Archivi** > Configurazione > **Generale** > **Web** > Configurazione PWA superiori.
+>- Se utilizzi PWA Studio e non riesci ad accedere al file `robots.txt` configurato, aggiungi `robots.txt` al [Inserisco nell&#39;elenco Consentiti di dei nomi anteriori](https://github.com/magento/magento2-upward-connector#front-name-allowlist) in **Archivi** > Configurazione > **Generale** > **Web** > Configurazione PWA (UPWARD).
+
