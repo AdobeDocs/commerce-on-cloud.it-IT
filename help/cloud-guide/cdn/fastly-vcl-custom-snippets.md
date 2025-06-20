@@ -2,9 +2,10 @@
 title: Introduzione ai frammenti VCL personalizzati
 description: Scopri come utilizzare i frammenti di codice del linguaggio di controllo della vernice per personalizzare la configurazione del servizio Fastly per Adobe Commerce.
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
+source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2037'
 ht-degree: 0%
 
 ---
@@ -316,3 +317,16 @@ Questi esempi di richieste API utilizzano variabili di ambiente esportate per fo
 - **Sostituisci i valori nel [codice VCL Fastly predefinito](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   Creare uno snippet con valori aggiornati e assegnare una priorità di `100`.
+
+## Snippet che non possono essere visualizzati/modificati in Commerce Admin
+
+Non è possibile visualizzare o modificare alcuni snippet direttamente in Commerce Admin. Ad esempio, [snippet dinamici](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets). Nella sezione Snippet VCL personalizzati non verranno visualizzati i frammenti aggiunti dal team di supporto cloud direttamente al [dashboard di gestione Fastly](fastly.md#fastly-service-account-and-credentials).
+
+
+**Per osservare i frammenti aggiunti dal team del supporto cloud:**
+
+1. Vai alla sezione **Strumenti**.
+
+1. Fai clic su **Elenca tutte le versioni** accanto a _Cronologia versioni_.
+
+1. Fate clic sull&#39;icona dell&#39;occhio accanto alla versione VCL applicabile per visualizzare i frammenti esistenti.
