@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+source-git-commit: adcdcb663db466953f085f365a38de8301840ba4
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 0%
@@ -7,17 +7,17 @@ ht-degree: 0%
 ---
 # Snippet cloud
 
-## Avvertenza Elasticsearch {#elasticsearch-support}
+## Avvertenza di Elasticsearch {#elasticsearch-support}
 
 >[!WARNING]
 >
->Elasticsearch 7.11 e versioni successive non è supportato per Adobe Commerce sull’infrastruttura cloud. Le versioni di Adobe Commerce 2.3.7-p3, 2.4.3-p2 e 2.4.4 e successive supportano il servizio OpenSearch. Gli impianti locali continuano a sostenere l&#39;Elasticsearch.
+>Elasticsearch 7.11 e versioni successive non è supportato per Adobe Commerce sull’infrastruttura cloud. Le versioni di Adobe Commerce 2.3.7-p3, 2.4.3-p2 e 2.4.4 e successive supportano il servizio OpenSearch. Le installazioni on-premise continuano a supportare Elasticsearch.
 
 ## Integrazione avanzata {#enhanced-integration-envs}
 
 >[!NOTE]
 >
->I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=it) nel _Centro assistenza Adobe Commerce_.
+>I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) nel _Centro assistenza Adobe Commerce_.
 
 ## Opzioni di unione {#merge-options}
 
@@ -38,25 +38,27 @@ Impostare l&#39;opzione `_merge` su una delle opzioni seguenti:
 
 >[!WARNING]
 >
->Alcuni **progetti Pro** richiedono un ticket di supporto per aggiornare la configurazione della route nel file `routes.yaml` e la configurazione cron nel file `.magento.app.yaml`. Adobe consiglia di aggiornare e testare i file di configurazione YAML in un ambiente di integrazione, quindi di distribuire le modifiche nell’ambiente di staging. Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e non sono presenti messaggi di errore correlati nel registro, è **NECESSARIO** [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) che descriva le modifiche di configurazione tentate. Includi nel ticket tutti i file di configurazione YAML aggiornati.
+>Alcuni **progetti Pro** richiedono un ticket di supporto per aggiornare la configurazione della route nel file `routes.yaml` e la configurazione cron nel file `.magento.app.yaml`. Adobe consiglia di aggiornare e testare i file di configurazione YAML in un ambiente di integrazione, quindi di distribuire le modifiche nell’ambiente di staging. Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e non sono presenti messaggi di errore correlati nel registro, è **NECESSARIO** [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) che descriva le modifiche di configurazione tentate. Includi nel ticket tutti i file di configurazione YAML aggiornati.
 
 ## Supporto dei servizi Pro {#pro-update-service}
 
->[!TIP]
->
->Per i progetti Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per installare o aggiornare [servizi](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=it) solo negli ambienti `Staging` e `Production`.
->
->Indicare le modifiche necessarie al servizio, includere i file `.magento.app.yaml` e `services.yaml` aggiornati e indicare la versione PHP nel ticket. Per le modifiche self-service alle impostazioni di versione PHP, estensioni o ambiente, vedere [Impostazioni PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=it) in _Configurazione applicazione_.
->
->Per le modifiche a un ambiente di produzione live (**Solo Pro**), è necessario un preavviso minimo di 48 ore. Questo consente al team dell’infrastruttura Cloud di disporre del tempo sufficiente per eseguire il marshalling delle risorse e eseguire un aggiornamento sicuro. Il periodo di preavviso inizia quando il team dell&#39;infrastruttura riconosce la richiesta e pianifica l&#39;aggiornamento, esclusi i fine settimana. Ad esempio, per completare gli aggiornamenti del servizio il lunedì, è necessario ricevere una conferma dell&#39;aggiornamento pianificato entro mercoledì. Durante i periodi di picco della domanda, l&#39;elaborazione della richiesta potrebbe richiedere più tempo.
+>[!BEGINSHADEBOX]
+
+- Per i progetti Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per installare o aggiornare [servizi](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html) solo negli ambienti `Staging` e `Production`.
+
+- Indicare le modifiche necessarie al servizio, includere i file `.magento.app.yaml` e `services.yaml` aggiornati e indicare la versione PHP nel ticket. Per le modifiche self-service alle impostazioni di versione PHP, estensioni o ambiente, vedere [Impostazioni PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html) in _Configurazione applicazione_.
+
+- Per le modifiche a un ambiente di produzione live (**Solo Pro**), è necessario un preavviso minimo di 48 ore. Questo consente al team dell’infrastruttura Cloud di disporre del tempo sufficiente per eseguire il marshalling delle risorse e eseguire un aggiornamento sicuro. Il periodo di preavviso inizia quando il team dell&#39;infrastruttura riconosce la richiesta e pianifica l&#39;aggiornamento, esclusi i fine settimana. Ad esempio, per completare gli aggiornamenti del servizio il lunedì, è necessario ricevere una conferma dell&#39;aggiornamento pianificato entro mercoledì. Durante i periodi di picco della domanda, l&#39;elaborazione della richiesta potrebbe richiedere più tempo.
+
+>[!ENDSHADEBOX]
 
 ## Backup Pro {#pro-backups}
 
 >[!TIP]
 >
->Negli ambienti Pro Staging e Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per recuperare un backup specifico che rilevi la data, l&#39;ora e il fuso orario nel ticket.
+>Negli ambienti Pro Staging e Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per recuperare un backup specifico che rilevi la data, l&#39;ora e il fuso orario nel ticket.
 >
->Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=it).
+>Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html).
 
 ## Avviso di ridistribuzione {#redeploy-warning}
 
@@ -94,7 +96,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!NOTE]
 >
->[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per modificare la configurazione del servizio negli ambienti di produzione e staging di Pro.
+>[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per modificare la configurazione del servizio negli ambienti di produzione e staging di Pro.
 
 ## Modifica del servizio {#service-change-tip}
 
@@ -106,7 +108,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!TIP]
 >
->Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=it) nel _Centro assistenza di Commerce_.
+>Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) nel _Centro assistenza di Commerce_.
 
 ## Aggiornamento a ECE-Tools {#ece-tools-package}
 
@@ -114,7 +116,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 >
 >Se utilizzi una versione di Adobe Commerce sull&#39;infrastruttura cloud che non contiene il pacchetto `ece-tools`, devi eseguire un [aggiornamento una tantum](/help/cloud-guide/dev-tools/install-package.md) al progetto cloud per rimuovere i pacchetti obsoleti. Se si utilizza il pacchetto `ece-tools` e si desidera aggiornarlo, vedere [Aggiornare il pacchetto ECE-Tools](/help/cloud-guide/dev-tools/update-package.md).
 
-## Suggerimento per l'aggiornamento {#upgrade-tip}
+## Suggerimento per l&#39;aggiornamento {#upgrade-tip}
 
 >[!TIP]
 >
@@ -126,10 +128,10 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 1. [Accedi](/help/get-started/onboarding.md#access-your-admin-panel) all&#39;amministratore.
 
-## Automatizzare l'implementazione di snippet VCL personalizzato {#automate-vcl-snippet-deployment}
+## Automatizzare l&#39;implementazione di snippet VCL personalizzato {#automate-vcl-snippet-deployment}
 
 >[!NOTE]
 >
->Anziché caricare manualmente snippet VCL personalizzati, è possibile aggiungere snippet alla directory `$MAGENTO_CLOUD_APP_DIR/var/vcl_snippets_custom` nell&#39;ambiente. I frammenti in questa directory vengono caricati automaticamente quando si fa clic su _carica VCL in Fastly_ in Commerce Admin. Consulta [Distribuzione automatizzata di snippet VCL personalizzati](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md#automated-custom-vcl-snippets-deployment) nel modulo Fastly CDN per la documentazione del Magento 2.
+>Anziché caricare manualmente snippet VCL personalizzati, è possibile aggiungere snippet alla directory `$MAGENTO_CLOUD_APP_DIR/var/vcl_snippets_custom` nell&#39;ambiente. I frammenti in questa directory vengono caricati automaticamente quando si fa clic su _carica VCL in Fastly_ in Commerce Admin. Consulta [Distribuzione automatizzata di snippet VCL personalizzati](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md#automated-custom-vcl-snippets-deployment) nel modulo Fastly CDN per la documentazione di Magento 2.
 
 <!-- Fastly-related snippets end -->
