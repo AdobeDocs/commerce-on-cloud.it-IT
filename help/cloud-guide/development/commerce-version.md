@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Aggiorna versione Commerce
 
-Puoi aggiornare la base di codice di Adobe Commerce a una versione più recente. Prima di aggiornare il progetto, controllare i [requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella _Guida all&#39;installazione_ per i requisiti della versione più recente del software.
+Puoi aggiornare la base di codice di Adobe Commerce a una versione più recente. Prima di aggiornare il progetto, controllare i [requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella _Guida all&#39;installazione_ per i requisiti della versione più recente del software.
 
 A seconda della configurazione del progetto, le attività di aggiornamento possono includere quanto segue:
 
@@ -128,7 +128,7 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. Se utilizzi B2B, aggiorna il file `composer.json` con la [versione supportata](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions) per Commerce.
+1. Se utilizzi B2B, aggiorna il file `composer.json` con la [versione supportata](https://experienceleague.adobe.com/it/docs/commerce-operations/release/product-availability#adobe-authored-extensions) per Commerce.
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -142,15 +142,15 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
 
 1. Esaminare le patch attualmente applicate:
 
-   - Se nella directory `m2-hotfixes` sono installate patch, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) e collabora con il supporto Adobe Commerce per verificare quali patch possono ancora essere applicate alla nuova versione. Rimuovere le patch non applicabili dalla directory `m2-hotfixes`.
+   - Se nella directory `m2-hotfixes` sono installate patch, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) e collabora con il supporto Adobe Commerce per verificare quali patch possono ancora essere applicate alla nuova versione. Rimuovere le patch non applicabili dalla directory `m2-hotfixes`.
 
    - Se nel file [ sono state applicate ]patch di qualità`.magento.env.yaml`, verificare se è ancora possibile applicarle alla nuova versione. Rimuovere le patch non applicabili dalla sezione `QUALITY_PATCHES` del file `.magento.env.yaml`.
 
-   **Metodo 1**: [Verificare le versioni applicabili nelle note sulla versione delle patch di qualità](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **Metodo 1**: [Verificare le versioni applicabili nelle note sulla versione delle patch di qualità](https://experienceleague.adobe.com/it/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **Metodo 2**: [Visualizzare le patch e lo stato disponibili](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **Metodo 2**: [Visualizzare le patch e lo stato disponibili](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **Metodo 3**: [Cerca patch](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
+   **Metodo 3**: [Cerca patch](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=it)
 
 
 1. Aggiungi, conferma e invia modifiche al codice.
