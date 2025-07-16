@@ -2,18 +2,23 @@
 title: Installazione senza downtime
 description: Scopri come ridurre i tempi di inattività complessivi durante l’implementazione di Adobe Commerce su progetti di infrastruttura cloud.
 feature: Cloud, Deploy, SCD, Themes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
+source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # Installazione senza downtime
 
-Adobe Commerce su infrastruttura cloud esegue l&#39;applicazione in modalità [_manutenzione_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=it#production-mode) durante la fase di distribuzione, che porta il sito offline fino al completamento della distribuzione. Il periodo di tempo in cui il sito di produzione è in modalità di manutenzione dipende dalle dimensioni del sito, dal numero di modifiche applicate durante la distribuzione e dalla configurazione per la distribuzione di contenuto statico. È possibile configurare il progetto in modo che venga distribuito con un effetto di downtime **zero**.
+Adobe Commerce su infrastruttura cloud esegue l&#39;applicazione in modalità [_manutenzione_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode) durante la fase di distribuzione, che porta il sito offline fino al completamento della distribuzione. Il periodo di tempo in cui il sito di produzione è in modalità di manutenzione dipende dalle dimensioni del sito, dal numero di modifiche applicate durante la distribuzione e dalla configurazione per la distribuzione di contenuto statico. È possibile configurare il progetto in modo che venga distribuito con un effetto di downtime **zero**.
 
 Durante il processo di distribuzione, tutte le connessioni si accodano per un massimo di 5 minuti mantenendo tutte le sessioni attive e le azioni in sospeso, ad esempio l’aggiunta al carrello o l’estrazione. Dopo la distribuzione, la coda viene rilasciata e le connessioni continuano senza interruzioni. Per utilizzare questo _blocco della connessione_ a tuo vantaggio e ridurre la distribuzione a _zero_ tempi di inattività, devi configurare il progetto per utilizzare la strategia di distribuzione più efficiente.
+
+>[!NOTE]
+>
+>Per verificare se il progetto Cloud è configurato in modo ottimale per ridurre al minimo i tempi di inattività della distribuzione, utilizzare la [Creazione guidata avanzata](smart-wizards.md). La Smart Wizard controlla la configurazione corrente e ti guida attraverso le regolazioni di configurazione consigliate per abilitare le best practice per le distribuzioni senza tempi di inattività.
 
 Utilizza i seguenti passaggi per ridurre il tempo necessario allo store per distribuire un aggiornamento in produzione:
 
@@ -25,7 +30,7 @@ Il tuo progetto di infrastruttura cloud Adobe Commerce deve disporre del pacchet
    >Anche se è consigliabile utilizzare il pacchetto `ece-tools` più recente, il metodo di distribuzione senza interruzione delle attività funziona con `ece-tools` [versione 2002.0.13](../release-notes/cloud-release-archive.md#v2002013) e successive.
 
 1. [Configura distribuzione contenuto statico](static-content.md)
-Se la distribuzione del contenuto statico non riesce nella fase di distribuzione, il sito si blocca in modalità di manutenzione. Quando si verifica un errore durante la fase di build, il processo evita i tempi di inattività perché non inizia mai la fase di distribuzione. [La generazione di contenuto statico durante la fase di compilazione con HTML minimizzato](static-content.md#setting-the-scd-on-build), noto anche come stato ideale, rappresenta la configurazione ottimale per le distribuzioni senza tempi di inattività e _impedisce_ tempi di inattività in caso di errore.
+Se la distribuzione del contenuto statico non riesce nella fase di distribuzione, il sito si blocca in modalità di manutenzione. Quando si verifica un errore durante la fase di build, il processo evita i tempi di inattività perché non inizia mai la fase di distribuzione. [La generazione di contenuto statico durante la fase di compilazione con HTML](static-content.md#setting-the-scd-on-build) minimizzato, noto anche come stato ideale, rappresenta la configurazione ottimale per le distribuzioni senza tempi di inattività e _impedisce_ tempi di inattività in caso di errore.
 
 1. [Configurare l&#39;hook post-distribuzione](../application/hooks-property.md)
 Devi configurare l’hook post-distribuzione per pulire e riscaldare la cache. Per impostazione predefinita, la pulizia della cache si verifica durante la fase di distribuzione quando il sito è inattivo. Se si sposta la cache nella fase di post-distribuzione, la cache rimane attiva fino al completamento della fase di distribuzione, quindi è possibile pulire la cache in modo sicuro.
