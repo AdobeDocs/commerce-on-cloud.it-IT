@@ -3,11 +3,11 @@ title: Pacchetto Docker cloud
 description: Consulta un elenco degli ultimi miglioramenti apportati al pacchetto Cloud Docker.
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-06-03T00:00:00Z
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '3729'
+source-wordcount: '3775'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,17 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v1.4.3 {#latest}
+## v1.4.4 {#latest}
+
+Data di rilascio: 07 agosto 2025
+
+- ![icona correzione](../../assets/fix.svg) **PHP 8.4**—Aggiunti test PHP 8.4.<!-- MCLOUD-13311 -->
+- ![icona correzione](../../assets/fix.svg) **Estensione FTP**-Aggiunta correzione per l&#39;estensione FTP.<!-- MCLOUD-13843 -->
+- ![nuova icona](../../assets/new.svg) **Immagine Opensearch3**—Aggiunto supporto di Opensearch3.<!-- MCLOUD-13766 -->
+- ![nuova icona](../../assets/new.svg) **Test di Opensearch3**—Aggiunti test PHP 8.4 per Opensearch3.<!-- MCLOUD-13768 -->
+- ![nuova icona](../../assets/new.svg) **Valkey**—Aggiunto supporto per Valkey.<!-- MCLOUD-13558 -->
+
+## v1.4.3
 
 Data di rilascio: 03 giugno 2025
 
@@ -163,7 +173,7 @@ Data di rilascio: 20 aprile 2021
 - ![nuova icona](../../assets/new.svg) **Generazione automatica dei certificati NGINX**—Rimossi i certificati esistenti dall&#39;immagine NGINX. I certificati NGINX vengono ora generati automaticamente con ogni nuova distribuzione per migliorare la sicurezza.<!--MCLOUD-7396-->
 - ![icona correzione](../../assets/fix.svg) **Abilitato`opcache.validate_timestamps`**. Impostazione PHP `opcache.validate_timestamps` abilitata per impostazione predefinita in modalità sviluppatore. L&#39;abilitazione di questa impostazione ha risolto il problema che impediva il riconoscimento delle modifiche al file system nel Docker.<!--MCLOUD-7466-->
 - ![icona correzione](../../assets/fix.svg) **Correzione di`build:custom:compose`**. Il comando `build:custom:compose` è stato corretto in modo da generare un errore quando i file non possono essere sovrascritti durante il processo di compilazione. La generazione di un errore impedisce le situazioni in cui `docker-compose up` potrebbe utilizzare i file errati.<!--MCLOUD-7457-->
-- ![icona correzione](../../assets/fix.svg) **Correzione dell&#39;opzione `--sync_engine="native"`**—È stato risolto il problema che impediva all&#39;opzione `--sync_engine="native"` in modalità di produzione (`--mode="production"`) di creare voci per cartelle locali nel file `docker.composer.yml`.<!--MCLOUD-7254-->
+- ![icona correzione](../../assets/fix.svg) **Correzione dell&#39;opzione `--sync_engine="native"`**—È stato risolto il problema che impediva all&#39;opzione `--mode="production"` in modalità di produzione (`--sync_engine="native"`) di creare voci per cartelle locali nel file `docker.composer.yml`.<!--MCLOUD-7254-->
 - ![icona correzione](../../assets/fix.svg) **Sono stati corretti gli errori di convalida della versione del servizio**. Sono state aggiunte versioni del servizio per [!DNL RabbitMQ], Elasticsearch e altri servizi alla proprietà `type` nella variabile `MAGENTO_CLOUD_RELATIONSHIP`. L&#39;aggiunta di queste versioni alla variabile `relationships` ha corretto gli errori di convalida che si verificavano durante la fase di distribuzione.<!--MCLOUD-7572-->
 
 ## v1.2.1

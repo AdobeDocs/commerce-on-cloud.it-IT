@@ -2,10 +2,11 @@
 title: Componenti cloud per Commerce
 description: Consulta un elenco degli ultimi miglioramenti apportati al pacchetto Componenti cloud.
 recommendations: noDisplay, catalog
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,13 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v1.1.2 {#latest}
+## v1.1.3 {#latest}
+
+Data di rilascio: 07 agosto 2025
+
+- ![nuova icona](../../assets/new.svg) **PHP 8.4**—Aggiunto test funzionale per PHP 8.4 e correzioni.<!-- MCLOUD-13313 -->
+
+## v1.1.2
 
 Data di rilascio: 03 giugno 2025
 
@@ -60,7 +67,7 @@ Data di rilascio: 10 marzo 2023
 
 Data di rilascio: 13 settembre 2022
 
-- ![icona correzione](../../assets/fix.svg) **Errori durante il riscaldamento**—È stato risolto un problema che tentava di [riscaldamento](../environment/variables-post-deploy.md#warm_up_pages) quando la visibilità della pagina era impostata su [**Non visibile singolarmente**](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) nell&#39;amministratore, causando `ERROR: Warming up failed: <link to page>` errori nel registro di distribuzione.<!-- MCLOUD-9134 -->
+- ![icona correzione](../../assets/fix.svg) **Errori durante il riscaldamento**—È stato risolto un problema che tentava di [riscaldamento](../environment/variables-post-deploy.md#warm_up_pages) quando la visibilità della pagina era impostata su [**Non visibile singolarmente**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) nell&#39;amministratore, causando `ERROR: Warming up failed: <link to page>` errori nel registro di distribuzione.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 
