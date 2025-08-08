@@ -1,13 +1,13 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 69b764a03e6c272498e57645dca40d29c4e79626
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '934'
 ht-degree: 3%
 
 ---
 # strumenti ece
 
-**Versione**: 2002.2.5
+**Versione**: 2002.2.7
 
 Questo riferimento contiene 34 comandi disponibili tramite lo strumento della riga di comando `ece-tools`.
 L&#39;elenco iniziale viene generato automaticamente utilizzando il comando `ece-tools list` in Adobe Commerce sull&#39;infrastruttura cloud.
@@ -25,9 +25,16 @@ Visualizza la Guida per il comando specificato. Se non viene assegnato alcun com
 - Predefinito: `false`
 - Non accetta un valore
 
-#### `--quiet`, `-q`
+#### `--silent`
 
 Non inviare messaggi
+
+- Predefinito: `false`
+- Non accetta un valore
+
+#### `--quiet`, `-q`
+
+Vengono visualizzati solo gli errori. Tutti gli altri output vengono soppressi
 
 - Predefinito: `false`
 - Non accetta un valore
@@ -56,7 +63,6 @@ Forza (o disattiva — senza ansi) output ANSI
 
 Ignora l&#39;opzione &quot;—ansi&quot;
 
-- Predefinito: `false`
 - Non accetta un valore
 
 #### `--no-interaction`, `-n`
@@ -401,7 +407,7 @@ Per le opzioni globali, vedi [Opzioni globali](#global-options).
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-Ripristinare i file di configurazione importanti. Esegui backup:elenco per visualizzare l&#39;elenco dei file di backup.
+Ripristinare i file di configurazione importanti. Esegui backup:list per visualizzare l&#39;elenco dei file di backup.
 
 ### Opzioni
 
