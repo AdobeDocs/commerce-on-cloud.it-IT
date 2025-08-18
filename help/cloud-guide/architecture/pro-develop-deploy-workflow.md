@@ -3,9 +3,9 @@ title: Flusso di lavoro di un progetto professionale
 description: Scopri come utilizzare i flussi di lavoro di sviluppo e distribuzione Pro.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
+source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,20 @@ Il progetto Pro include un singolo archivio Git con un ramo `master` globale e t
 
 ![Elenco ambienti Pro](../../assets/pro-environments.png)
 
-Questi ambienti sono `read-only` e accettano le modifiche del codice distribuito dai rami inviati dall&#39;area di lavoro locale. Per una panoramica completa degli ambienti Pro, consulta [Architettura Pro](pro-architecture.md). Per una panoramica dell&#39;elenco degli ambienti Pro nella visualizzazione del progetto, vedere [[!DNL Cloud Console]](../project/overview.md#cloud-console).
+Questi ambienti sono `read-only` e accettano le modifiche del codice distribuito dai rami inviate solo dall&#39;area di lavoro locale.
 
 L’immagine seguente illustra il flusso di lavoro di sviluppo e distribuzione di Pro, che utilizza un approccio semplice e con ramificazioni Git. [sviluppa](#development-workflow) codice utilizzando un ramo attivo basato sull&#39;ambiente `integration`, _invia_ e _richiama_ modifiche al codice da e verso il ramo attivo remoto. Distribuisci il codice verificato _unendo_ il ramo remoto al ramo base, che attiva un processo [build e distribuzione](#deployment-workflow) automatizzato per tale ambiente.
 
 ![Visualizzazione di alto livello del flusso di lavoro di sviluppo dell&#39;architettura Pro](../../assets/pro-dev-workflow.png)
+
+Poiché l’ambiente è di sola lettura, non è possibile apportare modifiche al codice direttamente nell’ambiente Cloud. Se si tenta di eseguire `composer install` per installare qualsiasi modulo, verrà visualizzato un errore, ad esempio:
+
+```bash
+file_put_contents(...): Failed to open stream: Read-only file system  
+The disk hosting /app/<cluster_ID> is full
+```
+
+Per ulteriori informazioni, vedere [Architettura Pro](pro-architecture.md) per una panoramica degli ambienti Pro e [[!DNL Cloud Console]](../project/overview.md#cloud-console) per una panoramica dell&#39;elenco degli ambienti Pro nella visualizzazione del progetto.
 
 ## Flusso di lavoro di sviluppo
 
