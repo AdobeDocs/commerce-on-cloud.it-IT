@@ -2,7 +2,8 @@
 title: Blocca spam di riferimento
 description: Blocca lo spam di riferimento dal sito utilizzando il dizionario Fastly Edge e uno snippet VCL personalizzato.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 0%
@@ -79,7 +80,7 @@ Prima di creare uno snippet basato su questo esempio, esaminare i valori per det
 
 - `dynamic` — Il valore 0 indica un [frammento normale](https://docs.fastly.com/en/guides/using-regular-vcl-snippets) da caricare nella VCL con versione per la configurazione Fastly.
 
-- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per eseguire questo codice snippet prima che a uno qualsiasi dei snippet VCL di Magento predefiniti (`magentomodule_*`) sia assegnata una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
+- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per eseguire questo codice snippet prima che a uno qualsiasi dei snippet VCL predefiniti di Magento (`magentomodule_*`) sia assegnata una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
 
 - `type` — specifica un percorso in cui inserire lo snippet nella versione VCL. In questo esempio, lo snippet VCL è uno snippet `recv`. Quando il frammento viene inserito nella versione VCL, viene aggiunto alla subroutine `vcl_recv`, sotto il codice VCL Fastly predefinito e sopra qualsiasi oggetto.
 
@@ -135,3 +136,5 @@ Convalida in breve la versione VCL aggiornata durante il processo di caricamento
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

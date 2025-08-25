@@ -2,7 +2,8 @@
 title: VCL personalizzato per consentire le richieste
 description: Filtra le richieste in arrivo e consenti l’accesso per indirizzo IP ai siti Adobe Commerce tramite un elenco ACL Fastly Edge e uno snippet VCL personalizzato.
 feature: Cloud, Configuration, Security
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '848'
 ht-degree: 0%
@@ -74,11 +75,11 @@ Il seguente codice snippet VCL personalizzato (formato JSON) mostra la logica pe
 }
 ```
 
-Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=it#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
+Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
 
 - `name` — Nome dello snippet VCL. Per questo esempio, `allowlist`.
 
-- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per l&#39;esecuzione immediata e verificare se le richieste dell&#39;amministratore provengono da un indirizzo IP consentito. Il frammento viene eseguito prima che a uno dei frammenti VCL di Magento predefiniti (`magentomodule_*`) sia assegnata una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
+- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per l&#39;esecuzione immediata e verificare se le richieste dell&#39;amministratore provengono da un indirizzo IP consentito. Il frammento viene eseguito prima di qualsiasi altro frammento predefinito di Magento VCL (`magentomodule_*`) a cui è stata assegnata una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
 
 - `type` — Specifica una posizione in cui inserire lo snippet nel codice VCL con versione. Questo VCL è un tipo di snippet `recv` che aggiunge il codice del snippet alla subroutine `vcl_recv` sotto il codice VCL Fastly predefinito e sopra qualsiasi oggetto.
 
@@ -90,7 +91,7 @@ Nell&#39;esempio di codice, la condizione `!req.http.Fastly-FF` è importante qu
 
 Dopo aver esaminato e aggiornato il codice per l’ambiente, utilizza uno dei metodi seguenti per aggiungere lo snippet VCL personalizzato alla configurazione del servizio Fastly:
 
-- [Aggiungi lo snippet VCL personalizzato dall&#39;amministratore](#add-the-custom-vcl-snippet). Questo metodo è consigliato se puoi accedere all’Admin. (Richiede il modulo CDN [Fastly per il Magento 2 versione 1.2.58](fastly-configuration.md#upgrade) o successiva.)
+- [Aggiungi lo snippet VCL personalizzato dall&#39;amministratore](#add-the-custom-vcl-snippet). Questo metodo è consigliato se puoi accedere all’Admin. (Richiede [Fastly CDN Module per Magento 2 versione 1.2.58](fastly-configuration.md#upgrade) o successiva.)
 
 - Salva l&#39;esempio di codice JSON in un file (ad esempio, `allowlist.json`) e [caricalo utilizzando l&#39;API Fastly](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api). Utilizza questo metodo se non riesci ad accedere all’Admin.
 
@@ -129,3 +130,5 @@ Convalida infine la versione aggiornata del codice VCL durante il processo di ca
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

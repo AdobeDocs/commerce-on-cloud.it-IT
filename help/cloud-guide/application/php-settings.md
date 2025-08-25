@@ -3,7 +3,7 @@ title: Impostazioni PHP
 description: Scopri le impostazioni PHP ottimali per la configurazione delle applicazioni Commerce nell’infrastruttura cloud.
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Impostazioni PHP
 
-Puoi scegliere quale [versione di PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) eseguire nel file `.magento.app.yaml`:
+Puoi scegliere quale [versione di PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) eseguire nel file `.magento.app.yaml`:
 
 ```yaml
 name: mymagento
@@ -63,7 +63,7 @@ Queste impostazioni consentono ai processi PHP di memorizzare nella cache i perc
 
 >[!NOTE]
 >
->Per un elenco delle impostazioni di configurazione PHP consigliate, vedere [Impostazioni PHP richieste](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=it) nella _Guida all&#39;installazione_.
+>Per un elenco delle impostazioni di configurazione PHP consigliate, vedere [Impostazioni PHP richieste](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html) nella _Guida all&#39;installazione_.
 
 ### Controllare le impostazioni PHP personalizzate
 
@@ -118,7 +118,7 @@ La tabella seguente mostra le estensioni PHP supportate durante la distribuzione
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-I requisiti del modulo PHP sono legati alla versione Adobe Commerce. Consulta [Requisiti PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=it).
+I requisiti del modulo PHP sono legati alla versione Adobe Commerce. Consulta [Requisiti PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html).
 
 ### Supporto per le estensioni
 
@@ -136,8 +136,10 @@ sourceguardian.restrict_unencoded = "1"
 
 Consulta la [sezione 3.5 della documentazione di SourceGuardian](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _Collegamento a un PDF_.
 
-[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per assistenza sull&#39;installazione di queste estensioni PHP in tutti gli ambienti di produzione e di staging Pro. Includi il file `.magento/services.yaml` aggiornato, il file `.magento.app.yaml` con la versione PHP aggiornata ed eventuali estensioni PHP aggiuntive. Per le modifiche a un ambiente di produzione live, devi fornire un preavviso minimo di 48 ore. L’aggiornamento del progetto da parte del team di infrastruttura Cloud può richiedere fino a 48 ore.
+[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per assistenza sull&#39;installazione di queste estensioni PHP in tutti gli ambienti di produzione e di staging Pro. Includi il file `.magento/services.yaml` aggiornato, il file `.magento.app.yaml` con la versione PHP aggiornata ed eventuali estensioni PHP aggiuntive. Per le modifiche a un ambiente di produzione live, devi fornire un preavviso minimo di 48 ore. L’aggiornamento del progetto da parte del team di infrastruttura Cloud può richiedere fino a 48 ore.
 
 >[!WARNING]
 >
 >PHP compilato con debug non supportato. Il probe potrebbe essere in conflitto con [!DNL XDebug] o [!DNL XHProf]. Disattiva queste estensioni quando abiliti il Probe. Il probe è in conflitto con alcune estensioni PHP come [!DNL Pinba] o IonCube.
+
+<!-- Last updated from includes: 2025-04-14 09:39:27 -->
