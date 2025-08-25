@@ -75,7 +75,7 @@ Il seguente codice snippet VCL personalizzato (formato JSON) mostra la logica pe
 }
 ```
 
-Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
+Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=it#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
 
 - `name` — Nome dello snippet VCL. Per questo esempio, `allowlist`.
 
