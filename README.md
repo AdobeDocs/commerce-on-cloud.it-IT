@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 Questo sito contiene la documentazione più recente per gli sviluppatori di Commerce on Cloud Infrastructure.
 
-- [Guida di Commerce sull&#39;infrastruttura cloud](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview)
-- [Introduzione a Commerce](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
+- [Guida di Commerce sull&#39;infrastruttura cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [Introduzione a Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
 
 ## Codice di condotta di Adobe Open Source
 
@@ -18,7 +18,7 @@ Questo progetto ha adottato il [Codice di condotta di Adobe Open Source](code-of
 
 ## Informazioni sui contributi ai contenuti di Adobe
 
-Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
+Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 Il modo in cui contribuisci dipende da chi sei e dal tipo di modifiche con cui desideri contribuire:
 
@@ -40,7 +40,7 @@ Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del te
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per apportare modifiche di base o eseguire il fork dell’archivio per apportare contributi principali.
 
-Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
+Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 ## Come utilizzare markdown per formattare l’argomento
 
@@ -70,7 +70,7 @@ In generale, la maggior parte degli autori deve solo aggiungere una versione all
 >**NOTA:**
 >
 >- La generazione di contenuti basati su modelli richiede l’utilizzo della riga di comando in un terminale.
->- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version] (_jekyll/.ruby-version) per la versione richiesta.
+>- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version](_jekyll/.ruby-version) per la versione richiesta.
 
 Per una descrizione della struttura di file per il contenuto con modelli, consulta:
 
@@ -131,3 +131,31 @@ Per aggiornare il contenuto basato su modelli:
    ```
 
 Per ulteriori informazioni su [File di dati](https://jekyllrb.com/docs/datafiles), [Filtri liquidi](https://jekyllrb.com/docs/liquid/filters/) e altre funzionalità, vedere la documentazione di Jekyll.
+
+## Hook di pre-commit per l’ottimizzazione delle immagini
+
+Questo archivio include hook di pre-commit automatizzati che ottimizzano le immagini prima del commit. **Tutti i collaboratori devono abilitare questi hook** per garantire un&#39;ottimizzazione delle immagini coerente e dimensioni ridotte dell&#39;archivio.
+
+### Configurazione rapida
+
+Dopo aver clonato l’archivio, esegui:
+
+```bash
+.githooks/setup-hooks.sh
+```
+
+### Funzionamento degli hook
+
+- Rileva automaticamente i file immagine di staging (PNG, JPG, JPEG, GIF, SVG)
+- Esegui `image_optim` per comprimere e ottimizzare le immagini
+- Riposiziona automaticamente nell&#39;area intermedia le immagini ottimizzate
+- Assicurati che tutte le immagini salvate siano ottimizzate correttamente
+
+### Vantaggi
+
+- Dimensioni ridotte dell’archivio
+- Caricamenti di pagina più rapidi per la documentazione
+- Qualità delle immagini coerente per tutti i collaboratori
+- Non è richiesta alcuna ottimizzazione manuale
+
+Per istruzioni dettagliate sulla configurazione, la risoluzione dei problemi e la configurazione, vedere [`.githooks/README.md`](.githooks/README.md).
