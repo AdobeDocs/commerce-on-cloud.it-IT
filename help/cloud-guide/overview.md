@@ -2,7 +2,7 @@
 title: Commerce su infrastruttura cloud
 description: Informazioni sulla creazione, distribuzione e gestione dell’infrastruttura cloud per Commerce.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 10818a862fbba14bdfb3de1e6107d745104e4791
+source-git-commit: b3b020dd4a0f76c60be3eae1c93f97e82adcacab
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 3%
@@ -23,7 +23,7 @@ Adobe Commerce su infrastruttura cloud fornisce una piattaforma di hosting autom
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulla protezione, fare riferimento all&#39;[elenco di controllo per l&#39;avvio della protezione](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Per ulteriori informazioni sulla protezione, fare riferimento all&#39;[elenco di controllo per l&#39;avvio della protezione](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Visualizza lo [stack di tecnologia](architecture/tech-stack.md) in dettaglio o scopri ulteriori informazioni sulle caratteristiche specifiche e sui prodotti supportati nell&#39;architettura [Cloud per Commerce](architecture/cloud-architecture.md).
 
@@ -60,5 +60,6 @@ La guida all’infrastruttura cloud di Commerce presuppone che tu abbia una cert
 
 - [Documentazione per gli sviluppatori di Adobe Commerce](https://developer.adobe.com/commerce/docs/) (sito Adobe Developer): sviluppo, personalizzazione, integrazione, estensione e utilizzo di funzionalità avanzate
 
-- [Documentazione di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html?lang=it) (Adobe Experience League): pianificazione, implementazione, funzionamento, aggiornamento e manutenzione dei [!DNL Commerce] progetti
+- [Documentazione di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League): pianificazione, implementazione, funzionamento, aggiornamento e manutenzione dei [!DNL Commerce] progetti
 
+{{$include /help/_includes/templated/whats-new.md}}
