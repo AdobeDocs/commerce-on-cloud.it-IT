@@ -2,9 +2,10 @@
 title: Progetto infrastruttura cloud
 description: Leggi una panoramica su Adobe Commerce nell'infrastruttura cloud [!DNL Cloud Console] e scopri come accedere alle impostazioni dell'account.
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8eed04c7-6469-45a4-aa89-dc594c977264
+source-git-commit: 00b1b6578c226a304697963d17ba349ea17da260
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ Adobe fornisce un [!DNL Cloud Console] e strumenti per sviluppatori per gestire 
 
 ## [!DNL Cloud Console]
 
-[!DNL Cloud Console] fornisce metodi interattivi per generare, gestire e distribuire il codice Commerce in un formato semplice da usare. [Accedi a [!DNL Cloud Console]](https://console.adobecommerce.com) per visualizzare l&#39;elenco dei progetti. Puoi visualizzare solo i progetti per i quali disponi delle autorizzazioni di accesso come amministratore o per tipi di ambiente specifici. I partner Adobe Solutions possono visualizzare più progetti per i clienti supportati.
+[!DNL Cloud Console] fornisce metodi interattivi per generare, gestire e distribuire il codice Commerce in un formato semplice da usare. [Accedi a [!DNL Cloud Console]](https://console.adobecommerce.com) per visualizzare l&#39;elenco dei progetti. Puoi visualizzare solo i progetti per i quali disponi delle autorizzazioni di accesso come amministratore o per tipi di ambiente specifici. I partner delle soluzioni Adobe possono visualizzare più progetti per i clienti supportati.
 
 >[!TIP]
 >
@@ -42,7 +43,7 @@ Se non è selezionato alcun ambiente, nella panoramica del progetto viene visual
 
 E nella panoramica del progetto principale:
 
-- La vista Ambienti mostra una vista a elenco o struttura di ![rami attivi](../../assets/icon-active.png){width="32"} (active) and ![inactive branch](../../assets/icon-inactive.png){width="32"} (inattivi).
+- La vista Ambienti mostra una vista elenco o struttura di ![rami attivi](../../assets/icon-active.png){width="32"} (attivi) e ![rami inattivi](../../assets/icon-inactive.png){width="32"} (inattivi).
 - [Il flusso di attività](activity-stream.md) mostra le attività in esecuzione, in sospeso e recenti per il progetto.
 <!-- - Apps & Services—Shows a topology of service containers -->
 
@@ -140,7 +141,7 @@ Fare clic su **[!UICONTROL Environments]** e selezionare un ambiente specifico d
 
 >[!WARNING]
 >
->**DO NOT** utilizza il metodo di controllo degli accessi HTTP per proteggere gli ambienti di staging e produzione Pro. Questo interrompe il caching rapido. Utilizza invece la funzionalità [Blocco](../cdn/fastly-vcl-blocking.md) disponibile nella rete CDN Fastly per Adobe Commerce.
+>**DO NOT** utilizza il metodo di controllo degli accessi HTTP per proteggere gli ambienti di staging e produzione Pro. Questo interrompe il caching rapido. Utilizza invece la funzionalità [Blocco](../cdn/fastly-vcl-blocking.md) disponibile nella rete CDN Fastly affinché Adobe Commerce blocchi l&#39;accesso o implementa il controllo degli accessi utilizzando [Autenticazione Fastly Basic](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md).
 
 ## Credenziali Fastly e New Relic
 
