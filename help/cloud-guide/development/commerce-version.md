@@ -96,7 +96,7 @@ Per aggiornare il file `composer.json` per Adobe Commerce versione 2.4.4 e succe
 
 1. Utilizza SSH per accedere all’ambiente remoto.
 
-1. Crea un dump del database [](../storage/database-dump.md). Per scegliere una directory di destinazione per il dump del database, utilizzare l&#39;opzione `--dump-directory`.
+1. Crea un dump del database [&#128279;](../storage/database-dump.md). Per scegliere una directory di destinazione per il dump del database, utilizzare l&#39;opzione `--dump-directory`.
 
    ```bash
    vendor/bin/ece-tools db-dump
@@ -112,7 +112,7 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
 
 1. Sulla workstation locale, passa alla directory del progetto.
 
-1. Impostare il vincolo di versione [](overview.md#cloud-metapackage) per la versione di aggiornamento di destinazione. Questo passaggio è necessario solo se la versione di destinazione non rientra nel vincolo esistente.
+1. Impostare il vincolo di versione [&#128279;](overview.md#cloud-metapackage) per la versione di aggiornamento di destinazione. Questo passaggio è necessario solo se la versione di destinazione non rientra nel vincolo esistente.
 
    ```bash
    composer require-commerce "magento/magento-cloud-metapackage":">=CURRENT_VERSION <NEXT_VERSION" --no-update
