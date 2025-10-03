@@ -3,20 +3,20 @@ title: Aggiorna versione Commerce
 description: Scopri come aggiornare la versione di Adobe Commerce nell’ambiente dell’infrastruttura cloud.
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
-source-git-commit: 7f9aac358effdf200b59678098e6a1635612301b
+source-git-commit: fe1da39c1d00d74d3f116423e06d11cefd3c2659
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # Aggiorna versione Commerce
 
-Puoi aggiornare la base di codice di Adobe Commerce a una versione più recente. Prima di aggiornare l&#39;ambiente, controllare i [requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella _Guida all&#39;installazione_ per i requisiti della versione più recente del software.
+Puoi aggiornare la base di codice di Adobe Commerce a una versione più recente. Prima di aggiornare l&#39;ambiente, controllare i [requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella _Guida all&#39;installazione_ per i requisiti della versione più recente del software.
 
 A seconda del tipo di ambiente (Sviluppo, Staging o Produzione), le attività di aggiornamento possono includere quanto segue:
 
-- Aggiornare il file `.magento/services.yaml` con le nuove versioni di MariaDB (MySQL), OpenSearch, RabbitMQ e Redis per verificarne la compatibilità con le nuove versioni di Adobe Commerce.
+- Aggiornare il file `.magento/services.yaml` con le nuove versioni di MariaDB (MySQL), OpenSearch, RabbitMQ e Redis per verificarne la compatibilità con le nuove versioni di Adobe Commerce. Per i progetti Pro, è necessario inviare un ticket di supporto Adobe Commerce per installare o aggiornare i servizi negli ambienti di staging e produzione.
 - Aggiornare il file `.magento.app.yaml` con le nuove impostazioni per hook e variabili di ambiente.
 - Aggiorna le estensioni di terze parti alla versione più recente supportata.
 
@@ -96,7 +96,7 @@ Per aggiornare il file `composer.json` per Adobe Commerce versione 2.4.4 e succe
 
 1. Utilizza SSH per accedere all’ambiente remoto.
 
-1. Crea un dump del database [&#128279;](../storage/database-dump.md). Per scegliere una directory di destinazione per il dump del database, utilizzare l&#39;opzione `--dump-directory`.
+1. Crea un dump del database [](../storage/database-dump.md). Per scegliere una directory di destinazione per il dump del database, utilizzare l&#39;opzione `--dump-directory`.
 
    ```bash
    vendor/bin/ece-tools db-dump
@@ -112,7 +112,7 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
 
 1. Sulla workstation locale, passa alla directory del progetto.
 
-1. Impostare il vincolo di versione [&#128279;](overview.md#cloud-metapackage) per la versione di aggiornamento di destinazione. Questo passaggio è necessario solo se la versione di destinazione non rientra nel vincolo esistente.
+1. Impostare il vincolo di versione [](overview.md#cloud-metapackage) per la versione di aggiornamento di destinazione. Questo passaggio è necessario solo se la versione di destinazione non rientra nel vincolo esistente.
 
    ```bash
    composer require-commerce "magento/magento-cloud-metapackage":">=CURRENT_VERSION <NEXT_VERSION" --no-update
@@ -128,7 +128,7 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. Se utilizzi B2B, aggiorna il file `composer.json` con la [versione supportata](https://experienceleague.adobe.com/it/docs/commerce-operations/release/product-availability#adobe-authored-extensions) per Commerce.
+1. Se utilizzi B2B, aggiorna il file `composer.json` con la [versione supportata](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions) per Commerce.
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -142,15 +142,15 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
 
 1. Esaminare le patch attualmente applicate:
 
-   - Se nella directory `m2-hotfixes` sono installate patch, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) e collabora con il supporto Adobe Commerce per verificare quali patch possono ancora essere applicate alla nuova versione. Rimuovere le patch non applicabili dalla directory `m2-hotfixes`.
+   - Se nella directory `m2-hotfixes` sono installate patch, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) e collabora con il supporto Adobe Commerce per verificare quali patch possono ancora essere applicate alla nuova versione. Rimuovere le patch non applicabili dalla directory `m2-hotfixes`.
 
    - Se nel file [ sono state applicate ]patch di qualità`.magento.env.yaml`, verificare se è ancora possibile applicarle alla nuova versione. Rimuovere le patch non applicabili dalla sezione `QUALITY_PATCHES` del file `.magento.env.yaml`.
 
-   **Metodo 1**: [Verificare le versioni applicabili nelle note sulla versione delle patch di qualità](https://experienceleague.adobe.com/it/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **Metodo 1**: [Verificare le versioni applicabili nelle note sulla versione delle patch di qualità](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **Metodo 2**: [Visualizzare le patch e lo stato disponibili](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **Metodo 2**: [Visualizzare le patch e lo stato disponibili](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **Metodo 3**: [Cerca patch](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=it)
+   **Metodo 3**: [Cerca patch](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. Aggiungi, conferma e invia modifiche al codice.
