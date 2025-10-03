@@ -2,7 +2,8 @@
 title: Risoluzione rapida dei problemi
 description: Scopri come risolvere e gestire i problemi relativi al modulo e ai servizi Fastly CDN per Adobe Commerce.
 feature: Cloud, Configuration, Cache, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 69954ef9-9ece-411e-934e-814a56542290
+source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Risoluzione rapida dei problemi
 
-Utilizza le seguenti informazioni per risolvere i problemi e gestire il modulo Fastly CDN per il Magento 2 nell’ambiente di progetto Adobe Commerce on Cloud Infrastructure. Ad esempio, puoi analizzare i valori delle intestazioni di risposta e il comportamento di caching per risolvere i problemi di servizio e prestazioni Fastly.
+Utilizza le seguenti informazioni per risolvere e gestire i problemi relativi al modulo Fastly CDN per Magento 2 nell’ambiente di progetto Adobe Commerce on Cloud Infrastructure. Ad esempio, puoi analizzare i valori delle intestazioni di risposta e il comportamento di caching per risolvere i problemi di servizio e prestazioni Fastly.
 
 Negli ambienti di produzione e staging di Pro è possibile utilizzare [registri di New Relic](../monitor/log-management.md) per visualizzare e analizzare dati di registro Fastly CDN e WAF per risolvere errori e problemi di prestazioni.
 
@@ -39,11 +40,11 @@ Utilizza il seguente elenco per identificare e risolvere i problemi relativi all
 
 - **Il menu Store non viene visualizzato o non funziona**. È possibile che si stia utilizzando un collegamento o un collegamento temporaneo direttamente al server di origine anziché l&#39;URL del sito attivo oppure che si sia utilizzato `-H "host:URL"` in un comando [cURL](#check-live-site-through-fastly). Se salti Fastly al server di origine, il menu principale non funziona e vengono visualizzate intestazioni non corrette che consentono il caching sul lato browser.
 
-- **La navigazione superiore non funziona**. La navigazione superiore si basa sull&#39;elaborazione ESI (Edge Side Includes) abilitata quando si caricano i frammenti VCL Fastly del Magento predefinito. Se la navigazione non funziona, [carica Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly) e ricontrolla il sito.
+- **La navigazione superiore non funziona**. La navigazione superiore si basa sull&#39;elaborazione ESI (Edge Side Includes) abilitata quando si caricano i frammenti VCL Fastly di Magento predefiniti. Se la navigazione non funziona, [carica Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly) e ricontrolla il sito.
 
-- **Geolocalizzazione/GeoIP non funziona**. I frammenti VCL Fastly Magento predefiniti aggiungono il codice del paese all&#39;URL. Se il codice del paese non funziona, [carica il file VCL](fastly-configuration.md#upload-vcl-to-fastly) Fastly e controlla nuovamente il sito.
+- **Geolocalizzazione/GeoIP non funziona**. Gli snippet Magento Fastly VCL predefiniti aggiungono il codice del paese all&#39;URL. Se il codice del paese non funziona, [carica il file VCL](fastly-configuration.md#upload-vcl-to-fastly) Fastly e controlla nuovamente il sito.
 
-- **Le pagine non sono memorizzate in cache**. Per impostazione predefinita, Fastly non memorizza in cache le pagine con l&#39;intestazione `Set-Cookies`. Adobe Commerce imposta i cookie anche su pagine memorizzabili in cache (TTL > 0). Il Magento predefinito Fastly VCL elimina tali cookie dalle pagine memorizzabili in cache. Se le pagine non vengono memorizzate in cache, [carica Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly) e ricontrolla il sito.
+- **Le pagine non sono memorizzate in cache**. Per impostazione predefinita, Fastly non memorizza in cache le pagine con l&#39;intestazione `Set-Cookies`. Adobe Commerce imposta i cookie anche su pagine memorizzabili in cache (TTL > 0). Il file Magento Fastly VCL predefinito elimina tali cookie dalle pagine memorizzabili in cache. Se le pagine non vengono memorizzate in cache, [carica Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly) e ricontrolla il sito.
 
   Questo problema può verificarsi anche se un blocco di pagina in un modello è contrassegnato come non memorizzabile in cache. In tal caso, il problema è probabilmente causato da un modulo o da un’estensione di terze parti che blocca o rimuove le intestazioni di Adobe Commerce. Per risolvere il problema, vedere [X-Cache contiene solo messaggi non recapitati, nessun HIT](#x-cache-contains-only-miss-no-hit).
 
@@ -153,7 +154,7 @@ Le richieste API Fastly vengono trasmesse tramite l’estensione Fastly per otte
 1. Nella risposta, verifica le [intestazioni](#check-cache-hit-and-miss-response-headers) per assicurarti che Fastly funzioni. Dovresti visualizzare le seguenti intestazioni univoche nella risposta:
 
    ```http
-   < Fastly-Magento-VCL-Uploaded: yes
+   < Fastly-Magento-VCL-Uploaded: 1.2.222
    < X-Cache: HIT, MISS
    ```
 
@@ -175,7 +176,7 @@ Verifica che la risposta restituita contenga le seguenti informazioni:
 
 - Include l&#39;intestazione `X-Magento-Tags`
 
-- Il valore dell&#39;intestazione `Fastly-Module-Enabled` è `Yes` o il numero di versione del modulo Fastly per CDN Magento 2 installato nell&#39;ambiente del progetto
+- Il valore dell&#39;intestazione `Fastly-Module-Enabled` è `Yes` o il numero di versione del modulo Fastly for CDN Magento 2 installato nell&#39;ambiente del progetto
 
 - [Cache-Control: max-age](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) è maggiore di 0
 
@@ -236,7 +237,7 @@ php bin/magento module:status Fastly_Cdn
 
 In base allo stato restituito, utilizza le istruzioni seguenti per aggiornare la configurazione Fastly.
 
-- `Module does not exist` - Se il modulo non esiste [installare e configurare](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md) il modulo CDN Fastly per il Magento 2 in un ramo di integrazione. Al termine dell’installazione, abilita e configura il modulo. Vedi [Configura Fastly](fastly-configuration.md).
+- `Module does not exist` - Se il modulo non esiste [installare e configurare](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md) il modulo CDN Fastly per Magento 2 in un ramo di integrazione. Al termine dell’installazione, abilita e configura il modulo. Vedi [Configura Fastly](fastly-configuration.md).
 
 - `Module is disabled` - Se il modulo Fastly è disabilitato, aggiornare la configurazione dell&#39;ambiente in un ramo `integration` nell&#39;ambiente locale per abilitarlo. Quindi, invia le modifiche a Staging e Produzione. Consulta [Gestione estensioni](../store/extensions.md#install-an-extension).
 
