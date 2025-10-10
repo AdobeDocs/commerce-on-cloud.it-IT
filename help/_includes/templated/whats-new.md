@@ -23,7 +23,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.8.</p>
+      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.8.</p>
 </td>
       <td>
         Tecnico
@@ -45,7 +45,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">riferimento CLI</a> dopo la versione Cloud CLI v1.47.0.</p>
+      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">riferimento CLI</a> dopo la versione Cloud CLI v1.47.0.</p>
 </td>
       <td>
         Tecnico
@@ -67,7 +67,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Sono stati chiariti i sistemi operativi supportati per lo strumento CLI <code class="language-plaintext highlighter-rouge">magento-cloud</code> <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installazione</a>.</p>
+      <td><p>Sono stati chiariti i sistemi operativi supportati per lo strumento CLI <code class="language-plaintext highlighter-rouge">magento-cloud</code> <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installazione</a>.</p>
 </td>
       <td>
         Feedback
@@ -89,7 +89,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Sono state aggiunte <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">note sulla versione</a> per il pacchetto Cloud Patches v1.1.11.</p>
+      <td><p>Sono state aggiunte <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">note sulla versione</a> per il pacchetto Cloud Patches v1.1.11.</p>
 </td>
       <td>
         Aggiornamento principale
