@@ -1,21 +1,26 @@
 ---
-title: Configura servizio RabbitMQ
+title: Configurazione del servizio RabbitMQ
 description: Scopri come abilitare il servizio RabbitMQ per gestire le code di messaggi per Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
+source-git-commit: 2df119f1c09b92e45ae30544e5c2ee0e0d21834c
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
 
 # Configura il servizio [!DNL RabbitMQ]
 
-[MQF](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=it) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
+[MQF](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
 
 MQF utilizza [RabbitMQ](https://www.rabbitmq.com/) come broker di messaggistica, che fornisce una piattaforma scalabile per l&#39;invio e la ricezione di messaggi. Include inoltre un meccanismo per l’archiviazione dei messaggi non consegnati. [!DNL RabbitMQ] è basato sulla specifica AMQP 0.9.1.
 
->[!WARNING]
+>[!NOTE]
+>
+>Adobe Commerce su infrastruttura cloud supporta anche [ActiveMQ Artemis](activemq.md) come servizio di coda messaggi alternativo tramite il protocollo STOMP.
+
+>[!IMPORTANT]
 >
 >Se preferisci utilizzare un servizio basato su AMQP esistente, come [!DNL RabbitMQ], invece di affidarti ad Adobe Commerce sull&#39;infrastruttura cloud per crearlo, utilizza la variabile di ambiente [`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration) per connetterlo al tuo sito.
 
@@ -56,7 +61,7 @@ MQF utilizza [RabbitMQ](https://www.rabbitmq.com/) come broker di messaggistica,
 
 {{service-change-tip}}
 
-## Connetti a RabbitMQ per il debug
+## Connessione a RabbitMQ per il debug
 
 A scopo di debug, è utile connettersi direttamente a un’istanza del servizio in uno dei seguenti modi:
 
@@ -72,7 +77,7 @@ A scopo di debug, è utile connettersi direttamente a un’istanza del servizio 
    magento-cloud login
    ```
 
-1. Controlla l’ambiente con RabbitMQ installato e configurato.
+1. Consulta l’ambiente con RabbitMQ installato e configurato.
 
    ```bash
    magento-cloud environment:checkout <environment-id>
@@ -96,7 +101,7 @@ A scopo di debug, è utile connettersi direttamente a un’istanza del servizio 
    php -r 'print_r(json_decode(base64_decode($_ENV["MAGENTO_CLOUD_RELATIONSHIPS"])));'
    ```
 
-   Nella risposta, trova le informazioni di RabbitMQ, ad esempio:
+   Nella risposta, trova le informazioni RabbitMQ, ad esempio:
 
    ```json
    {
@@ -113,13 +118,13 @@ A scopo di debug, è utile connettersi direttamente a un’istanza del servizio 
    }
    ```
 
-1. Abilita l&#39;inoltro porta locale a RabbitMQ (se il progetto si trova in un&#39;area diversa, ad esempio Stati Uniti-3, UE-5 o AP-3, sostituire ``us-3``/``eu-5``/``ap-3`` con ``us``)
+1. Abilita l&#39;inoltro porta locale a RabbitMQ (se il progetto si trova in un&#39;area diversa, ad esempio l&#39;area US-3, EU-5 o AP-3, sostituire ``us-3``/``eu-5``/``ap-3`` con ``us``)
 
    ```bash
    ssh -L <port-number>:rabbitmq.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-   Un esempio per accedere all&#39;interfaccia Web di gestione di RabbitMQ in `http://localhost:15672` è:
+   Un esempio per accedere all&#39;interfaccia Web di gestione RabbitMQ in `http://localhost:15672` è:
 
    ```bash
    ssh -L 15672:rabbitmq.internal:15672 <project-ID>-<branch-ID>@ssh.us.magentosite.cloud

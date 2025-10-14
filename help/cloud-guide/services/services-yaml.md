@@ -2,9 +2,10 @@
 title: Configurare i servizi
 description: Scopri come configurare i servizi utilizzati da Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -31,13 +32,14 @@ La modifica della configurazione di un servizio determina il provisioning dell�
 
 L’infrastruttura cloud supporta e distribuisce i seguenti servizi:
 
+- [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
-È possibile visualizzare le versioni e i valori del disco predefiniti nel [file `services.yaml` predefinito](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) corrente. L&#39;esempio seguente mostra i servizi `mysql`, `redis`, `opensearch` o `elasticsearch` e `rabbitmq` definiti nel file di configurazione `services.yaml`:
+È possibile visualizzare le versioni e i valori del disco predefiniti nel [file `services.yaml` predefinito](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) corrente. L&#39;esempio seguente mostra i servizi `mysql`, `redis`, `opensearch` o `elasticsearch`, `rabbitmq` e `activemq-artemis` definiti nel file di configurazione `services.yaml`:
 
 ```yaml
 mysql:
@@ -53,6 +55,10 @@ opensearch:
 
 rabbitmq:
     type: rabbitmq:3.9
+    disk: 1024
+
+activemq-artemis:
+    type: activemq-artemis:2.42
     disk: 1024
 ```
 
@@ -92,7 +98,7 @@ redis2:
 La ridenominazione di un servizio nel file `services.yaml` **rimuove definitivamente** quanto segue:
 
 - Il servizio esistente prima di creare un servizio con il nuovo nome specificato.
-- Tutti i dati esistenti per il servizio vengono rimossi. Adobe consiglia di [eseguire il backup dell&#39;ambiente Starter](../storage/snapshots.md) prima di modificare il nome di un servizio esistente.
+- Tutti i dati esistenti per il servizio vengono rimossi. Adobe consiglia vivamente di [eseguire il backup dell&#39;ambiente Starter](../storage/snapshots.md) prima di modificare il nome di un servizio esistente.
 
 ### `type`
 
@@ -171,7 +177,7 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
 
 ## Versioni del servizio
 
-Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e di Magento Open Source.
+Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
 
 ### Controlli di fine del ciclo di vita del software
 
@@ -180,7 +186,7 @@ Durante il processo di distribuzione, il pacchetto `ece-tools` controlla le vers
 - Se la versione di un servizio rientra nei tre mesi successivi alla data di fine del ciclo di vita, nel registro di distribuzione viene visualizzata una notifica.
 - Se la data fine del ciclo di vita è nel passato, viene visualizzata una notifica di avviso.
 
-Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file `eol.yaml` di [ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file [ di `eol.yaml`ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migra a OpenSearch
 

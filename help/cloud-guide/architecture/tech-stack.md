@@ -2,9 +2,10 @@
 title: Stack tecnologico
 description: Scopri lo stack di tecnologia che costituisce l’infrastruttura Commerce on Cloud.
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -17,10 +18,10 @@ Considera Adobe Commerce sull’infrastruttura cloud come cinque livelli funzion
 
 1. [**Infrastruttura cloud**](pro-architecture.md): scegli Amazon Web Services (AWS) o Microsoft Azure as your Infrastructure as a Service (IaaS) foundation per i progetti Adobe Commerce on Cloud Infrastructure Pro.
 
-   Adobe analizza regolarmente l&#39;utilizzo delle risorse di elaborazione virtuale (vCPU) e alloca automaticamente le risorse per ottimizzare l&#39;utilizzo a lungo termine e ridurre il rischio di superare il limite di giorni massimo annuo per vCPU. Se si prevede un aumento del traffico del sito per periodi di tempo specifici, è necessario continuare ad aprire un ticket di supporto per [richiedere un upsize temporaneo](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=it).
+   Adobe analizza regolarmente l&#39;utilizzo delle risorse di elaborazione virtuale (vCPU) e alloca automaticamente le risorse per ottimizzare l&#39;utilizzo a lungo termine e ridurre il rischio di superare il limite di giorni massimo annuo per vCPU. Se si prevede un aumento del traffico del sito per periodi di tempo specifici, è necessario continuare ad aprire un ticket di supporto per [richiedere un upsize temporaneo](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html).
 
 1. [**Platform as a Service**](cloud-architecture.md): ogni progetto Adobe Commerce su infrastruttura cloud fornisce un ambiente di integrazione Platform as a Service (PaaS) per lo sviluppo, il test e l&#39;integrazione di servizi.
-1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce sull&#39;infrastruttura cloud fornisce un&#39;infrastruttura preconfigurata che include PHP, MySQL (MariaDB), Redis, [!DNL RabbitMQ] e tecnologie di motori di ricerca supportate.
+1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce sull&#39;infrastruttura cloud fornisce un&#39;infrastruttura preconfigurata che include PHP, MySQL (MariaDB), Redis, servizi della coda messaggi ([!DNL RabbitMQ] o [!DNL ActiveMQ]) e tecnologie supportate per motori di ricerca.
 1. [**Strumenti per le prestazioni**](../monitor/new-relic-service.md): gli strumenti per le prestazioni di New Relic consentono di eseguire il debug, monitorare e gestire le applicazioni e l&#39;infrastruttura raccogliendo, analizzando e visualizzando dati dal proprio Adobe Commerce sui progetti di infrastruttura cloud.
 1. [**Rete CDN (Content Delivery Network), Firewall applicazione Web ([!DNL WAF]) e Ottimizzazione immagine (IO)**](../cdn/fastly.md):
 

@@ -4,9 +4,10 @@ description: Scopri il contrasto tra le architetture di progetto Starter e Pro p
 feature: Cloud, Iaas, Paas
 topic: Architecture
 recommendations: noDisplay
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 7c1e895d-0f88-4f11-919a-b3b5748ca5f0
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ Per un confronto, ogni piano include le seguenti caratteristiche dell&#39;infras
 
 |          | Starter | Pro |
 | -------- | --------------------| ------------------ |
-| Funzioni principali | <ul><li>[Tutte le funzionalità di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=it)</li><li>Strumento di onboarding PayPal</li><li>[Rapporti di Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[Tutte le funzionalità di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=it)</li><li>Strumento di onboarding PayPal</li><li>[Rapporti di Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[Modulo B2B](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| Funzioni principali | <ul><li>[Tutte le funzionalità di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>Strumento di onboarding PayPal</li><li>[Rapporti di Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[Tutte le funzionalità di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>Strumento di onboarding PayPal</li><li>[Rapporti di Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[Modulo B2B](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
 | Infrastruttura e installazione | <ul><li>Strumenti di integrazione cloud continua con utenti illimitati</li><li>Fastly Content Delivery Network (CDN), Image Optimization (IO) e maggiore sicurezza con ampi margini di larghezza di banda. Il servizio Web Application Firewall (WAF) è disponibile solo negli ambienti di produzione.</li><li>[New Relic](../monitor/new-relic-service.md) APM (Monitoraggio delle prestazioni) in 3 rami: `master` e 2 di tua scelta<br>Platform as a Service (PaaS) ambienti di produzione, staging e sviluppo (4 ambienti attivi totali) ottimizzati per Adobe Commerce</li><li>Filtro in uscita (firewall in uscita)</li></ul> | <ul><li>Strumenti di integrazione cloud continua con utenti illimitati</li><li>Fastly Content Delivery Network (CDN), Image Optimization (IO) e maggiore sicurezza con ampi margini di larghezza di banda. Il servizio Web Application Firewall (WAF) è disponibile solo negli ambienti di produzione.</li><li>[Infrastruttura New Relic](../monitor/new-relic-service.md) in produzione + APM (Monitoraggio delle prestazioni) in staging e produzione. Il criterio [Avvisi gestiti](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) per Adobe Commerce implementa le procedure consigliate di monitoraggio per inviare notifiche proattive sui problemi dell&#39;applicazione e dell&#39;infrastruttura che influiscono sulle prestazioni del sito.</li><li>[Ambienti di sviluppo dell&#39;integrazione](pro-architecture.md#integration-environment) basati su Platform as a Service (PaaS) (2 ambienti attivi in totale) ottimizzati per Adobe Commerce</li><li>Infrastructure as a Service (IaaS): infrastruttura virtuale dedicata per gli ambienti di staging e produzione</li></ul> |
 | Infrastruttura ad alta disponibilità | | [Architettura ad alta disponibilità](pro-architecture.md#redundant-hardware) con configurazione a tre server nel servizio IaaS (Infrastructure as a Service) sottostante per garantire affidabilità e disponibilità di livello enterprise |
 | Hardware dedicato | | Hardware isolato e dedicato nell&#39;infrastruttura sottostante come servizio (IaaS) per fornire livelli ancora più elevati di affidabilità e disponibilità |
@@ -68,6 +69,7 @@ Puoi configurare i seguenti servizi:
 - [MySQL](../services/mysql.md)
 - [Redis](../services/redis.md)
 - [RabbitMQ](../services/rabbitmq.md)
+- [ActiveMQ](../services/activemq.md)
 - [Elasticsearch](../services/elasticsearch.md)
 - [OpenSearch](../services/opensearch.md)
 
@@ -75,7 +77,7 @@ Puoi configurare i seguenti servizi:
 
 >[!NOTE]
 >
->Per le versioni consigliate, vedere [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella _Guida all&#39;installazione_.
+>Per le versioni consigliate, vedere [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella _Guida all&#39;installazione_.
 
 Il modulo Fastly CDN viene utilizzato per i servizi CDN e di caching negli ambienti di staging e produzione. Vedere [Configurare Fastly Services](../cdn/fastly.md).
 
