@@ -177,7 +177,7 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
 
 ## Versioni del servizio
 
-Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
+Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
 
 ### Controlli di fine del ciclo di vita del software
 
