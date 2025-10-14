@@ -246,7 +246,7 @@ I valori includono:
 
 - `dynamic` - Indica se si tratta di un [frammento normale](https://docs.fastly.com/en/guides/about-vcl-snippets) o di un [frammento dinamico](https://docs.fastly.com/guides/vcl-snippets/using-dynamic-vcl-snippets).
 
-- `type` - Specifica il percorso per l&#39;inserimento dello snippet generato, ad esempio `init` (sopra le subroutine) e `recv` (dentro le subroutine). Per informazioni su questi valori, vedere [Valori oggetto frammento VCL ](https://docs.fastly.com/api/config#snippet).
+- `type` - Specifica il percorso per l&#39;inserimento dello snippet generato, ad esempio `init` (sopra le subroutine) e `recv` (dentro le subroutine). Per informazioni su questi valori, vedere [Valori oggetto frammento VCL &#x200B;](https://docs.fastly.com/api/config#snippet).
 
 - `priority` - Valore compreso tra `1` e `100` che determina quando viene eseguito il codice snippet VCL personalizzato. Vengono eseguiti prima snippet VCL personalizzati con valori inferiori.
 
