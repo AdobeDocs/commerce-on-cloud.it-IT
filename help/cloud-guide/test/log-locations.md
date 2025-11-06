@@ -78,7 +78,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Negli ambienti Pro Staging e Pro Production, la rotazione, la compressione e la rimozione automatica dei registri sono attivate per i file di registro con un nome di file fisso. Ogni tipo di file di registro ha un pattern e una durata di rotazione.
 >I dettagli completi sulla rotazione dei registri dell&#39;ambiente e sulla durata dei registri compressi sono disponibili in: `/etc/logrotate.conf` e `/etc/logrotate.d/<various>`.
->Per gli ambienti Pro Staging e Pro Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per richiedere modifiche alla configurazione della rotazione del registro.
+>Per gli ambienti Pro Staging e Pro Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per richiedere modifiche alla configurazione della rotazione del registro.
 
 >[!TIP]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-La maggior parte dei messaggi di errore contiene una descrizione e un’azione suggerita. Utilizza il [Riferimento messaggio di errore per ECE-Tools](../dev-tools/error-reference.md) per cercare il codice di errore per ulteriori indicazioni. Per ulteriori informazioni, utilizzare [Risoluzione dei problemi di distribuzione di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html).
+La maggior parte dei messaggi di errore contiene una descrizione e un’azione suggerita. Utilizza il [Riferimento messaggio di errore per ECE-Tools](../dev-tools/error-reference.md) per cercare il codice di errore per ulteriori indicazioni. Per ulteriori informazioni, utilizzare [Risoluzione dei problemi di distribuzione di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=it).
 
 ## Registri applicazioni
 
@@ -227,7 +227,7 @@ Per impostazione predefinita, i registri dell&#39;applicazione vengono compressi
 
 I file di registro archiviati vengono sempre memorizzati nella directory in cui si trovava il file originale prima della compressione.
 
-Puoi [inviare un ticket di supporto](https://experienceleague.adobe.com/home?support-tab=home#support) per richiedere modifiche al periodo di conservazione del registro o alla configurazione di localizzazione. È possibile aumentare il periodo di conservazione fino a un massimo di 365 giorni, ridurlo per risparmiare la quota di archiviazione o aggiungere percorsi di registro aggiuntivi alla configurazione logrotate. Queste modifiche sono disponibili per i cluster Pro Staging e Production.
+Puoi [inviare un ticket di supporto](https://experienceleague.adobe.com/home?lang=it&support-tab=home#support) per richiedere modifiche al periodo di conservazione del registro o alla configurazione di localizzazione. È possibile aumentare il periodo di conservazione fino a un massimo di 365 giorni, ridurlo per risparmiare la quota di archiviazione o aggiungere percorsi di registro aggiuntivi alla configurazione logrotate. Queste modifiche sono disponibili per i cluster Pro Staging e Production.
 
 Ad esempio, se si crea un percorso personalizzato per archiviare i registri nella directory `var/log/mymodule`, è possibile richiedere la rotazione del registro per questo percorso. Tuttavia, l&#39;infrastruttura corrente richiede nomi di file coerenti affinché Adobe possa configurare correttamente la rotazione del registro. Per evitare problemi di configurazione, Adobe consiglia di mantenere coerenti i nomi dei registri.
 
