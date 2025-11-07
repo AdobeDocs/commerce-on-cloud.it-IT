@@ -4,9 +4,9 @@ description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchet
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 562fd6e1dcd09600e00d034a94509b2dfd69d1ef
+source-git-commit: 4f96ed89edbbc148c5558050368d8366bd89053a
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Il pacchetto [ece-tools](https://github.com/magento/ece-tools) è un insieme di 
 
 >[!NOTE]
 >
->Per informazioni sull&#39;aggiornamento all&#39;ultima versione del pacchetto [, vedere &#x200B;](../dev-tools/update-package.md)Aggiornamento degli strumenti ECE`ece-tools`.
+>Per informazioni sull&#39;aggiornamento all&#39;ultima versione del pacchetto [, vedere ](../dev-tools/update-package.md)Aggiornamento degli strumenti ECE`ece-tools`.
 
 Il pacchetto `ece-tools` utilizza la seguente sequenza di versioni di rilascio: `200<major>.<minor>.<patch>`
 
@@ -28,14 +28,7 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v2002.2.9 {#latest}
-
-Data di rilascio: 06 novembre 2025
-
-- ![icona correzione](../../assets/fix.svg) **Pacchetto Symfony**-Aggiunto supporto per i pacchetti Symfony YAML più recenti.<!-- MCLOUD-14020 -->
-- ![icona di correzione](../../assets/fix.svg) **Pulizia della cache corretta per i servizi attivi** - Aggiunta convalida del servizio attivo.<!-- MCLOUD-14166 -->
-
-## v2002.2.8
+## v2002.2.8 {#latest}
 
 Data di rilascio: 08 ottobre 2025
 
