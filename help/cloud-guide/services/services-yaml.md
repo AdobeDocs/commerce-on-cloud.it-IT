@@ -189,7 +189,7 @@ Durante il processo di distribuzione, il pacchetto `ece-tools` controlla le vers
 - Se la versione di un servizio rientra nei tre mesi successivi alla data di fine del ciclo di vita, nel registro di distribuzione viene visualizzata una notifica.
 - Se la data fine del ciclo di vita è nel passato, viene visualizzata una notifica di avviso.
 
-Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file [ di `eol.yaml`ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file [&#x200B; di `eol.yaml`ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migra a OpenSearch
 
