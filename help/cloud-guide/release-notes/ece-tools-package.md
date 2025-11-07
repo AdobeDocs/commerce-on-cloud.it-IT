@@ -17,7 +17,7 @@ Il pacchetto [ece-tools](https://github.com/magento/ece-tools) è un insieme di 
 
 >[!NOTE]
 >
->Per informazioni sull&#39;aggiornamento all&#39;ultima versione del pacchetto [, vedere ](../dev-tools/update-package.md)Aggiornamento degli strumenti ECE`ece-tools`.
+>Per informazioni sull&#39;aggiornamento all&#39;ultima versione del pacchetto [, vedere &#x200B;](../dev-tools/update-package.md)Aggiornamento degli strumenti ECE`ece-tools`.
 
 Il pacchetto `ece-tools` utilizza la seguente sequenza di versioni di rilascio: `200<major>.<minor>.<patch>`
 
