@@ -3,9 +3,9 @@ title: Configurare i servizi
 description: Scopri come configurare i servizi utilizzati da Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ Il file `services.yaml` definisce i servizi supportati e utilizzati da Adobe Com
 >[!NOTE]
 >
 >Il file `.magento/services.yaml` è gestito localmente nella directory `.magento` del progetto. La configurazione è accessibile durante il processo di build per definire le versioni del servizio richieste solo nell’ambiente di integrazione e viene rimossa al termine della distribuzione, in modo da non trovarle sul server.
-
 
 Lo script di distribuzione utilizza i file di configurazione nella directory `.magento` per eseguire il provisioning dell&#39;ambiente con i servizi configurati. Un servizio diventa disponibile per l&#39;applicazione se è incluso nella proprietà [`relationships`](../application/properties.md#relationships) del file `.magento.app.yaml`. Il file `services.yaml` contiene i valori _type_ e _disk_. Il tipo di servizio definisce il servizio _name_ e _version_.
 
@@ -38,6 +37,10 @@ L’infrastruttura cloud supporta e distribuisce i seguenti servizi:
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
+
+>[!NOTE]
+>
+>Dopo l’aggiornamento a una nuova versione di RabbitMQ, attiva una distribuzione completa per garantire che le code di messaggi personalizzate vengano ricreate in RabbitMQ.
 
 È possibile visualizzare le versioni e i valori del disco predefiniti nel [file `services.yaml` predefinito](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) corrente. L&#39;esempio seguente mostra i servizi `mysql`, `redis`, `opensearch` o `elasticsearch`, `rabbitmq` e `activemq-artemis` definiti nel file di configurazione `services.yaml`:
 
@@ -177,7 +180,7 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
 
 ## Versioni del servizio
 
-Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
+Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
 
 ### Controlli di fine del ciclo di vita del software
 
@@ -186,7 +189,7 @@ Durante il processo di distribuzione, il pacchetto `ece-tools` controlla le vers
 - Se la versione di un servizio rientra nei tre mesi successivi alla data di fine del ciclo di vita, nel registro di distribuzione viene visualizzata una notifica.
 - Se la data fine del ciclo di vita è nel passato, viene visualizzata una notifica di avviso.
 
-Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file [&#x200B; di `eol.yaml`ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file [ di `eol.yaml`ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migra a OpenSearch
 
