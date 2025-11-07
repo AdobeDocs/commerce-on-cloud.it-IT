@@ -5,9 +5,10 @@ role: Admin
 feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 953593de-f675-49fd-988f-f11306f67fbd
+source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ L’accesso a livello di ambiente si basa sul tipo di ambiente: produzione, stag
 
 **Prerequisiti:**
 
-- Un utente registrato con un Adobe ID. Un utente deve [registrarsi per un account Adobe](https://account.adobe.com) e quindi [inizializzare il proprio account Cloud](https://console.adobecommerce.com) prima di poterlo aggiungere a un progetto Cloud.
+- Un utente registrato con un Adobe ID. Un utente deve [registrarsi per un account Adobe](https://account.adobe.com), quindi inizializzare il proprio account [Cloud](https://console.adobecommerce.com) visitando [https://console.adobecommerce.com](https://console.adobecommerce.com) prima di poterlo aggiungere a un progetto Cloud.
 - Un utente assegnato al ruolo **Amministratore** non può gestire gli utenti con CLI `magento-cloud`. Solo gli utenti con il ruolo **Proprietario account** possono gestire gli utenti.
 
 >[!ENDSHADEBOX]
@@ -231,7 +232,7 @@ Le istruzioni per l&#39;installazione dell&#39;applicazione di autenticazione e 
 
      >[!WARNING]
      >
-     >Se si perde l&#39;accesso a un account con TFA e non si dispone dell&#39;elenco dei codici di ripristino, è necessario contattare l&#39;amministratore del progetto o [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per reimpostare l&#39;applicazione TFA.
+     >Se si perde l&#39;accesso a un account con TFA e non si dispone dell&#39;elenco dei codici di ripristino, è necessario contattare l&#39;amministratore del progetto o [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per reimpostare l&#39;applicazione TFA.
 
 1. Dopo aver completato la configurazione TFA, fai clic su **Salva** per aggiornare l&#39;account.
 
@@ -266,7 +267,7 @@ Nei progetti in cui è abilitata l’imposizione MFA, è necessario disporre di 
 
 >[!IMPORTANT]
 >
->Valori dei token API di Protect per l’account. Non esporre il valore in esempi di codice, acquisizioni di schermate o comunicazioni client-server non sicure. Inoltre, non esporre il valore nel codice sorgente memorizzato negli archivi pubblici.
+>Proteggi i valori dei token API per il tuo account. Non esporre il valore in esempi di codice, acquisizioni di schermate o comunicazioni client-server non sicure. Inoltre, non esporre il valore nel codice sorgente memorizzato negli archivi pubblici.
 
 **Per creare un token API**:
 
