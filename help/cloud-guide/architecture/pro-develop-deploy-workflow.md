@@ -3,9 +3,9 @@ title: Flusso di lavoro di un progetto professionale
 description: Scopri come utilizzare i flussi di lavoro di sviluppo e distribuzione Pro.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: edff4efe0af54542321e887defc27dc96e6ae7f6
+source-git-commit: 7758ca69fc8232a8e1798c536410dc028c87fee6
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ The disk hosting /app/<cluster_ID> is full
 
 >[!NOTE]
 >
->Questa restrizione protegge l&#39;integrità e la sicurezza dell&#39;applicazione. Le autorizzazioni delle cartelle su questi file system di sola lettura non possono essere modificate, nemmeno il supporto tecnico. Eventuali modifiche devono essere effettuate da un ramo nell’ambiente di sviluppo locale e inviate all’ambiente dell’applicazione. Per ulteriori informazioni, vedere [Architettura Pro](pro-architecture.md) per una panoramica degli ambienti Pro e [[!DNL Cloud Console]](../project/overview.md#cloud-console) per una panoramica dell&#39;elenco degli ambienti Pro nella visualizzazione del progetto.
+>Non è possibile modificare le autorizzazioni per le cartelle di sola lettura in nessuno degli ambienti Pro. Questa restrizione protegge l&#39;integrità e la sicurezza dell&#39;applicazione. Le autorizzazioni delle cartelle su questi file system di sola lettura non possono essere modificate, nemmeno il supporto tecnico. Eventuali modifiche devono essere effettuate da un ramo nell’ambiente di sviluppo locale e inviate all’ambiente dell’applicazione. Per ulteriori informazioni, vedere [Architettura Pro](pro-architecture.md) per una panoramica degli ambienti Pro e [[!DNL Cloud Console]](../project/overview.md#cloud-console) per una panoramica dell&#39;elenco degli ambienti Pro nella visualizzazione del progetto.
 
 ## Flusso di lavoro di sviluppo
 

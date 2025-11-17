@@ -2,9 +2,10 @@
 title: Architettura iniziale
 description: Scopri gli ambienti supportati dall’architettura Starter.
 feature: Cloud, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
+source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,9 @@ L&#39;architettura Starter dell&#39;infrastruttura cloud di Adobe Commerce suppo
 
 Tutti gli ambienti sono contenuti in contenitori PaaS (Platform as a service). Questi contenitori vengono distribuiti all&#39;interno di contenitori con restrizioni elevate su una griglia di server. Questi ambienti sono di sola lettura e accettano le modifiche del codice distribuito dai rami inviati dall’area di lavoro locale. Ogni ambiente fornisce un database e un server web.
 
-Puoi utilizzare qualsiasi metodologia di sviluppo e ramificazione che ti piace. Quando si ottiene l&#39;accesso iniziale al progetto, creare un ambiente `staging` dall&#39;ambiente `master`. Quindi, creare l&#39;ambiente `integration` ramificando da `staging`.
+>[!NOTE]
+>
+>Non è possibile modificare le autorizzazioni per le cartelle di sola lettura in nessuno degli ambienti Starter. Questa restrizione protegge l&#39;integrità e la sicurezza dell&#39;applicazione. Le autorizzazioni delle cartelle su questi file system di sola lettura non possono essere modificate, nemmeno il supporto tecnico. Eventuali modifiche devono essere effettuate da un ramo nell’ambiente di sviluppo locale e inviate all’ambiente dell’applicazione. Puoi utilizzare qualsiasi metodologia di sviluppo e ramificazione che ti piace. Quando si ottiene l&#39;accesso iniziale al progetto, creare un ambiente `staging` dall&#39;ambiente `master`. Quindi, creare l&#39;ambiente `integration` ramificando da `staging`.
 
 ## Architettura dell’ambiente di partenza
 
@@ -89,7 +92,7 @@ Gli ambienti di produzione e staging includono le seguenti tecnologie. È possib
 - Fastly per il caching HTTP e CDN
 - Server web Nginx che parla con PHP-FPM, un&#39;istanza con più lavoratori
 - Server Redis
-- Elasticsearch di ricerca nel catalogo per Adobe Commerce da 2.2 a 2.4.3-p2
+- Elasticsearch per la ricerca del catalogo per Adobe Commerce da 2.2 a 2.4.3-p2
 - OpenSearch per la ricerca di cataloghi per Adobe Commerce 2.3.7-p3, 2.4.3-p2, 2.4.4 e versioni successive
 - Filtro in uscita (firewall in uscita)
 
@@ -123,7 +126,7 @@ Adobe Commerce su infrastruttura cloud utilizza il sistema operativo Debian GNU/
 
 - [OpenSearch](../services/opensearch.md)
 
-Negli ambienti di staging e produzione, utilizzi Fastly per CDN e caching. La versione più recente dell’estensione Fastly CDN viene installata durante il provisioning iniziale del progetto. Puoi aggiornare l’estensione per ottenere le correzioni di bug e i miglioramenti più recenti. Consulta [Modulo CDN finale per il Magento 2](https://github.com/fastly/fastly-magento2). Inoltre, puoi accedere a [New Relic](../monitor/account-management.md) per il monitoraggio delle prestazioni.
+Negli ambienti di staging e produzione, utilizzi Fastly per CDN e caching. La versione più recente dell’estensione Fastly CDN viene installata durante il provisioning iniziale del progetto. Puoi aggiornare l’estensione per ottenere le correzioni di bug e i miglioramenti più recenti. Consulta [Modulo CDN Fastly per Magento 2](https://github.com/fastly/fastly-magento2). Inoltre, puoi accedere a [New Relic](../monitor/account-management.md) per il monitoraggio delle prestazioni.
 
 Utilizzare i seguenti file per configurare le versioni del software da utilizzare nell&#39;implementazione.
 
