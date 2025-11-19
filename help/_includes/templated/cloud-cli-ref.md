@@ -1,7 +1,7 @@
 ---
-source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
+source-git-commit: fddcfdb97aede07b2cd6ef12bda6d7998f941951
 workflow-type: tm+mt
-source-wordcount: '13671'
+source-wordcount: '13721'
 ht-degree: 0%
 
 ---
@@ -819,7 +819,7 @@ Accedi a Magento Cloud utilizzando un token API
 Use this command to log in to your Magento Cloud account using an API token.
 
 You can create an account at:
-    https://business.adobe.com/it/products/magento/magento-commerce.html
+    https://business.adobe.com/products/magento/magento-commerce.html
 
 If you have an account, but you do not already have an API token, you can create one here:
     https://accounts.magento.cloud/user/api-tokens
@@ -1694,7 +1694,7 @@ Relazione di servizio da utilizzare
 magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-Aggiungi un nuovo dominio al progetto
+Aggiungi un nuovo dominio al progetto. Questa opzione non è disponibile per i progetti di piano Cloud Pro.
 
 ### Argomenti
 
@@ -1766,7 +1766,7 @@ Attendere il completamento dell&#39;operazione (impostazione predefinita)
 magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-Eliminare un dominio dal progetto
+Elimina un dominio dal progetto. Questa opzione non è disponibile per i progetti di piano Cloud Pro.
 
 ### Argomenti
 
@@ -1813,7 +1813,7 @@ Attendere il completamento dell&#39;operazione (impostazione predefinita)
 magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
 ```
 
-Visualizzare informazioni dettagliate per un dominio
+Visualizzare informazioni dettagliate su un dominio. Questa opzione non è disponibile per i progetti di piano Cloud Pro.
 
 ### Argomenti
 
@@ -1878,7 +1878,7 @@ ID ambiente. Utilizza &quot;.&quot; per selezionare l’ambiente predefinito del
 magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-Ottieni un elenco di tutti i domini
+Ottieni un elenco di tutti i domini. Questa opzione non è disponibile per i progetti di piano Cloud Pro.
 
 ### Opzioni
 
@@ -1924,7 +1924,7 @@ ID ambiente. Utilizza &quot;.&quot; per selezionare l’ambiente predefinito del
 magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-Aggiornare un dominio
+Aggiornare un dominio. Questa opzione non è disponibile per i progetti di piano Cloud Pro.
 
 ### Argomenti
 
