@@ -5,9 +5,9 @@ role: Developer
 feature: Cloud, Security
 topic: Security
 exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
-source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
+source-git-commit: 9c0b4bea11abb2ce5644556ab3dadd361f8ff449
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Crea una coppia di chiavi SSH in ogni computer e area di lavoro che richiede l�
 
 ## Aggiungi una chiave pubblica SSH al tuo account
 
-Dopo aver aggiunto o aggiornato la chiave pubblica SSH all&#39;account Adobe Commerce sull&#39;infrastruttura cloud, [ridistribuisci tutti gli ambienti attivi](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) nell&#39;account per installare la chiave.
+Dopo aver aggiunto o aggiornato la chiave pubblica SSH all&#39;account Adobe Commerce sull&#39;infrastruttura cloud, [ridistribuisci tutti gli ambienti attivi](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) nell&#39;account per installare la chiave.
 
 È possibile aggiungere chiavi SSH all&#39;account utilizzando uno dei seguenti metodi: Cloud CLI o [!DNL Cloud Console].
 
@@ -155,10 +155,10 @@ A seconda del client, potrebbero essere necessarie opzioni aggiuntive per comple
 
 Per gli ambienti **Starter e gli ambienti di integrazione Pro**, è inoltre consigliabile [aggiungere un `mount`](../application/properties.md#mounts) per l&#39;accesso a una directory specifica. Aggiungere il mount al file `.magento.app.yaml`. Per un elenco delle directory scrivibili, vedere [Struttura del progetto](../project/file-structure.md). Questo punto di montaggio funziona solo in questi ambienti.
 
-Per **ambienti di staging e produzione Pro**, se non disponi dell&#39;accesso SSH all&#39;ambiente, devi [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per richiedere l&#39;accesso sFTP e un punto di montaggio per accedere alla cartella specifica, ad esempio `pub/media`.
+Per **ambienti di staging e produzione Pro**, se non disponi dell&#39;accesso SSH all&#39;ambiente, devi [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per richiedere l&#39;accesso sFTP e un punto di montaggio per accedere alla cartella specifica, ad esempio `pub/media`.
 
 >[!NOTE]
->Per Pro Staging and Production, se la connessione sFTP è per un utente _generico_ che **non** deve essere [aggiunto al progetto Cloud](../project/user-access.md), è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) allegando la chiave **public**. **Non fornire mai la tua chiave SSH privata.**
+>Per Pro Staging and Production, se la connessione sFTP è per un utente _generico_ che **non** deve essere [aggiunto al progetto Cloud](../project/user-access.md), è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) allegando la chiave **public**. **Non fornire mai la tua chiave SSH privata.**
 
 ## Tunneling SSH
 
@@ -219,3 +219,7 @@ Dopo aver stabilito un tunnel SSH, è possibile connettersi ai servizi come se s
 ```bash
 mysql --host=127.0.0.1 --user='<database-username>' --pass='<user-password>' --database='<name>' --port='<port>'
 ```
+
+#### Ottieni credenziali MySQL
+
+Recuperare le credenziali di accesso MySQL dalle proprietà `database` nella variabile di ambiente `$MAGENTO_CLOUD_RELATIONSHIPS`. Per istruzioni sul recupero delle informazioni in un ambiente locale o remoto, vedere [Relazioni di servizio](../services/services-yaml.md#service-relationships).
