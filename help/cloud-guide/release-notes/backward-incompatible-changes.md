@@ -58,7 +58,7 @@ Nelle versioni precedenti di ECE-Tools, era possibile utilizzare i comandi `m2-e
 
 ## Modifiche alle patch cloud
 
-- **Rimuovi le patch scaricate**-Il pacchetto `magento/magento-cloud-patches` raccoglie tutte le patch disponibili nella pagina [download del software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) e le applica automaticamente quando si distribuisce nel cloud. Per evitare conflitti di patch dopo l&#39;aggiornamento a ECE-Tools 2002.1.0 o versione successiva, rimuovere tutte le patch fornite da Adobe scaricate e aggiunte manualmente al progetto.
+- **Rimuovi le patch scaricate**-Il pacchetto `magento/magento-cloud-patches` raccoglie tutte le patch disponibili nella pagina [download del software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=it) e le applica automaticamente quando si distribuisce nel cloud. Per evitare conflitti di patch dopo l&#39;aggiornamento a ECE-Tools 2002.1.0 o versione successiva, rimuovere tutte le patch fornite da Adobe scaricate e aggiunte manualmente al progetto.
 
 - **Aggiornamento del comando Applica patch**. Il comando per l&#39;applicazione delle patch è stato spostato dalla directory `vendor/bin/ece-tools` alla directory `vendor/bin/ece-patches`. Se si utilizza questo comando per applicare le patch manualmente, utilizzare il nuovo percorso.
 
