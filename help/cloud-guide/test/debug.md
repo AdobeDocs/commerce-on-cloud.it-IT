@@ -1,7 +1,8 @@
 ---
 title: Configura [!DNL Xdebug]
 description: Scopri come configurare l’estensione Xdebug per il debug dello sviluppo di progetti Adobe Commerce su infrastrutture cloud.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '1920'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->È possibile configurare [!DNL Xdebug] per l&#39;esecuzione nell&#39;ambiente Cloud Docker per il debug locale senza modificare la configurazione del progetto Adobe Commerce su infrastruttura cloud. Vedere [Configurare Xdebug per Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/).
+>È possibile configurare [!DNL Xdebug] per l&#39;esecuzione nell&#39;ambiente Cloud Docker per il debug locale senza modificare la configurazione del progetto Adobe Commerce su infrastruttura cloud. Vedere [Configurare Xdebug per Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).
 
 Per abilitare [!DNL Xdebug], devi configurare un file nell&#39;archivio Git, configurare l&#39;IDE e configurare l&#39;inoltro delle porte. È possibile configurare alcune impostazioni nel file `magento.app.yaml`. Dopo la modifica, invia le modifiche Git in tutti gli ambienti Starter e gli ambienti di integrazione Pro per abilitare [!DNL Xdebug]. [!DNL Xdebug] è già disponibile negli ambienti Pro Staging &amp; Production.
 
