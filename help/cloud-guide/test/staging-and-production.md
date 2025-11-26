@@ -1,7 +1,8 @@
 ---
 title: Test di staging e produzione
 description: Scopri come eseguire il test in ambienti di staging e produzione.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -87,7 +88,7 @@ In caso di problemi, salva i passaggi di riproduzione, i messaggi di errore, le 
 
 <table>
 <tr>
-<td style="width:150px">Gestione utente</td>
+<td style="width:150px">Gestione degli utenti</td>
 <td>
 <ul>
 <li>Creare e modificare gli account cliente, verificare le e-mail</li>
@@ -211,7 +212,7 @@ Per ottenere risultati ottimali, utilizzare i seguenti strumenti:
 
 ## Test funzionali
 
-Puoi utilizzare il framework di test funzionali di Magento (MFTF) per completare i test funzionali per Adobe Commerce dall’ambiente Cloud Docker. Consulta [Test dell&#39;applicazione](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/) nella _Guida di Cloud Docker per Commerce_.
+Puoi utilizzare il framework di test funzionali di Magento (MFTF) per completare i test funzionali per Adobe Commerce dall’ambiente Cloud Docker. Consulta [Test dell&#39;applicazione](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing) nella _Guida di Cloud Docker per Commerce_.
 
 ## Configurare lo strumento Security Scan
 
