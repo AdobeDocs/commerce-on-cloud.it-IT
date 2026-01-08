@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
+source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ bundle exec rake images:optimize path=../path/to/images
 
 ## Configurazione
 
-Gli hook utilizzano il file di configurazione `_jekyll/.image_optim` per personalizzare le impostazioni di ottimizzazione:
+Gli hook utilizzano il file di configurazione `_jekyll/.image_optim.yml` per personalizzare le impostazioni di ottimizzazione:
 
 - **PNG**: usa `advpng`, `optipng` e `pngquant`
 - **JPEG**: usa `jhead`, `jpegoptim` e `jpegtran`
@@ -120,12 +120,12 @@ Gli hook utilizzano il file di configurazione `_jekyll/.image_optim` per persona
 ### Errori di ottimizzazione
 
 - Verificare che `bundle install` sia stato eseguito nella directory `_jekyll`
-- Verificare che `image_optim` e `image_optim_pack` gems siano installati
-- Rivedi il file di configurazione `.image_optim`
+- Verifica che la Gem `adobe-comdox-exl-rake-tasks` sia installata (fornisce `image_optim`)
+- Rivedi il file di configurazione `.image_optim.yml`
 
 ### Problemi relativi alle prestazioni
 
-- Regola conteggio thread in `_jekyll/.image_optim`
+- Regola conteggio thread in `_jekyll/.image_optim.yml`
 - Imposta variabile di ambiente `DEBUG=1` per informazioni dettagliate sull&#39;errore
 
 ## Come funziona

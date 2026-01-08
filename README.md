@@ -1,7 +1,7 @@
 ---
-source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
+source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 Questo sito contiene la documentazione più recente per gli sviluppatori di Commerce on Cloud Infrastructure.
 
-- [Guida di Commerce sull&#39;infrastruttura cloud](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview)
-- [Introduzione a Commerce](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
+- [Guida di Commerce sull&#39;infrastruttura cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [Introduzione a Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
 
 ## Codice di condotta di Adobe Open Source
 
@@ -18,7 +18,7 @@ Questo progetto ha adottato il [Codice di condotta di Adobe Open Source](code-of
 
 ## Informazioni sui contributi ai contenuti di Adobe
 
-Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
+Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 Il modo in cui contribuisci dipende da chi sei e dal tipo di modifiche con cui desideri contribuire:
 
@@ -40,7 +40,7 @@ Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del te
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per apportare modifiche di base o eseguire il fork dell’archivio per apportare contributi principali.
 
-Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
+Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 ## Come utilizzare markdown per formattare l’argomento
 
@@ -70,7 +70,7 @@ In generale, la maggior parte degli autori deve solo aggiungere una versione all
 >**NOTA:**
 >
 >- La generazione di contenuti basati su modelli richiede l’utilizzo della riga di comando in un terminale.
->- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version] (_jekyll/.ruby-version) per la versione richiesta.
+>- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version](_jekyll/.ruby-version) per la versione richiesta.
 
 Per una descrizione della struttura di file per il contenuto con modelli, consulta:
 
@@ -101,7 +101,7 @@ Per aggiornare il contenuto basato su modelli:
    bundle exec rake render
    ```
 
-   >**NOTA:** è necessario eseguire lo script dalla directory `_jekyll`. Se questa è la prima volta che esegui lo script, devi prima installare le dipendenze Ruby con il comando `bundle install`. Le attività di rastremazione vengono fornite dal gem `adobe-comdox-exl-rake-tasks` per una migliore manutenzione negli archivi della documentazione di Adobe Commerce.
+   >**NOTA:** è necessario eseguire lo script dalla directory `_jekyll`. Se questa è la prima volta che esegui lo script, devi prima installare le dipendenze Ruby con il comando `bundle install`. Le attività e le dipendenze di base del rake (Jekyll, Rake, ottimizzazione immagine) sono fornite dal gem `adobe-comdox-exl-rake-tasks` per una migliore manutenzione negli archivi della documentazione di Adobe Commerce. Le attività personalizzate specifiche di questo archivio sono implementate in `Rakefile`.
 
 5. Tornare alla directory `root`.
 
