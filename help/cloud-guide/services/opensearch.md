@@ -3,16 +3,16 @@ title: Configura servizio OpenSearch
 description: Scopri come abilitare il servizio OpenSearch per Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 5a190471f4ccc23eb1c311f3082af1948cf1c68d
+source-git-commit: 3a81c8ef2024341e60f4767bdd6616df26f8045f
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
 
 # Configura servizio OpenSearch
 
-Il servizio [OpenSearch](https://www.opensearch.org) è un fork open-source di Elasticsearch 7.10.2, in seguito alle modifiche delle licenze per Elasticsearch. Visualizza il [progetto OpenSource](https://github.com/opensearch-project) in GitHub.
+Il servizio [OpenSearch](https://www.opensearch.org) è un fork open-source di Elasticsearch 7.10.2, in seguito alle modifiche delle licenze per Elasticsearch. Visualizza il [progetto OpenSource](https://github.com/opensearch-project) in GitHub. [Requisiti di sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) elenca la versione supportata.
 
 {{elasticsearch-support}}
 
@@ -27,19 +27,19 @@ OpenSearch consente di estrarre dati da qualsiasi origine, qualsiasi formato, no
 
 >[!TIP]
 >
->Per i progetti Adobe Commerce su infrastruttura cloud che non utilizzano [Live Search](https://experienceleague.adobe.com/it/docs/commerce/live-search/overview), Adobe consiglia di configurare [!DNL OpenSearch] per fornire un&#39;opzione di fallback per gli strumenti di ricerca di terze parti. Tuttavia, [!DNL OpenSearch] e [!DNL Live Search] non possono essere entrambi abilitati nella stessa istanza di Commerce.
+>Per i progetti Adobe Commerce su infrastruttura cloud che non utilizzano [Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview), Adobe consiglia di configurare [!DNL OpenSearch] per fornire un&#39;opzione di fallback per gli strumenti di ricerca di terze parti. Tuttavia, [!DNL OpenSearch] e [!DNL Live Search] non possono essere entrambi abilitati nella stessa istanza di Commerce.
 
 **Per abilitare OpenSearch**:
 
-1. Per gli ambienti di integrazione, aggiungere il servizio `opensearch` al file `.magento/services.yaml` con la versione appropriata e spazio su disco allocato in MB. In questo caso, è appropriata la versione 2. La versione secondaria non è richiesta.
+1. Per gli ambienti di integrazione, aggiungere il servizio `opensearch` al file `.magento/services.yaml` con la versione appropriata e spazio su disco allocato in MB. In questo caso, è appropriata la versione 3. La versione secondaria non è richiesta.
 
    ```yaml
    opensearch:
-       type: opensearch:2
+       type: opensearch:3
        disk: 1024
    ```
 
-   Per i progetti Pro, è necessario [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per modificare la versione di OpenSearch negli ambienti di staging e produzione.
+   Per i progetti Pro, è necessario [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per modificare la versione di OpenSearch negli ambienti di staging e produzione.
 
 1. Impostare o verificare la proprietà `relationships` nel file `.magento.app.yaml`.
 
@@ -92,7 +92,7 @@ Quando installi o aggiorni il progetto Adobe Commerce su infrastruttura cloud, v
 
 - **Aggiornamento del progetto**-Verificare che il client OpenSearch PHP nella nuova versione dell&#39;applicazione sia compatibile con la versione del servizio OpenSearch installata nell&#39;infrastruttura cloud.
 
-Il supporto per la versione del servizio e la compatibilità è determinato dalle versioni testate e distribuite nell’infrastruttura Cloud e talvolta è diverso dalle versioni supportate dalle distribuzioni locali di Adobe Commerce. Per un elenco delle versioni supportate, vedere [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella _Guida all&#39;installazione_.
+Il supporto per la versione del servizio e la compatibilità è determinato dalle versioni testate e distribuite nell’infrastruttura Cloud e talvolta è diverso dalle versioni supportate dalle distribuzioni locali di Adobe Commerce. Per un elenco delle versioni supportate, vedere [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella _Guida all&#39;installazione_.
 
 **Per verificare la compatibilità del software OpenSearch**:
 
@@ -135,7 +135,7 @@ Il supporto per la versione del servizio e la compatibilità è determinato dall
    | path                                     | null                                                   |
    | query                                    |                                                        |
    | password                                 | null                                                   |
-   | type                                     | opensearch:2                                           |
+   | type                                     | opensearch:3                                           |
    | public                                   | false                                                  |
    | host_mapped                              | false                                                  |
    ```
@@ -153,7 +153,7 @@ Il supporto per la versione del servizio e la compatibilità è determinato dall
       "cluster_uuid" : "_yzaae6-ywSEW1MaAF8ZPWyQ",
       "version" : {
         "distribution" : "opensearch",
-        "number" : "2.5.0",
+        "number" : "3.1.0",
         "build_type" : "deb",
         "build_hash" : "aaaaaaa",
         "build_date" : "2023-01-23T12:07:18.760675Z",
@@ -184,7 +184,7 @@ Se devi riavviare il servizio OpenSearch, devi contattare il supporto Adobe Comm
 
 >[!NOTE]
 >
->Questo vale solo per gli ambienti di integrazione e avvio. Per installare i plug-in in un cluster Pro Staging o Production, [invia una richiesta di supporto](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case).
+>Questo vale solo per gli ambienti di integrazione e avvio. Per installare i plug-in in un cluster Pro Staging o Production, [invia una richiesta di supporto](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case).
 
 
 ```yaml
@@ -208,7 +208,7 @@ La rimozione delle voci del plug-in dalla sezione `opensearch:` del file `.magen
 
 >[!NOTE]
 >
->Questa modifica si applica solo agli ambienti Integration e Starter. Per rimuovere il plug-in in un cluster Pro Staging o Production, è necessario [inviare un ticket di supporto](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case).
+>Questa modifica si applica solo agli ambienti Integration e Starter. Per rimuovere il plug-in in un cluster Pro Staging o Production, è necessario [inviare un ticket di supporto](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case).
 
 1. Rimuovere le voci del plug-in OpenSearch dal file `.magento/services.yaml`.
 1. Aggiungi, esegui il commit e invia le modifiche al codice.
