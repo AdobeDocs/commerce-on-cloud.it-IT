@@ -2,9 +2,10 @@
 title: Distribuzione a staging e produzione
 description: Scopri come implementare il codice dell’infrastruttura cloud Adobe Commerce negli ambienti di staging e produzione per ulteriori test.
 feature: Cloud, Console, Deploy, SCD, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
+source-git-commit: fe634412c6de8325faa36c07e9769cde0eb76c48
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ Quando sei pronto per distribuire l’archivio, devi completare la distribuzione
 
 >[!TIP]
 >
->Adobe consiglia di creare un [backup](../storage/snapshots.md) dell&#39;ambiente prima delle distribuzioni.
+>Adobe consiglia di creare un [backup](../storage/snapshots.md) dell&#39;ambiente prima delle implementazioni.
 
 È inoltre possibile abilitare [Tracciare le distribuzioni con New Relic](../monitor/track-deployments.md) per monitorare gli eventi di distribuzione e analizzare le prestazioni tra le distribuzioni.
 
@@ -139,7 +140,7 @@ Cloud CLI fornisce i comandi per distribuire il codice. Hai bisogno dell’acces
 
 ## Migrazione di file statici
 
-[I file statici](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/glossary) sono archiviati in `mounts`. Esistono due metodi per migrare i file da una posizione di montaggio di origine, ad esempio l&#39;ambiente locale, a una posizione di montaggio di destinazione. Entrambi i metodi utilizzano l&#39;utilità `rsync`, ma Adobe consiglia di utilizzare l&#39;interfaccia della riga di comando `magento-cloud` per spostare i file tra l&#39;ambiente locale e remoto. Adobe consiglia inoltre di utilizzare il metodo `rsync` per spostare i file da un&#39;origine remota a un&#39;altra posizione remota.
+[I file statici](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) sono archiviati in `mounts`. Esistono due metodi per migrare i file da una posizione di montaggio di origine, ad esempio l&#39;ambiente locale, a una posizione di montaggio di destinazione. Entrambi i metodi utilizzano l&#39;utilità `rsync`, ma Adobe consiglia di utilizzare l&#39;interfaccia della riga di comando `magento-cloud` per spostare i file tra l&#39;ambiente locale e remoto. Adobe consiglia inoltre di utilizzare il metodo `rsync` per spostare i file da un&#39;origine remota a un&#39;altra posizione remota.
 
 ### Eseguire la migrazione dei file tramite CLI
 
@@ -245,11 +246,11 @@ Consulta la Guida di [rsync](https://linux.die.net/man/1/rsync).
 >
 >Il database dell’ambiente di integrazione è destinato esclusivamente ai test di sviluppo e può includere dati di cui non desideri eseguire la migrazione nell’ambiente di staging e produzione.
 
-Per le distribuzioni continue di integrazione, Adobe **sconsiglia** la migrazione dei dati dall&#39;integrazione all&#39;ambiente di staging e produzione. Puoi trasmettere dati di test o sovrascrivere dati importanti. Tutte le configurazioni vitali vengono passate utilizzando il [file di configurazione](../store/store-settings.md) e il comando `setup:upgrade` durante la compilazione e la distribuzione.
+Per le distribuzioni continue dell&#39;integrazione, Adobe **sconsiglia** la migrazione dei dati dall&#39;integrazione all&#39;ambiente di staging e produzione. Puoi trasmettere dati di test o sovrascrivere dati importanti. Tutte le configurazioni vitali vengono passate utilizzando il [file di configurazione](../store/store-settings.md) e il comando `setup:upgrade` durante la compilazione e la distribuzione.
 
 >[!ENDSHADEBOX]
 
-Adobe **consiglia** di migrare i dati dalla produzione alla gestione temporanea per testare completamente il sito e archiviare in un ambiente di produzione vicino a tutti i servizi e le impostazioni.
+Adobe **consiglia** di migrare i dati dalla produzione all&#39;ambiente di staging per testare completamente il sito e archiviarlo in un ambiente vicino alla produzione con tutti i servizi e le impostazioni.
 
 >[!NOTE]
 >
@@ -319,16 +320,10 @@ Durante l&#39;importazione dei dati è necessario eliminare e creare un database
    drop database main;
    ```
 
-   Per la produzione:
+   Per gli ambienti di produzione e staging:
 
    ```shell
-   drop database <cluster-id>;
-   ```
-
-   Per staging:
-
-   ```shell
-   drop database <cluster-ID_stg>;
+   drop database <database_name>;
    ```
 
 1. Ricreare il database.
