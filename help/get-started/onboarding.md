@@ -21,7 +21,7 @@ Per integrare rapidamente il progetto e iniziare a sviluppare il sito per la dis
 
 ## Registrati a un account Cloud
 
-Se non disponi di un account Adobe Commerce su infrastruttura cloud, contatta [Vendite](https://business.adobe.com/products/magento/get-demo.html). Quando ti iscrivi, Adobe crea il tuo account e ti invia un’e-mail di benvenuto con le istruzioni su come accedere all’interfaccia del progetto. L’e-mail contiene un collegamento che ti consente di accedere al tuo account e completare la configurazione iniziale del progetto.
+Se non disponi di un account Adobe Commerce su infrastruttura cloud, contatta [Vendite](https://business.adobe.com/it/products/magento/get-demo.html). Quando ti iscrivi, Adobe crea il tuo account e ti invia un’e-mail di benvenuto con le istruzioni su come accedere all’interfaccia del progetto. L’e-mail contiene un collegamento che ti consente di accedere al tuo account e completare la configurazione iniziale del progetto.
 
 ## Accedere al progetto e aggiungere utenti
 
@@ -33,7 +33,7 @@ Puoi aggiungere utenti registrati al tuo Adobe Commerce solo a progetti e ambien
 
 ### Accesso all’account condiviso
 
-Il proprietario della licenza può impostare l’accesso condiviso per l’account. L’accesso condiviso consente a dipendenti e fornitori di servizi affidabili di utilizzare il Centro assistenza per inviare e tenere traccia dei ticket di supporto relativi ai progetti di infrastruttura cloud di Adobe Commerce. Per istruzioni sull&#39;installazione, vedere l&#39;articolo [Accesso condiviso](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) nell&#39;Help Center.
+Il proprietario della licenza può impostare l’accesso condiviso per l’account. L’accesso condiviso consente a dipendenti e fornitori di servizi affidabili di utilizzare il Centro assistenza per inviare e tenere traccia dei ticket di supporto relativi ai progetti di infrastruttura cloud di Adobe Commerce. Per istruzioni sull&#39;installazione, vedere l&#39;articolo [Accesso condiviso](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#shared-access) nell&#39;Help Center.
 
 ### [!DNL Cloud Console]
 
