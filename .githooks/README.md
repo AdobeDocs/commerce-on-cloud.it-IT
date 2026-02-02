@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: ee2ed3a78939af36572f0baa6672b2e9f9a2557f
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ Questa directory contiene hook di pre-commit che ottimizzano automaticamente le 
 
 ## Funzionamento degli hook
 
-- **Rileva automaticamente** file di immagine di staging (PNG, JPG, JPEG, GIF, SVG)
+- **Rileva automaticamente** file di immagine di staging (PNG, JPG, JPEG, GIF)
 - **Esegui`image_optim`** per comprimere e ottimizzare le immagini
 - **Riposiziona nell&#39;area intermedia le immagini ottimizzate** automaticamente
 - **Assicurarsi che tutte le immagini salvate** siano ottimizzate correttamente
@@ -85,11 +85,11 @@ Image optimization complete!
 ## Linee guida per le immagini
 
 - **PNG**: da utilizzare per le schermate e gli elementi dell&#39;interfaccia utente (verranno ottimizzati automaticamente)
-- **SVG**: utilizzare per icone e grafica semplice (ottimizzazione disabilitata per impostazione predefinita)
 - **JPEG**: utilizza per le foto (verrà ottimizzato automaticamente)
 - **GIF**: utilizza per le animazioni (verrà ottimizzato automaticamente)
+- **SVG**: da utilizzare per icone ed elementi grafici semplici (non elaborati da hook, commit così com&#39;è)
 
-Gli hook di pre-commit ottimizzano automaticamente tutte le immagini durante il commit.
+Gli hook di pre-commit ottimizzano automaticamente le immagini PNG, JPEG e GIF durante il commit.
 
 ## Ottimizzazione manuale
 
@@ -107,7 +107,7 @@ Gli hook utilizzano il file di configurazione `_jekyll/.image_optim.yml` per per
 - **PNG**: usa `advpng`, `optipng` e `pngquant`
 - **JPEG**: usa `jhead`, `jpegoptim` e `jpegtran`
 - **GIF**: Usa `gifsicle`
-- **SVG**: l&#39;ottimizzazione SVG è disabilitata per impostazione predefinita (può interrompere elementi grafici vettoriali complessi e animazioni)
+- **SVG**: non elaborato (escluso dal rilevamento per mantenere grafica vettoriale e animazioni)
 
 ## Risoluzione dei problemi
 
@@ -141,7 +141,7 @@ Gli hook utilizzano il file di configurazione `_jekyll/.image_optim.yml` per per
 - **PNG** (`.png`) - Compressione senza perdita di dati e perdita di dati
 - **JPEG** (`.jpg`, `.jpeg`) - Compressione con perdita di dati con pulizia metadati
 - **GIF** (`.gif`) - Animazione e ottimizzazione statica
-- **SVG** (`.svg`) - Ottimizzazione vettoriale (disattivata per impostazione predefinita)
+- **SVG** (`.svg`) - Non elaborato dagli hook (conferma così com&#39;è per mantenere la qualità)
 
 ## Best practice
 
