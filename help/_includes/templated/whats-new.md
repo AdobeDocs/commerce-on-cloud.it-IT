@@ -1,8 +1,8 @@
 ---
-source-git-commit: c5e52c70c121aa3650acfba8a98b743834a95428
+source-git-commit: 76b43148aed413fc8108beb45ed292008f4b6aa0
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 6%
+source-wordcount: '88'
+ht-degree: 4%
 
 ---
 # Nuovo modello
@@ -10,6 +10,28 @@ ht-degree: 6%
 ## Novità
 
 Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo elenco sono esclusi tutti gli aggiornamenti minori, ad esempio la modifica della copia.
+
+### 3 febbraio 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descrizione</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Sono state aggiunte le seguenti informazioni sul cloaking dell'origine alla <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Panoramica dei servizi Fastly</a>.<br />- Definizione e flusso di traffico<br />- Stato abilitazione (abilitato su tutti i progetti cloud dal 2021) Esempi di URL di origine bloccati<br />- Esempi di utilizzo API REST</p>
+</td>
+      <td>
+        Tecnico
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/e367fd9c565d4d6d2bbc15b0289768dc38dcf7a9">commit</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 13 gennaio 2026
 
@@ -23,7 +45,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata aggiornata la versione degli esempi in <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurazione del servizio OpenSearch</a>.</p>
+      <td><p>È stata aggiornata la versione degli esempi in <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurazione del servizio OpenSearch</a>.</p>
 </td>
       <td>
         Feedback
