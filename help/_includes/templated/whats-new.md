@@ -23,7 +23,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Sono state aggiunte istruzioni per <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">modificare il proprietario dell'account New Relic</a> nella <em>Guida di Commerce sull'infrastruttura cloud</em>.</p>
+      <td><p>Sono state aggiunte istruzioni per <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">modificare il proprietario dell'account New Relic</a> nella <em>Guida di Commerce sull'infrastruttura cloud</em>.</p>
 </td>
       <td>
         Tecnico
@@ -45,7 +45,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Sono state aggiunte le seguenti informazioni sul cloaking dell'origine alla <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Panoramica dei servizi Fastly</a>.<br />- Definizione e flusso di traffico<br />- Stato abilitazione (abilitato su tutti i progetti cloud dal 2021) Esempi di URL di origine bloccati<br />- Esempi di utilizzo API REST</p>
+      <td><p>Sono state aggiunte le seguenti informazioni sul cloaking dell'origine alla <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/fastly">Panoramica dei servizi Fastly</a>.<br />- Definizione e flusso di traffico<br />- Stato abilitazione (abilitato su tutti i progetti cloud dal 2021) Esempi di URL di origine bloccati<br />- Esempi di utilizzo API REST</p>
 </td>
       <td>
         Tecnico
@@ -67,7 +67,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata aggiornata la versione degli esempi in <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurazione del servizio OpenSearch</a>.</p>
+      <td><p>È stata aggiornata la versione degli esempi in <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurazione del servizio OpenSearch</a>.</p>
 </td>
       <td>
         Feedback
