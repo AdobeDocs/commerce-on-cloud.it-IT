@@ -1,8 +1,8 @@
 ---
-source-git-commit: 2d85220736f084121d0215bcfa481eb204d0e203
+source-git-commit: 2dc98e99fe463f8cc7dbb40871cc1a6db08f3797
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 4%
+source-wordcount: '219'
+ht-degree: 2%
 
 ---
 # Nuovo modello
@@ -10,6 +10,28 @@ ht-degree: 4%
 ## Novità
 
 Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo elenco sono esclusi tutti gli aggiornamenti minori, ad esempio la modifica della copia.
+
+### 27 febbraio 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descrizione</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>È stato aggiornato l'<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">Elenco di controllo Launch</a> per Commerce su progetti cloud per aggiungere record AAAA veloci alle istruzioni di configurazione DNS.</p>
+</td>
+      <td>
+        Feedback
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/c4c84286c178cb17a2051d6d803742ab73c409bf">commit</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 19 febbraio 2026
 
@@ -23,7 +45,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Sono state aggiunte istruzioni per <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">modificare il proprietario dell'account New Relic</a> nella <em>Guida di Commerce sull'infrastruttura cloud</em>.</p>
+      <td><p>Sono state aggiunte istruzioni per <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">modificare il proprietario dell'account New Relic</a> nella <em>Guida di Commerce sull'infrastruttura cloud</em>.</p>
 </td>
       <td>
         Tecnico
@@ -45,7 +67,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Sono state aggiunte le seguenti informazioni sul cloaking dell'origine alla <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/fastly">Panoramica dei servizi Fastly</a>.<br />- Definizione e flusso di traffico<br />- Stato abilitazione (abilitato su tutti i progetti cloud dal 2021) Esempi di URL di origine bloccati<br />- Esempi di utilizzo API REST</p>
+      <td><p>Sono state aggiunte le seguenti informazioni sul cloaking dell'origine nella <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">panoramica dei servizi Fastly</a>.<br />- Definizione e flusso di traffico<br />- Stato abilitazione (abilitato in tutti i progetti cloud dal 2021) Esempi di URL di origine bloccati<br />- Esempi di utilizzo dell'API REST</p>
 </td>
       <td>
         Tecnico
@@ -67,7 +89,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata aggiornata la versione degli esempi in <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurazione del servizio OpenSearch</a>.</p>
+      <td><p>È stata aggiornata la versione degli esempi in <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurazione del servizio OpenSearch</a>.</p>
 </td>
       <td>
         Feedback
