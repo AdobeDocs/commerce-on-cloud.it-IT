@@ -1,9 +1,10 @@
 ---
 title: Elenco di controllo di Launch
 description: Verificare gli elementi dell'elenco di controllo per l'avvio del sito.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
+source-git-commit: ca2d94364787695398b2b8af559733fe52ec2949
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Consulta [Distribuzione dei test](../test/staging-and-production.md) per testare
 
 Adobe fornisce un certificato crittografato SSL/TLS per ogni ambiente. Questo certificato è necessario affinché Fastly possa gestire il traffico protetto tramite HTTPS.
 
-Per utilizzare questo certificato, devi aggiornare la configurazione DNS in modo che Adobe possa completare la convalida del dominio e applicare il certificato all’ambiente. Ogni ambiente dispone di un certificato univoco che copre i domini di Adobe Commerce sui siti dell’infrastruttura cloud implementati in tale ambiente. È consigliabile completare e aggiornare la configurazione durante il [processo di configurazione rapido](../cdn/fastly-configuration.md).
+Per utilizzare questo certificato, devi aggiornare la configurazione DNS in modo che Adobe possa completare la convalida del dominio e applicare il certificato al tuo ambiente. Ogni ambiente dispone di un certificato univoco che copre i domini di Adobe Commerce sui siti dell’infrastruttura cloud implementati in tale ambiente. È consigliabile completare e aggiornare la configurazione durante il [processo di configurazione rapido](../cdn/fastly-configuration.md).
 
 ## Aggiornamento della configurazione DNS con le impostazioni di produzione
 
@@ -60,14 +61,14 @@ Quando sei pronto per avviare il sito, devi aggiornare la configurazione DNS per
    | `www.<domain-name>.com` | prod.magentocloud.map.fastly.net |
    | `mystore.<domain-name>.com` | prod.magentocloud.map.fastly.net |
 
-1. Se necessario, aggiungere i record A per mappare il dominio apex (`<domain-name>.com`) ai seguenti indirizzi IP Fastly:
+1. Se necessario, aggiungere i record A e AAAA per mappare il dominio APEX (`<domain-name>.com`) ai seguenti indirizzi IP Fastly:
 
-   | Dominio apex | NOME |
-   | --------------- | ----------------- |
-   | `<domain-name>.com` | `151.101.1.124` |
-   | `<domain-name>.com` | `151.101.65.124` |
-   | `<domain-name>.com` | `151.101.129.124` |
-   | `<domain-name>.com` | `151.101.193.124` |
+   | Dominio apex | NOME | AAAANAME |
+   | --------------- | ----------------- | -------- |
+   | `<domain-name>.com` | `151.101.1.124` | 2a04:4e42:200::380 |
+   | `<domain-name>.com` | `151.101.65.124` | 2a04:4e42:400::380 |
+   | `<domain-name>.com` | `151.101.129.124` | 2a04:4e42:600::380 |
+   | `<domain-name>.com` | `151.101.193.124` | 2a04:4e42::380 |
 
 >[!IMPORTANT]
 >
@@ -90,7 +91,7 @@ Quando sei pronto per avviare il sito, devi aggiornare la configurazione DNS per
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **NOTA**: puoi anche aggiornare l&#39;URL di base dall&#39;amministratore. Consulta [URL store](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=it) nella _Guida agli store e all&#39;esperienza di acquisto di Adobe Commerce_.
+   **NOTA**: puoi anche aggiornare l&#39;URL di base dall&#39;amministratore. Consulta [URL store](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) nella _Guida agli store e all&#39;esperienza di acquisto di Adobe Commerce_.
 
 1. Attendi alcuni minuti per l’aggiornamento del sito.
 
@@ -104,7 +105,7 @@ Di seguito sono riportate le modifiche e i controlli consigliati:
 
 - [Test e-mail in uscita completato](../project/outgoing-emails.md)
 
-- [Configurazione sicura per le credenziali amministratore e URL amministratore di base](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/security/security-admin)
+- [Configurazione sicura per le credenziali amministratore e URL amministratore di base](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [Ottimizza tutte le immagini per il web](../cdn/fastly-image-optimization.md)
 
@@ -136,13 +137,13 @@ Puoi eseguire il test anche utilizzando le seguenti opzioni di terze parti:
 
 - [Configurare l&#39;analisi della protezione](overview.md#set-up-the-security-scan-tool)
 
-- [Configurazione sicura per l&#39;utente amministratore](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/security/security-admin)
+- [Configurazione sicura per l’utente amministratore](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [Configurazione sicura per URL amministratore](https://experienceleague.adobe.com/it/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [Configurazione sicura per l’URL amministratore](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Rimuovere gli utenti che non fanno più parte del progetto di infrastruttura cloud di Adobe Commerce](../project/user-access.md)
 
-- [Configura autenticazione a due fattori](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
+- [Configurare l’autenticazione a due fattori](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
 
 ## Monitoraggio delle prestazioni
 
