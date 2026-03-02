@@ -3,9 +3,9 @@ user-guide-title: Guida di Commerce sul cloud
 user-guide-description: Scopri come gestire l’applicazione Adobe Commerce sull’infrastruttura cloud.
 product: magento
 feature: Cloud
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 2311b8e5c0216c01d0189c8f8e669dcddfcd1dcc
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '387'
 ht-degree: 8%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 8%
    + [Flusso di lavoro professionale](architecture/pro-develop-deploy-workflow.md)
    + [Architettura scalata](architecture/scaled-architecture.md)
    + [Ridimensionamento automatico](architecture/autoscaling.md)
-+ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=it)
++ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Note sulla versione {#release-notes}
    + [Suite di strumenti cloud](release-notes/cloud-tools-suite.md)
    + [Pacchetto ECE-Strumenti](release-notes/ece-tools-package.md)
@@ -89,6 +89,7 @@ ht-degree: 8%
    + [Ripristina ambiente](development/restore-environment.md)
    + Storage {#storage}
       + [Gestione dello spazio su disco](storage/manage-disk-space.md)
+      + [Verifica il limite di spazio su disco per Adobe Commerce sull’infrastruttura cloud](storage/check-disk-space-limit-on-cloud.md)
       + [Query del database del profilo](storage/profile-database-queries.md)
       + [Eseguire il backup del database](storage/database-dump.md)
       + [Gestione dei backup](storage/snapshots.md)
