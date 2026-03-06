@@ -4,9 +4,9 @@ description: Consulta un elenco degli ultimi miglioramenti apportati al pacchett
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
+source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,13 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v1.1.3 {#latest}
+## v1.1.4 {#latest}
+
+Data di rilascio: 05 marzo 2026
+
+- ![nuova icona](../../assets/new.svg) **PHP 8.5**—Aggiunto supporto per PHP 8.5.<!-- MCLOUD-14182-->
+
+## v1.1.3
 
 Data di rilascio: 07 agosto 2025
 
@@ -67,7 +73,7 @@ Data di rilascio: 10 marzo 2023
 
 Data di rilascio: 13 settembre 2022
 
-- ![icona correzione](../../assets/fix.svg) **Errori durante il riscaldamento**—È stato risolto un problema che tentava di [riscaldamento](../environment/variables-post-deploy.md#warm_up_pages) quando la visibilità della pagina era impostata su [**Non visibile singolarmente**](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) nell&#39;amministratore, causando `ERROR: Warming up failed: <link to page>` errori nel registro di distribuzione.<!-- MCLOUD-9134 -->
+- ![icona correzione](../../assets/fix.svg) **Errori durante il riscaldamento**—È stato risolto un problema che tentava di [riscaldamento](../environment/variables-post-deploy.md#warm_up_pages) quando la visibilità della pagina era impostata su [**Non visibile singolarmente**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) nell&#39;amministratore, causando `ERROR: Warming up failed: <link to page>` errori nel registro di distribuzione.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

@@ -4,9 +4,9 @@ description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchet
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 16d5577da8841c2f65f9b5298beaa7fb84a1ab47
+source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3491'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Il pacchetto [ece-tools](https://github.com/magento/ece-tools) è un insieme di 
 
 >[!NOTE]
 >
->Per informazioni sull&#39;aggiornamento all&#39;ultima versione del pacchetto [, vedere &#x200B;](../dev-tools/update-package.md)Aggiornamento degli strumenti ECE`ece-tools`.
+>Per informazioni sull&#39;aggiornamento all&#39;ultima versione del pacchetto `ece-tools`, vedere [Aggiornamento degli strumenti ECE](../dev-tools/update-package.md).
 
 Il pacchetto `ece-tools` utilizza la seguente sequenza di versioni di rilascio: `200<major>.<minor>.<patch>`
 
@@ -28,7 +28,16 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v2002.2.9 {#latest}
+## v2002.2.10 {#latest}
+
+Data di rilascio: 05 marzo 2026
+
+- ![nuova icona](../../assets/new.svg) **PHP 8.5**—Aggiunto supporto per PHP 8.5.<!-- MCLOUD-14179 -->
+- ![icona correzione](../../assets/fix.svg) **Test funzionale aggiornato**-Valkey 8.1, 8,2 e Redis 8.4 test aggiornati<!-- MCLOUD-13983 -->
+- ![icona correzione](../../assets/fix.svg) **Aggiornamento di MariaDB, PHP e Convalida Opensearch**-Aggiornamento dello script di convalida.<!-- MCLOUD-14574/MCLOUD-14466 -->
+- ![icona di correzione](../../assets/fix.svg) **convalida EOL**-Aggiornate date di fine del ciclo di vita (EOL) dei servizi.<!-- MCLOUD-14272 -->
+
+## v2002.2.9
 
 Data di rilascio: 13 novembre 2025
 
@@ -177,7 +186,7 @@ Data di rilascio: 4 agosto 2022
 
 - ![icona di correzione](../../assets/fix.svg) **ElasticSuite Validator e OpenSearch**—È stato corretto un problema di convalida del controllo di integrità ElasticSuite quando OpenSearch è installato.<!-- MCLOUD-8767 -->
 - ![icona correzione](../../assets/fix.svg) **Tipi restituiti per i comandi di distribuzione**—Sono stati corretti i tipi restituiti per i comandi di distribuzione.<!-- AC-3208 -->
-- ![icona di correzione](../../assets/fix.svg) **[!DNL RabbitMQ]problema con la nuova installazione di Commerce 2.4.5**—È stato risolto [!DNL RabbitMQ] problema di arresto anomalo nella nuova installazione di Commerce 2.4.5.<!-- MCLOUD-9059 -->
+- ![icona di correzione](../../assets/fix.svg) **[!DNL RabbitMQ]problema con la nuova installazione di Commerce 2.4.5**—È stato risolto [!DNL RabbitMQ] problema di arresto anomalo sul nuovo Commerce 2.4.5. installazione.<!-- MCLOUD-9059 -->
 
 ## v2002.1.10
 
@@ -361,7 +370,7 @@ Data di rilascio: 25 giugno 2020
 
    - ![nuova icona](../../assets/new.svg) **Controlli di compatibilità di Elasticsearch 7.x**—È stata aggiornata la convalida di Elasticsearch per i controlli di compatibilità del software Elasticsearch 7.x.<!--MCLOUD-5542-->
 
-   - ![nuova icona](../../assets/new.svg) **Versioni del servizio aggiornate e controlli di convalida EOL**—Convalida aggiornata per verificare le versioni del servizio installate rispetto ai requisiti di Adobe Commerce 2.4.<!--MCLOUD-6144-->
+   - ![nuova icona](../../assets/new.svg) **Versioni del servizio aggiornate e controlli di convalida EOL**—Convalida aggiornata per verificare le versioni del servizio installate rispetto a Adobe Commerce 2.4. requisiti.<!--MCLOUD-6144-->
 
    - ![icona di correzione](../../assets/fix.svg) È stato risolto un problema di convalida in modo che il seguente messaggio di avviso post-distribuzione venga visualizzato solo se la configurazione dell&#39;hook `post-deploy` non è presente nel file `.magento.app.yaml`:
 
@@ -455,7 +464,7 @@ Data di rilascio: 6 febbraio 2020
 
 - ![icona correzione](../../assets/fix.svg) È stato risolto un problema che ha causato un errore nel processo di compilazione quando il file `config.php` è vuoto.<!--MAGECLOUD-4127-->
 
-## 2002.0.23.
+## 2002.0.23
 
 Data di rilascio: 27 febbraio 2020
 
