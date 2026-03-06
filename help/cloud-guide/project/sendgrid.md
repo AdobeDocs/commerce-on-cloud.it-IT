@@ -2,9 +2,9 @@
 title: Servizio e-mail SendGrid
 description: Scopri il servizio e-mail SendGrid per Adobe Commerce sull’infrastruttura cloud e come verificare la configurazione DNS.
 exl-id: 06236068-df32-468f-99ec-c379984be136
-source-git-commit: 0cb86dd5e4fe627b198ac3c1a6b14607f377a9a3
+source-git-commit: 648e39821d211fa391cf94ed1db8de7ba0c2e254
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Puoi abilitare o disabilitare le e-mail in uscita per ogni ambiente dalla consol
 
 Per impostazione predefinita, le e-mail in uscita sono abilitate negli ambienti di produzione e staging di Pro. Tuttavia, [!UICONTROL Outgoing emails] potrebbe apparire disabilitato nelle impostazioni dell&#39;ambiente finché non si imposta la proprietà `enable_smtp` tramite la [riga di comando](outgoing-emails.md#enable-emails-in-the-cli) o la [console cloud](outgoing-emails.md#enable-emails-in-the-cloud-console). Puoi abilitare le e-mail in uscita per gli ambienti di integrazione e staging per inviare e-mail di autenticazione a due fattori o reimpostare le e-mail con password per gli utenti del progetto Cloud. Consulta [Configurare le e-mail per il test](outgoing-emails.md).
 
-Se le e-mail in uscita devono essere disabilitate o riabilitate negli ambienti di produzione o staging di Pro, puoi inviare un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+Se le e-mail in uscita devono essere disabilitate o riabilitate negli ambienti di produzione o staging di Pro, puoi inviare un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
 
 >[!TIP]
 >
@@ -41,7 +41,7 @@ Se le e-mail in uscita devono essere disabilitate o riabilitate negli ambienti d
 
 Tutti i progetti Cloud vengono gestiti con un account centrale, pertanto solo l’assistenza ha accesso al dashboard SendGrid. SendGrid non fornisce funzionalità di restrizione dell&#39;account secondario.
 
-Per esaminare i registri attività per verificare lo stato di consegna o un elenco di indirizzi e-mail non recapitati, rifiutati o bloccati, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket). Il team di supporto **non può** recuperare i registri attività più vecchi di 30 giorni.
+Per esaminare i registri attività per verificare lo stato di consegna o un elenco di indirizzi e-mail non recapitati, rifiutati o bloccati, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket). Il team di supporto **non può** recuperare i registri attività più vecchi di 30 giorni.
 
 Se possibile, includi le seguenti informazioni nella richiesta:
 
@@ -49,13 +49,25 @@ Se possibile, includi le seguenti informazioni nella richiesta:
 * il periodo in questione (solo negli ultimi 30 giorni)
 * oggetto dell’e-mail
 
+Per gestire meglio le impostazioni di consegna e-mail, utilizza il tuo [server SMTP o il provider del servizio di consegna e-mail](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications). Puoi anche registrarti al tuo servizio SendGrid per seguire da vicino lo stack del servizio Cloud.
+
+>
+>
+>Se si utilizza il proprio account SendGrid, non si riceverà più il supporto SendGrid tramite Adobe.
+>
+> Per abilitare il servizio SendGrid proprietario o aggiornare una chiave API esistente, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) e includi la chiave API per l&#39;account SendGrid.
+
 ## Posta identificata DomainKeys (DKIM)
 
 DKIM è una tecnologia di autenticazione e-mail che consente ai provider di servizi Internet (ISP) di identificare sia indirizzi di mittente legittimi che falsi, una tecnica comunemente utilizzata nelle truffe di phishing e e-mail. DKIM si basa su un proprietario di dominio che gestisce i record DNS. Quando si utilizza DKIM, il server di invio utilizza una chiave privata per firmare i messaggi. Inoltre, il proprietario del dominio aggiunge un record DKIM, che è un record `TXT` modificato, ai record DNS del dominio mittente. Questo record `TXT` contiene una chiave pubblica utilizzata dai server di posta dei destinatari per verificare la firma di un messaggio. La procedura di crittografia a chiave pubblica di DKIM consente ai destinatari di verificare l&#39;autenticità di un mittente. Vedi [Record DKIM spiegati](https://docs.sendgrid.com/ui/account-and-settings/dkim-records).
 
 >[!WARNING]
 >
->Le firme di SendGrid DKIM e il supporto dell’autenticazione del dominio sono disponibili solo negli ambienti di produzione e staging per i progetti Pro, ma non per tutti gli ambienti Starter. Di conseguenza, le e-mail transazionali in uscita potrebbero essere segnalate da filtri anti-spam. L’utilizzo di DKIM migliora la velocità di consegna come mittente di e-mail autenticato. Per migliorare il tasso di consegna dei messaggi, puoi effettuare l’aggiornamento da Starter a Pro oppure utilizzare il tuo server SMTP o il provider di servizi di consegna e-mail. Consulta [Configurare le connessioni e-mail](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/communications/email-communications) nella _Guida di Admin Systems_.
+>Le firme di SendGrid DKIM e il supporto per l’autenticazione del dominio sono disponibili solo negli ambienti di produzione e staging per i progetti Pro. Non sono supportati in ambienti Starter.
+>
+>Per questo motivo, le e-mail transazionali inviate da ambienti Starter hanno più probabilità di essere contrassegnate come spam in quanto non possono essere autenticate completamente.  Negli ambienti Pro, l’abilitazione di DKIM autentica il dominio di invio, migliorando notevolmente il recapito dei messaggi e riducendo la possibilità che i messaggi vengano filtrati come spam.
+>
+>Per migliorare il tasso di consegna dei messaggi, effettua l&#39;aggiornamento da Starter a Pro oppure utilizza il tuo server SMTP o il provider di servizi di consegna e-mail. Consulta [Configurare le connessioni e-mail](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications) nella _Guida di Admin Systems_.
 
 ### Autenticazione del mittente e del dominio
 
@@ -63,11 +75,11 @@ Affinché SendGrid possa inviare e-mail transazionali per tuo conto dagli ambien
 
 >[!TIP]
 >
->Assicurarsi di configurare **[!UICONTROL Sindirizzi e-mail dell&#39;archivio]** con il dominio corretto in **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. L’autenticazione del dominio viene eseguita sull’indirizzo e-mail del mittente. Se l&#39;impostazione predefinita (`example.com`) è configurata, le e-mail da `example.com` verrebbero bloccate da Sendgrid.
+>Assicurarsi di configurare **[!UICONTROLSindirizzi e-mail dell&#39;archivio]** con il dominio corretto in **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. L’autenticazione del dominio viene eseguita sull’indirizzo e-mail del mittente. Se l&#39;impostazione predefinita (`example.com`) è configurata, le e-mail da `example.com` verrebbero bloccate da Sendgrid.
 
 **Per abilitare l&#39;autenticazione del dominio**:
 
-1. Invia un [ticket di supporto](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) per richiedere l&#39;abilitazione di DKIM per un dominio specifico (**Solo per ambienti di staging e produzione Pro**).
+1. Invia un [ticket di supporto](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) per richiedere l&#39;abilitazione di DKIM per un dominio specifico (**Solo per ambienti di staging e produzione Pro**).
 1. Aggiorna la configurazione DNS con i record `TXT` e `CNAME` forniti nel ticket di supporto.
 
 **Esempio di record `TXT` con ID account**:
@@ -118,7 +130,7 @@ dig CNAME s2._domainkey.domain_name
 
 La soglia delle e-mail transazionali si riferisce al numero di messaggi e-mail transazionali che puoi inviare dagli ambienti Pro entro un periodo di tempo specifico, ad esempio 12.000 e-mail al mese da ambienti non di produzione. La soglia è progettata per proteggere dall’invio di spam e potenzialmente danneggiare la reputazione delle e-mail.
 
-Non vi sono limiti rigidi al numero di e-mail che possono essere inviate nell’ambiente di produzione, purché il punteggio di reputazione del mittente sia superiore al 95%. La reputazione è influenzata dal numero di e-mail non recapitate o rifiutate e dal fatto che i registri di posta indesiderata basati su DNS abbiano contrassegnato il dominio come potenziale origine di posta indesiderata. Vedere [Messaggi e-mail non inviati quando i crediti SendGrid sono stati superati in Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) nella _Knowledge Base di supporto di Commerce_.
+Non vi sono limiti rigidi al numero di e-mail che possono essere inviate nell’ambiente di produzione, purché il punteggio di reputazione del mittente sia superiore al 95%. La reputazione è influenzata dal numero di e-mail non recapitate o rifiutate e dal fatto che i registri di posta indesiderata basati su DNS abbiano contrassegnato il dominio come potenziale origine di posta indesiderata. Vedere [Messaggi e-mail non inviati quando i crediti SendGrid sono stati superati in Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) nella _Knowledge Base di supporto di Commerce_.
 
 **Per verificare se il numero massimo di crediti è stato superato**:
 
@@ -132,7 +144,7 @@ Non vi sono limiti rigidi al numero di e-mail che possono essere inviate nell’
 
 1. Controlla `/var/log/mail.log` per `authentication failed : Maxium credits exceeded` voci.
 
-   Se sono presenti `authentication failed` voci di registro e la **reputazione di invio e-mail** è di almeno 95, puoi [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) per richiedere un aumento dell&#39;assegnazione del credito.
+   Se sono presenti `authentication failed` voci di registro e la **reputazione di invio e-mail** è di almeno 95, puoi [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) per richiedere un aumento dell&#39;assegnazione del credito.
 
 >[!NOTE]
 >
@@ -148,6 +160,6 @@ Un elenco di soppressione delle e-mail è un elenco di destinatari a cui le e-ma
 
 Per evitare che le e-mail vengano inviate alla cartella di posta indesiderata, segui l&#39;articolo sulle best practice di Sendgrid, [Why Are My Emails Going to Spam?](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder) (Perché le e-mail verranno inviate allo spam).
 
-Se alcuni destinatari non ricevono le e-mail, puoi [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) per richiedere una revisione degli elenchi di soppressione e rimuovere i destinatari, se necessario.
+Se alcuni destinatari non ricevono le e-mail, puoi [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) per richiedere una revisione degli elenchi di soppressione e rimuovere i destinatari, se necessario.
 
 Per ulteriori dettagli, fare riferimento a [Cos&#39;è un elenco di soppressione?](https://sendgrid.com/en-us/blog/what-is-a-suppression-list)
