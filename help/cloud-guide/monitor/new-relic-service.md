@@ -3,9 +3,10 @@ title: servizio New Relic
 description: Scopri il servizio New Relic disponibile con il tuo progetto di infrastruttura cloud Adobe Commerce on.
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 10966241-311d-4b68-804d-4c9569bf933d
+source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -23,6 +24,8 @@ Le seguenti funzioni di New Relic sono disponibili per l’utilizzo con gli ambi
 >[!INFO]
 >
 >Altre funzioni di New Relic non sono disponibili nei progetti Adobe Commerce.
+>
+>I clienti di Adobe Commerce on Cloud non possono integrare o inviare dati da server esterni direttamente all’account New Relic con provisioning. Il servizio New Relic è limitato al monitoraggio dell&#39;ambiente applicativo Commerce Cloud. Solo i servizi di terze parti richiamati dall’applicazione stessa (ad esempio, API esterne o servizi chiamati durante il runtime) possono essere tracciati e monitorati all’interno di New Relic.
 
 ## APM NEW RELIC
 
