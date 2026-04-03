@@ -3,9 +3,9 @@ title: Configurare i servizi
 description: Scopri come configurare i servizi utilizzati da Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
+source-git-commit: 4ea85b008e2ea9d1c9ab623c413ff9c3c3aaffd2
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ L’infrastruttura cloud supporta e distribuisce i seguenti servizi:
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
+>È necessario [aggiornare RabbitMQ in sequenza tra le versioni disponibili](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Ad esempio, non è possibile eseguire l&#39;aggiornamento da 3.9 a 4.1
 >
 >Dopo l’aggiornamento a una nuova versione di RabbitMQ, attiva una distribuzione completa per garantire che le code di messaggi personalizzate vengano ricreate in RabbitMQ.
 
@@ -180,7 +181,7 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
 
 ## Versioni del servizio
 
-Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
+Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
 
 ### Controlli di fine del ciclo di vita del software
 
@@ -189,7 +190,7 @@ Durante il processo di distribuzione, il pacchetto `ece-tools` controlla le vers
 - Se la versione di un servizio rientra nei tre mesi successivi alla data di fine del ciclo di vita, nel registro di distribuzione viene visualizzata una notifica.
 - Se la data fine del ciclo di vita è nel passato, viene visualizzata una notifica di avviso.
 
-Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file [&#x200B; di `eol.yaml`ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Per mantenere la sicurezza dello store, aggiornare le versioni del software installato prima che raggiungano la fine del ciclo di vita. È possibile rivedere le date di fine del ciclo di vita nel file `eol.yaml` di [ece-tools&#39;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migra a OpenSearch
 
