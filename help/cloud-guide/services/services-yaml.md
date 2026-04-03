@@ -39,7 +39,7 @@ L’infrastruttura cloud supporta e distribuisce i seguenti servizi:
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->È necessario [aggiornare RabbitMQ in sequenza tra le versioni disponibili](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Ad esempio, non è possibile eseguire l&#39;aggiornamento da 3.9 a 4.1
+>È necessario [aggiornare RabbitMQ in sequenza tra le versioni disponibili](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Ad esempio, non è possibile eseguire l&#39;aggiornamento da 3.9 a 4.1
 >
 >Dopo l’aggiornamento a una nuova versione di RabbitMQ, attiva una distribuzione completa per garantire che le code di messaggi personalizzate vengano ricreate in RabbitMQ.
 
@@ -181,7 +181,7 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
 
 ## Versioni del servizio
 
-Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
+Il supporto per la versione del servizio e la compatibilità per l’infrastruttura cloud di Adobe Commerce è determinato dalle versioni distribuite e testate nell’infrastruttura cloud e talvolta differisce dalle versioni supportate dalle distribuzioni Adobe Commerce on-premise. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella guida _Installazione_ per un elenco delle dipendenze software di terze parti testate da Adobe con specifiche versioni di Adobe Commerce e Magento Open Source.
 
 ### Controlli di fine del ciclo di vita del software
 
