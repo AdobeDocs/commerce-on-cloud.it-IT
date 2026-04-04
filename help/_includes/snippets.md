@@ -1,7 +1,7 @@
 ---
-source-git-commit: aae9f01d5b92d8067624953e3c959ec8dce3b108
+source-git-commit: c8effbdb82060e2a2cbcbdef577fed7249a76799
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=it) nel _Centro assistenza Adobe Commerce_.
+>I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) nel _Centro assistenza Adobe Commerce_.
 
 ## Opzioni di unione {#merge-options}
 
@@ -41,36 +41,46 @@ Impostare l&#39;opzione `_merge` su una delle opzioni seguenti:
 >Alcuni **progetti Pro** richiedono l&#39;assistenza del supporto Adobe per aggiornare le configurazioni delle route nel file `routes.yaml` e le configurazioni cron nel file `.magento.app.yaml`. Adobe consiglia di apportare e convalidare prima tutte le modifiche di configurazione YAML in un ambiente di integrazione e quindi distribuirle nell’ambiente di staging.
 >
 >
->Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e non sono presenti messaggi di errore correlati nel registro, **è necessario** [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket). Nel ticket, descrivi chiaramente le modifiche di configurazione tentate e allega eventuali file di configurazione YAML aggiornati.
+>Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e non sono presenti messaggi di errore correlati nel registro, **è necessario** [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Nel ticket, descrivi chiaramente le modifiche di configurazione tentate e allega eventuali file di configurazione YAML aggiornati.
 
 ## Supporto dei servizi Pro {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- Per i progetti Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per installare o aggiornare [servizi](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=it) solo negli ambienti `Staging` e `Production`.
+- Per i progetti Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per installare o aggiornare [servizi](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html) solo negli ambienti `Staging` e `Production`.
 
-- Indicare le modifiche necessarie al servizio, includere i file `.magento.app.yaml` e `services.yaml` aggiornati e indicare la versione PHP nel ticket. Per le modifiche self-service alle impostazioni di versione PHP, estensioni o ambiente, vedere [Impostazioni PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=it) in _Configurazione applicazione_.
+- Indicare le modifiche necessarie al servizio, includere i file `.magento.app.yaml` e `services.yaml` aggiornati e indicare la versione PHP nel ticket. Per le modifiche self-service alle impostazioni di versione PHP, estensioni o ambiente, vedere [Impostazioni PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html) in _Configurazione applicazione_.
 
->[!IMPORTANT]
->
->Quando selezioni il campo Ambiente nel nuovo modulo del ticket, utilizza la denominazione dell’ambiente di Adobe. Ad esempio, seleziona Staging anche se chiami l&#39;ambiente **Dev** internamente. Puoi indicare il tuo nome interno nella descrizione, ma il campo Ambiente deve utilizzare la nomenclatura di Adobe.
+  >[!IMPORTANT]
+  >
+  >Quando selezioni il campo Ambiente nel nuovo modulo del ticket, utilizza la denominazione dell’ambiente di Adobe. Ad esempio, seleziona Staging anche se chiami l&#39;ambiente **Dev** internamente. Puoi indicare il tuo nome interno nella descrizione, ma il campo Ambiente deve utilizzare la nomenclatura di Adobe.
 
 - Per le modifiche a un ambiente di produzione live (**Solo Pro**), è necessario un preavviso minimo di 48 ore. Questo consente al team dell’infrastruttura Cloud di disporre del tempo sufficiente per eseguire il marshalling delle risorse e eseguire un aggiornamento sicuro. Il periodo di preavviso inizia quando il team dell&#39;infrastruttura riconosce la richiesta e pianifica l&#39;aggiornamento, esclusi i fine settimana. Ad esempio, per completare gli aggiornamenti del servizio il lunedì, è necessario ricevere una conferma dell&#39;aggiornamento pianificato entro mercoledì. Durante i periodi di picco della domanda, l&#39;elaborazione della richiesta potrebbe richiedere più tempo.
 
->[!NOTE]
->
->Tutte le finestre di manutenzione programmate devono essere fornite in formato UTC per garantire chiarezza e coerenza in tutte le comunicazioni. Gli aggiornamenti del servizio non possono essere pianificati nell’ambiente di staging; nella maggior parte dei casi, gli aggiornamenti in staging vengono eseguiti lo stesso giorno della richiesta.
->
->Se richiedi un aggiornamento di RabbitMQ, assicurati di ridistribuire l’ambiente al termine dell’aggiornamento in modo che le code dei messaggi vengano reinizializzate.
+  >[!NOTE]
+  >
+  >Tutte le finestre di manutenzione programmate devono essere fornite in formato UTC per garantire chiarezza e coerenza in tutte le comunicazioni. Gli aggiornamenti del servizio non possono essere pianificati nell’ambiente di staging; nella maggior parte dei casi, gli aggiornamenti in staging vengono eseguiti lo stesso giorno della richiesta.
+  >
+  >Se richiedi un aggiornamento di RabbitMQ, assicurati di ridistribuire l’ambiente al termine dell’aggiornamento in modo che le code dei messaggi vengano reinizializzate.
+
+- **Processo di handshake in due parti per la pianificazione degli aggiornamenti**
+
+  Per garantire un processo di aggiornamento agevole e coordinato, il supporto Adobe Commerce segue un processo di handshake in due parti per tutti gli aggiornamenti dell’ambiente di produzione:
+
+   1. **Conferma cliente**: il supporto Adobe richiede innanzitutto al cliente di confermare la data e l&#39;ora desiderate per l&#39;aggiornamento. Questo passaggio assicura che la tempistica sia allineata alle esigenze aziendali del cliente e alle finestre di manutenzione.
+   2. **Pianificazione e conferma finale**: dopo la conferma della tempistica da parte del cliente, il supporto Adobe invia la richiesta al team Infrastruttura, che la esamina e conferma definitivamente la finestra di aggiornamento pianificata.
+
+L&#39;aggiornamento non viene considerato pianificato finché il team dell&#39;infrastruttura non ha fornito la conferma finale. I clienti sono incoraggiati a rispondere tempestivamente almeno 48 ore prima della finestra di aggiornamento per evitare ritardi e consentire un preavviso adeguato.
+
 >[!ENDSHADEBOX]
 
 ## Backup Pro {#pro-backups}
 
 >[!TIP]
 >
->Negli ambienti Pro Staging e Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per recuperare un backup specifico che rilevi la data, l&#39;ora e il fuso orario nel ticket.
+>Negli ambienti Pro Staging e Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per recuperare un backup specifico che rilevi la data, l&#39;ora e il fuso orario nel ticket.
 >
->Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=it).
+>Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html).
 
 ## Avviso di ridistribuzione {#redeploy-warning}
 
@@ -108,7 +118,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!NOTE]
 >
->[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per modificare la configurazione del servizio negli ambienti di produzione e staging di Pro.
+>[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per modificare la configurazione del servizio negli ambienti di produzione e staging di Pro.
 
 ## Modifica del servizio {#service-change-tip}
 
@@ -120,7 +130,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!TIP]
 >
->Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=it) nel _Centro assistenza di Commerce_.
+>Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) nel _Centro assistenza di Commerce_.
 
 ## Aggiornamento a ECE-Tools {#ece-tools-package}
 
@@ -128,7 +138,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 >
 >Se utilizzi una versione di Adobe Commerce sull&#39;infrastruttura cloud che non contiene il pacchetto `ece-tools`, devi eseguire un [aggiornamento una tantum](/help/cloud-guide/dev-tools/install-package.md) al progetto cloud per rimuovere i pacchetti obsoleti. Se si utilizza il pacchetto `ece-tools` e si desidera aggiornarlo, vedere [Aggiornare il pacchetto ECE-Tools](/help/cloud-guide/dev-tools/update-package.md).
 
-## Suggerimento per l'aggiornamento {#upgrade-tip}
+## Suggerimento per l&#39;aggiornamento {#upgrade-tip}
 
 >[!TIP]
 >
@@ -140,7 +150,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 1. [Accedi](/help/get-started/onboarding.md#access-your-admin-panel) all&#39;amministratore.
 
-## Automatizzare l'implementazione di snippet VCL personalizzato {#automate-vcl-snippet-deployment}
+## Automatizzare l&#39;implementazione di snippet VCL personalizzato {#automate-vcl-snippet-deployment}
 
 >[!NOTE]
 >
