@@ -41,7 +41,7 @@ Il proprietario della licenza può impostare l’accesso condiviso per l’accou
 
 ## Iscriviti allo stato di Adobe
 
-Aggiornamenti su Adobe Commerce negli ambienti di piattaforma dell&#39;infrastruttura cloud e nei servizi correlati sono disponibili nella [pagina Stato](https://status.adobe.com/products/503473).
+Aggiornamenti su Adobe Commerce negli ambienti di piattaforma dell&#39;infrastruttura cloud e nei servizi correlati sono disponibili nella [pagina Stato](https://status.adobe.com/it/products/503473).
 
 La pagina fornisce uno stato per i componenti e i servizi di Adobe Commerce seguito da notifiche su rapporti di incidenti, aggiornamenti del servizio, interruzioni pianificate e manutenzione pianificata. Chiunque lavori sul tuo progetto può iscriversi al sito di stato di Adobe Commerce per ricevere notifiche e aggiornamenti sugli eventi tramite e-mail o Slack. Puoi personalizzare il tuo abbonamento allo stato di Adobe per tenere traccia di prodotti specifici per regione ed eventi.
 
