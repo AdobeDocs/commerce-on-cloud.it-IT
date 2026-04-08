@@ -4,9 +4,9 @@ description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchet
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
+source-git-commit: b3d634838e562ceba4221a69e87eda377d8f9363
 workflow-type: tm+mt
-source-wordcount: '3491'
+source-wordcount: '3485'
 ht-degree: 0%
 
 ---
@@ -85,18 +85,14 @@ Data di rilascio: 27 maggio 2025
 
 Data di rilascio: 24 aprile 2025
 
-- ![icona correzione](../../assets/fix.svg) **Opensearch2 per 2.4.4/2.4.5**—È stato risolto un problema relativo al supporto di `opensearch2` nelle versioni di Adobe Commerce 2.4.4/2.4.5.<!-- MCLOUD-13607 -->
+- ![icona correzione](../../assets/fix.svg) **Opensearch2 per 2.4.4/2.4.5**—È stato risolto un problema relativo al supporto di `opensearch2` nelle versioni di Adobe Commerce 2.4.4/2.4.5. <!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
 Data di rilascio: 9 aprile 2025
 
-- ![icona di correzione](../../assets/fix.svg) **Correzione di Valkey**&#x200B;È stato risolto un problema con la configurazione personalizzata di Valkey.<!-- MCLOUD-13569 -->
-- ![icona correzione](../../assets/fix.svg) **Correzione convalida**-Correzione convalida per RabbitMQ 4.0.<!-- MCLOUD-13560 -->
-
-## v2002.2.2
-
-Data di rilascio: 7 aprile 2025
+- ![icona di correzione](../../assets/fix.svg) **Correzione di Valkey**&#x200B;È stato risolto un problema con la configurazione personalizzata di Valkey. <!-- MCLOUD-13569 -->
+- ![icona correzione](../../assets/fix.svg) **Correzione convalida**-Correzione convalida per RabbitMQ 4.0. <!-- MCLOUD-13560 -->
 
 ## v2002.2.2
 
