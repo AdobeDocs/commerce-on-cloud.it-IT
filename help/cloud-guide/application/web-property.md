@@ -2,9 +2,10 @@
 title: Proprietà web
 description: Vedi esempi su come configurare la proprietà web nel file di configurazione dell'applicazione  [!DNL Commerce] .
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
+source-git-commit: 94a7748348ba590bb4fed740df658c5bac4c31e9
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -31,12 +32,16 @@ web:
 | `rules` | Specificare le sostituzioni per una posizione. Utilizza un’espressione regolare per corrispondere a una richiesta. Se una richiesta in ingresso corrisponde alla regola, la gestione regolare della richiesta viene ignorata dalle chiavi utilizzate nella regola. |
 | `passthru` | Impostare l&#39;URL utilizzato nel caso in cui non sia possibile trovare un file statico o un file PHP. In genere, questo URL è il controller front per le applicazioni, ad esempio `/index.php` o `/app.php`. |
 | `root` | Imposta il percorso relativo alla radice dell&#39;applicazione esposta sul Web. La directory pubblica (posizione &quot;/&quot;) di un progetto Cloud è impostata su &quot;pub&quot; per impostazione predefinita. |
-| `scripts` | Consenti il caricamento di script in questa posizione. Impostare il valore su `true` per consentire gli script. |
+| `scripts` | Consenti il caricamento di script in questa posizione. Impostare il valore su `true` per consentire gli script. Per le directory `pub/media` e `pub/static`, la configurazione predefinita è impostata su `scripts: false` per impedire l&#39;esecuzione dei file caricati. |
+
+>[!IMPORTANT]
+>
+>**Nota sulla sicurezza:** la configurazione predefinita della proprietà `web` per Adobe Commerce su Cloud imposta `scripts: false` per i percorsi dei file multimediali per impedire l&#39;esecuzione dei file caricati. Non sovrascrivere questa impostazione a meno che tu non comprenda appieno le implicazioni di sicurezza per l’implementazione.
 
 La configurazione predefinita consente quanto segue:
 
 - Dal percorso radice (`/`) è possibile accedere solo al Web e ai file multimediali
-- Dai percorsi `~/pub/static` e `~/pub/media` è possibile accedere a qualsiasi file
+- Dai percorsi `~/pub/media` e `~/pub/static` è possibile accedere a qualsiasi file
 
 Nell&#39;esempio seguente viene illustrata la configurazione predefinita nel file `.magento.app.yaml` per un set di percorsi accessibili dal Web associati a una voce nella proprietà [`mounts`](properties.md#mounts):
 
