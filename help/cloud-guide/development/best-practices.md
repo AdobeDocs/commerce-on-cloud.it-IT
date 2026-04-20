@@ -50,10 +50,10 @@ Segui le best practice per le build e la distribuzione e utilizza il flusso di l
 
    - Utilizzare SSH per accedere al server remoto e verificare quanto segue:
 
-      - Controlla lo stato dell’indicizzatore e reindicizza in base alle esigenze. Vedi [Gestione degli indicizzatori](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html) nella _Guida alla configurazione_.
+      - Controlla lo stato dell’indicizzatore e reindicizza in base alle esigenze. Vedi [Gestione degli indicizzatori](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=it) nella _Guida alla configurazione_.
 
       - Controllare i registri `cron` e la tabella `cron_schedule` nel database di Adobe Commerce per verificare lo stato cron ed eseguire nuovamente i processi cron in base alle esigenze.
-Vedi [Registrazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging) nella _Guida alla configurazione_.
+Vedi [Registrazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=it#logging) nella _Guida alla configurazione_.
 
    - Completa il test di accettazione utente post-aggiornamento sugli ambienti di staging e produzione e risolve eventuali problemi relativi agli aggiornamenti di estensioni di terze parti e personalizzati.
 
@@ -67,7 +67,7 @@ Esegui Upgrade Compatibility Tool (UCT) come parte dell’analisi pre-aggiorname
 
 Per informazioni dettagliate sulla configurazione e sull’utilizzo, consulta:
 
-- [Panoramica di Upgrade Compatibility Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [Eseguire Upgrade Compatibility Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [Panoramica di Upgrade Compatibility Tool](https://experienceleague.adobe.com/it/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [Eseguire Upgrade Compatibility Tool](https://experienceleague.adobe.com/it/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-Per i commercianti di Cloud che utilizzano lo strumento di analisi a livello di sito, puoi anche attivare l’UCT dalla dashboard e scaricare il rapporto HTML direttamente dal widget. Consulta Integrare lo [strumento di analisi a livello di sito](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool).
+Per i commercianti di Cloud che utilizzano lo strumento di analisi a livello di sito, puoi anche attivare l’UCT dalla dashboard e scaricare il rapporto HTML direttamente dal widget. Consulta Integrare lo [strumento di analisi a livello di sito](https://experienceleague.adobe.com/it/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool).
