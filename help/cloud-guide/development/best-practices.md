@@ -2,9 +2,10 @@
 title: Best practice per l’aggiornamento del progetto
 description: Consulta un elenco di best practice per l’aggiornamento dei file di progetto.
 feature: Cloud, Best Practices, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 64f92739-9170-4cbf-90ef-aab6593a37ca
+source-git-commit: 31494a956babaf15320d0ffa86fcba9e845d53a1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ Segui le best practice per le build e la distribuzione e utilizza il flusso di l
 
    - Assicurati che tutti i temi personalizzati siano compatibili con la nuova versione di Adobe Commerce
 
-   - Dopo l&#39;aggiornamento di estensioni di terze parti e personalizzate, utilizzare il comando `magento-cloud local:build` per convalidare le dipendenze del Compositore prima della distribuzione.
+   - Dopo l&#39;aggiornamento di estensioni di terze parti e personalizzate, utilizzare il comando `magento-cloud local:build` per convalidare le dipendenze del Compositore prima della distribuzione ed eseguire [Upgrade Compatibility Tool](#use-the-upgrade-compatibility-tool) per identificare le incompatibilità a livello di codice tra la versione corrente e quella di destinazione. Quindi utilizzare lo [strumento di compatibilità per l&#39;aggiornamento](https://fluffyjaws.adobe.com/#use-the-upgrade-compatibility-tool) per identificare e assegnare la priorità alle incompatibilità a livello di codice prima di distribuirle in Integration, Staging o Production.
 
    - Consulta le note sulla versione e la documentazione dell’estensione di Adobe Commerce per assicurarti di aver implementato tutte le soluzioni alternative o le modifiche alla configurazione necessarie per risolvere problemi funzionali noti e bug correlati all’aggiornamento della versione e delle estensioni di Adobe Commerce.
 
@@ -29,7 +30,7 @@ Segui le best practice per le build e la distribuzione e utilizza il flusso di l
 
    - Apporta gli aggiornamenti necessari alle impostazioni specifiche dell’ambiente prima di distribuirle nell’ambiente remoto.
 
-   - Verificare che la versione del servizio di ricerca sia compatibile con la versione del client PHP. Consulta [Configura Elasticsearch](../services/elasticsearch.md) o [Configura OpenSearch](../services/opensearch.md).
+   - Verificare che la versione del servizio di ricerca sia compatibile con la versione del client PHP. Consulta [Configurare Elasticsearch](../services/elasticsearch.md) o [Configurare OpenSearch](../services/opensearch.md).
 
 - **Verifica la connettività del database e l&#39;archiviazione disponibile negli ambienti remoti**-
 
@@ -49,9 +50,24 @@ Segui le best practice per le build e la distribuzione e utilizza il flusso di l
 
    - Utilizzare SSH per accedere al server remoto e verificare quanto segue:
 
-      - Controlla lo stato dell’indicizzatore e reindicizza in base alle esigenze. Vedi [Gestione degli indicizzatori](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=it) nella _Guida alla configurazione_.
+      - Controlla lo stato dell’indicizzatore e reindicizza in base alle esigenze. Vedi [Gestione degli indicizzatori](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html) nella _Guida alla configurazione_.
 
       - Controllare i registri `cron` e la tabella `cron_schedule` nel database di Adobe Commerce per verificare lo stato cron ed eseguire nuovamente i processi cron in base alle esigenze.
-Vedi [Registrazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=it#logging) nella _Guida alla configurazione_.
+Vedi [Registrazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging) nella _Guida alla configurazione_.
 
    - Completa il test di accettazione utente post-aggiornamento sugli ambienti di staging e produzione e risolve eventuali problemi relativi agli aggiornamenti di estensioni di terze parti e personalizzati.
+
+## Utilizzare Upgrade Compatibility Tool
+
+Esegui Upgrade Compatibility Tool (UCT) come parte dell’analisi pre-aggiornamento per comprendere l’ambito e l’impatto di un aggiornamento.
+
+- La funzione UCT confronta l’istanza corrente con una versione di Adobe Commerce di destinazione, restituendo un elenco di problemi critici, errori e avvisi che devono essere corretti prima dell’aggiornamento.
+- Utilizza `--coming-version (-c)` per eseguire il confronto con la versione di destinazione pianificata e `--ignore-current-version-compatibility-issues` per concentrarti solo sui nuovi problemi introdotti dall&#39;aggiornamento.
+- Considera il rapporto HTML UCT come un input per l’elenco di controllo per l’aggiornamento, insieme alla compatibilità delle estensioni, alle versioni del servizio e ai controlli del database.
+
+Per informazioni dettagliate sulla configurazione e sull’utilizzo, consulta:
+
+- [Panoramica di Upgrade Compatibility Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [Eseguire Upgrade Compatibility Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+
+Per i commercianti di Cloud che utilizzano lo strumento di analisi a livello di sito, puoi anche attivare l’UCT dalla dashboard e scaricare il rapporto HTML direttamente dal widget. Consulta Integrare lo [strumento di analisi a livello di sito](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool).
