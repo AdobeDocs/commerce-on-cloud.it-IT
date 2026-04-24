@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9edcfebdd327f09d1f9583e3a3c3a847cb1e38ed
+source-git-commit: b9db54f3bdb605e7530b2bec8aee1f22793746d4
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '285'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata aggiunta una nota sulla sicurezza nel riferimento alla <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configurazione della proprietà Web</a> per Adobe Commerce sull'infrastruttura cloud per chiarire che la configurazione predefinita per la proprietà Web utilizza <code class="language-plaintext highlighter-rouge">scripts:false</code> per i percorsi dei file multimediali per impedire l'esecuzione dei file caricati.</p>
+      <td><p>È stata aggiunta una nota sulla sicurezza nel riferimento alla <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configurazione della proprietà Web</a> per Adobe Commerce sull'infrastruttura cloud per chiarire che la configurazione predefinita per la proprietà Web utilizza <code class="language-plaintext highlighter-rouge">scripts:false</code> per i percorsi dei file multimediali per impedire l'esecuzione dei file caricati.</p>
 </td>
       <td>
         Tecnico, feedback
@@ -45,7 +45,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Versione ECE-Tools</a>, v2002.2.10.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Versione ECE-Tools</a>, v2002.2.10.</p>
 </td>
       <td>
         Tecnico
@@ -67,7 +67,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stato aggiunto un chiarimento su come <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">modificare l'URL amministratore</a> in Adobe Commerce on Cloud anziché on-premise.</p>
+      <td><p>È stato aggiunto un chiarimento su come <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">modificare l'URL amministratore</a> in Adobe Commerce on Cloud anziché on-premise.</p>
 </td>
       <td>
         Aggiornamento principale, feedback
@@ -89,7 +89,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata aggiunta la documentazione per <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">verificare il limite di spazio su disco per i progetti Adobe Commerce on Cloud</a> dalla console cloud.</p>
+      <td><p>È stata aggiunta la documentazione per <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">verificare il limite di spazio su disco per i progetti Adobe Commerce on Cloud</a> dalla console cloud.</p>
 </td>
       <td>
         Nuovo argomento, tecnico
@@ -111,34 +111,12 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stato aggiornato l'<a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/launch/checklist">Elenco di controllo Launch</a> per Commerce su progetti cloud per aggiungere record AAAA veloci alle istruzioni di configurazione DNS.</p>
+      <td><p>È stato aggiornato l'<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">Elenco di controllo Launch</a> per Commerce su progetti cloud per aggiungere record AAAA veloci alle istruzioni di configurazione DNS.</p>
 </td>
       <td>
         Feedback
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/c4c84286c178cb17a2051d6d803742ab73c409bf">commit</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 19 febbraio 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Descrizione</th>
-      <th>Tipo</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Sono state aggiunte istruzioni per <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">modificare il proprietario dell'account New Relic</a> nella <em>Guida di Commerce sull'infrastruttura cloud</em>.</p>
-</td>
-      <td>
-        Tecnico
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/6e570c70bb720a6469d7764c7640b07bb56880ce">commit</a></td>
     </tr>
   </tbody>
 </table>
