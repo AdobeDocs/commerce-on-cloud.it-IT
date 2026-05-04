@@ -1,9 +1,11 @@
 ---
+cloud: Experience Cloud
+solution-title: Commerce
 user-guide-title: Guida di Commerce sul cloud
 user-guide-description: Scopri come gestire l’applicazione Adobe Commerce sull’infrastruttura cloud.
 product: magento
 feature: Cloud
-source-git-commit: 2311b8e5c0216c01d0189c8f8e669dcddfcd1dcc
+source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 8%
@@ -24,7 +26,7 @@ ht-degree: 8%
    + [Flusso di lavoro professionale](architecture/pro-develop-deploy-workflow.md)
    + [Architettura scalata](architecture/scaled-architecture.md)
    + [Ridimensionamento automatico](architecture/autoscaling.md)
-+ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=it)
++ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Note sulla versione {#release-notes}
    + [Suite di strumenti cloud](release-notes/cloud-tools-suite.md)
    + [Pacchetto ECE-Strumenti](release-notes/ece-tools-package.md)
@@ -151,8 +153,8 @@ ht-degree: 8%
       + [Introduzione](cdn/fastly-vcl-custom-snippets.md)
       + [Reindirizzare le richieste a un back-end CMS](cdn/fastly-vcl-wordpress.md)
       + [Blocca spam di riferimento](cdn/fastly-vcl-badreferer.md)
-      + [INSERIRE NELL&#39;ELENCO CONSENTITI IP](cdn/fastly-vcl-allowlist.md)
-      + [INSERIRE NELL&#39;ELENCO BLOCCATI IP](cdn/fastly-vcl-blocking.md)
+      + [IP](cdn/fastly-vcl-allowlist.md)
+      + [IP](cdn/fastly-vcl-blocking.md)
       + [Ignora Fastly Cache](cdn/fastly-vcl-bypass-to-origin.md)
    + [Risoluzione rapida dei problemi](cdn/fastly-troubleshooting.md)
 + Impostazioni store {#configure-store}
