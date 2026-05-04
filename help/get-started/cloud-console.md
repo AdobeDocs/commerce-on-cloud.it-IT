@@ -3,13 +3,13 @@ title: Accedi a  [!DNL Cloud Console]
 description: Scopri  [!DNL Cloud Console]  per l’infrastruttura Adobe Commerce su Cloud.
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4c68508a-f25a-457b-be6d-36dc8ac428f1
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
-
 
 # Accedi a [!DNL Cloud Console]
 
@@ -39,12 +39,14 @@ Le funzioni nuove o migliorate sono le seguenti:
 | -------------- | ----------------------------------- |
 | [Flusso attività](../cloud-guide/project/activity-stream.md) | Interagisci con un elenco ordinabile di azioni in esecuzione, in sospeso o storiche. Seleziona un’attività e visualizza i registri o annulla una build in esecuzione. |
 | [Panoramica dei progetti e dell&#39;ambiente](../cloud-guide/project/overview.md#project-overview) | Apri il progetto e consulta la panoramica dei dettagli del progetto e l’elenco degli ambienti. La panoramica dell’ambiente fornisce ulteriori dettagli sullo stato dell’ambiente, sull’accesso alle applicazioni e sulle attività recenti. |
-| [Moduli di integrazione](../cloud-guide/integrations/overview.md) | Utilizza semplici moduli e indicazioni per aggiungere integrazioni, ad esempio notifiche Bitbucket o di Slack. |
+| [Moduli di integrazione](../cloud-guide/integrations/overview.md) | Utilizza semplici moduli e indicazioni per aggiungere integrazioni, ad esempio notifiche Bitbucket o Slack. |
 | [Elenco progetti](../cloud-guide/project/overview.md#cloud-console) | Nella visualizzazione _Tutti i progetti_ sono elencati tutti i progetti per i quali si dispone dell&#39;autorizzazione di accesso. È possibile fare clic su **[!UICONTROL Show filters]** e filtrare l&#39;elenco dei progetti per tipo, area geografica o piano. |
 | [Opzioni di visibilità variabili](../cloud-guide/environment/variable-levels.md) | Limita la visibilità di una variabile a livello di progetto o di ambiente durante la generazione o il runtime. |
 
-<!-- The following are features yet to be activated:
-| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | -->
+<!--
+The following are features yet to be activated:
+| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | 
+-->
 
 ## Domande della console
 

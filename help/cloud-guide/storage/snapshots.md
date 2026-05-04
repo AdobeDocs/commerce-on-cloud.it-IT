@@ -3,9 +3,9 @@ title: Gestione dei backup
 description: Scopri come creare e ripristinare manualmente un backup per il progetto di infrastruttura cloud di Adobe Commerce.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ La funzionalità di backup/snapshot non è applicabile **not** agli ambienti di 
 
 **Per creare un backup del database dell&#39;ambiente Pro**:
 
-Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 **Per creare un backup di qualsiasi ambiente Starter utilizzando[!DNL Cloud Console]**:
 
@@ -150,7 +150,7 @@ I tempi di ripristino variano a seconda delle dimensioni del database:
 
 ## Ripristino di un&#39;istantanea di disaster recovery
 
-Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Codice di rollback
 
