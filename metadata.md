@@ -9,10 +9,10 @@ feature-set: Commerce
 role: Admin, Developer
 topic: Commerce, Development
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/commerce-on-cloud.en
+git-repo: https://github.com/AdobeDocs/commerce-on-cloud.it-IT
 description: Guide di Adobe Commerce sull’infrastruttura cloud
 index: true
-badgePaas: label="Solo PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Applicabile solo ai progetti Adobe Commerce on Cloud (infrastruttura PaaS gestita da Adobe) e ai progetti on-premise."
+badgePaas: label="Solo PaaS" type="Informative" url="https://experienceleague.adobe.com/it/docs/commerce/user-guides/product-solutions" tooltip="Applicabile solo ai progetti Adobe Commerce on Cloud (infrastruttura PaaS gestita da Adobe) e ai progetti on-premise."
 source-git-commit: bdbb6e21c8d7af1c2726382333ec5184b87ac7b7
 workflow-type: tm+mt
 source-wordcount: '74'
