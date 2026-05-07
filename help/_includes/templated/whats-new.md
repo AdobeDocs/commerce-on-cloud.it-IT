@@ -23,7 +23,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata aggiunta una nota sulla sicurezza nel riferimento alla <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configurazione della proprietà Web</a> per Adobe Commerce sull'infrastruttura cloud per chiarire che la configurazione predefinita per la proprietà Web utilizza <code class="language-plaintext highlighter-rouge">scripts:false</code> per i percorsi dei file multimediali per impedire l'esecuzione dei file caricati.</p>
+      <td><p>È stata aggiunta una nota sulla sicurezza nel riferimento alla <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configurazione della proprietà Web</a> per Adobe Commerce sull'infrastruttura cloud per chiarire che la configurazione predefinita per la proprietà Web utilizza <code class="language-plaintext highlighter-rouge">scripts:false</code> per i percorsi dei file multimediali per impedire l'esecuzione dei file caricati.</p>
 </td>
       <td>
         Tecnico, feedback
