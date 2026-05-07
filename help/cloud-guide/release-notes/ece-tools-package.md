@@ -2,11 +2,11 @@
 title: Note sulla versione di ECE-Tools
 description: Consulta l’elenco degli ultimi miglioramenti apportati al pacchetto ECE-Strumenti.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-08-07T00:00:00Z
+last-substantial-update: 2026-05-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+source-git-commit: 0781fdfe8b0dbc6312848572ff4b996e51270a3f
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3563'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,18 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v2002.2.10 {#latest}
+## v2002.2.11 {#latest}
+
+Data di rilascio: 06 maggio 2026
+
+- ![nuova icona](../../assets/new.svg) **RabbitMQ**—Aggiunto supporto RabbitMQ 4.2.<!-- MCLOUD-14374 -->
+- ![nuova icona](../../assets/new.svg) **Opensearch**—Aggiunto il supporto di Opensearch 2.19 e 3.5 per più versioni di Magento. <!-- MCLOUD-14682 -->
+- ![nuova icona](../../assets/new.svg) **Valkey**—Aggiunta supporto Valkey 8.1 e 9.<!-- MCLOUD-14784/MCLOUD-14625 -->
+- ![nuova icona](../../assets/new.svg) **ActiveMQ**—Aggiunto supporto ActiveMQ 2.5.1.<!-- MCLOUD-14683 -->
+- ![nuova icona](../../assets/new.svg) **MariaDB**—Aggiunto supporto MariaDB 11.8 e 12.2.<!-- MCLOUD-14628 -->
+- ![icona correzione](../../assets/fix.svg) **Configurazione e distribuzione**: sono stati corretti gli avvisi relativi alla distribuzione cloud, le deprecazioni aggiornate dei test del compositore e la visibilità della versione degli strumenti ECE al momento della distribuzione.<!-- MCLOUD-14822 -->
+
+## v2002.2.10
 
 Data di rilascio: 05 marzo 2026
 
@@ -85,14 +96,18 @@ Data di rilascio: 27 maggio 2025
 
 Data di rilascio: 24 aprile 2025
 
-- ![icona correzione](../../assets/fix.svg) **Opensearch2 per 2.4.4/2.4.5**—È stato risolto un problema relativo al supporto di `opensearch2` nelle versioni di Adobe Commerce 2.4.4/2.4.5. <!-- MCLOUD-13607 -->
+- ![icona correzione](../../assets/fix.svg) **Opensearch2 per 2.4.4/2.4.5**—È stato risolto un problema relativo al supporto di `opensearch2` nelle versioni di Adobe Commerce 2.4.4/2.4.5.<!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
 Data di rilascio: 9 aprile 2025
 
-- ![icona di correzione](../../assets/fix.svg) **Correzione di Valkey**&#x200B;È stato risolto un problema con la configurazione personalizzata di Valkey. <!-- MCLOUD-13569 -->
-- ![icona correzione](../../assets/fix.svg) **Correzione convalida**-Correzione convalida per RabbitMQ 4.0. <!-- MCLOUD-13560 -->
+- ![icona di correzione](../../assets/fix.svg) **Correzione di Valkey**&#x200B;È stato risolto un problema con la configurazione personalizzata di Valkey.<!-- MCLOUD-13569 -->
+- ![icona correzione](../../assets/fix.svg) **Correzione convalida**-Correzione convalida per RabbitMQ 4.0.<!-- MCLOUD-13560 -->
+
+## v2002.2.2
+
+Data di rilascio: 7 aprile 2025
 
 ## v2002.2.2
 
@@ -256,9 +271,7 @@ Data di rilascio: 1 febbraio 2021
 
 - ![nuova icona](../../assets/new.svg) **Nuova variabile di ambiente SCD_NO_PARENT** - Aggiunta della variabile di ambiente `SCD_NO_PARENT` (per Adobe Commerce >=2.4.2) per gestire la generazione di contenuto statico per i temi principali.<!--MCLOUD-7284-->
 
-- ![icona correzione](../../assets/fix.svg) **Limiti di memoria e comandi**—È stato risolto un problema che impediva il funzionamento di `php vendor/bin/ece-tools` comandi se le dimensioni del file `cloud.log` superavano il limite di memoria PHP. Invece di leggere l&#39;intero file `cloud.log` in memoria, ora si legge solo un sottoinsieme di dati più piccolo dal file di registro.
-  <!--MCLOUD-7275-->
-  <!--MCLOUD-7400-->
+- ![icona correzione](../../assets/fix.svg) **Limiti di memoria e comandi**—È stato risolto un problema che impediva il funzionamento di `php vendor/bin/ece-tools` comandi se le dimensioni del file `cloud.log` superavano il limite di memoria PHP. Invece di leggere l&#39;intero file `cloud.log` in memoria, ora si legge solo un sottoinsieme di dati più piccolo dal file di registro.<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
 - ![icona di correzione](../../assets/fix.svg) **Connessioni di database personalizzate**—È stato risolto un problema di configurazione `.magento.env.yaml` a causa del quale non venivano utilizzate le connessioni di database personalizzate definite per `DATABASE_CONFIGURATION`. Impossibile aggiungere le impostazioni di connessione a `app/etc/env.php`.<!--MCLOUD-7426-->
 
