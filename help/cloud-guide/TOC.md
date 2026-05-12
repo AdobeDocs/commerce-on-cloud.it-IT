@@ -5,9 +5,9 @@ user-guide-title: Guida di Commerce sul cloud
 user-guide-description: Scopri come gestire l’applicazione Adobe Commerce sull’infrastruttura cloud.
 product: magento
 feature: Cloud
-source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
+source-git-commit: 5475b65cb9606b200ff6ac3096ed0d0cf3168cf9
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 8%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 8%
    + [Flusso di lavoro professionale](architecture/pro-develop-deploy-workflow.md)
    + [Architettura scalata](architecture/scaled-architecture.md)
    + [Ridimensionamento automatico](architecture/autoscaling.md)
-+ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=it)
++ [Introduzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Note sulla versione {#release-notes}
    + [Suite di strumenti cloud](release-notes/cloud-tools-suite.md)
    + [Pacchetto ECE-Strumenti](release-notes/ece-tools-package.md)
@@ -148,6 +148,7 @@ ht-degree: 8%
       + [Personalizza configurazione cache](cdn/fastly-custom-cache-configuration.md)
       + [Personalizzare le pagine di errore e manutenzione](cdn/fastly-custom-response.md)
    + [Firewall applicazione Web](cdn/fastly-waf-service.md)
+   + [Sicurezza avanzata](cdn/advanced-security.md)
    + [Ottimizzazione immagine](cdn/fastly-image-optimization.md)
    + Personalizza con VCL {#custom-vcl-snippets}
       + [Introduzione](cdn/fastly-vcl-custom-snippets.md)
