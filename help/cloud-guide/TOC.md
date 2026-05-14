@@ -5,7 +5,7 @@ user-guide-title: Guida di Commerce sul cloud
 user-guide-description: Scopri come gestire l’applicazione Adobe Commerce sull’infrastruttura cloud.
 product: magento
 feature: Cloud
-source-git-commit: 5475b65cb9606b200ff6ac3096ed0d0cf3168cf9
+source-git-commit: 6f70f167bbd29c6a83f4feaf14e5b642cd39e87f
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 8%
@@ -35,7 +35,7 @@ ht-degree: 8%
    + [Componenti cloud](release-notes/cloud-components.md)
    + [Pacchetti cloud](release-notes/cloud-packages.md)
    + [Modifiche non compatibili con le versioni precedenti](release-notes/backward-incompatible-changes.md)
-   + [Archivio delle note sulla versione](release-notes/cloud-release-archive.md)
+   + {hide-from-toc}[Archivio note sulla versione](release-notes/cloud-release-archive.md)
 + Progetto cloud {#project}
    + [Panoramica del progetto](project/overview.md)
    + [Struttura del progetto](project/file-structure.md)
