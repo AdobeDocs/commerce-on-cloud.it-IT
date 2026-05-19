@@ -70,7 +70,7 @@ In generale, la maggior parte degli autori deve solo aggiungere una versione all
 >**NOTA:**
 >
 >- La generazione di contenuti basati su modelli richiede l’utilizzo della riga di comando in un terminale.
->- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version](_jekyll/.ruby-version) per la versione richiesta.
+>- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version] (_jekyll/.ruby-version) per la versione richiesta.
 
 Per una descrizione della struttura di file per il contenuto con modelli, consulta:
 
