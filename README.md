@@ -9,8 +9,8 @@ ht-degree: 0%
 
 Questo sito contiene la documentazione più recente per gli sviluppatori di Commerce on Cloud Infrastructure.
 
-- [Guida di Commerce sull’infrastruttura cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [Introduzione a Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
+- [Guida di Commerce sull’infrastruttura cloud](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview)
+- [Introduzione a Commerce](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
 
 ## Codice di condotta di Adobe Open Source
 
@@ -18,7 +18,7 @@ Questo progetto ha adottato il [Codice di condotta di Adobe Open Source](code-of
 
 ## Informazioni sui contributi ai contenuti di Adobe
 
-Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
+Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
 
 Il modo in cui contribuisci dipende da chi sei e dal tipo di modifiche con cui desideri contribuire:
 
@@ -34,13 +34,13 @@ Se fai parte della community Adobe e desideri creare un nuovo articolo o inviare
 
 ### Modifiche sostanziali da parte dei dipendenti Adobe
 
-Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato all&#39;indirizzo `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`.
+Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato all&#39;indirizzo `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.it-IT`.
 
 ## Strumenti e configurazione
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per apportare modifiche di base o eseguire il fork dell’archivio per apportare contributi principali.
 
-Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
+Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
 
 ## Come utilizzare markdown per formattare l’argomento
 
