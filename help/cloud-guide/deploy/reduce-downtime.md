@@ -3,9 +3,17 @@ title: Installazione senza downtime
 description: Scopri come ridurre i tempi di inattività complessivi durante l’implementazione di Adobe Commerce su progetti di infrastruttura cloud.
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
-source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
+TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: 502
 ht-degree: 0%
 
 ---
@@ -40,7 +48,7 @@ Devi configurare l’hook post-distribuzione per pulire e riscaldare la cache. P
 1. [Riduci file tema](../environment/variables-deploy.md#scdmatrix)
 È possibile ridurre il numero di file di tema non necessari configurando la variabile di ambiente SCD\_MATRIX.
 
-1. [Accelera la distribuzione del contenuto statico](../environment/variables-deploy.md#scdthreads)
+1. [Velocizza la distribuzione dei contenuti statici](../environment/variables-deploy.md#scdthreads)
 È possibile velocizzare il processo di distribuzione aggiornando la variabile di ambiente SCD\_THREADS per aumentare il numero di thread per la distribuzione del contenuto statico.
 
 >[!NOTE]

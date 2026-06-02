@@ -1,10 +1,31 @@
 ---
 title: Sicurezza dell’infrastruttura cloud
-description: Scopri come Adobe protegge l’infrastruttura cloud con Adobe Commerce.
+description: Scopri in che modo Adobe protegge l’infrastruttura cloud di Adobe Commerce.
 feature: Cloud, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ae934401-2c32-427a-8162-98df9a047cd4
+TQID: https://experienceleague.adobe.com/3qXIdZWVJ-jxSodN8YGSzE2TOvMzlMKXHgRizgLVoHk
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+subfeature_v2:
+  - id: bcbf87e7-9b75-4596-bffe-0f376b4c73a7
+  - id: f2261633-201d-46c5-8a66-999e70527a83
+  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: 1724
 ht-degree: 0%
 
 ---
@@ -45,7 +66,7 @@ L&#39;applicazione Adobe Commerce non supporta la crittografia a livello di colo
 
 ## Rilevamento degli endpoint e risposta
 
-[!DNL CrowdStrike Falcon], un agente EDR (Endpoint Detection and Response) leggero di nuova generazione è installato su tutti gli endpoint (inclusi i server) all&#39;interno di Adobe. Gli agenti EDR proteggono i dati e i sistemi Adobe con il monitoraggio e la raccolta continui in tempo reale, che consente di identificare e rispondere rapidamente alle minacce.
+[!DNL CrowdStrike Falcon], un agente EDR (Endpoint Detection and Response) leggero di nuova generazione è installato su tutti gli endpoint (inclusi i server) in Adobe. Gli agenti EDR proteggono i dati e i sistemi Adobe con il monitoraggio e la raccolta continui in tempo reale, che consente di identificare e rispondere rapidamente alle minacce.
 
 ## Test di penetrazione
 
@@ -88,7 +109,7 @@ Consulta [Visualizzare e gestire i registri](../test/log-locations.md).
 
 ## Dati sensibili
 
-I dati riservati possono riguardare sia informazioni personali dei consumatori che dati riservati dei clienti Managed Services. La protezione dei dati sensibili di clienti e consumatori è un obbligo fondamentale per Adobe Commerce Managed Services. Sia i clienti Managed Services che Adobe hanno obblighi legali in merito alle informazioni personali identificabili. Oltre alle funzioni di sicurezza dell’architettura, esistono altri controlli per limitare la distribuzione e l’accesso ai dati sensibili.
+I dati riservati possono riguardare sia informazioni personali dei consumatori che dati riservati dei clienti Managed Services. La protezione dei dati sensibili di clienti e consumatori è un obbligo fondamentale per Adobe Commerce Managed Services. Sia i clienti di Managed Services che quelli di Adobe hanno degli obblighi legali in merito alle informazioni personali identificabili. Oltre alle funzioni di sicurezza dell’architettura, esistono altri controlli per limitare la distribuzione e l’accesso ai dati sensibili.
 
 I clienti possiedono i propri dati e hanno il controllo sulla loro posizione. Il cliente specifica la posizione in cui risiedono le istanze di produzione e sviluppo. Inoltre, specificano la posizione utilizzata per l’ambiente di reporting di Adobe Commerce con Commerce e se tale applicazione di reporting di Adobe Commerce ha accesso o meno a informazioni personali. Le istanze di produzione possono trovarsi nella maggior parte delle aree geografiche di AWS, mentre gli ambienti di sviluppo e reporting di Adobe Commerce si trovano attualmente negli Stati Uniti o nell’Unione Europea.
 

@@ -3,9 +3,20 @@ title: VCL personalizzato per consentire le richieste
 description: Filtra le richieste in arrivo e consenti l’accesso per indirizzo IP ai siti Adobe Commerce tramite un elenco ACL Fastly Edge e uno snippet VCL personalizzato.
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: 873
 ht-degree: 0%
 
 ---
@@ -14,7 +25,7 @@ ht-degree: 0%
 
 Puoi utilizzare un elenco Fastly Edge ACL con uno snippet di codice VCL personalizzato per filtrare le richieste in ingresso e consentire l’accesso per indirizzo IP. L&#39;elenco ACL specifica gli indirizzi IP da consentire.
 
-Crea un inserisco nell&#39;elenco Consentiti di per limitare l’accesso all’ambiente di staging in modo che siano consentite solo le richieste da indirizzi IP specifici per sviluppatori interni e servizi esterni approvati. Puoi anche creare un inserisco nell&#39;elenco Consentiti di per proteggere l’accesso all’amministratore negli ambienti di staging e produzione.
+Crea un inserisco nell&#39;elenco Consentiti di per limitare l’accesso all’ambiente di staging in modo che siano consentite solo le richieste da indirizzi IP specifici per sviluppatori interni e servizi esterni approvati. È inoltre possibile creare un inserisco nell&#39;elenco Consentiti di per proteggere l’accesso all’amministratore negli ambienti di staging e produzione.
 
 Nell&#39;esempio seguente viene illustrato come utilizzare uno snippet VCL personalizzato con un elenco di controllo di accesso [Fastly](https://docs.fastly.com/guides/access-control-lists/about-acls) per proteggere l&#39;accesso all&#39;amministratore per un ambiente di progetto Adobe Commerce su infrastruttura cloud. Quando aggiungi lo snippet VCL personalizzato all’ambiente Cloud, Fastly consente solo le richieste di indirizzi IP inclusi nell’ACL.
 

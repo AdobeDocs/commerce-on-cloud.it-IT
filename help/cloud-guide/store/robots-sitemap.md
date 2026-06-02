@@ -3,9 +3,17 @@ title: Aggiungi mappa del sito e robot per motori di ricerca
 description: Scopri come aggiungere robot per mappe del sito e motori di ricerca ad Adobe Commerce su infrastrutture cloud.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 1d52481fb6874f3a9ba14b0ff4fe39dc7d564938
+TQID: https://experienceleague.adobe.com/Nve-76Ow3rv0PrGEUVTSfr3eyJcw8IFj9bbpS10HnNY
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: 612
 ht-degree: 0%
 
 ---
@@ -139,5 +147,5 @@ Per attivare le personalizzazioni di `robots.txt` in produzione, abilita l&#39;i
 >
 >- L’indicizzazione tramite motori di ricerca può essere abilitata solo in Produzione, ma non in nessuno degli ambienti inferiori.
 >
->- Se utilizzi PWA Studio e non riesci ad accedere al file `robots.txt` configurato, aggiungi `robots.txt` al [Inserisco nell&#39;elenco Consentiti di dei nomi anteriori](https://github.com/magento/magento2-upward-connector#front-name-allowlist) in **Archivi** > Configurazione > **Generale** > **Web** > Configurazione PWA (UPWARD).
+>- Se utilizzi PWA Studio e non riesci ad accedere al file `robots.txt` configurato, aggiungi `robots.txt` al [Inserisco nell&#39;elenco Consentiti di del nome anteriore](https://github.com/magento/magento2-upward-connector#front-name-allowlist) in **Archivi** > Configurazione > **Generale** > **Web** > Configurazione PWA verso l&#39;alto.
 

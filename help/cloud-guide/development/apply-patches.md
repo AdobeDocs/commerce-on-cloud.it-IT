@@ -2,9 +2,16 @@
 title: Applicare le patch
 description: Scopri come applicare le patch nel progetto Adobe Commerce su infrastruttura cloud.
 feature: Cloud, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
+TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: 910
 ht-degree: 0%
 
 ---
@@ -91,7 +98,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 La tabella di stato contiene i seguenti tipi di informazioni:
 
 - **Tipo**:
-   - `Optional` - Tutte le patch dello strumento Quality Patches e del pacchetto Cloud Patches sono opzionali per le installazioni di Adobe Commerce e di Magento Open Source. Per l’infrastruttura cloud di Adobe Commerce, tutte le patch sono opzionali.
+   - `Optional` - Tutte le patch dello strumento Quality Patches e del pacchetto Cloud Patches sono opzionali per le installazioni di Adobe Commerce e Magento Open Source. Per l’infrastruttura cloud di Adobe Commerce, tutte le patch sono opzionali.
    - `Required` - Tutte le patch del pacchetto Patch cloud per Commerce sono necessarie per i clienti Cloud.
    - `Deprecated` - La singola patch è contrassegnata come obsoleta. Si consiglia di ripristinarla se è stata applicata. Dopo aver ripristinato una patch obsoleta, questa non verrà più visualizzata nella tabella di stato.
    - `Custom` - Tutte le patch dalla directory &#39;m2-hotfixes&#39;.
@@ -112,7 +119,7 @@ La tabella di stato contiene i seguenti tipi di informazioni:
 
 **Per applicare singole patch in un ambiente di sviluppo locale**:
 
-1. Aggiungere la variabile &#39;QUALITY_PATCH&#39; al file `.magento.env.yaml` ed elencare le patch richieste al di sotto di esso.
+1. Aggiungere la variabile &#39;QUALITY_PATCHES&#39; al file `.magento.env.yaml` ed elencare le patch richieste al di sotto di essa.
 
    ```yaml
    stage:

@@ -2,9 +2,21 @@
 title: Personalizzare le pagine di errore e manutenzione
 description: Scopri come personalizzare la pagina di errore predefinita che viene visualizzata quando le richieste al server di origine Fastly non riescono.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 960195c7-5ee9-4134-8b0a-a251c5e6adf9
+TQID: https://experienceleague.adobe.com/EhK04rgGdkT3Tvd6wbefYjY9Yqozkzra4-ELdkH8sMo
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -15,7 +27,7 @@ Quando una richiesta all’origine Fastly ha esito negativo, Fastly restituisce 
 
 ![Ultima pagina di errore predefinita](../../assets/cdn/fastly-503-example.png)
 
-Puoi aggiornare la configurazione dell’archivio Adobe Commerce per sostituire alcune pagine di risposta predefinite con pagine che presentano messaggi più semplici e uno stile HTML migliorato, come illustrato nell’esempio seguente.
+Puoi aggiornare la configurazione dell’archivio Adobe Commerce per sostituire alcune pagine di risposta predefinite con pagine che presentano messaggi più semplici e uno stile di HTML migliorato, come illustrato nell’esempio seguente.
 
 ![Pagina di errore personalizzata rapida](../../assets/cdn/fastly-new-error-page.png)
 
@@ -53,7 +65,7 @@ Puoi personalizzare la pagina predefinita adattando il seguente codice HTML per 
    </body></html>
 ```
 
-Verifica che l’origine modificata venga visualizzata correttamente nel browser. Quindi, aggiungi il codice HTML personalizzato alla configurazione Fastly.
+Verifica che l’origine modificata venga visualizzata correttamente nel browser. Aggiungi quindi il codice HTML personalizzato alla configurazione Fastly.
 
 Per aggiungere la pagina di risposta personalizzata alla configurazione Fastly:
 
@@ -87,7 +99,7 @@ I clienti visualizzano la seguente pagina di errore predefinita di WAF quando un
 
 ![Pagina di errore WAF](../../assets/cdn/fastly-waf-403-error.png)
 
-Nell&#39;esempio di codice riportato di seguito viene illustrata l&#39;origine HTML per la pagina predefinita.
+Nell&#39;esempio di codice riportato di seguito viene illustrata l&#39;origine di HTML per la pagina predefinita.
 
 ```html
 <html>
@@ -131,7 +143,7 @@ Puoi utilizzare l&#39;opzione **Pagine sintetiche personalizzate** > **Modifica 
 
    - **Stato** — Selezionare lo stato `403 Forbidden`.
    - **Tipo MIME** — Tipo `text/html`.
-   - **Contenuto** - Modifica la risposta predefinita del HTML per aggiungere CSS personalizzato e aggiornare il titolo e i messaggi in base alle esigenze.
+   - **Contenuto** - Modifica la risposta HTML predefinita per aggiungere CSS personalizzato e aggiornare il titolo e i messaggi in base alle esigenze.
 
 1. Seleziona **Carica** nella parte superiore della pagina per caricare l&#39;origine HTML personalizzata nel server Fastly.
 

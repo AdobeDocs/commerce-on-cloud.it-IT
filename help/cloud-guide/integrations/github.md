@@ -2,10 +2,19 @@
 title: Integrazione GitHub
 description: Scopri come integrare il progetto di infrastruttura cloud Adobe Commerce con GitHub.
 feature: Cloud, Integration
-last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2023-05-25T00:00:00.000Z
+exl-id: 08e569fa-5ab4-45c0-82e6-476f25c17fe0
+TQID: https://experienceleague.adobe.com/7Lt2uWkU1kD8VoZAX--lGcJawdg3VEy9U39IS45dBvY
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: 972
 ht-degree: 0%
 
 ---
@@ -167,7 +176,7 @@ Per comunicare eventi, come un push, con il server Cloud Git, devi creare un web
    - **URL payload**: immetti l&#39;URL restituito quando abiliti l&#39;integrazione GitHub.
    - **Tipo di contenuto**: scegli **application/json** dall&#39;elenco.
    - **Segreto**: immetti un segreto di verifica.
-   - **Quali eventi attivare questo webhook?**: Seleziona **Invia tutto**.
+   - **Quali eventi desideri attivare questo webhook?**: Seleziona **Invia tutto**.
    - Selezionare la casella di controllo **Attivo**.
 
 1. Fai clic su **Aggiungi webhook**.

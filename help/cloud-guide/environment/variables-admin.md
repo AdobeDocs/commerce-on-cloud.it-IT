@@ -4,9 +4,19 @@ description: Consulta un elenco delle variabili di ambiente utilizzate per l’i
 feature: Cloud, Configuration, Install, Roles/Permissions
 role: Developer
 exl-id: d2746185-bc59-4d30-a088-73df1bd2c0b2
-source-git-commit: ac1b2001294ba72304fc7ad3c760872dbd73e44f
+TQID: https://experienceleague.adobe.com/gCq40IqrBWMNPSy8eLBQhXFIXmgmUWQjQ8bWZK7fIcQ
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: 785
 ht-degree: 0%
 
 ---
@@ -38,7 +48,7 @@ Utilizza la seguente variabile di ambiente per proteggere l’accesso all’inte
 
 ### Modificare l’URL dell’amministratore
 
-Per impostazione predefinita, l&#39;URL [Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html?lang=it) è impostato su *&lt;nome_dominio>/admin&lt;id=&#39;70&#39;/>.* Per motivi di sicurezza, Adobe consiglia di impostarlo su un URL amministratore univoco e personalizzato, difficilmente intuibile.
+Per impostazione predefinita, l&#39;URL [Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html?lang=it) è impostato su *&lt;nome_dominio>/admin*. Per motivi di sicurezza, Adobe consiglia di impostarlo su un URL amministratore univoco e personalizzato, difficilmente intuibile.
 
 **In [!DNL Adobe Commerce] nell&#39;infrastruttura cloud**, è necessario modificare l&#39;URL amministratore utilizzando la variabile di ambiente `ADMIN_URL` in ([!DNL Cloud Console] o [!DNL Cloud CLI]). La modifica dell&#39;impostazione da [!DNL Admin] è applicabile solo alle installazioni locali. Per le installazioni locali, segui [utilizza un URL amministratore personalizzato](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=it#use-a-custom-admin-url).
 

@@ -2,9 +2,20 @@
 title: Crons, proprietà
 description: Vedi esempi su come configurare la proprietà "crons" nel file di configurazione dell'applicazione  [!DNL Commerce] .
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ff176cb1-5b6c-48a0-ad3c-56cc1d606c97
+TQID: https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: 1172
 ht-degree: 0%
 
 ---
@@ -87,7 +98,7 @@ Adobe Commerce utilizza un&#39;espressione con cinque valori per una specifica `
 Alcuni esempi:
 
 - `00 */3 * * *` viene eseguito ogni tre ore al primo minuto (12:00, 3:00, 6:00)
-- `20 */8 * * *` viene eseguito ogni 8 ore al minuto 20 (12:20, 8:20, 16:20)
+- `20 */8 * * *` viene eseguito ogni 8 ore al minuto 20 (12:20, 8:20, 4:20 pm)
 - `00 00 * * *` viene eseguito una volta al giorno a mezzanotte
 - `00 * * * 1` viene eseguito una volta alla settimana il lunedì a mezzanotte.
 
@@ -191,12 +202,12 @@ Per aggiungere, rimuovere o aggiornare un processo personalizzato, modificare la
 
 ## Risoluzione dei problemi dei processi cron
 
-Adobe ha aggiornato il pacchetto Adobe Commerce sull’infrastruttura cloud per ottimizzare l’elaborazione dei cron in Adobe Commerce sulla piattaforma di infrastruttura cloud e risolvere i problemi relativi ai cron. Se si verificano problemi con l&#39;elaborazione cron, verificare che il progetto utilizzi la versione più recente del pacchetto `ece-tools`. Consulta [Aggiorna strumenti ECE](../dev-tools/update-package.md).
+Adobe ha aggiornato il pacchetto sull’infrastruttura cloud di Adobe Commerce per ottimizzare l’elaborazione dei cron sulla piattaforma Adobe Commerce on cloud infrastructure e risolvere i problemi relativi ai cron. Se si verificano problemi con l&#39;elaborazione cron, verificare che il progetto utilizzi la versione più recente del pacchetto `ece-tools`. Consulta [Aggiorna strumenti ECE](../dev-tools/update-package.md).
 
 È possibile esaminare le informazioni sull’elaborazione delle cron nei file di registro a livello di applicazione per ciascun ambiente. Consulta [Registri applicazioni](../test/log-locations.md#application-logs).
 
 Consulta i seguenti articoli sul supporto Adobe Commerce per assistenza nella risoluzione dei problemi correlati ai cron:
 
-- [Le attività di Cron bloccano le attività da altri gruppi](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=it)
+- [Le attività di controllo bloccano le attività da altri gruppi](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=it)
 
-- [Ripristina manualmente i processi cron bloccati nel cloud](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=it)
+- [Ripristina manualmente i processi cron bloccati sul cloud](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=it)

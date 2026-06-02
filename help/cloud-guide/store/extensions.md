@@ -2,16 +2,28 @@
 title: Gestione estensioni
 description: Scopri come installare e gestire le estensioni in Adobe Commerce su un’infrastruttura cloud.
 feature: Cloud, Extensions, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 88c5ea06-fe79-4105-8b67-f16e9ef06210
+TQID: https://experienceleague.adobe.com/7ZNXOai-hYkUS4ff3bNW32Ny63DfJLMBG2Zti5OVxRM
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: 672
 ht-degree: 0%
 
 ---
 
 # Gestione estensioni
 
-Puoi estendere le funzionalità dell&#39;applicazione Adobe Commerce aggiungendo un&#39;estensione dalla [Commerce Marketplace](https://marketplace.magento.com). Ad esempio, puoi aggiungere un tema per cambiare l’aspetto della vetrina, oppure un pacchetto per la lingua per localizzare la vetrina e l’amministratore.
+Puoi estendere le funzionalità dell&#39;applicazione Adobe Commerce aggiungendo un&#39;estensione da [Commerce Marketplace](https://marketplace.magento.com). Ad esempio, puoi aggiungere un tema per cambiare l’aspetto della vetrina, oppure un pacchetto per la lingua per localizzare la vetrina e l’amministratore.
 
 >[!NOTE]
 >
@@ -21,7 +33,7 @@ Puoi estendere le funzionalità dell&#39;applicazione Adobe Commerce aggiungendo
 
 Anche se questa sezione illustra come ottenere il nome e la versione del Compositore da Commerce Marketplace, è possibile trovare il nome e la versione del modulo _any_ nel file Compositore del modulo. Aprire il file `composer.json` in un editor di testo e prendere nota dei valori `"name"` e `"version"`.
 
-**Per ottenere il nome del Compositore di un modulo dalla Commerce Marketplace**:
+**Per ottenere il nome del Compositore di un modulo da Commerce Marketplace**:
 
 1. Accedi a [Commerce Marketplace](https://marketplace.magento.com) con il nome utente e la password utilizzati per acquistare il componente.
 

@@ -1,9 +1,20 @@
 ---
 title: Passaggi di avvio
 description: Scopri come completare il lancio del sito.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e7a3cd6b-32de-4fd0-9fbd-da8299e77114
+TQID: https://experienceleague.adobe.com/Nl8YFJUZUkxtsm0eqBgJklsTysKuUE31PkEDsJmvBMU
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: 347
 ht-degree: 0%
 
 ---
@@ -12,9 +23,9 @@ ht-degree: 0%
 
 Dopo aver testato e completato l’elenco di controllo di lancio, puoi avviare i passaggi finali per avviare. Questi passaggi includono l’immissione dei biglietti, il trasferimento dell’accesso al sito e infine il test del negozio quando è in diretta.
 
-Il personale di supporto Adobe collabora con te durante la procedura, verificando lo stato e aiutandoti nel caso in cui si verifichino domande o problemi. Tutti i problemi devono essere tracciati con i ticket per acquisire al meglio ciò che è successo e come è stato risolto. Quando si iniziano iterazioni continue per la distribuzione degli aggiornamenti allo store avviato, è possibile che si verifichino di nuovo problemi simili. Questi ticket possono aiutare a individuare i problemi e a regolare le attività di distribuzione.
+Il personale di supporto Adobe collabora con il cliente durante la procedura, verificando lo stato e fornendo assistenza nel caso in cui si verifichino domande o problemi. Tutti i problemi devono essere tracciati con i ticket per acquisire al meglio ciò che è successo e come è stato risolto. Quando si iniziano iterazioni continue per la distribuzione degli aggiornamenti allo store avviato, è possibile che si verifichino di nuovo problemi simili. Questi ticket possono aiutare a individuare i problemi e a regolare le attività di distribuzione.
 
-## Contatta l’Adobe per avviare il sito
+## Contatta Adobe per avviare il sito
 
 Contatta il supporto Adobe Commerce e aggiorna tutti i ticket di lancio del sito (Go Live) con la data e l’ora previste per il passaggio e il lancio del tuo store.
 
@@ -38,6 +49,6 @@ Completa alcuni test UAT nel tuo archivio live per verificare che tutto sia in f
 
 ## Post-lancio
 
-Adobe controlla e monitora il sito per garantire che tutti i servizi e gli accessi siano visualizzati in verde. Rimaniamo a disposizione quando necessario per esaminare e verificare che tutti i registri di sistema, i servizi, la memorizzazione in cache e le funzioni funzionino come necessario per te e per i tuoi clienti.
+Adobe controlla il sito e verifica che tutti i servizi e gli accessi siano visualizzati in verde. Rimaniamo a disposizione quando necessario per esaminare e verificare che tutti i registri di sistema, i servizi, la memorizzazione in cache e le funzioni funzionino come necessario per te e per i tuoi clienti.
 
 In caso di problemi, crea e tieni traccia dei problemi con il supporto. Includi quante più informazioni possibili tra cui data/ora, funzionalità specifiche con un problema, sintomi e comportamenti insoliti, estensioni e altro ancora. Analizziamo i registri, il problema e collaboriamo con te per risolverlo il più rapidamente possibile.
