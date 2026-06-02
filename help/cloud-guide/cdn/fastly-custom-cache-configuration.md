@@ -3,9 +3,14 @@ title: Personalizza configurazione cache
 description: Scopri come rivedere e personalizzare le impostazioni di configurazione della cache al termine della configurazione del servizio Fastly.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: a2f5e2f67c7739302a87eaa27df25a62fca1acb7
+TQID: https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: 2126
 ht-degree: 0%
 
 ---
@@ -191,7 +196,7 @@ Per i progetti Starter e Pro è possibile utilizzare l&#39;opzione [!UICONTROL D
 
 - Per i progetti iniziali, vai all&#39;URL del progetto nella scheda [!UICONTROL Domains] in [!DNL Cloud Console] per aggiungere l&#39;URL del progetto.
 
-- Per i progetti Pro, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per aggiungere il dominio alla configurazione del progetto cloud. Il team di supporto aggiorna anche la configurazione dell’account Adobe Commerce Fastly per aggiungere il dominio.
+- Per i progetti Pro, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per aggiungere il dominio alla configurazione del progetto cloud. Il team di supporto aggiorna anche la configurazione dell’account Adobe Commerce Fastly per aggiungere il dominio.
 
 **Per gestire la configurazione Fastly Domain dall&#39;amministratore**:
 

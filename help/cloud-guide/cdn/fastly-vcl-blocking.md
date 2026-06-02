@@ -3,9 +3,14 @@ title: VCL personalizzato per richieste di blocco
 description: Blocca le richieste in ingresso per indirizzo IP utilizzando un elenco di controllo di accesso (ACL) di Edge con uno snippet VCL personalizzato.
 feature: Cloud, Configuration, Security
 exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: 1026
 ht-degree: 0%
 
 ---
@@ -39,7 +44,7 @@ Puoi fare riferimento all’ACL di Edge per nome nel codice dello snippet VCL.
 
 >[!NOTE]
 >
->Questo esempio mostra agli utenti avanzati come creare uno snippet di codice VCL per configurare regole di blocco personalizzato da caricare nel servizio Fastly. È possibile configurare un inserisco nell&#39;elenco Bloccati di Adobe Commerce o di basato sul paese dall&#39;amministratore di inserire nell&#39;elenco Consentiti utilizzando la funzionalità [Blocco](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) disponibile nel modulo Fastly CDN per Magento 2.
+>Questo esempio mostra agli utenti avanzati come creare uno snippet di codice VCL per configurare regole di blocco personalizzato da caricare nel servizio Fastly. Puoi configurare un inserisco nell&#39;elenco Bloccati di elenco Consentiti di o di in base al paese dall&#39;amministratore Adobe Commerce utilizzando la funzione [Blocco](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) disponibile nel modulo Fastly CDN per Magento 2.
 
 Dopo aver definito l&#39;ACL di Edge, è possibile utilizzarlo per creare lo snippet VCL per bloccare l&#39;accesso agli indirizzi IP specificati nell&#39;ACL. Puoi utilizzare lo stesso frammento VCL sia negli ambienti di staging che in quelli di produzione, ma è necessario caricare il frammento in ogni ambiente separatamente.
 

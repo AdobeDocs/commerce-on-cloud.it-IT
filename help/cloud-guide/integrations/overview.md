@@ -3,17 +3,22 @@ title: Panoramica sulle integrazioni
 description: Scopri le opzioni di integrazione di terze parti per il tuo progetto di infrastruttura cloud Adobe Commerce on.
 role: Developer
 feature: Cloud, Integration
-last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2024-02-06T00:00:00.000Z
+exl-id: 97c5f70d-1465-46c9-bb33-98897262c5ef
+TQID: https://experienceleague.adobe.com/07ozUcb8SWNcyRzgxClhaG5S-cOHqywkYWfke1rJB1g
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: 574
 ht-degree: 0%
 
 ---
 
 # Panoramica sulle integrazioni
 
-Le integrazioni sono utili per utilizzare servizi esterni, come l’hosting Git o i bot di Slack, e per mantenere i processi di sviluppo correnti, come l’utilizzo della funzione di richiesta pull di revisione del codice in GitHub. Puoi aggiungere le seguenti integrazioni al progetto di infrastruttura cloud di Adobe Commerce:
+Le integrazioni sono utili per utilizzare servizi esterni, come l’hosting Git o bot Slack, e per mantenere i processi di sviluppo correnti, come l’utilizzo della funzione di richiesta pull di revisione del codice in GitHub. Puoi aggiungere le seguenti integrazioni al progetto di infrastruttura cloud di Adobe Commerce:
 
 ![Integrazioni](/help/assets/integrations.png)
 

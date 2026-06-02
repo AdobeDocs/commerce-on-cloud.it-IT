@@ -2,26 +2,32 @@
 title: Best practice per la configurazione dell’archivio
 description: Scopri le best practice per configurare il tuo store su Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Best Practices
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ae7da73b-f874-4623-bf29-821ee0a00eb9
+TQID: https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: 1178
 ht-degree: 0%
 
 ---
 
 # Best practice per la configurazione dell’archivio
 
-Per informazioni dettagliate sulla configurazione di store, siti Web e siti Web, consultare la [Guida utente di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=it). Questa pagina fornisce best practice, informazioni utili e linee guida per la configurazione di store, siti e altro ancora con contenuti aggiuntivi da pubblicare nel tempo e tra versioni diverse.
+Per informazioni dettagliate sulla configurazione di store, siti Web e siti Web, consultare la [Guida utente di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html). Questa pagina fornisce best practice, informazioni utili e linee guida per la configurazione di store, siti e altro ancora con contenuti aggiuntivi da pubblicare nel tempo e tra versioni diverse.
 
 ## Campagne di marketing e promozioni
 
 Queste informazioni sono utili per Adobe Commerce sull’infrastruttura cloud 2.1.X e 2.2.X.
 
-Per creare campagne e promozioni, crea le opzioni e le impostazioni in [Gestione temporanea dei contenuti](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=it). Questa funzione ti consente di creare e visualizzare in anteprima le campagne prima di renderle pubbliche per le vendite ai clienti. Di seguito sono riportate informazioni utili. Per istruzioni esatte, consulta il contenuto della Guida utente di Adobe Commerce collegato.
+Per creare campagne e promozioni, crea le opzioni e le impostazioni in [Gestione temporanea dei contenuti](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html). Questa funzione ti consente di creare e visualizzare in anteprima le campagne prima di renderle pubbliche per le vendite ai clienti. Di seguito sono riportate informazioni utili. Per istruzioni esatte, consulta il contenuto della Guida utente di Adobe Commerce collegato.
 
 _Le campagne_ sono eventi di marketing per vendite stagionali, nuove linee di prodotti e altro ancora. Ogni campagna può includere temi personalizzati, blocchi per il contenuto, widget per controllare e visualizzare il contenuto e promozioni associate con regole di prezzo. A causa della natura estesa di una campagna, puoi crearle con una data di inizio e una data di fine attraverso la gestione temporanea del contenuto.
 
-_Le promozioni_ forniscono sconti, offerte una tantum, coupon, incentivi per nuovi acquirenti e altro ancora. Queste promozioni vengono create come _Regole di prezzo_ che impostano i termini, gli sconti e le opzioni per incoraggiare i clienti ad acquistare. Puoi creare regole di prezzo sul [carrello](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=it) o [catalogo](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=it), con opzioni aggiuntive per banner, punti premio e altro ancora. Puoi pianificare campagne per le promozioni, applicando regole di prezzo per eventi importanti come una nuova linea di prodotti o vendite stagionali.
+_Le promozioni_ forniscono sconti, offerte una tantum, coupon, incentivi per nuovi acquirenti e altro ancora. Queste promozioni vengono create come _Regole di prezzo_ che impostano i termini, gli sconti e le opzioni per incoraggiare i clienti ad acquistare. Puoi creare regole di prezzo sul [carrello](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html) o [catalogo](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html), con opzioni aggiuntive per banner, punti premio e altro ancora. Puoi pianificare campagne per le promozioni, applicando regole di prezzo per eventi importanti come una nuova linea di prodotti o vendite stagionali.
 
 Di seguito sono riportati suggerimenti per creare, aggiornare e gestire promozioni e campagne:
 
@@ -34,7 +40,7 @@ Di seguito sono riportati suggerimenti per creare, aggiornare e gestire promozio
 
 Queste informazioni sono utili per Adobe Commerce sull’infrastruttura cloud 2.1.X e 2.2.X.
 
-In genere, è possibile impostare [Advanced Pricing](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=it) per i prodotti tramite l&#39;area **Prodotti** > **Cataloghi** dell&#39;amministratore. Con Contenuto in staging, completa alcuni passaggi aggiuntivi per aggiungere il prezzo a una promozione e a una campagna.
+In genere, è possibile impostare [Advanced Pricing](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html) per i prodotti tramite l&#39;area **Prodotti** > **Cataloghi** dell&#39;amministratore. Con Contenuto in staging, completa alcuni passaggi aggiuntivi per aggiungere il prezzo a una promozione e a una campagna.
 
 Per modificare Advanced Pricing e aggiornare la gestione temporanea dei contenuti:
 
@@ -47,17 +53,17 @@ Per modificare Advanced Pricing e aggiornare la gestione temporanea dei contenut
 1. Salva la promozione. Viene creata una campagna iniziale inattiva.
 1. Puoi visualizzare in anteprima il prezzo speciale, il nome della promozione, il prezzo regolare e l’intervallo di date pianificato per la campagna.
 
-Per ulteriori informazioni, puoi continuare con le istruzioni [Pianifica modifiche per le regole di prezzo del catalogo](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=it). Fai clic su **Avanti** per eseguire i passaggi.
+Per ulteriori informazioni, puoi continuare con le istruzioni [Pianifica modifiche per le regole di prezzo del catalogo](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html). Fai clic su **Avanti** per eseguire i passaggi.
 
 ## Regole di prezzo
 
 Le regole di prezzo possono includere logica e condizioni illimitate come l’immaginazione di marketing. Alcuni esempi popolari includono Buy One Get One Free, Buy One Get One 50% di sconto, $25 di sconto su ordini superiori a $100 dollari e altro ancora.
 
-Per creare una regola di prezzo, vedere [Guida utente di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=it).
+Per creare una regola di prezzo, vedere [Guida utente di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html).
 
 Di seguito è riportato un esempio di creazione di una regola di prezzo per uno sconto Solo primo ordine. Per questo sconto, si desidera:
 
-* Crea una regola di prezzo con un [segmento cliente](https://experienceleague.adobe.com/it/docs/commerce-admin/customers/segments/customer-segment-price-rule) con una condizione: Numero totale di ordini inferiore a 1
+* Crea una regola di prezzo con un [segmento cliente](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule) con una condizione: Numero totale di ordini inferiore a 1
 * Aggiungi questo segmento di clienti come condizione alla regola del carrello
 * Facoltativo - Aggiungi condizioni e regole per applicare gli sconti a SKU o categorie di prodotti specifiche per acquisti mirati
 

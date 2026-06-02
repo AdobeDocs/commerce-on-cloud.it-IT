@@ -3,16 +3,21 @@ title: Servizio PrivateLink
 description: Scopri come utilizzare il servizio PrivateLink per stabilire una connessione sicura tra un cloud privato e la piattaforma cloud Adobe Commerce nella stessa area geografica.
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
-source-git-commit: 0e7f268de078bd9840358b66606a60b2a2225764
+TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: 1798
 ht-degree: 0%
 
 ---
 
 # Servizio PrivateLink
 
-Adobe Commerce sull&#39;infrastruttura cloud supporta l&#39;integrazione con il servizio [AWS PrivateLink](https://aws.amazon.com/privatelink/) o [Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/). È possibile utilizzare PrivateLink per stabilire comunicazioni private sicure tra Adobe Commerce in ambienti di infrastruttura cloud con servizi e applicazioni ospitati su sistemi esterni. Sia l’applicazione Adobe Commerce che i sistemi esterni devono essere accessibili tramite endpoint Virtual Private Cloud (VPC) configurati sulla stessa piattaforma cloud (AWS o Azure) all’interno della stessa area cloud.
+Adobe Commerce su infrastruttura cloud supporta l&#39;integrazione con il servizio [AWS PrivateLink](https://aws.amazon.com/privatelink/) o [Azure Private Link](https://learn.microsoft.com/en-us/azure/private-link/). È possibile utilizzare PrivateLink per stabilire comunicazioni private sicure tra Adobe Commerce in ambienti di infrastruttura cloud con servizi e applicazioni ospitati su sistemi esterni. Sia l’applicazione Adobe Commerce che i sistemi esterni devono essere accessibili tramite endpoint Virtual Private Cloud (VPC) configurati sulla stessa piattaforma cloud (AWS o Azure) all’interno della stessa area cloud.
 
 >[!TIP]
 >
@@ -22,7 +27,7 @@ Adobe Commerce sull&#39;infrastruttura cloud supporta l&#39;integrazione con il 
 
 L’integrazione del servizio PrivateLink per i progetti di infrastruttura cloud di Adobe Commerce include le seguenti funzioni e supporto:
 
-- Connessione sicura tra un cliente di Virtual Private Cloud (VPC) e Adobe VPC sulla stessa piattaforma cloud (AWS o Azure) all’interno della stessa area cloud.
+- Una connessione sicura tra un cliente Virtual Private Cloud (VPC) e Adobe VPC sulla stessa piattaforma cloud (AWS o Azure) all’interno della stessa area cloud.
 - Supporto per la comunicazione unidirezionale o bidirezionale tra i servizi endpoint disponibili presso Adobe e le VPC dei clienti.
 - Abilitazione servizio:
 
@@ -37,7 +42,7 @@ L’integrazione del servizio PrivateLink per i progetti di infrastruttura cloud
 - Il supporto Adobe Commerce non copre la risoluzione dei problemi di AWS PrivateLink oltre l’abilitazione iniziale.
 - I clienti sono responsabili dei costi associati alla gestione del proprio VPC.
 - Supporto del protocollo **HTTPS (porta 443) per piattaforma:**
-   - **Collegamento privato di Azure**: impossibile utilizzare il protocollo HTTPS (porta 443) per connettersi ad Adobe Commerce nell&#39;infrastruttura cloud a causa di [occultamento origine veloce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=it).
+   - **Azure Private Link**: impossibile utilizzare il protocollo HTTPS (porta 443) per connettersi ad Adobe Commerce sull&#39;infrastruttura cloud a causa di [occultamento origine veloce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html).
    - **AWS PrivateLink**: sono supportate le connessioni del protocollo HTTPS (porta 443).
 - PrivateDNS non disponibile.
 
@@ -93,7 +98,7 @@ Raccogli i seguenti dati necessari per l’abilitazione di PrivateLink:
 - Per la connessione di un servizio esterno al cluster Adobe Commerce Pro è necessario:
 
    - Elenco di porte del cluster Pro da esporre al nuovo endpoint privato esterno
-   - Elenco degli ID di sottoscrizione di Azure per le connessioni degli endpoint privati
+   - Elenco di ID di abbonamento Azure per le connessioni degli endpoint privati
 
 - Per collegare il cluster Adobe Commerce Pro a un servizio esterno, è necessario:
 
@@ -117,7 +122,7 @@ Il seguente flusso di lavoro illustra il processo di abilitazione per l’integr
 1. **Il cliente** aggiunge il servizio endpoint di Adobe al proprio account cloud (AWS o Azure), che attiva una richiesta di connessione ad Adobe. Per istruzioni, consulta la documentazione della piattaforma Cloud:
 
    - Per AWS, vedere [Accettazione e rifiuto delle richieste di connessione dell&#39;endpoint di interfaccia].
-   - Per Azure, vedere [Gestire le richieste di connessione].
+   - Per Azure, consulta [Gestire le richieste di connessione].
 
 1. **Adobe** approva la richiesta di connessione.
 
@@ -131,11 +136,11 @@ Il seguente flusso di lavoro illustra il processo di abilitazione per l’integr
       - Aggiorna la configurazione del servizio endpoint cliente per accettare le richieste avviate dall’account Adobe. Per istruzioni, consulta la documentazione della piattaforma Cloud:
 
          - Per AWS, consulta [Aggiunta e rimozione delle autorizzazioni per il servizio endpoint].
-         - Per Azure, vedere [Gestire una connessione a un endpoint privato]
+         - Per Azure, consulta [Gestire una connessione a un endpoint privato]
 
       - Fornisci ad Adobe il nome del servizio endpoint per il VPC del cliente.
 
-   - **Adobe** aggiunge il servizio endpoint del cliente all&#39;account della piattaforma Adobe (AWS o Azure), che attiva una richiesta di connessione a VPC del cliente.
+   - **Adobe** aggiunge il servizio endpoint del cliente all&#39;account della piattaforma Adobe (AWS o Azure), che attiva una richiesta di connessione al VPC del cliente.
    - **Il cliente** approva la richiesta di connessione da parte di Adobe per completare la configurazione.
    - **Cliente** [verifica la connessione](#test-vpc-endpoint-service-connection) da Adobe VPC.
 
@@ -205,7 +210,7 @@ Il seguente flusso di lavoro illustra il processo di abilitazione per l’integr
 
 ## Modifica configurazione PrivateLink
 
-[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per modificare una configurazione PrivateLink esistente. Ad esempio, puoi richiedere modifiche come segue:
+[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per modificare una configurazione PrivateLink esistente. Ad esempio, puoi richiedere modifiche come segue:
 
 - Rimuovi la connessione PrivateLink dall’ambiente di produzione o staging di Adobe Commerce on cloud infrastructure Pro.
 - Modifica il numero di account della piattaforma cloud del cliente per accedere al servizio endpoint di Adobe.
@@ -222,7 +227,7 @@ Per supportare le connessioni bidirezionali PrivateLink, il VPC del cliente deve
 Se queste risorse non sono disponibili nel VPC del cliente, devi accedere al tuo account della piattaforma Cloud per aggiungere la configurazione.
 
 - Console Amazon VPC - `https://console.aws.amazon.com/vpc/`
-- Portale di Azure - `https://portal.azure.com`
+- Portale Azure - `https://portal.azure.com`
 
 Consulta la documentazione della piattaforma Cloud per le istruzioni di configurazione di PrivateLink:
 
@@ -234,7 +239,7 @@ Consulta la documentazione della piattaforma Cloud per le istruzioni di configur
 
 - **Documentazione di Azure PrivateLink**
    - [Creare un load balancer]
-   - [Flusso di lavoro del collegamento privato di Azure]
+   - [Flusso di lavoro di Azure Private Link]
 
 <!--Link definitions-->
 

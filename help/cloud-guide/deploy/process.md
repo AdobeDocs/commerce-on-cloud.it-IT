@@ -2,9 +2,15 @@
 title: Processo di distribuzione
 description: Scopri come funziona l’implementazione per Adobe Commerce sui progetti di infrastruttura cloud.
 feature: Cloud, Build, Deploy, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 76806381-0ecc-4d76-974a-f203d3bf44da
+TQID: https://experienceleague.adobe.com/mSJOsLfNVGbkSNSrUzJgszxsqc07c-4KFhrJxm5I72U
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: 413
 ht-degree: 0%
 
 ---
@@ -21,7 +27,7 @@ La fase _build_ assembla i contenitori per i servizi definiti nei file di config
 
 ## ![Fase di distribuzione](../../assets/status-deploy.png) Fase di distribuzione
 
-La fase _deploy_ blocca temporaneamente le richieste in ingresso e fa passare il sito alla [modalità di manutenzione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=it). La fase di distribuzione utilizza i nuovi contenitori e, dopo il montaggio del file system, apre le connessioni di rete, attiva i servizi definiti nella sezione `relationships` del file `.magento.app.yaml` ed esegue gli hook di distribuzione definiti nel file `.magento.app.yaml`. Tutto è _di sola lettura_, ad eccezione delle directory definite nel file `.magento.app.yaml`. Per impostazione predefinita, la proprietà [`mounts`](../application/properties.md#mounts) include le directory seguenti:
+La fase _deploy_ blocca temporaneamente le richieste in ingresso e fa passare il sito alla [modalità di manutenzione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html). La fase di distribuzione utilizza i nuovi contenitori e, dopo il montaggio del file system, apre le connessioni di rete, attiva i servizi definiti nella sezione `relationships` del file `.magento.app.yaml` ed esegue gli hook di distribuzione definiti nel file `.magento.app.yaml`. Tutto è _di sola lettura_, ad eccezione delle directory definite nel file `.magento.app.yaml`. Per impostazione predefinita, la proprietà [`mounts`](../application/properties.md#mounts) include le directory seguenti:
 
 - `app/etc`—contiene i file di configurazione `env.php` e `config.php`
 - `pub/media`: contiene tutti i dati multimediali, ad esempio prodotti o categorie

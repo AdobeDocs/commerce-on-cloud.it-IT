@@ -2,9 +2,14 @@
 title: Elenco di controllo di Launch
 description: Verificare gli elementi dell'elenco di controllo per l'avvio del sito.
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
-source-git-commit: ca2d94364787695398b2b8af559733fe52ec2949
+TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: 1155
 ht-degree: 0%
 
 ---
@@ -72,8 +77,7 @@ Quando sei pronto per avviare il sito, devi aggiornare la configurazione DNS per
 
 >[!IMPORTANT]
 >
->Le istruzioni DNS in [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sezione 2.4**) indicano che:
->_Un record CNAME non può coesistere con altri dati. In altre parole, se suzy.podunk.xx è un alias per sue.podunk.xx, non è possibile avere un record MX per suzy.podunk.edu, un record A o persino un record TXT._
+>Le istruzioni DNS in [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sezione 2.4**) indicano che:>_Un record CNAME non può coesistere con altri dati. In altre parole, se suzy.podunk.xx è un alias per sue.podunk.xx, non è possibile avere un record MX per suzy.podunk.edu, un record A o persino un record TXT._
 >
 >Per questo motivo, i record DNS devono essere di tipo `CNAME` per i sottodomini e di tipo `A` per i domini APEX (domini radice). L’eliminazione di questa regola può causare interruzioni del servizio di posta o della propagazione DNS, perché non è più possibile aggiungere altri record, ad esempio MX o NS. Alcuni provider DNS possono aggirare questo problema utilizzando personalizzazioni interne, ma il rispetto dello standard garantisce stabilità e flessibilità (ad esempio la modifica del provider DNS).
 
@@ -91,7 +95,7 @@ Quando sei pronto per avviare il sito, devi aggiornare la configurazione DNS per
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **NOTA**: puoi anche aggiornare l&#39;URL di base dall&#39;amministratore. Consulta [URL store](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=it) nella _Guida agli store e all&#39;esperienza di acquisto di Adobe Commerce_.
+   **NOTA**: puoi anche aggiornare l&#39;URL di base dall&#39;amministratore. Consulta [URL store](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) nella _Guida agli store e all&#39;esperienza di acquisto di Adobe Commerce_.
 
 1. Attendi alcuni minuti per l’aggiornamento del sito.
 
@@ -105,7 +109,7 @@ Di seguito sono riportate le modifiche e i controlli consigliati:
 
 - [Test e-mail in uscita completato](../project/outgoing-emails.md)
 
-- [Configurazione sicura per le credenziali amministratore e URL amministratore di base](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/security/security-admin)
+- [Configurazione sicura per le credenziali amministratore e URL amministratore di base](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [Ottimizza tutte le immagini per il web](../cdn/fastly-image-optimization.md)
 
@@ -137,9 +141,9 @@ Puoi eseguire il test anche utilizzando le seguenti opzioni di terze parti:
 
 - [Configurare l&#39;analisi della protezione](overview.md#set-up-the-security-scan-tool)
 
-- [Configurazione sicura per l’utente amministratore](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/security/security-admin)
+- [Configurazione sicura per l’utente amministratore](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [Configurazione sicura per l’URL amministratore](https://experienceleague.adobe.com/it/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [Configurazione sicura per l’URL amministratore](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Rimuovere gli utenti che non fanno più parte del progetto di infrastruttura cloud di Adobe Commerce](../project/user-access.md)
 

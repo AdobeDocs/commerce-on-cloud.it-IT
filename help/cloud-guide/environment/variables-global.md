@@ -4,9 +4,15 @@ description: Consulta l’elenco delle variabili di ambiente che controllano le 
 feature: Cloud, Configuration, Build, Deploy, Eventing, Logs, SCD
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
+TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: 774
 ht-degree: 0%
 
 ---
@@ -177,7 +183,7 @@ stage:
 - **Predefinito**—_Non impostato_
 - **Versione**—Adobe Commerce 2.1.4 e versioni successive
 
-Utilizza la variabile `X_FRAME_CONFIGURATION` per modificare la configurazione dell&#39;intestazione [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=it) per il tuo sito Adobe Commerce. Questa configurazione controlla come il browser esegue il rendering di una pagina in un `<frame>`, `<iframe>` o `<object>`. Utilizza una delle seguenti opzioni:
+Utilizza la variabile `X_FRAME_CONFIGURATION` per modificare la configurazione dell&#39;intestazione [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html) per il tuo sito Adobe Commerce. Questa configurazione controlla come il browser esegue il rendering di una pagina in un `<frame>`, `<iframe>` o `<object>`. Utilizza una delle seguenti opzioni:
 
 - `DENY` - Impossibile visualizzare la pagina in un frame.
 - `SAMEORIGIN`—(impostazione predefinita di Adobe Commerce). La pagina può essere visualizzata solo in un frame sulla stessa origine della pagina stessa.

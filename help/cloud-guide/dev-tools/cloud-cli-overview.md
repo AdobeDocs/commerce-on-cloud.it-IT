@@ -2,9 +2,13 @@
 title: Cloud CLI
 description: Scopri la CLI di Magento-Cloud e come consente di gestire gli ambienti di sviluppo locali per il progetto di infrastruttura cloud Adobe Commerce.
 exl-id: 71a705f2-8672-4125-b539-b7b1621f2f64
-source-git-commit: 82d89f442792baec995dd0be40f2a49cba168f76
+TQID: https://experienceleague.adobe.com/cp-mG1bOtIxmm4bKKFmABa-vrudh-paS7E6x6IlWHmU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: 860
 ht-degree: 0%
 
 ---
@@ -19,12 +23,12 @@ Questo strumento estende le funzionalità di [[!DNL Cloud Console]](../../get-st
 >
 >Si tratta di uno strumento locale supportato solo dai sistemi operativi basati su Unix. Windows non è supportato. Non può essere installato nell’ambiente Cloud (di sola lettura) utilizzando il metodo descritto in questa pagina. Puoi installare i moduli nell&#39;ambiente Cloud solo tramite uno dei seguenti **flussi di lavoro di distribuzione**.
 >
->- [Flusso di lavoro di distribuzione Pro](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [Flusso di lavoro di distribuzione iniziale](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [Flusso di lavoro di distribuzione Pro](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [Flusso di lavoro di distribuzione iniziale](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **Per installare `magento-cloud` CLI**:
 
-1. Nella _workstation locale_, passa alla directory in cui intendi clonare il progetto Cloud e in cui il [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=it) dispone dell&#39;accesso _scrittura_.
+1. Nella _workstation locale_, passa alla directory in cui intendi clonare il progetto Cloud e in cui il [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) dispone dell&#39;accesso _scrittura_.
 
 1. Installare l&#39;interfaccia della riga di comando `magento-cloud`.
 
@@ -137,7 +141,7 @@ I passaggi seguenti illustrano l’utilizzo dei comandi CLI e Git in modo interc
 
 1. Sulla workstation locale, passa alla directory del progetto.
 
-1. Passa al [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=it).
+1. Passa al [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html).
 
 1. Accedi al progetto.
 

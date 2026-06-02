@@ -2,9 +2,14 @@
 title: Imposta cache per file statici
 description: Scopri come impostare le opzioni di archiviazione della cache nel file di configurazione dell'applicazione  [!DNL Commerce] .
 feature: Cloud, Configuration, Cache, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 0f577974-85d7-4972-8f03-856aa6accaae
+TQID: https://experienceleague.adobe.com/ZA0WRB9p4Gpi7kjWxNPS5uCSfaTmrkrqxc4SgC9y9og
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: 131
 ht-degree: 0%
 
 ---
@@ -15,7 +20,7 @@ Il valore TTL della cache (time-to-live) per i file multimediali e statici è im
 
 >[!NOTE]
 >
->Prima di aggiornare l’ambiente di produzione, è importante testare le modifiche all’interno dell’ambiente di staging. [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per assistenza sull&#39;aggiornamento della configurazione in questi ambienti.
+>Prima di aggiornare l’ambiente di produzione, è importante testare le modifiche all’interno dell’ambiente di staging. [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per assistenza sull&#39;aggiornamento della configurazione in questi ambienti.
 
 1. Specificare il tempo TTL (in secondi) nella proprietà [`web`](web-property.md) del file `.magento.app.yaml`. È possibile aggiungere la chiave `expires` in `locations` o in `"/media"` e `"/static"`.
 

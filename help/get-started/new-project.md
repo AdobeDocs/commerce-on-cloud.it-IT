@@ -1,11 +1,17 @@
 ---
 title: Provisioning di Commerce su Cloud
-description: Scopri come preparare un consulente tecnico per i clienti Adobe per il provisioning del progetto Adobe Commerce su infrastruttura cloud.
+description: Scopri come preparare un consulente tecnico clienti Adobe per il provisioning del progetto Adobe Commerce su infrastruttura cloud.
 recommendations: noDisplay, catalog
 role: Admin
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 77e8c9fb-8c4a-4c98-adbc-e57871c5bdbc
+TQID: https://experienceleague.adobe.com/GzCPqYxn0-ACS34UfvHypqv6BveTRpbLJNN2jNmCL-E
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: 774
 ht-degree: 0%
 
 ---
@@ -14,7 +20,7 @@ ht-degree: 0%
 
 Iniziamo e inizializziamo il tuo progetto Commerce sull’infrastruttura cloud.
 
-Adobe Prima di eseguire il provisioning del Commerce negli ambienti di progetto cloud, è consigliabile prendere in considerazione le strategie seguenti e preparare le risposte per la prima consultazione con il team dell’account Adobe. Utilizza le sezioni seguenti come elenco di controllo per aiutarti a preparare la conversazione con un consulente tecnico del cliente per il provisioning di un progetto cloud:
+Prima di eseguire il provisioning del Commerce negli ambienti di progetto cloud, Adobe consiglia di prendere in considerazione le strategie seguenti e preparare le risposte per la prima consultazione con il team dell’account Adobe. Utilizza le sezioni seguenti come elenco di controllo per aiutarti a preparare la conversazione con un consulente tecnico del cliente per il provisioning di un progetto cloud:
 
 ## Definizione del dominio
 
@@ -31,7 +37,7 @@ Esempi per i domini Produzione e Staging:
 
 Per ulteriori informazioni su più domini o su domini univoci, consulta [Configurare più siti Web o store](../cloud-guide/store/multiple-sites.md) nella guida _Commerce on Cloud Infrastructure_.
 
-Se disponi di un account Fastly esistente che collega gli stessi domini APEX e secondari utilizzati sul tuo sito Adobe Commerce, consulta [Più account Fastly e domini assegnati](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}.
+Se disponi di un account Fastly che collega gli stessi sottodomini e APEX utilizzati sul tuo sito Adobe Commerce, consulta [Più account Fastly e domini assegnati](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}.
 
 ## Dominio e-mail transazionale
 
@@ -59,7 +65,7 @@ Consulta [Gestire lo spazio su disco](../cloud-guide/storage/manage-disk-space.m
 
 **Domanda 4**: _In quale regione del servizio cloud è più conveniente essere vicini?_
 
-Scegli Amazon Web Services (AWS) o Microsoft Azure as your Infrastructure as a Service (IaaS) foundation per i progetti Adobe Commerce on Cloud Infrastructure Pro. Ogni provider di servizi opera in più aree geografiche e fornisce più aree di disponibilità. Seleziona un’area adatta alla tua posizione e riduci il potenziale di latenza e costi più elevati.
+Scegli Amazon Web Services (AWS) o Microsoft Azure come base IaaS (Infrastructure as a Service) per i progetti Adobe Commerce su infrastruttura cloud Pro. Ogni provider di servizi opera in più aree geografiche e fornisce più aree di disponibilità. Seleziona un’area adatta alla tua posizione e riduci il potenziale di latenza e costi più elevati.
 
 Vedi [una mappa delle aree geografiche cloud di Adobe Commerce](../cloud-guide/overview.md).
 

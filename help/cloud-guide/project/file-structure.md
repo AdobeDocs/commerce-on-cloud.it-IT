@@ -1,9 +1,15 @@
 ---
 title: Struttura del progetto
 description: Scopri la struttura dei file e i modelli di progetto per Adobe Commerce sull’infrastruttura cloud.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 364e40e4-a5b3-4d23-b86d-74fc0696ac19
+TQID: https://experienceleague.adobe.com/B6fTvmHLFa5THSgLKsjl1smPC8ekPdXB9A-vyqFVwG8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: 473
 ht-degree: 0%
 
 ---
@@ -17,7 +23,7 @@ Nella tabella seguente sono descritti i file inclusi in un progetto cloud:
 | File | Descrizione |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | File di configurazione che reindirizza `www` al dominio apex e applicazione `php` per il server HTTP. Vedere [Configurare le route](../routes/routes-yaml.md). |
-| `/.magento/services.yaml` | File di configurazione che definisce un&#39;istanza MySQL (MariaDB), Redis e OpenSearch o un Elasticsearch. Vedere [Configurare i servizi](../services/services-yaml.md). |
+| `/.magento/services.yaml` | File di configurazione che definisce un&#39;istanza MySQL (MariaDB), Redis e OpenSearch o Elasticsearch. Vedere [Configurare i servizi](../services/services-yaml.md). |
 | `/app` | La cartella `code` è utilizzata per i moduli personalizzati. La cartella `design` è utilizzata per [temi personalizzati](../store/custom-theme.md). La cartella `etc` contiene i file di configurazione per l&#39;applicazione. |
 | `/m2-hotfixes` | Utilizzato per patch personalizzate. |
 | `/update` | Cartella di servizio utilizzata dal modulo di supporto. |

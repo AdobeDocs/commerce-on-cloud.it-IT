@@ -1,18 +1,22 @@
 ---
 title: Proprietà
-description: Utilizzare l'elenco delle proprietà come riferimento quando si configura il [!DNL Commerce] applicazione per versione e distribuire al infrastruttura cloud.
+description: Utilizzare l'elenco delle proprietà come riferimento durante la configurazione dell'applicazione  [!DNL Commerce]  per la compilazione e la distribuzione nell'infrastruttura cloud.
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+TQID: https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: 855
 ht-degree: 0%
 
 ---
 
 # Proprietà per la configurazione dell&#39;applicazione
 
-Il `.magento.app.yaml` file utilizza le proprietà per gestire il supporto dell&#39;ambiente per il [!DNL Commerce] applicazione.
+Il file `.magento.app.yaml` utilizza le proprietà per gestire il supporto dell&#39;ambiente per l&#39;applicazione [!DNL Commerce].
 
 | Nome | Descrizione | Predefinito | Obbligatorio |
 | ------ | --------------------------------- | ------- | -------- |
@@ -26,7 +30,7 @@ Il `.magento.app.yaml` file utilizza le proprietà per gestire il supporto dell&
 | [`name`](#name) | Definisci il nome dell’applicazione | `mymagento` | Sì |
 | [`relationships`](#relationships) | Servizi mappa | Servizi:<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | No |
 | [`runtime`](#runtime) | La proprietà runtime include le estensioni richieste dall&#39;applicazione [!DNL Commerce]. | Estensioni:<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | Sì |
-| [`type`](#type-and-build) | Imposta l&#39;immagine del contenitore di base | `php:8.3` | Sì |
+| [`type`](#type-and-build) | Impostare l&#39;immagine contenitore di base | `php:8.3` | Sì |
 | [`variables`](variables-property.md) | Applicare una variabile di ambiente per una versione specifica di Commerce | — | No |
 | [`web`](web-property.md) | Gestire le richieste esterne | — | Sì |
 | [`workers`](workers-property.md) | Gestire le richieste esterne | — | Sì, se non si utilizza la proprietà web |
@@ -68,11 +72,11 @@ dependencies:
 
 La proprietà `build: flavor:` non è utilizzata per Composer 2.x; pertanto, è necessario installare manualmente Composer durante la fase di build. Per installare e utilizzare Composer 2.x nei progetti Starter e Pro, è necessario apportare tre modifiche alla configurazione di `.magento.app.yaml`:
 
-1. Rimuovi `composer` come `build: flavor:` e aggiungi `none`. Questa modifica impedisce a Cloud di utilizzare la versione 1.x predefinita di Composer per eseguire versione attività.
-1. Aggiungi `composer/composer: '^2.0'` come dipendenza per l&#39;installazione `php` di Composer 2.x.
-1. Aggiungi le `composer` attività versione a un `build` hook per eseguire le attività versione utilizzando Composer 2.x.
+1. Rimuovi `composer` come `build: flavor:` e aggiungi `none`. Questa modifica impedisce a Cloud di utilizzare la versione predefinita 1.x di Composer per eseguire attività di build.
+1. Aggiungi `composer/composer: '^2.0'` come dipendenza `php` per l&#39;installazione di Composer 2.x.
+1. Aggiungere le attività di compilazione `composer` a un hook `build` per eseguire le attività di compilazione tramite Composer 2.x.
 
-Utilizzare i seguenti frammenti di configurazione nella propria `.magento.app.yaml` configurazione:
+Utilizza i seguenti frammenti di configurazione nella tua configurazione di `.magento.app.yaml`:
 
 ```yaml
 # 1. Change flavor to none.
@@ -91,19 +95,19 @@ hooks:
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 ```
 
-Per ulteriori informazioni su Composer, vedere [Pacchetti](../development/overview.md#required-packages) richiesti.
+Per ulteriori informazioni su Composer, vedere [Pacchetti richiesti](../development/overview.md#required-packages).
 
 ## `dependencies`
 
 Specifica le dipendenze che potrebbero essere necessarie all&#39;applicazione durante il processo di compilazione.
 
-Adobe Systems Commerce supporta le dipendenze dalle seguenti lingue:
+Adobe Commerce supporta le dipendenze dalle seguenti lingue:
 
 - PHP
 - Rubino
 - Node.js
 
-Tali dipendenze sono indipendenti dalle eventuali dipendenze del applicazione e sono disponibili nel `PATH`, durante il processo di versione e nell&#39;ambiente di runtime del applicazione.
+Tali dipendenze sono indipendenti dalle dipendenze finali dell&#39;applicazione e sono disponibili in `PATH`, durante il processo di compilazione e nell&#39;ambiente di esecuzione dell&#39;applicazione.
 
 È possibile specificare tali dipendenze nel modo seguente:
 
@@ -140,7 +144,7 @@ La dimensione minima consigliata del disco è 256 MB. Se viene visualizzato l&#3
 
 >[!NOTE]
 >
->Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
+>Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
 >
 >Non è possibile aumentare temporaneamente lo storage su disco in Staging o Produzione; questo processo non è reversibile.
 
@@ -191,7 +195,7 @@ Il formato per l&#39;aggiunta del montaggio all&#39;elenco è il seguente:
 
 >[!NOTE]
 >
->Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
+>Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
 
 È possibile rendere accessibile il mount web aggiungendolo al blocco di posizioni [`web`](web-property.md).
 
@@ -204,10 +208,10 @@ Il formato per l&#39;aggiunta del montaggio all&#39;elenco è il seguente:
 La proprietà `access` indica un livello di ruolo utente minimo che può accedere SSH agli ambienti. I ruoli utente disponibili sono:
 
 - `admin`—Può modificare le impostazioni ed eseguire azioni nell&#39;ambiente; dispone di _diritti per collaboratori_ e _visualizzatori_.
-- `contributor`- Può inviare codice a questo ambiente e diramarsi dall&#39;ambiente; ha _visualizzatore_ diritti.
-- `viewer`- Consente di visualizzare solo l&#39;ambiente.
+- `contributor` - Può inviare il codice a questo ambiente e diramarlo dall&#39;ambiente; dispone dei diritti di _visualizzatore_.
+- `viewer` - Può visualizzare solo l&#39;ambiente.
 
-Il ruolo utente predefinito è `contributor`, che limita il accesso SSH agli utenti con soli _diritti visualizzatore_ . È possibile modificare il ruolo utente in `viewer` per consentire l&#39;accesso SSH agli utenti con soli _diritti visualizzatore_:
+Il ruolo utente predefinito è `contributor`, che limita l&#39;accesso SSH agli utenti con soli diritti di _visualizzatore_. È possibile modificare il ruolo utente in `viewer` per consentire l&#39;accesso SSH agli utenti con soli _diritti visualizzatore_:
 
 ```yaml
 access:

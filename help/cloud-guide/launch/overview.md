@@ -2,9 +2,14 @@
 title: Lancio del sito
 description: Scopri come iniziare la preparazione per il lancio del sito.
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
-source-git-commit: 38ac38d4edd0f317155d0d4537021a29a21d5761
+TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: 966
 ht-degree: 0%
 
 ---
@@ -43,7 +48,7 @@ Come parte della sottoscrizione di Adobe Commerce sull’infrastruttura cloud, A
 
 >[!NOTE]
 >
->Se desideri distribuire il tuo certificato SSL di convalida estesa per la tua società invece di utilizzare il certificato Let&#39;s Encrypt, contatta il tuo CTA o [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket).
+>Se desideri distribuire il tuo certificato SSL di convalida estesa per la tua società invece di utilizzare il certificato Let&#39;s Encrypt, contatta il tuo CTA o [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
 
 ## Configurare lo strumento Security Scan
 
@@ -57,7 +62,7 @@ Come parte della sottoscrizione di Adobe Commerce sull’infrastruttura cloud, A
 >3.218.25.102
 >```
 >
->Aggiungere questi indirizzi IP a un elenco Consentiti di protezione del firewall di rete per consentire allo strumento di eseguire la scansione del sito. Lo strumento invia richieste solo alle porte 80 e 443.
+>Aggiungere questi indirizzi IP a un elenco Consentiti di accesso alla rete in modo che lo strumento possa eseguire la scansione del sito. Lo strumento invia richieste solo alle porte 80 e 443.
 
 Lo strumento di analisi della sicurezza consente di monitorare regolarmente i siti Web dei negozi e ricevere aggiornamenti per i rischi di sicurezza noti, malware e software obsoleto. Questo strumento è un servizio gratuito disponibile per tutte le implementazioni e le versioni di Adobe Commerce sull’infrastruttura cloud. Puoi accedere allo strumento tramite il tuo [account Commerce Marketplace](https://account.magento.com/customer/account/login).
 
@@ -69,7 +74,7 @@ Lo strumento di analisi della sicurezza consente di monitorare regolarmente i si
 >
 >Adobe consiglia di utilizzare lo strumento di analisi della sicurezza rispetto ad altri strumenti di terze parti per garantire la migliore qualità del servizio durante l’analisi dei risultati.
 
-Per informazioni sulla configurazione e l&#39;utilizzo dello strumento di analisi della sicurezza, consultare la [Guida utente](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/security/security-scan). In genere, si inizia a utilizzare questo strumento quando si inizia il test di accettazione utente (UAT).
+Per informazioni sulla configurazione e l&#39;utilizzo dello strumento di analisi della sicurezza, consultare la [Guida utente](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan). In genere, si inizia a utilizzare questo strumento quando si inizia il test di accettazione utente (UAT).
 
 Ogni sito digitalizzato deve essere registrato tramite la scheda Security Scan. Durante il processo di registrazione, è necessario accettare la liberatoria prima di poter iniziare la scansione. Puoi controllare sia la pianificazione che autorizzare l’utente a ricevere notifiche al termine di ogni scansione. È possibile pianificare scansioni per una data e un&#39;ora specifiche e ricorrenti oppure eseguire una scansione su richiesta in base alle esigenze.
 

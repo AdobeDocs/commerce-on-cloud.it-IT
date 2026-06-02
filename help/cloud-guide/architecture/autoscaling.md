@@ -3,9 +3,15 @@ title: Ridimensionamento automatico
 description: Scopri come Adobe Commerce sull’infrastruttura cloud può essere scalato per soddisfare le richieste di risorse.
 feature: Cloud, Auto Scaling
 topic: Architecture
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 11bfde40-79d1-4d51-9233-150c4cfb80fd
+TQID: https://experienceleague.adobe.com/uL--0lHHJ-4SN3BkFU8reAefWhpMQOLBRVG7fX3jTM8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: 605
 ht-degree: 0%
 
 ---
@@ -58,22 +64,22 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## Abilita ridimensionamento automatico
 
-Per abilitare o disabilitare il ridimensionamento automatico per il progetto di infrastruttura cloud Adobe Commerce, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket). Scegli i seguenti motivi nel ticket:
+Per abilitare o disabilitare il ridimensionamento automatico per il progetto di infrastruttura cloud Adobe Commerce, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Scegli i seguenti motivi nel ticket:
 
 - **Motivo contatto**: richiesta di modifica dell&#39;infrastruttura
 - **Motivo del contatto per l&#39;infrastruttura Adobe Commerce**: altra richiesta di modifica dell&#39;infrastruttura
 
 >[!IMPORTANT]
 >
->La funzione di ridimensionamento automatico acquisisce gli eventi imprevisti. Anche se è stato abilitato il ridimensionamento automatico, Adobe consiglia di continuare a [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) se si prevede un evento imminente.
+>La funzione di ridimensionamento automatico acquisisce gli eventi imprevisti. Anche se è stato abilitato il ridimensionamento automatico, Adobe consiglia di continuare a [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) se si prevede un evento imminente.
 
 ### Test di carico
 
 Adobe abilita prima il ridimensionamento automatico nel cluster _staging_ del progetto cloud. Dopo aver eseguito e completato il test di carico nell’ambiente, Adobe abilita il ridimensionamento automatico nel cluster di produzione. Per informazioni sul test di carico, vedere [Test delle prestazioni](../launch/checklist.md#performance-testing).
 
-### INSERIRE NELL&#39;ELENCO CONSENTITI IP
+### IP
 
-Dopo aver abilitato il ridimensionamento automatico, il traffico del nodo web in uscita proviene dagli indirizzi IP dei nodi di servizio. Se utilizzi un elenco Consentiti di con un servizio di terze parti non incluso nel progetto Adobe Commerce on Cloud Infrastructure, verifica gli indirizzi IP nel inserisco nell&#39;elenco Consentiti di del servizio di terze parti.
+Dopo aver abilitato il ridimensionamento automatico, il traffico del nodo web in uscita proviene dagli indirizzi IP dei nodi di servizio. Se utilizzi un elenco Consentiti di con un servizio di terze parti che non è incluso nel pacchetto con il progetto Adobe Commerce on Cloud Infrastructure, verifica gli indirizzi IP nel inserisco nell&#39;elenco Consentiti di  del servizio di terze parti.
 
 Ad esempio:
 

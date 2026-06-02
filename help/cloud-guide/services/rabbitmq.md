@@ -3,16 +3,21 @@ title: Configurazione del servizio RabbitMQ
 description: Scopri come abilitare il servizio RabbitMQ per gestire le code di messaggi per Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Services
 exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
-source-git-commit: 3e84f813f8e7e46b6de03e2811b9cf097b6ceb47
+TQID: https://experienceleague.adobe.com/oweBbN2F8xg9ISmnP-31-ymXpHIdBzQsDbYHDPK-SSM
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: 541
 ht-degree: 0%
 
 ---
 
 # Configura il servizio [!DNL RabbitMQ]
 
-[MQF](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=it) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
+[MQF](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
 
 MQF utilizza [RabbitMQ](https://www.rabbitmq.com/) come broker di messaggistica, che fornisce una piattaforma scalabile per l&#39;invio e la ricezione di messaggi. Include inoltre un meccanismo per l’archiviazione dei messaggi non consegnati. [!DNL RabbitMQ] è basato sulla specifica AMQP 0.9.1.
 
@@ -152,7 +157,7 @@ Per connettersi a RabbitMQ utilizzando l&#39;applicazione PHP, aggiungere una li
 
 ## Risoluzione dei problemi del servizio [!DNL RabbitMQ]
 
-Vedi [Impossibile connettersi a RabbitMQ in Adobe Commerce Cloud](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27688).
+Vedi [Impossibile connettersi a RabbitMQ in Adobe Commerce Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688).
 
 ## Aggiornamento del servizio [!DNL RabbitMQ]
 
@@ -160,4 +165,4 @@ Vedi [Impossibile connettersi a RabbitMQ in Adobe Commerce Cloud](https://experi
 >
 >Durante l&#39;aggiornamento di [!DNL RabbitMQ] in un ambiente di integrazione, non saltare le versioni. Sono supportati solo [aggiornamenti sequenziali](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability) (ad esempio, 3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1) e ogni versione bump deve corrispondere a una distribuzione effettiva e corretta dell&#39;ambiente Cloud.
 >
->Per istruzioni generali sull&#39;aggiornamento del servizio, vedere [Modifica versione del servizio](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version).
+>Per istruzioni generali sull&#39;aggiornamento del servizio, vedere [Modifica versione del servizio](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version).

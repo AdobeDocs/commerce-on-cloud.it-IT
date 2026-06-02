@@ -3,9 +3,16 @@ title: Architettura Pro
 description: Scopri gli ambienti supportati dall’architettura Pro.
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
+TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: 1587
 ht-degree: 0%
 
 ---
@@ -53,7 +60,7 @@ Nei progetti Pro, il ramo `master` fornisce un ambiente PaaS attivo con l&#39;am
 
 ### Ambiente di integrazione
 
-L’ambiente di integrazione viene eseguito in un contenitore Linux (LXC) su una griglia di server noti come PaaS. Ogni ambiente include un server web e un database per testare il sito. Per un elenco degli indirizzi IP di AWS e Azure, vedere [Indirizzi IP regionali](../project/regional-ip-addresses.md).
+L’ambiente di integrazione viene eseguito in un contenitore Linux (LXC) su una griglia di server noti come PaaS. Ogni ambiente include un server web e un database per testare il sito. Per un elenco degli indirizzi IP AWS e Azure, consulta [Indirizzi IP regionali](../project/regional-ip-addresses.md).
 
 **Casi d&#39;uso consigliati:**
 
@@ -147,7 +154,7 @@ L&#39;ambiente di produzione dispone di tre macchine virtuali (VM) dietro un loa
 
 - **Redis**: un server per macchina virtuale con un solo server attivo e gli altri due come repliche
 
-- **Elasticsearch**: ricerca di Adobe Commerce nell&#39;infrastruttura cloud da 2.2 a 2.4.3-p2
+- **Elasticsearch**—cerca Adobe Commerce nell&#39;infrastruttura cloud da 2.2 a 2.4.3-p2
 
 - **OpenSearch**—cerca Adobe Commerce nell&#39;infrastruttura cloud 2.3.7-p3, 2.4.3-p2, 2.4.4 e versioni successive
 
@@ -170,13 +177,13 @@ Grazie all&#39;hardware unico e ridondante, Adobe può fornire tre server gatewa
 
 ## Backup e disaster recovery
 
-Adobe Commerce sull’infrastruttura cloud utilizza un’architettura ad alta disponibilità che replica ogni progetto Pro in tre aree di disponibilità di AWS o Azure separate, ciascuna con un centro dati separato. Oltre a questa ridondanza, gli ambienti di staging e produzione Pro ricevono backup regolari e live progettati per essere utilizzati in caso di _errore irreversibile_.
+Adobe Commerce su infrastruttura cloud utilizza un’architettura ad alta disponibilità che replica ogni progetto Pro in tre aree di disponibilità AWS o Azure separate, ciascuna con un centro dati separato. Oltre a questa ridondanza, gli ambienti di staging e produzione Pro ricevono backup regolari e live progettati per essere utilizzati in caso di _errore irreversibile_.
 
 **I backup automatici** includono dati persistenti provenienti da tutti i servizi in esecuzione, quali il database MySQL e i file archiviati nei volumi montati. I backup vengono salvati in EBS (Elastic Block Storage) crittografato nella stessa area dell’ambiente di produzione. I backup automatici non sono accessibili pubblicamente perché sono archiviati in un sistema separato.
 
 >[!NOTE]
 >
->I volumi montati includono/fanno riferimento solo ai [mount scrivibili](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) e non includeranno tutta la directory `app/`. Per quanto riguarda gli altri file, questi vengono creati/generati dal processo di [compilazione e distribuzione](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow) e sarà inoltre necessario controllare l&#39;archivio Git per i file rimanenti.
+>I volumi montati includono/fanno riferimento solo ai [mount scrivibili](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) e non includeranno tutta la directory `app/`. Per quanto riguarda gli altri file, questi vengono creati/generati dal processo di [compilazione e distribuzione](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow) e sarà inoltre necessario controllare l&#39;archivio Git per i file rimanenti.
 
 {{pro-backups}}
 
@@ -184,11 +191,11 @@ Puoi creare un **backup manuale** del database per gli ambienti di staging e pro
 
 ### Obiettivo punto di ripristino
 
-Contatta il tuo Customer Success Manager Adobe per informazioni dettagliate sul tempo dell’obiettivo del punto di ripristino per l’ultimo backup. La frequenza dei backup dipende dalla pianificazione del backup e dal volume di modifiche da scrivere nel servizio di storage.
+Contatta il tuo Customer Success Manager Adobe per informazioni dettagliate sul tempo di realizzazione dell’obiettivo del punto di ripristino. La frequenza dei backup dipende dalla pianificazione del backup e dal volume di modifiche da scrivere nel servizio di storage.
 
 ### Criterio di conservazione
 
-Adobe mantiene i backup automatici in base ai seguenti criteri di conservazione dei dati:
+Adobe conserva i backup automatici in base ai seguenti criteri di conservazione dei dati:
 
 | Periodo | Criterio di conservazione dei backup |
 | ------------------ | ----------------------- |
@@ -206,8 +213,8 @@ RTO dipende dalle dimensioni dello storage. Il ripristino di volumi EBS di grand
 
 ## Scalabilità del cluster Pro
 
-Le configurazioni di ridimensionamento del cluster Pro e _calcolo_ variano a seconda delle dipendenze del provider cloud scelto (AWS, Azure), dell&#39;area geografica e del servizio. L’infrastruttura cloud Adobe può scalare i cluster Pro per soddisfare le aspettative di traffico e i requisiti di servizio in base al cambiamento delle richieste.
+Le configurazioni di ridimensionamento del cluster Pro e _calcolo_ variano a seconda del provider cloud scelto (AWS, Azure), dell&#39;area geografica e delle dipendenze del servizio. L’infrastruttura cloud Adobe può scalare i cluster Pro per soddisfare le aspettative di traffico e i requisiti di servizio in base al cambiamento delle richieste.
 
 L’architettura ridondante consente all’infrastruttura cloud Adobe di eseguire l’upscale senza tempi di inattività. Durante l&#39;upscaling, ciascuna delle tre istanze ruota per aggiornare la capacità senza influire sul funzionamento del sito. Ad esempio, puoi aggiungere altri server web a un cluster esistente se la restrizione si trova a livello PHP anziché a livello di database. In questo modo viene fornita la _scalabilità orizzontale_ per integrare la scalabilità verticale fornita dalle CPU aggiuntive a livello di database. Vedi [Architettura scalata](scaled-architecture.md).
 
-Se prevedi un aumento significativo del traffico per un evento o per un altro motivo, puoi richiedere un aumento temporaneo della capacità. Vedi [Come richiedere un upsize temporaneo](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=it) nel _Centro assistenza Commerce_.
+Se prevedi un aumento significativo del traffico per un evento o per un altro motivo, puoi richiedere un aumento temporaneo della capacità. Vedi [Come richiedere un upsize temporaneo](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html) nel _Centro assistenza Commerce_.

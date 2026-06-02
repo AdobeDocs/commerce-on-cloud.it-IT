@@ -3,9 +3,13 @@ title: Gestione dei backup
 description: Scopri come creare e ripristinare manualmente un backup per il progetto di infrastruttura cloud di Adobe Commerce.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+TQID: https://experienceleague.adobe.com/UHzlr5FQsXz6FEDpwWzYE5JxThIHAMXI-MKM-7DF2P0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: 865
 ht-degree: 0%
 
 ---
@@ -37,7 +41,7 @@ La funzionalità di backup/snapshot non è applicabile **not** agli ambienti di 
 
 **Per creare un backup del database dell&#39;ambiente Pro**:
 
-Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+Per creare un dump del database di qualsiasi ambiente Pro, inclusi quelli di gestione temporanea e produzione, vedere l&#39;articolo della Knowledge Base [Creazione di un dump del database](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 **Per creare un backup di qualsiasi ambiente Starter utilizzando[!DNL Cloud Console]**:
 
@@ -150,7 +154,7 @@ I tempi di ripristino variano a seconda delle dimensioni del database:
 
 ## Ripristino di un&#39;istantanea di disaster recovery
 
-Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Per ripristinare lo snapshot del ripristino di emergenza negli ambienti di staging e produzione Pro, [Importare l&#39;immagine del database direttamente dal server](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Codice di rollback
 

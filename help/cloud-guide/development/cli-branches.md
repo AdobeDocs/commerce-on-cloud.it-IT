@@ -3,9 +3,14 @@ title: Gestire i rami con CLI
 description: Scopri come gestire i rami dell’ambiente per Adobe Commerce sull’infrastruttura cloud utilizzando Cloud CLI.
 role: Developer
 feature: Cloud, Install
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: d67e8802-8137-451f-b468-8b788afb01ea
+TQID: https://experienceleague.adobe.com/hCfTF-Vl9LLKgUet4hS3JZN3kX7ZF6BDJ4tsYnr44Fs
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: 688
 ht-degree: 0%
 
 ---
@@ -30,7 +35,7 @@ Le istruzioni seguenti utilizzano una combinazione di comandi CLI `magento-cloud
 
 **Per clonare un ambiente `master` del progetto**:
 
-1. Accedi alla tua workstation locale con un account [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=it).
+1. Accedi alla tua workstation locale con un account [proprietario del file system](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html).
 
 1. Passare alla directory _docroot_ del server Web o dell&#39;host virtuale.
 

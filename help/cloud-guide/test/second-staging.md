@@ -1,16 +1,21 @@
 ---
 title: Secondo ambiente di staging
 description: Scopri i vantaggi e gli utilizzi di un secondo ambiente di staging per test paralleli, isolamento dei problemi, controllo delle versioni e altro ancora.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 300019bd-07cb-4efb-8740-a49a5a3cf01b
+TQID: https://experienceleague.adobe.com/GFIisldCx779874WoAb0gmXHlE52dN-3COiIsfYDYCU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: 719
 ht-degree: 0%
 
 ---
 
 # Secondo ambiente di staging
 
-Nell’infrastruttura Adobe Commerce Cloud, l’ambiente di staging assicura test e convalida completi in un’impostazione in grado di rispecchiare l’ambiente di produzione. Questo ambiente consente di identificare e risolvere in modo sicuro i bug, garantendo al contempo che tutte le nuove funzioni o modifiche siano perfettamente integrate prima che influiscano sul sito live.
+Nell’infrastruttura Adobe Commerce Cloud, l’ambiente di staging assicura test e convalida completi in un’impostazione che può rispecchiare l’ambiente di produzione. Questo ambiente consente di identificare e risolvere in modo sicuro i bug, garantendo al contempo che tutte le nuove funzioni o modifiche siano perfettamente integrate prima che influiscano sul sito live.
 
 Alcuni progetti richiedono un flusso di lavoro di sviluppo più sofisticato. Per supportare questa esigenza, Adobe offre un ambiente di staging aggiuntivo come opzione aggiuntiva all’infrastruttura cloud. Disporre di due ambienti di staging è vantaggioso per progetti complessi e per la collaborazione simultanea tra i team.
 
@@ -58,11 +63,11 @@ Per facilitare la richiesta, segui i passaggi:
 
 1. Contatta il tuo rappresentante commerciale.
 
-   Contatta il tuo rappresentante commerciale Adobe e fornisci il ramo specifico che desideri utilizzare come base per il nuovo ambiente di staging (integrazione o principale).
+   Contatta il rappresentante commerciale Adobe e fornisci il ramo specifico che desideri utilizzare come base per il nuovo ambiente di staging (integrazione o principale).
 
 1. Conferma i dettagli.
 
-   Dopo aver confermato i dettagli con il rappresentante commerciale, attendere la conferma che la richiesta di provisioning è stata ricevuta e viene elaborata. Al termine del provisioning, il team Adobe ti invierà una conferma.
+   Dopo aver confermato i dettagli con il rappresentante commerciale, attendere la conferma che la richiesta di provisioning è stata ricevuta e viene elaborata. Al termine del processo di provisioning, il team Adobe ti invierà una conferma.
 
 1. Implementare nel nuovo ambiente.
 
