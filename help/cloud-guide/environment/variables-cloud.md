@@ -4,9 +4,14 @@ description: Consulta un elenco di variabili di ambiente specifiche per Adobe Co
 feature: Cloud, Configuration
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 82923b6f-221d-4902-a1b8-5ba6c7b3339a
+TQID: https://experienceleague.adobe.com/Zk52OMqjrB74v9djO1PVOYd3wOS8EbdfL1rnqIdA8B4
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: 343
 ht-degree: 0%
 
 ---
@@ -27,11 +32,11 @@ Le variabili di ambiente specifiche di Adobe Commerce sull&#39;infrastruttura cl
 | `MAGENTO_CLOUD_ROUTES` | Descrivere le route definite nel file di ambiente `.magento/routes.yaml`. |
 | `MAGENTO_CLOUD_TREE_ID` | L’ID della struttura per l’applicazione, che corrisponde all’SHA della struttura in Git. |
 | `MAGENTO_CLOUD_VARIABLES` | Oggetto JSON con codifica base64 con coppie chiave-valore, ad esempio `"key":"value"`. |
-| `MAGENTO_CLOUD_LOCKS_DIR` | Fornisce il percorso del punto di montaggio per il provider di blocchi nell’infrastruttura cloud. Il provider di blocchi impedisce l&#39;avvio di processi cron e gruppi cron duplicati. |
+| `MAGENTO_CLOUD_LOCKS_DIR` | Fornisce il percorso del punto di montaggio per il provider di blocchi nell’infrastruttura cloud. Il provider di blocchi impedisce l&#39;avvio di processi cron e gruppi cron duplicati.<br><br>Sono supportati solo i provider di blocco `file` e `db`.<br><br>**Gli ambienti di produzione e staging Pro** sono predefiniti nel provider di blocchi `file`. Questo valore non può essere modificato.<br><br>**Integrazione Pro e ambienti Starter**, non utilizzare la variabile `MAGENTO_CLOUD_LOCKS_DIR`. Il provider del blocco `db` è applicato per impostazione predefinita. È possibile modificare il valore predefinito aggiornando la variabile di distribuzione dell&#39;ambiente `[LOCK_PROVIDER](variables-deploy.md#lock_provider` nel file `.magento.env.yaml`. |
 
 >[!WARNING]
 >
->Per aggiungere variabili di ambiente a [sostituire le impostazioni di configurazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=it) utilizzando [[!DNL Cloud Console]](../project/overview.md), è necessario anteporre al nome della variabile `env:` come nell&#39;esempio seguente:
+>Per aggiungere variabili di ambiente a [sostituire le impostazioni di configurazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html) utilizzando [[!DNL Cloud Console]](../project/overview.md), è necessario anteporre al nome della variabile `env:` come nell&#39;esempio seguente:
 >
 >![Esempio di variabile di ambiente](../../assets/set-env-variable-ui.png)
 
