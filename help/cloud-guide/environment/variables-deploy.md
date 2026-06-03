@@ -5,9 +5,20 @@ feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
-source-git-commit: 208b6f41287156287dd0e84aaa00a9e2ab2557d4
+TQID: https://experienceleague.adobe.com/TNuUxXzCiXnKefww0DmKbjfJygEz2HFG-0PjCsCy2nA
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
 workflow-type: tm+mt
-source-wordcount: '2551'
+source-wordcount: 2575
 ht-degree: 0%
 
 ---
@@ -346,18 +357,18 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **Predefinito**—`file`
+- **Predefinito**: negli ambienti di produzione e di gestione temporanea il valore predefinito è `file`. Per l&#39;integrazione Pro e gli ambienti di avvio, il valore predefinito è `db`.
 - **Versione**—Adobe Commerce 2.2.5 e versioni successive
 
-Il provider di blocchi impedisce l&#39;avvio di processi cron e gruppi cron duplicati. Utilizza il provider di blocchi `file` nell&#39;ambiente di produzione. Gli ambienti Starter e l&#39;ambiente di integrazione Pro non utilizzano la variabile [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md), pertanto `ece-tools` applica automaticamente il provider di blocchi `db`.
+Il provider di blocchi impedisce l&#39;avvio di processi cron e gruppi cron duplicati. Commerce on Cloud supporta solo `file` e `db` provider di blocchi.
+
+Per gli ambienti di produzione e staging, il valore predefinito `file` è impostato da [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md) e non può essere sostituito. Per gli ambienti Starter e l&#39;ambiente di integrazione Pro, `ece-tools` imposta automaticamente il provider di blocchi `db`. In questi ambienti è possibile modificare l&#39;impostazione predefinita in `file` per ottimizzare le prestazioni locali e speculare l&#39;architettura di produzione.
 
 ```yaml
 stage:
   deploy:
     LOCK_PROVIDER: "db"
 ```
-
-Vedere [Configurare il blocco](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=it) nella _Guida all&#39;installazione_.
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
