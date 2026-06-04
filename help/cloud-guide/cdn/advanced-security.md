@@ -2,9 +2,10 @@
 title: Sicurezza avanzata di Adobe Commerce
 description: Scopri in che modo la sicurezza avanzata aggiunge la gestione dei bot, la limitazione avanzata della velocità e la protezione DDoS di Livello 7 ad Adobe Commerce su infrastruttura cloud.
 feature: Cloud, Configuration, Security
-source-git-commit: 8a7c1c297092fdf2b75d22ce99c360c85eac0495
+exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
+source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '2474'
 ht-degree: 0%
 
 ---
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security] è un prodotto che funziona con [!DNL Adobe Commerce on Cloud Infrastructure] per mantenere il tuo negozio online veloce, disponibile e sicuro. In questo modo è possibile proteggere i ricavi, ridurre i tempi di inattività e mantenere la fiducia dei clienti durante i picchi di traffico e gli attacchi automatizzati.
 
-[!DNL Adobe Commerce on Cloud Infrastructure] include la protezione integrata [Layer 3 e 4 DDoS](./fastly.md#ddos-protection) e un [Firewall applicazione Web (WAF)](./fastly-waf-service.md). Nel [modello di responsabilità condivisa](https://experienceleague.adobe.com/it/docs/commerce-operations/security-and-compliance/shared-responsibility), il rilevamento dei dati DDoS di Layer 7, la protezione dei bot e il blocco proattivo degli indirizzi IP sono responsabilità degli esercenti, che [!DNL Adobe Commerce Advanced Security] è progettato per gestire.
+[!DNL Adobe Commerce on Cloud Infrastructure] include la protezione integrata [Layer 3 e 4 DDoS](./fastly.md#ddos-protection) e un [Firewall applicazione Web (WAF)](./fastly-waf-service.md). Nel [modello di responsabilità condivisa](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility), il rilevamento dei dati DDoS di Layer 7, la protezione dei bot e il blocco proattivo degli indirizzi IP sono responsabilità degli esercenti, che [!DNL Adobe Commerce Advanced Security] è progettato per gestire.
 
 [!DNL Advanced Security] estende la protezione della vetrina attraverso funzionalità di sicurezza edge basate su Fastly, che offrono la gestione dei bot, la limitazione avanzata della velocità e la protezione DDoS Layer 7 come parte di una piattaforma edge unificata che combina scalabilità, prestazioni e sicurezza ai margini della rete.
 
@@ -34,6 +35,80 @@ ht-degree: 0%
 >[!NOTE]
 >
 >[!DNL Advanced Security] configurazioni richiedono attualmente l&#39;invio di un ticket di supporto. La configurazione self-service tramite l’interfaccia di amministrazione è pianificata per una versione futura. Per ulteriori informazioni, consultare [Richiesta [!DNL Advanced Security]](#request-advanced-security).
+
+>[!IMPORTANT]
+>
+>**Limitazioni correnti**
+>
+>Fino alla fine del terzo trimestre 2026, i clienti non possono modificare o gestire direttamente le regole di gestione dei bot.
+>
+>Per eventuali aggiunte, modifiche o regolazioni delle regole, contatta il supporto Adobe Commerce tramite un [ticket di supporto](https://experienceleague.adobe.com/home?support-tab=home#support). Il team di supporto implementerà le modifiche richieste.
+>
+>A partire dal quarto trimestre 2026, Fastly rilascerà una funzionalità aggiuntiva che consentirà ai clienti di gestire le regole di gestione dei bot nel pannello di amministrazione di Commerce.
+
+## Regole e protezioni predefinite
+
+Le regole e le protezioni predefinite seguenti sono disponibili con [!DNL Advanced Security].
+
+### DDoS Layer 7
+
+- Le soglie DDoS sono integrate nella piattaforma Fastly CDN e non possono attualmente essere personalizzate in base al cliente.
+- I registri per il traffico bloccato dalle protezioni DDoS non sono direttamente visibili ai clienti.
+- Su richiesta, il supporto Adobe Commerce può fornire dettagli relativi al traffico DDoS bloccato.
+- Le funzionalità native di inoltro dei registri DDoS sono previste in una versione futura.
+
+### Gestione bot
+
+Le seguenti protezioni di base per la gestione dei bot sono disponibili tramite la dashboard di Signal Sciences di Fastly.
+
+| Tipo di regola | Stato | Visibilità |
+|---|---|---|
+| Blocca traffico con tag sospetto BOT non valido | Abilitato per impostazione predefinita durante l’onboarding | Visibile nei registri di New Relic in `sigsci_tags` |
+| Blocca il traffico in base a un tag specifico (tag sigsci) | Configurato solo se necessario in collaborazione con il cliente | Visibile nei registri di New Relic in `sigsci_tags` |
+| Limitazione di frequenza per API o pattern di URL specifici | Configurato solo se necessario in collaborazione con il cliente | Il traffico bloccato è visibile nei registri di New Relic in `Agent_response` |
+| Sfida dinamica per API o pattern URL specifici | Configurato solo se necessario in collaborazione con il cliente | Il traffico bloccato è visibile nei registri di New Relic in `Agent_response` |
+| Sfida browser | Configurato solo se necessario in collaborazione con il cliente | Il traffico bloccato è visibile nei registri di New Relic in `Agent_response` |
+
+## Osservabilità: monitoraggio della protezione dei bot e delle attività NGWAF
+
+I registri CDN vengono inoltrati automaticamente all’account New Relic del cliente. Per ulteriori dettagli, consulta [Gestione registro](../monitor/log-management.md).
+
+I registri CDN includono la telemetria integrata di Signal Sciences (Bot Protection / Next-Generation WAF), che consente ai clienti di monitorare gli eventi relativi alla sicurezza direttamente all&#39;interno di New Relic.
+
+I campi chiave includono:
+
+- **`Sigsci_Tags`** - Indica le classificazioni e i tag applicati da Signal Sciences.
+- **`Agent_response`** - Indica l&#39;azione eseguita dall&#39;agente NGWAF/Protezione bot.
+
+Esempi:
+
+- Per identificare il traffico bloccato dalle regole di protezione bot o NGWAF:
+
+  `Agent_response:"406"`
+
+  Il codice di risposta 406 indica che la richiesta è stata bloccata dai controlli di sicurezza.
+
+- Per identificare le richieste contrassegnate come sospetti bot non validi:
+
+  `Sigsci_Tags:"*SUSPECTED-BAD-BOT*"`
+
+Questi campi possono essere utilizzati per creare dashboard, avvisi e indagini all’interno di New Relic per monitorare le attività bot, le richieste bloccate e altri eventi relativi alla sicurezza.
+
+## Le funzionalità VCL esistenti rimangono invariate
+
+L&#39;abilitazione del componente aggiuntivo [!DNL Advanced Security] non modifica né sostituisce i controlli di sicurezza esistenti basati su Fastly VCL.
+
+Le seguenti funzionalità di blocco VCL esistenti continuano a funzionare senza alcuna modifica:
+
+- Blocco basato su IP
+- Blocco geografico
+- Blocco basato su agente utente
+- Blocco basato su firma JA3
+- Blocco basato su firma JA4
+
+I clienti possono continuare a utilizzare le configurazioni VCL personalizzate e le regole di sicurezza esistenti insieme alle funzionalità del componente aggiuntivo [!DNL Advanced Security].
+
+Il componente aggiuntivo [!DNL Advanced Security] funziona in aggiunta alla rete CDN Fastly standard e alle protezioni VCL esistenti già disponibili in [!DNL Adobe Commerce on Cloud Infrastructure].
 
 ## Copertura delle minacce
 
@@ -141,7 +216,7 @@ I seguenti scenari sono meglio gestiti con protezioni alternative che possono in
 - **Strumenti di conformità**: scansione PCI, reporting sulla conformità SOC e strumenti di controllo normativi.
 - **Protezione avanzata a livello di applicazione**: autenticazione API basata su token, normalizzazione dei parametri di query e progettazione della strategia di caching.
 
-Per una panoramica completa delle responsabilità di Adobe e della sicurezza del cliente, vedere il [modello di responsabilità condivisa](https://experienceleague.adobe.com/it/docs/commerce-operations/security-and-compliance/shared-responsibility).
+Per una panoramica completa delle responsabilità di Adobe e della sicurezza del cliente, vedere il [modello di responsabilità condivisa](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility).
 
 ## Modelli di attacco e protezioni comuni
 
@@ -179,7 +254,7 @@ Per richiedere [!DNL Advanced Security]:
 
 1. Contatta il team del tuo account Adobe o il rappresentante commerciale Adobe per discutere di [!DNL Advanced Security] per il tuo progetto.
 
-1. Dopo aver acquistato [!DNL Advanced Security], [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) richiedendo l&#39;abilitazione di [!DNL Advanced Security]. Includi l&#39;ID progetto [!DNL Adobe Commerce on Cloud Infrastructure] e gli ambienti che richiedono l&#39;abilitazione (ad esempio, Produzione e Staging).
+1. Dopo aver acquistato [!DNL Advanced Security], [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) richiedendo l&#39;abilitazione di [!DNL Advanced Security]. Includi l&#39;ID progetto [!DNL Adobe Commerce on Cloud Infrastructure] e gli ambienti che richiedono l&#39;abilitazione (ad esempio, Produzione e Staging).
 
 1. Adobe attiva [!DNL Advanced Security] nel servizio Fastly e configura i criteri di protezione iniziali. L’abilitazione di solito viene completata entro pochi giorni lavorativi dall’invio del biglietto.
 
@@ -187,7 +262,7 @@ Per richiedere [!DNL Advanced Security]:
 
 >[!NOTE]
 >
->Le modifiche alla configurazione apportate a [!DNL Advanced Security] richiedono attualmente [l&#39;invio di un ticket di supporto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket). La configurazione self-service tramite l’interfaccia di amministrazione è pianificata per una versione futura.
+>Le modifiche alla configurazione apportate a [!DNL Advanced Security] richiedono attualmente [l&#39;invio di un ticket di supporto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). La configurazione self-service tramite l’interfaccia di amministrazione è pianificata per una versione futura.
 
 ## Limitazioni
 
