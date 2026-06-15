@@ -122,13 +122,13 @@ Durante il provisioning del progetto, Adobe aggiunge il progetto all’account F
 
 ### Modifica token API Fastly
 
-Invia un ticket di supporto Adobe Commerce per rilasciare una nuova credenziale token API Fastly [se la convalida non riesce/è scaduta](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) o se ritieni che sia stata compromessa.
+Invia un ticket di supporto Adobe Commerce per rilasciare una nuova credenziale token API Fastly [se la convalida non riesce/è scaduta](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) o se ritieni che sia stata compromessa.
 
 Quando ricevi il nuovo token, aggiorna l’ambiente di staging o produzione per utilizzare il nuovo token.
 
 **Per modificare le credenziali del token API Fastly**:
 
-1. [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) richiedendo nuove credenziali API Fastly.
+1. [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) richiedendo nuove credenziali API Fastly.
 
    Includi l’ID del progetto Adobe Commerce su infrastruttura cloud e gli ambienti che richiedono una nuova credenziale.
 
@@ -176,7 +176,7 @@ La protezione DDOS è integrata nel servizio Fastly CDN. Una volta abilitati i s
 
 >[!NOTE]
 >
->La protezione contro gli attacchi Layer 7 non è coperta dal servizio Fastly CDN integrato con Adobe Commerce. Per suggerimenti sulla protezione dagli attacchi di livello 7, vedere [Verifica degli attacchi DDoS](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli) e [Come bloccare gli attacchi dannosi](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) nella *Knowledge Base di Adobe Commerce*.
+>La protezione contro gli attacchi Layer 7 non è coperta dal servizio Fastly CDN integrato con Adobe Commerce. Per suggerimenti sulla protezione dagli attacchi di livello 7, vedere [Verifica degli attacchi DDoS](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli) e [Come bloccare gli attacchi dannosi](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) nella *Knowledge Base di Adobe Commerce*.
 
 <!--Link definitions-->
 
@@ -188,6 +188,6 @@ La protezione DDOS è integrata nel servizio Fastly CDN. Una volta abilitati i s
 
 [Ticket di supporto rapido]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
+[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=it
 
 [Utilizzo dei domini]: https://docs.fastly.com/en/guides/working-with-domains
