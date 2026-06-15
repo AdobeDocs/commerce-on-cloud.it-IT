@@ -1,26 +1,16 @@
 ---
-title: Gestire l’accesso degli utenti
-description: Scopri come gestire l’accesso degli utenti a Adobe Commerce su progetti e ambienti di infrastruttura cloud.
+title: Gestisci accesso utente
+description: Scopri come aggiungere utenti e assegnare ruoli su Adobe Commerce in progetti e ambienti di infrastruttura cloud utilizzando la CLI di Magento-Cloud o la console cloud.
 role: Admin
 feature: Cloud, Roles/Permissions
-last-substantial-update: 2023-06-27T00:00:00.000Z
+level: Beginner
+short-description: Aggiungi gli utenti e assegna i ruoli di progetto e ambiente nella Cloud Console o nella CLI.
+last-substantial-update: 2026-06-11T00:00:00Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: de324897e87232393f20d95b2867d8a95605fa23
 workflow-type: tm+mt
-source-wordcount: 1518
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -37,7 +27,7 @@ I visualizzatori dei progetti non possono eseguire attività in alcun ambiente; 
 L’accesso a livello di ambiente si basa sul tipo di ambiente: produzione, staging e sviluppo. Concedere a un utente l&#39;autorizzazione _visualizzatore_ per _ambienti di sviluppo_ significa che può visualizzare **tutti** gli ambienti di sviluppo nel progetto. La tabella seguente chiarisce le capacità concesse a ciascun livello di autorizzazione:
 
 | Livello di autorizzazione | Accesso | Accesso SSH |
-| ------------------ | ----------- | :----------: |
+| ---------------- | ------ | :--------: |
 | **Amministratore** | Eseguire attività di amministrazione, ad esempio modificare le impostazioni, inviare codice, eseguire attività e gestire i rami, inclusa l&#39;unione con l&#39;ambiente padre | Sì |
 | **Collaboratore** | Invio di codice e diramazione dell&#39;ambiente; impossibile modificare le impostazioni o eseguire azioni | Sì |
 | **Visualizzatore** | Accesso in sola visualizzazione al tipo di ambiente | No |
@@ -47,14 +37,10 @@ L’accesso a livello di ambiente si basa sul tipo di ambiente: produzione, stag
 
 È possibile aggiungere utenti e assegnare ruoli utilizzando la CLI di `magento-cloud` o [!DNL Cloud Console].
 
->[!BEGINSHADEBOX]
-
-**Prerequisiti:**
-
-- Un utente registrato con un Adobe ID. Un utente deve [registrarsi per un account Adobe](https://account.adobe.com), quindi inizializzare il proprio account [Cloud](https://console.adobecommerce.com) visitando [https://console.adobecommerce.com](https://console.adobecommerce.com) prima di poterlo aggiungere a un progetto Cloud.
-- Un utente assegnato al ruolo **Amministratore** non può gestire gli utenti con CLI `magento-cloud`. Solo gli utenti con il ruolo **Proprietario account** possono gestire gli utenti.
-
->[!ENDSHADEBOX]
+>[!PREREQUISITES]
+>
+>- Un utente registrato con un Adobe ID. Un utente deve [registrarsi per un account Adobe](https://account.adobe.com), quindi inizializzare il proprio account [Cloud](https://console.adobecommerce.com) prima di poterlo aggiungere a un progetto Cloud.
+>- Un utente assegnato al ruolo **Amministratore** non può gestire gli utenti con CLI `magento-cloud`. Solo gli utenti con il ruolo **Proprietario account** possono gestire gli utenti.
 
 ## Gestione degli utenti con CLI
 
@@ -78,13 +64,13 @@ Negli esempi seguenti viene utilizzata la CLI `magento-cloud` per aggiungere un 
 
    >[!IMPORTANT]
    >
-   >L&#39;utente deve disporre di un Adobe ID. Vedere i [prerequisiti](#add-users-and-manage-access).
+   >L’utente deve disporre di un Adobe ID. Consulta i prerequisiti.
 
 1. Segui i prompt: specifica l’indirizzo e-mail dell’utente, imposta i ruoli di progetto e tipo di ambiente, quindi aggiungi l’utente.
 
    > Prompt di esempio
 
-   ```
+   ```text
    Enter the user's email address: alice@example.com
    
    Email address: alice@example.com
@@ -118,7 +104,7 @@ magento-cloud user:get alice@example.com
 
 >Risposta di esempio:
 
-```
+```text
 Current role(s) of User (alice@example.com) on Production (project_id):
   Project role: admin
 ```
@@ -145,7 +131,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 >[!IMPORTANT]
 >
->L&#39;utente deve disporre di un Adobe ID. Vedere i [prerequisiti](#add-users-and-manage-access).
+>L’utente deve disporre di un Adobe ID. Consulta i prerequisiti.
 
 ### Aggiungere un utente al progetto
 
@@ -177,9 +163,25 @@ magento-cloud user:update alice@example.com -r production:a
    >
    >L’aggiunta di un utente non attiva automaticamente una distribuzione.
 
-1. Dopo aver aggiunto gli utenti, ridistribuisci tutti gli ambienti per applicare le modifiche. L’aggiunta di un utente non attiva automaticamente una distribuzione. La ridistribuzione è un passaggio importante per garantire che l’utente possa accedere a un ambiente utilizzando SSH o eseguire attività di amministratore.
+1. Dopo aver aggiunto gli utenti, ridistribuisci tutti gli ambienti per applicare le modifiche.
+
+   La ridistribuzione garantisce che l’utente possa accedere agli ambienti utilizzando SSH o eseguire attività di amministratore.
 
 Dopo aver aggiunto l’utente, Adobe invia un’e-mail all’indirizzo specificato con le istruzioni per l’accesso al progetto Adobe Commerce on Cloud Infrastructure.
+
+### Stati invito
+
+In [!DNL Cloud Console], un amministratore può inviare un invito prima del completamento dell&#39;inizializzazione dell&#39;account. In tal caso, nell&#39;elenco di accesso verrà visualizzato l&#39;utente con uno stato quale [!UICONTROL Invite pending]. L’accesso non è completamente attivo fino al completamento dell’onboarding.
+
+A seconda della console e dello stato dell’account dell’utente, l’utente può trovarsi in uno dei seguenti stati:
+
+- **[!UICONTROL Not invited]** — Nessun record di accesso al progetto esistente.
+- **[!UICONTROL Invite pending]** - È stato inviato un invito, ma l&#39;inizializzazione o l&#39;accettazione dell&#39;account non è completa.
+- **[!UICONTROL Active]** — L&#39;utente ha completato l&#39;onboarding e dispone dell&#39;accesso al progetto attivo.
+
+>[!NOTE]
+>
+>[!DNL Cloud Console] visualizza gli stati degli inviti in modo più esplicito rispetto a [!DNL Legacy Cloud Console] (`https://<region-id>.magento.cloud/projects/<project_id>`). Un utente visibile o un invito non sempre significa che può accedere immediatamente a tutti gli ambienti. Potrebbe essere ancora necessario configurare la chiave SSH o eseguire altri passaggi di propagazione. Consulta [Requisiti di autenticazione utente](#user-authentication-requirements).
 
 ## Requisiti di autenticazione utente
 
@@ -222,7 +224,7 @@ Le istruzioni per l&#39;installazione dell&#39;applicazione di autenticazione e 
 
    - Sul dispositivo mobile, apri l’applicazione di autenticazione. Quindi, aggiungi il codice di installazione all’applicazione.
 
-   - Nella pagina [!UICONTROL **[!UICONTROL TFA set up - Application]**], digita il codice TFA dal tuo dispositivo mobile nel campo **[!UICONTROL Application verification code]**.
+   - Nella pagina **[!UICONTROL TFA set up - Application]** digitare il codice TFA dal dispositivo mobile nel campo **[!UICONTROL Application verification code]**.
 
    - Fare clic su **[!UICONTROL Verify and save]**.
 
@@ -291,6 +293,10 @@ Nei progetti in cui è abilitata l’imposizione MFA, è necessario disporre di 
 
 1. Fare clic su **[!UICONTROL Create API token]** e immettere un nome. Ad esempio, specificare un nome che corrisponda a quello dell&#39;utente del computer o del processo automatizzato che utilizza il token API.
 
-   ![Token API](../../assets/api-token-name.png)
+   ![Scheda Token API della console cloud con il campo Crea nome token API](../../assets/api-token-name.png)
 
 1. Fare clic su **[!UICONTROL Create API token]**.
+
+## Ulteriori informazioni su questo argomento
+
+- [Impossibile aggiungere un utente al progetto cloud Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project). La risoluzione dei problemi non riesce quando si aggiunge un utente.
