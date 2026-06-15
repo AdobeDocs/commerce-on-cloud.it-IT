@@ -246,7 +246,7 @@ Le istruzioni per l&#39;installazione dell&#39;applicazione di autenticazione e 
 
      >[!WARNING]
      >
-     >Se si perde l&#39;accesso a un account con TFA e non si dispone dell&#39;elenco dei codici di ripristino, è necessario contattare l&#39;amministratore del progetto o [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per reimpostare l&#39;applicazione TFA.
+     >Se si perde l&#39;accesso a un account con TFA e non si dispone dell&#39;elenco dei codici di ripristino, è necessario contattare l&#39;amministratore del progetto o [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per reimpostare l&#39;applicazione TFA.
 
 1. Dopo aver completato la configurazione TFA, fai clic su **Salva** per aggiornare l&#39;account.
 
@@ -299,4 +299,4 @@ Nei progetti in cui è abilitata l’imposizione MFA, è necessario disporre di 
 
 ## Ulteriori informazioni su questo argomento
 
-- [Impossibile aggiungere un utente al progetto cloud Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project). La risoluzione dei problemi non riesce quando si aggiunge un utente.
+- [Impossibile aggiungere un utente al progetto cloud Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project). La risoluzione dei problemi non riesce quando si aggiunge un utente.
