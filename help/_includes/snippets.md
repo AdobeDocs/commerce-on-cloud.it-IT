@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
+source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,16 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 >[!TIP]
 >
 >Prima di iniziare un aggiornamento o un processo di applicazione di patch, crea un ramo attivo dall’ambiente di integrazione ed estrai il nuovo ramo sulla workstation locale. La destinazione di un ramo all’aggiornamento o al processo di patch consente di evitare interferenze con il lavoro in corso.
+
+## Valkey in New Relic {#valkey-newrelic}
+
+>[!NOTE]
+>
+>New Relic potrebbe mostrare Redis anche dopo la migrazione a Valkey
+>
+>È previsto che New Relic possa continuare a fare riferimento al servizio cache come Redis anche dopo la migrazione dell’ambiente a Valkey.
+>
+>Valkey è un fork open-source di Redis, e alcuni strumenti e integrazioni continuano a identificare il servizio utilizzando la denominazione Redis piuttosto che un&#39;etichetta Valkey distinta. Ciò non indica necessariamente che Redis sia ancora installato.
 
 <!-- Fastly-related snippets begin -->
 
