@@ -182,7 +182,7 @@ La protezione DDOS è integrata nel servizio Fastly CDN. Una volta abilitati i s
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=it
 
 [Modulo CDN Fastly per Magento 2]: https://github.com/fastly/fastly-magento2
 
