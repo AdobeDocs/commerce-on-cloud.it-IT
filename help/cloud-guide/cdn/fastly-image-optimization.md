@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1211
 ht-degree: 0%
@@ -172,3 +172,4 @@ Consulta `srcset` [supporto browser](https://caniuse.com/#feat=srcset) e [specif
 ## Convalida I/O veloce
 
 Dopo aver abilitato e configurato Fastly IO, convalidare la configurazione eseguendo test di velocità della pagina Web con e senza Fastly IO abilitato. Inoltre, controlla le immagini nel tuo negozio per verificare le dimensioni e l&#39;aspetto delle immagini per eventuali problemi.
+

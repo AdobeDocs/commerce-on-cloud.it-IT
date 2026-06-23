@@ -21,7 +21,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 405
 ht-degree: 0%
@@ -50,3 +50,4 @@ Considera Adobe Commerce sull’infrastruttura cloud come cinque livelli funzion
 Le applicazioni monolitiche richiedono un uso intensivo delle risorse, sono difficili da scalare e da gestire rapidamente. Con l’infrastruttura Cloud, i clienti Commerce hanno un accesso senza precedenti ai microservizi basati su SaaS che sono ricchi, intelligenti e performanti. Consulta [Software e servizi supportati](cloud-architecture.md#supported-software-and-services).
 
 Utilizza la [Guida introduttiva di Commerce](../../get-started/overview.md) per configurare il nuovo programma Cloud e iniziare a gestire l&#39;applicazione [!DNL Commerce] in un ambiente nativo per il cloud.
+

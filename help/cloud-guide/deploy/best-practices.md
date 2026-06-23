@@ -18,7 +18,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1979
 ht-degree: 0%
@@ -207,3 +207,4 @@ La distribuzione corretta rimuove la modalità di manutenzione per consentire l&
 Abilita la generazione di contenuto statico utilizzando la variabile `SCD_ON_DEMAND` e configura l&#39;hook [`post_deploy`](../application/hooks-property.md) in modo che cancelli la cache e precarichi (riscaldi) la cache _dopo_ che il contenitore inizia ad accettare connessioni e _durante_ il traffico normale in ingresso.
 
 Per esaminare i registri di compilazione e distribuzione, vedere [Visualizza i registri](../test/log-locations.md#view-and-manage-logs).
+

@@ -11,7 +11,7 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 235
 ht-degree: 0%
@@ -73,3 +73,4 @@ I livelli di registro determinano il livello di dettaglio dei messaggi di notifi
 - **critico**: condizioni critiche, ad esempio un componente dell&#39;applicazione non disponibile o un&#39;eccezione imprevista
 - **avviso**: è necessaria un&#39;azione immediata, ad esempio un sito Web non disponibile o il database non è disponibile, che attiva un avviso SMS
 - **emergenza**—il sistema è inutilizzabile
+

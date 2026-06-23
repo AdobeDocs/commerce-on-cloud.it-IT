@@ -21,7 +21,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 987
 ht-degree: 0%
@@ -96,3 +96,4 @@ Il servizio WAF standard fornito da Fastly non supporta le seguenti funzionalit�
 Il servizio WAF ti consente di bloccare o consentire il traffico in base agli indirizzi IP. È possibile aggiungere elenchi di controllo di accesso (ACL) e snippet VCL personalizzati al servizio Fastly per specificare gli indirizzi IP e la logica VCL per bloccare o consentire il traffico. Vedi [Frammenti personalizzati VCL Fastly](fastly-vcl-custom-snippets.md).
 
 Il filtro per le richieste TCP, UDP o ICMP non è supportato dal servizio WAF. Tuttavia, questa funzionalità è fornita dalla protezione DDoS incorporata inclusa con il servizio Fastly CDN. Vedere [Protezione DDoS](fastly.md#ddos-protection).
+

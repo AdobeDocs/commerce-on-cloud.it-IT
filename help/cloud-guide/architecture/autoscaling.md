@@ -14,7 +14,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 605
 ht-degree: 0%
@@ -91,3 +91,4 @@ Ad esempio:
 - Se il inserisco nell&#39;elenco Consentiti di contiene gli indirizzi IP dei nodi di servizio (1, 2 e 3), non è richiesta alcuna azione.
 - Se il inserisco nell&#39;elenco Consentiti di contiene gli indirizzi IP per i nodi di servizio (1, 2 e 3) e i nodi web (4, 5 e 6), in questo caso tutti e sei i nodi, non è richiesta alcuna azione.
 - Se il inserisco nell&#39;elenco Consentiti di contiene gli indirizzi IP _only_ per i nodi Web (4, 5 e 6), è necessario aggiornare il inserisco nell&#39;elenco Consentiti di per includere gli indirizzi IP per i nodi di servizio.
+

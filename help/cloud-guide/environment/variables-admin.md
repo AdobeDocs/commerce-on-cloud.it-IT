@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 785
 ht-degree: 0%
@@ -60,12 +60,12 @@ Utilizzare [!DNL Cloud Console] o [!DNL Cloud CLI] per impostare o aggiornare `A
 
 ##### Ambiente di integrazione
 
-Dalla [console cloud](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=it), aggiungi una nuova variabile con:
+Dalla [console cloud](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html), aggiungi una nuova variabile con:
 
 - **Nome:** `ADMIN_URL`
 - **Valore:** Il nuovo URL amministratore (ad esempio, `magento_A8v10`)
 
-- Per i passaggi dettagliati, consulta [aggiungere variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=it#configure-environment) o [variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=it) nella documentazione per gli sviluppatori.
+- Per i passaggi dettagliati, consulta [aggiungere variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-environment) o [variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=it) nella documentazione per gli sviluppatori.
 
 ##### Imposta l&#39;URL amministratore in [!DNL Cloud Console]
 
@@ -101,3 +101,4 @@ magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master --inher
 >[!NOTE]
 >
 >Il valore `ADMIN_URL` accetta lettere (a-z, A-Z), numeri (0-9) e il carattere di sottolineatura (_). Gli spazi o altri caratteri non sono accettati.
+
