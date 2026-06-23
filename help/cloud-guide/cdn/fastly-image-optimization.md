@@ -4,16 +4,11 @@ description: Scopri come ottimizzare la consegna delle immagini e semplificare l
 feature: Cloud, Configuration, Media
 exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
 TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1211
 ht-degree: 0%
@@ -89,7 +84,7 @@ Se necessario, rivedere e aggiornare le impostazioni di configurazione I/O prede
 
    - **Ridimensiona filtro**. Lasciare l&#39;impostazione predefinita (`Lancsoz3`) o selezionare un&#39;alternativa. Questa impostazione specifica il filtro utilizzato per fornire un&#39;immagine ridimensionata. A seconda del filtro selezionato, l’immagine ridimensionata può avere un numero di pixel maggiore o minore.
 
-      - `Lanczos3` (impostazione predefinita) - Fornisce un&#39;immagine della migliore qualità. Aumenta la capacità di rilevare bordi e caratteristiche lineari all&#39;interno di un&#39;immagine e utilizza il ricampionamento _[!DNL sinc]_&#x200B;per fornire la migliore ricostruzione possibile.
+      - `Lanczos3` (impostazione predefinita) - Fornisce un&#39;immagine della migliore qualità. Aumenta la capacità di rilevare bordi e caratteristiche lineari all&#39;interno di un&#39;immagine e utilizza il ricampionamento _[!DNL sinc]_per fornire la migliore ricostruzione possibile.
       - `Lanczos2` - Utilizza lo stesso filtro di `Lancsoz3` ma con un&#39;approssimazione meno precisa della funzione di ricampionamento di _[!DNL sinc]_.
       - `Bicubic` - Ha un effetto di nitidezza naturale quando rimpicciolisce un&#39;immagine.
       - `Bilinear` - Ha un effetto di arrotondamento naturale quando si ingrandisce un&#39;immagine.
@@ -172,3 +167,4 @@ Consulta `srcset` [supporto browser](https://caniuse.com/#feat=srcset) e [specif
 ## Convalida I/O veloce
 
 Dopo aver abilitato e configurato Fastly IO, convalidare la configurazione eseguendo test di velocità della pagina Web con e senza Fastly IO abilitato. Inoltre, controlla le immagini nel tuo negozio per verificare le dimensioni e l&#39;aspetto delle immagini per eventuali problemi.
+

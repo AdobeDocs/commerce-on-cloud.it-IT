@@ -4,14 +4,10 @@ description: Scopri come ridurre i tempi di inattività complessivi durante l’
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
 TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 502
 ht-degree: 0%
@@ -20,7 +16,7 @@ ht-degree: 0%
 
 # Installazione senza downtime
 
-Adobe Commerce su infrastruttura cloud esegue l&#39;applicazione in modalità [_manutenzione_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=it#production-mode) durante la fase di distribuzione, che porta il sito offline fino al completamento della distribuzione. Il periodo di tempo in cui il sito di produzione è in modalità di manutenzione dipende dalle dimensioni del sito, dal numero di modifiche applicate durante la distribuzione e dalla configurazione per la distribuzione di contenuto statico. È possibile configurare il progetto in modo che venga distribuito con un effetto di downtime **zero**.
+Adobe Commerce su infrastruttura cloud esegue l&#39;applicazione in modalità [_manutenzione_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode) durante la fase di distribuzione, che porta il sito offline fino al completamento della distribuzione. Il periodo di tempo in cui il sito di produzione è in modalità di manutenzione dipende dalle dimensioni del sito, dal numero di modifiche applicate durante la distribuzione e dalla configurazione per la distribuzione di contenuto statico. È possibile configurare il progetto in modo che venga distribuito con un effetto di downtime **zero**.
 
 Durante il processo di distribuzione, tutte le connessioni si accodano per un massimo di 5 minuti mantenendo tutte le sessioni attive e le azioni in sospeso, ad esempio l’aggiunta al carrello o l’estrazione. Dopo la distribuzione, la coda viene rilasciata e le connessioni continuano senza interruzioni. Per utilizzare questo _blocco della connessione_ a tuo vantaggio e ridurre la distribuzione a _zero_ tempi di inattività, devi configurare il progetto per utilizzare la strategia di distribuzione più efficiente.
 
@@ -54,3 +50,4 @@ Devi configurare l’hook post-distribuzione per pulire e riscaldare la cache. P
 >[!NOTE]
 >
 >Puoi convalidare la configurazione del progetto per una distribuzione ottimale [eseguendo la procedura guidata per lo stato ideale](smart-wizards.md#verifying-an-ideal-configuration).
+

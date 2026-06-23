@@ -4,18 +4,11 @@ description: Scopri come utilizzare i flussi di lavoro di sviluppo e distribuzio
 feature: Cloud, Paas
 exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
 TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 2168
 ht-degree: 0%
@@ -117,9 +110,9 @@ Quando si è pronti a configurare l&#39;archivio, inviare tutto il codice all&#3
 Per informazioni sulle configurazioni, consulta la documentazione di Adobe Commerce e delle estensioni installate. Di seguito sono riportati alcuni collegamenti e idee utili per iniziare:
 
 - [Best practice per la configurazione dell&#39;archivio](../store/best-practices.md) per best practice specifiche nel cloud
-- [Configurazione di base](https://experienceleague.adobe.com/it/docs/commerce-admin/start/setup/store-details) per accesso amministratore archivio, nome, lingue, valute, branding, siti, visualizzazioni archivio e altro ancora
-- [Tema](https://experienceleague.adobe.com/it/docs/commerce-admin/content-design/content-menu#design-features) per il tuo aspetto del sito e dei negozi, inclusi CSS e layout
-- [Configurazione del sistema](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/guide-overview) per ruoli, strumenti, notifiche e la chiave di crittografia per il database
+- [Configurazione di base](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details) per accesso amministratore archivio, nome, lingue, valute, branding, siti, visualizzazioni archivio e altro ancora
+- [Tema](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features) per il tuo aspetto del sito e dei negozi, inclusi CSS e layout
+- [Configurazione del sistema](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview) per ruoli, strumenti, notifiche e la chiave di crittografia per il database
 - Impostazioni delle estensioni utilizzando la relativa documentazione
 
 Oltre alle impostazioni di solo archivio, puoi configurare ulteriormente più siti e archivi, servizi configurati e altro ancora. Consulta [Configurare l&#39;archivio](../store/overview.md).
@@ -175,9 +168,9 @@ Quando sviluppi funzioni, aggiungi estensioni e progetta temi, è utile disporre
 
 Per facilitare l’esportazione dei dati di produzione come dati di test da utilizzare negli ambienti di staging e integrazione:
 
-- [Esegui i comandi CLI delle utilità di supporto](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=it) (scelta consigliata) durante l&#39;esportazione di un backup protetto dei dati del cliente e dell&#39;archivio utilizzando la chiave di crittografia Adobe Commerce
+- [Esegui i comandi CLI delle utilità di supporto](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) (scelta consigliata) durante l&#39;esportazione di un backup protetto dei dati del cliente e dell&#39;archivio utilizzando la chiave di crittografia Adobe Commerce
 
-- Strumento [Raccolta dati](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/support#data-collector) per la generazione e l&#39;esportazione di dati
+- Strumento [Raccolta dati](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) per la generazione e l&#39;esportazione di dati
 
 Per eseguire la migrazione di questi dati, vedere [Eseguire la migrazione e distribuire file e dati statici](../deploy/staging-production.md#migrate-static-files).
 
@@ -185,7 +178,7 @@ Per eseguire la migrazione di questi dati, vedere [Eseguire la migrazione e dist
 
 >[!NOTE]
 >
->Prima di inviare i dati a un altro ambiente, è consigliabile bonificare i dati. Sono disponibili alcune opzioni, tra cui [utilizzare le utilità di supporto](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=it) o sviluppare uno script per eliminare i dati dei clienti.
+>Prima di inviare i dati a un altro ambiente, è consigliabile bonificare i dati. Sono disponibili alcune opzioni, tra cui [utilizzare le utilità di supporto](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) o sviluppare uno script per eliminare i dati dei clienti.
 
 >[!WARNING]
 >
@@ -258,3 +251,4 @@ Tutti gli ambienti dell’infrastruttura cloud supportano l’integrazione conti
 - Distribuisci e verifica nell&#39;ambiente `staging`
 
 - Distribuisci nell&#39;ambiente `production`
+

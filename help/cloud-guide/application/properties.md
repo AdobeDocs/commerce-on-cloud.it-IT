@@ -4,14 +4,10 @@ description: Utilizzare l'elenco delle proprietà come riferimento durante la co
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
 TQID: https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 855
 ht-degree: 0%
@@ -148,7 +144,7 @@ La dimensione minima consigliata del disco è 256 MB. Se viene visualizzato l&#3
 
 >[!NOTE]
 >
->Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
+>Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
 >
 >Non è possibile aumentare temporaneamente lo storage su disco in Staging o Produzione; questo processo non è reversibile.
 
@@ -199,7 +195,7 @@ Il formato per l&#39;aggiunta del montaggio all&#39;elenco è il seguente:
 
 >[!NOTE]
 >
->Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
+>Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
 
 È possibile rendere accessibile il mount web aggiungendolo al blocco di posizioni [`web`](web-property.md).
 
@@ -221,3 +217,4 @@ Il ruolo utente predefinito è `contributor`, che limita l&#39;accesso SSH agli 
 access:
     ssh: viewer
 ```
+

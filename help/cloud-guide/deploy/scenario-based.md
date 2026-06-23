@@ -4,16 +4,11 @@ description: Scopri come personalizzare le implementazioni di Adobe Commerce sul
 feature: Cloud, Configuration, Deploy, Build
 exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
 TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 874
 ht-degree: 0%
@@ -51,7 +46,7 @@ hooks:
 
 >[!NOTE]
 >
->Con la versione di `ece-tools` 2002.1.x, è disponibile un nuovo formato di [configurazione hook](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=it). Il formato legacy delle versioni `ece-tools` 2002.0.x è ancora supportato. Tuttavia, è necessario eseguire l’aggiornamento al nuovo formato per utilizzare la funzione di distribuzione basata su scenari.
+>Con la versione di `ece-tools` 2002.1.x, è disponibile un nuovo formato di [configurazione hook](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html). Il formato legacy delle versioni `ece-tools` 2002.0.x è ancora supportato. Tuttavia, è necessario eseguire l’aggiornamento al nuovo formato per utilizzare la funzione di distribuzione basata su scenari.
 
 ## Passaggi dello scenario di revisione
 
@@ -287,3 +282,4 @@ Per ulteriori informazioni sull&#39;iniezione di dipendenza, vedere [Iniezione d
 
 [scenario di distribuzione predefinito]: https://github.com/magento/ece-tools/blob/develop/scenario/deploy.xml
 [Script PHP EnableMaintenanceMode]: https://github.com/magento/ece-tools/blob/develop/src/Step/EnableMaintenanceMode.php
+

@@ -5,19 +5,12 @@ role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
 TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1638
 ht-degree: 0%
@@ -47,7 +40,7 @@ La strategia di diramazione utilizza un flusso di lavoro Git comune in cui puoi 
 
 Il tuo account supporta un numero limitato di ![rami attivi](../../assets/icon-active.png){width="32"} (attivi) e un numero illimitato di ![rami inattivi](../../assets/icon-inactive.png){width="32"} (inattivi). Gestire i rami attivi e inattivi aggiungendo o eliminando un ramo utilizzando solo [!DNL Cloud Console] o Cloud CLI. Prima di eliminare un ramo, disattivalo, che rimane nell&#39;elenco _Ambienti_ come _inattivo_. Puoi riattivare il ramo in un secondo momento oppure [eliminare il ramo](../dev-tools/cloud-cli-overview.md#) nelle impostazioni dell&#39;ambiente o utilizzando Cloud CLI.
 
-Se hai bisogno di altri ambienti attivi per lo sviluppo, invia un [ticket di supporto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket).
+Se hai bisogno di altri ambienti attivi per lo sviluppo, invia un [ticket di supporto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
 
 **Per aggiungere un ramo**:
 
@@ -101,7 +94,7 @@ Prima di poter eliminare un ambiente, devi disattivarlo. Una volta che un ambien
 
 1. Fai clic sull’icona Configura a destra della barra di navigazione superiore, che apre le impostazioni dell’ambiente.
 
-1. Nella scheda _[!UICONTROL General]_&#x200B;scorrere verso il basso fino alla sezione&#x200B;_[!UICONTROL Deactivate environment]_, fare clic su **[!UICONTROL Deactivate environment and delete data]** e seguire le istruzioni.
+1. Nella scheda _[!UICONTROL General]_scorrere verso il basso fino alla sezione_[!UICONTROL Deactivate environment]_, fare clic su **[!UICONTROL Deactivate environment and delete data]** e seguire le istruzioni.
 
 ## Sincronizzare un ambiente
 
@@ -286,3 +279,4 @@ In `composer.json`, utilizzare il formato `<user>@<host>:<.git</code>` o `ssh://
    ```
 
 1. Fare clic su **[!UICONTROL Save]**. In questo modo l’ambiente viene ridistribuito per aggiornare la sicurezza e le impostazioni. Adobe consiglia di eseguire un test dell’ambiente dopo aver completato le impostazioni di sicurezza.
+

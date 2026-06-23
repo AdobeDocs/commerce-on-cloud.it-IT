@@ -4,20 +4,11 @@ description: Scopri come utilizzare il servizio PrivateLink per stabilire una co
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
 TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1798
 ht-degree: 0%
@@ -51,7 +42,7 @@ L’integrazione del servizio PrivateLink per i progetti di infrastruttura cloud
 - Il supporto Adobe Commerce non copre la risoluzione dei problemi di AWS PrivateLink oltre l’abilitazione iniziale.
 - I clienti sono responsabili dei costi associati alla gestione del proprio VPC.
 - Supporto del protocollo **HTTPS (porta 443) per piattaforma:**
-   - **Azure Private Link**: impossibile utilizzare il protocollo HTTPS (porta 443) per connettersi ad Adobe Commerce sull&#39;infrastruttura cloud a causa di [occultamento origine veloce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=it).
+   - **Azure Private Link**: impossibile utilizzare il protocollo HTTPS (porta 443) per connettersi ad Adobe Commerce sull&#39;infrastruttura cloud a causa di [occultamento origine veloce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html).
    - **AWS PrivateLink**: sono supportate le connessioni del protocollo HTTPS (porta 443).
 - PrivateDNS non disponibile.
 
@@ -219,7 +210,7 @@ Il seguente flusso di lavoro illustra il processo di abilitazione per l’integr
 
 ## Modifica configurazione PrivateLink
 
-[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per modificare una configurazione PrivateLink esistente. Ad esempio, puoi richiedere modifiche come segue:
+[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) per modificare una configurazione PrivateLink esistente. Ad esempio, puoi richiedere modifiche come segue:
 
 - Rimuovi la connessione PrivateLink dall’ambiente di produzione o staging di Adobe Commerce on cloud infrastructure Pro.
 - Modifica il numero di account della piattaforma cloud del cliente per accedere al servizio endpoint di Adobe.
