@@ -210,5 +210,5 @@ Consulta i seguenti articoli sul supporto Adobe Commerce per assistenza nella ri
 
 - [Le attività di controllo bloccano le attività da altri gruppi](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=it)
 
-- [Ripristina manualmente i processi cron bloccati sul cloud](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html)
+- [Ripristina manualmente i processi cron bloccati sul cloud](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=it)
 
