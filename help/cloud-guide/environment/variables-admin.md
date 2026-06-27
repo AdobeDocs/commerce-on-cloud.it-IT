@@ -60,12 +60,12 @@ Utilizzare [!DNL Cloud Console] o [!DNL Cloud CLI] per impostare o aggiornare `A
 
 ##### Ambiente di integrazione
 
-Dalla [console cloud](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html), aggiungi una nuova variabile con:
+Dalla [console cloud](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=it), aggiungi una nuova variabile con:
 
 - **Nome:** `ADMIN_URL`
 - **Valore:** Il nuovo URL amministratore (ad esempio, `magento_A8v10`)
 
-- Per i passaggi dettagliati, consulta [aggiungere variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-environment) o [variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=it) nella documentazione per gli sviluppatori.
+- Per i passaggi dettagliati, consulta [aggiungere variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=it#configure-environment) o [variabili di ambiente](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=it) nella documentazione per gli sviluppatori.
 
 ##### Imposta l&#39;URL amministratore in [!DNL Cloud Console]
 
