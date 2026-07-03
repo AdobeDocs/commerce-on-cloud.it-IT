@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: bec442a5b442adafbd23c7c8eac1adbdb7b93b65
+source-git-commit: 5951c3001d665423634f06cd7cc277cd0fd80bbd
 workflow-type: tm+mt
-source-wordcount: 328
+source-wordcount: 391
 ht-degree: 0%
 
 ---
@@ -25,7 +25,9 @@ ht-degree: 0%
 
 [Redis](https://redis.io) è una soluzione cache back-end opzionale che sostituisce Zend Framework Zend_Cache_Backend_File, utilizzato da Adobe Commerce per impostazione predefinita.
 
-Consulta [Configurare Redis](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) nella _Guida alle best practice per l&#39;implementazione del playbook_.
+>[!IMPORTANT]
+>
+>La cache Redis non è supportata per Adobe Commerce 2.4.9 o versioni di patch successive a 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 e 2.4.8-p5. Utilizza Valkey per la configurazione della cache quando Redis non è supportato. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) per i servizi di cache supportati per versione.
 
 {{service-instruction}}
 
@@ -65,6 +67,10 @@ Consulta [Configurare Redis](https://experienceleague.adobe.com/it/docs/commerce
 1. [Verificare le relazioni del servizio](services-yaml.md#service-relationships).
 
 {{service-change-tip}}
+
+## Personalizzare la configurazione Redis
+
+Per informazioni dettagliate sulla personalizzazione della configurazione Redis, vedere [Configure Redis](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) nella _Guida alle best practice per l&#39;implementazione di Playbook_.
 
 ## Utilizzo di Redis CLI
 
