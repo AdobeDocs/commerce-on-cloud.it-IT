@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # Configura il servizio [!DNL RabbitMQ]
 
-[MQF](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
+[MQF](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=it) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
 
 MQF utilizza [RabbitMQ](https://www.rabbitmq.com/) come broker di messaggistica, che fornisce una piattaforma scalabile per l&#39;invio e la ricezione di messaggi. Include inoltre un meccanismo per l’archiviazione dei messaggi non consegnati. [!DNL RabbitMQ] è basato sulla specifica AMQP 0.9.1.
 
@@ -163,7 +163,7 @@ Per connettersi a RabbitMQ utilizzando l&#39;applicazione PHP, aggiungere una li
 
 ## Risoluzione dei problemi del servizio [!DNL RabbitMQ]
 
-Vedi [Impossibile connettersi a RabbitMQ in Adobe Commerce Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688).
+Vedi [Impossibile connettersi a RabbitMQ in Adobe Commerce Cloud](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27688).
 
 ## Aggiornamento del servizio [!DNL RabbitMQ]
 
@@ -173,4 +173,4 @@ Vedi [Impossibile connettersi a RabbitMQ in Adobe Commerce Cloud](https://experi
 >
 >Dopo aver modificato la versione del servizio RabbitMQ, incluso un aggiornamento o un downgrade, ridistribuire l&#39;ambiente. Durante la distribuzione, Adobe Commerce esegue le attività di configurazione che consentono di ricreare le code RabbitMQ, gli scambi e i binding richiesti.
 >
->Per istruzioni generali sull&#39;aggiornamento del servizio, vedere [Modifica versione del servizio](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version).
+>Per istruzioni generali sull&#39;aggiornamento del servizio, vedere [Modifica versione del servizio](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version).
