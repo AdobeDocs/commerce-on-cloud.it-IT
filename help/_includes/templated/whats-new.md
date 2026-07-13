@@ -23,7 +23,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornamento di <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">Gestione dell'accesso utente</a> con prerequisiti più chiari, stati degli inviti alla console Cloud, istruzioni per la ridistribuzione e risoluzione dei problemi correlati.</p>
+      <td><p>Aggiornamento di <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/project/user-access">Gestione dell'accesso utente</a> con prerequisiti più chiari, stati degli inviti alla console Cloud, istruzioni per la ridistribuzione e risoluzione dei problemi correlati.</p>
 </td>
       <td>
         Feedback
@@ -45,7 +45,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>L'argomento <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Sicurezza avanzata</a> è stato aggiornato con informazioni sulle limitazioni e sull'osservabilità.</p>
+      <td><p>L'argomento <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Sicurezza avanzata</a> è stato aggiornato con informazioni sulle limitazioni e sull'osservabilità.</p>
 </td>
       <td>
         Aggiornamento principale
@@ -67,7 +67,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata chiarita la configurazione predefinita del blocco e il modo in cui le variabili di ambiente <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> e <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> influiscono sugli ambienti Pro e Starter.</p>
+      <td><p>È stata chiarita la configurazione predefinita del blocco e il modo in cui le variabili di ambiente <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> e <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> influiscono sugli ambienti Pro e Starter.</p>
 </td>
       <td>
         Tecnico
@@ -89,7 +89,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata rimossa l'istruzione di supporto di Elasticsearch per On-Prem nell'<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">avviso di supporto di Elasticsearch</a>.</p>
+      <td><p>È stata rimossa l'istruzione di supporto di Elasticsearch per On-Prem nell'<a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/opensearch">avviso di supporto di Elasticsearch</a>.</p>
 </td>
       <td>
         Tecnico
