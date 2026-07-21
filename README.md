@@ -1,7 +1,7 @@
 ---
-source-git-commit: 55206749cd121ef6d6139a71af6ff905d4109859
+source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 Questo sito contiene la documentazione più recente per gli sviluppatori di Commerce on Cloud Infrastructure.
 
-- [Guida di Commerce sull’infrastruttura cloud](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview)
-- [Introduzione a Commerce](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
+- [Guida di Commerce sull’infrastruttura cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [Introduzione a Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
 
 ## Codice di condotta di Adobe Open Source
 
@@ -18,7 +18,7 @@ Questo progetto ha adottato il [Codice di condotta di Adobe Open Source](code-of
 
 ## Informazioni sui contributi ai contenuti di Adobe
 
-Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
+Consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 Il modo in cui contribuisci dipende da chi sei e dal tipo di modifiche con cui desideri contribuire:
 
@@ -34,13 +34,13 @@ Se fai parte della community Adobe e desideri creare un nuovo articolo o inviare
 
 ### Modifiche sostanziali da parte dei dipendenti Adobe
 
-Se sei un autore tecnico, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato all&#39;indirizzo `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.it-IT`.
+Se sei un autore, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato all&#39;indirizzo `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`.
 
 ## Strumenti e configurazione
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per apportare modifiche di base o eseguire il fork dell’archivio per apportare contributi principali.
 
-Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/it/docs/contributor/contributor-guide/introduction).
+Per informazioni dettagliate, consulta la [Guida per i collaboratori per la documentazione di Adobe](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 ## Come utilizzare markdown per formattare l’argomento
 
@@ -70,7 +70,7 @@ In generale, la maggior parte degli autori deve solo aggiungere una versione all
 >**NOTA:**
 >
 >- La generazione di contenuti basati su modelli richiede l’utilizzo della riga di comando in un terminale.
->- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version] (_jekyll/.ruby-version) per la versione richiesta.
+>- Per eseguire lo script di rendering, è necessario che Ruby sia installato. Vedere [_jekyll/.ruby-version](_jekyll/.ruby-version) per la versione richiesta.
 
 Per una descrizione della struttura di file per il contenuto con modelli, consulta:
 
@@ -134,7 +134,9 @@ Per ulteriori informazioni su [File di dati](https://jekyllrb.com/docs/datafiles
 
 ## Attività di rastremazione disponibili
 
-Questo archivio utilizza le attività di rastremazione fornite dal gem `adobe-comdox-exl-rake-tasks`. Per visualizzare tutte le attività disponibili, eseguire le operazioni seguenti:
+Questo archivio utilizza le attività di rastremazione fornite da
+[`adobe-comdox-exl-rake-tasks`](https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks)
+gemma. Per visualizzare tutte le attività disponibili, eseguire le operazioni seguenti:
 
 ```bash
 cd _jekyll
@@ -155,10 +157,11 @@ Dopo aver clonato l’archivio, esegui:
 
 ### Funzionamento degli hook
 
-- Rileva automaticamente i file immagine di staging (PNG, JPG, JPEG, GIF, SVG)
-- Esegui `image_optim` per comprimere e ottimizzare le immagini
+- Rileva automaticamente i file immagine di staging (PNG, JPEG, GIF, SVG)
+- Esegui `image_optim` per comprimere e ottimizzare le immagini raster (PNG, JPEG, GIF)
 - Riposiziona automaticamente nell&#39;area intermedia le immagini ottimizzate
-- Assicurati che tutte le immagini salvate siano ottimizzate correttamente
+- Assicurati che tutte le immagini raster salvate siano ottimizzate correttamente
+- Controlla i file SVG in staging in base a un limite di dimensioni e interrompi il commit se un SVG lo supera
 
 ### Vantaggi
 
