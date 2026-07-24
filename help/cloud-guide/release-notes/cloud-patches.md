@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: a7cd55b31bf909047e449e5f984fcb082706c2b9
+source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
 workflow-type: tm+mt
-source-wordcount: 2904
+source-wordcount: 2965
 ht-degree: 0%
 
 ---
@@ -44,7 +44,13 @@ Il pacchetto `magento/magento-cloud-patches` utilizza la seguente sequenza di ve
 
 <!--Add release notes below-->
 
-## v1.1.15 {#latest}
+## v1.1.16 {#latest}
+
+Data di rilascio: 23 luglio 2026
+
+- ![icona di correzione](../../assets/fix.svg) **Prestazioni e affidabilità migliorate della cache Symfony L2**—Ottimizzazione dell&#39;archiviazione dei tag della cache per symfony_l2, miglioramento dell&#39;invalidazione della cache con blocchi di rigenerazione basati su TTL e pulizia corretta dei tag L1 per eliminare le voci della cache non aggiornate. Per impostazione predefinita, è abilitata la compressione Redis/Valkey (compress_data) per ridurre il consumo di memoria e il traffico di rete durante l&#39;allineamento con l&#39;implementazione della cache precedente.<!-- ACP2E-5132 -->
+
+## v1.1.15
 
 Data di rilascio: 14 luglio 2026
 
@@ -185,8 +191,8 @@ Data di rilascio: 19 giugno 2023
 
 - **Creazione guidata/output CLI QPT avanzato**. È stato aggiunto un avviso alla creazione guidata/output CLI QPT che ricorda di verificare i dettagli e i requisiti della patch in caso di dipendenze.<!-- ACP2E-1963 -->
 - **Aggiunte patch per Commerce 2.4.6:**
-   - È stata corretta la convalida di `regexp cache tag`.<!-- MCLOUD-10226 -->
-   - Sono state migliorate le prestazioni riducendo il numero di volte in cui viene caricato lo stesso numero di configurazioni di distribuzione.<!-- MCLOUD-10604 -->
+  - È stata corretta la convalida di `regexp cache tag`.<!-- MCLOUD-10226 -->
+  - Sono state migliorate le prestazioni riducendo il numero di volte in cui viene caricato lo stesso numero di configurazioni di distribuzione.<!-- MCLOUD-10604 -->
 - **Sono state aggiunte patch per Commerce da 2.3.7 a 2.4.6**. È stato risolto un problema che causava un incremento di un valore casuale invece di un incremento di 1 per le tabelle `catalog_product_entity_*`.<!-- MCLOUD-10032 -->
 - **Sono state aggiunte patch per Commerce da 2.4.0 a 2.4.6**. È stato corretto un errore che indicava che `The file can't be deleted. Warning!unlink: No such file or directory`, che si verificava durante lo svuotamento della cache JS/CSS dall&#39;amministratore.<!-- MCLOUD-10279 -->
 
@@ -315,17 +321,17 @@ Data di rilascio: 14 ottobre 2020
 Data di rilascio:
 
 - **Patch Redis per Adobe Commerce 2.3.0 - 2.3.4**: ottimizzazione della comunicazione e miglioramento delle prestazioni
-   - Ridurre le dimensioni dei trasferimenti di rete tra Redis e Adobe Commerce
-   - Correzione delle race condition per le operazioni di caricamento e scrittura Redis
-   - Riscrittura dell&#39;adattatore cache di base per gestire gli errori durante il salvataggio
-   - Diminuisci consumo CPU Redis<!--MCLOUD-6139-->
+  - Ridurre le dimensioni dei trasferimenti di rete tra Redis e Adobe Commerce
+  - Correzione delle race condition per le operazioni di caricamento e scrittura Redis
+  - Riscrittura dell&#39;adattatore cache di base per gestire gli errori durante il salvataggio
+  - Diminuisci consumo CPU Redis<!--MCLOUD-6139-->
 
 - **Patch Redis per Adobe Commerce 2.3.0 - 2.3.5**—Migliorare le prestazioni e correggere gli errori
-   - Correggi l’implementazione del blocco della cache per evitare blocchi infiniti
-   - Migliorare il meccanismo di blocco corrente
-   - Implementa i blocchi firmati per impedire lo sblocco da richieste parallele
-   - Correggere il seguente errore che si verifica nell&#39;operazione di scrittura Redis: `OOM command not allowed when used memory > maxmemory`
-   - Correzione dell&#39;elaborazione per la cache pulita da parte del tag `cat_p` eseguito durante gli aggiornamenti del prodotto<!--MCLOUD-6110-->
+  - Correggi l’implementazione del blocco della cache per evitare blocchi infiniti
+  - Migliorare il meccanismo di blocco corrente
+  - Implementa i blocchi firmati per impedire lo sblocco da richieste parallele
+  - Correggere il seguente errore che si verifica nell&#39;operazione di scrittura Redis: `OOM command not allowed when used memory > maxmemory`
+  - Correzione dell&#39;elaborazione per la cache pulita da parte del tag `cat_p` eseguito durante gli aggiornamenti del prodotto<!--MCLOUD-6110-->
 
 - È stato risolto un problema che causava un errore durante l&#39;applicazione della patch `amzn/amazon-pay-module` richiesta ai progetti Adobe Commerce on cloud infrastructure con Adobe Commerce v2.2.6 o 2.3.5, che non includono questo modulo. Ora il processo di applicazione delle patch ignora la patch `amzn/amazon-pay-module` se il modulo non è installato.<!--MCLOUD-6588-->
 
@@ -369,9 +375,9 @@ Questa versione include le patch e le correzioni critiche seguenti:
 
 - **Aggiornamenti alla compatibilità per magento/magento-cloud-patches**
 
-   - Aggiornamento dei vincoli di versione `symfony` e `semver` nel file `composer.json` per compatibilità con Adobe Commerce 2.4 e versioni successive.<!--MAGECLOUD-5127-->
+  - Aggiornamento dei vincoli di versione `symfony` e `semver` nel file `composer.json` per compatibilità con Adobe Commerce 2.4 e versioni successive.<!--MAGECLOUD-5127-->
 
-   - Aggiornamento dei vincoli in `composer.json` per compatibilità con le versioni `ece-tools` 2002.0.22 e successive 2002.0.x.
+  - Aggiornamento dei vincoli in `composer.json` per compatibilità con le versioni `ece-tools` 2002.0.22 e successive 2002.0.x.
 
 - **Pagamento PayPal Express**—Pubblicata il 12 febbraio 2020, questa patch risolve un problema che riguarda gli ordini effettuati con Pagamento PayPal Express in cui l&#39;indirizzo di spedizione dell&#39;ordine specifica un paese immesso manualmente nel campo di testo anziché selezionato dal menu a discesa nella pagina Spedizione. Vedere la descrizione completa della patch nella pagina di download della patch.
 
@@ -389,9 +395,9 @@ Questa versione include le patch e le correzioni critiche seguenti:
 
 - **Correggi i deadlock cron e migliora il blocco cron**—
 
-   - È stato risolto un problema relativo ad alcuni processi cron non in esecuzione a causa di un valore di stato errato nella tabella `cron_schedule`. Ora si utilizza il framework di blocco di Adobe Commerce per controllare e aggiornare lo stato del processo cron anziché la tabella `cron_schedule`. I processi cron terminati con uno stato di errore vengono ritentati durante la successiva esecuzione del cron invece di attendere 24 ore.
+  - È stato risolto un problema relativo ad alcuni processi cron non in esecuzione a causa di un valore di stato errato nella tabella `cron_schedule`. Ora si utilizza il framework di blocco di Adobe Commerce per controllare e aggiornare lo stato del processo cron anziché la tabella `cron_schedule`. I processi cron terminati con uno stato di errore vengono ritentati durante la successiva esecuzione del cron invece di attendere 24 ore.
 
-   - Aggiunge un&#39;operazione _retry_ per evitare deadlock durante gli aggiornamenti ai dati nella tabella `cron_schedule`.
+  - Aggiunge un&#39;operazione _retry_ per evitare deadlock durante gli aggiornamenti ai dati nella tabella `cron_schedule`.
 
 - **È stato aggiornato `magento/magento-cloud-patches` per includere tutte le patch disponibili per Magento Open Source 2.x**. Il pacchetto magento/magento-cloud-patches è stato aggiornato in modo da includere tutte le patch di Magento Open Source 2.x disponibili nella pagina dei download del software. Se in precedenza hai copiato patch di Magento Open Source nel progetto di infrastruttura cloud di Adobe Commerce, rimuovile per evitare conflitti.<!--MAGECLOUD-4606-->
 

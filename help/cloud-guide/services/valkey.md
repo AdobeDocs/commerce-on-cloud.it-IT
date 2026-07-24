@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 988a098ec800616898a4ad0ab460a09ec64c4fc3
+source-git-commit: a12aa37d41a68df2fd4c84b589a08e128e5ec103
 workflow-type: tm+mt
-source-wordcount: 259
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -57,6 +57,10 @@ Vedi [Configurare Valkey](https://experienceleague.adobe.com/it/docs/commerce-op
         VALKEY_USE_SLAVE_CONNECTION: true
         VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
    ```
+
+   >[!TIP]
+   >
+   >Per Adobe Commerce 2.4.9 e versioni successive, è possibile utilizzare la moderna implementazione della cache L2 basata su Symfony Cache invece di `RemoteSynchronizedCache` impostando `VALKEY_BACKEND: symfony_l2`. Vedi [`VALKEY_BACKEND`](../environment/variables-deploy.md#valkey_backend) nel riferimento _Distribuisci variabili_.
 
 1. Aggiungi, esegui il commit e invia le modifiche al codice.
 
