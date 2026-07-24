@@ -9,8 +9,8 @@ ht-degree: 0%
 
 Questo sito contiene la documentazione più recente per gli sviluppatori di Commerce on Cloud Infrastructure.
 
-- [Guida di Commerce sull’infrastruttura cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [Introduzione a Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
+- [Guida di Commerce sull’infrastruttura cloud](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview)
+- [Introduzione a Commerce](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/start/overview) sull&#39;infrastruttura cloud
 
 ## Codice di condotta di Adobe Open Source
 
@@ -34,7 +34,7 @@ Se fai parte della community Adobe e desideri creare un nuovo articolo o inviare
 
 ### Modifiche sostanziali da parte dei dipendenti Adobe
 
-Se sei un autore, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato all&#39;indirizzo `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`.
+Se sei un autore, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud ed è tuo compito creare o contribuire ad articoli tecnici, devi utilizzare l&#39;archivio privato all&#39;indirizzo `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.it-IT`.
 
 ## Strumenti e configurazione
 
