@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8273c3ddc0f392b8f5d2163258ba53935b263c71
+source-git-commit: cb26cb9e3bf8b7d7c75509d8e3c3c02be439a3f4
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '263'
 ht-degree: 2%
 
 ---
@@ -10,6 +10,28 @@ ht-degree: 2%
 ## Novità
 
 Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo elenco sono esclusi tutti gli aggiornamenti minori, ad esempio la modifica della copia.
+
+### 20 luglio 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descrizione</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.12. Non sono state apportate altre modifiche oltre al numero di versione.</p>
+</td>
+      <td>
+        Tecnico
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/136f8312d1c125a49538ee050394c722ab68d9b6">commit</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 15 giugno 2026
 
@@ -23,7 +45,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornamento di <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/project/user-access">Gestione dell'accesso utente</a> con prerequisiti più chiari, stati degli inviti alla console Cloud, istruzioni per la ridistribuzione e risoluzione dei problemi correlati.</p>
+      <td><p>Aggiornamento di <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">Gestione dell'accesso utente</a> con prerequisiti più chiari, stati degli inviti alla console Cloud, istruzioni per la ridistribuzione e risoluzione dei problemi correlati.</p>
 </td>
       <td>
         Feedback
@@ -45,7 +67,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>L'argomento <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Sicurezza avanzata</a> è stato aggiornato con informazioni sulle limitazioni e sull'osservabilità.</p>
+      <td><p>L'argomento <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Sicurezza avanzata</a> è stato aggiornato con informazioni sulle limitazioni e sull'osservabilità.</p>
 </td>
       <td>
         Aggiornamento principale
@@ -67,7 +89,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata chiarita la configurazione predefinita del blocco e il modo in cui le variabili di ambiente <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> e <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> influiscono sugli ambienti Pro e Starter.</p>
+      <td><p>È stata chiarita la configurazione predefinita del blocco e il modo in cui le variabili di ambiente <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> e <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> influiscono sugli ambienti Pro e Starter.</p>
 </td>
       <td>
         Tecnico
@@ -89,7 +111,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>È stata rimossa l'istruzione di supporto di Elasticsearch per On-Prem nell'<a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/opensearch">avviso di supporto di Elasticsearch</a>.</p>
+      <td><p>È stata rimossa l'istruzione di supporto di Elasticsearch per On-Prem nell'<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">avviso di supporto di Elasticsearch</a>.</p>
 </td>
       <td>
         Tecnico
