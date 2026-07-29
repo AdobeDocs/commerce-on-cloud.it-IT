@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
 workflow-type: tm+mt
-source-wordcount: 1136
+source-wordcount: 1186
 ht-degree: 0%
 
 ---
@@ -27,9 +27,13 @@ Il file `services.yaml` definisce i servizi supportati e utilizzati da Adobe Com
 
 >[!NOTE]
 >
->Il file `.magento/services.yaml` è gestito localmente nella directory `.magento` del progetto. La configurazione è accessibile durante il processo di build per definire le versioni del servizio richieste solo nell’ambiente di integrazione e viene rimossa al termine della distribuzione, in modo da non trovarle sul server.
+>Il file `.magento/services.yaml` è gestito localmente nella directory `.magento` del progetto. Durante la distribuzione, Adobe Commerce sull’infrastruttura cloud utilizza questa configurazione per fornire servizi supportati per l’ambiente di destinazione. La directory `.magento` è stata rimossa dal server remoto dopo la distribuzione, pertanto `services.yaml` non verrà trovato nell&#39;ambiente distribuito.
 
 Lo script di distribuzione utilizza i file di configurazione nella directory `.magento` per eseguire il provisioning dell&#39;ambiente con i servizi configurati. Un servizio diventa disponibile per l&#39;applicazione se è incluso nella proprietà [`relationships`](../application/properties.md#relationships) del file `.magento.app.yaml`. Il file `services.yaml` contiene i valori _type_ e _disk_. Il tipo di servizio definisce il servizio _name_ e _version_.
+
+La configurazione del servizio in `.magento/services.yaml` è separata dalle dipendenze del pacchetto PHP e Composer definite in `composer.json` e bloccate in `composer.lock`.
+
+## Dove si applicano le modifiche al servizio
 
 La modifica della configurazione di un servizio determina il provisioning dell’ambiente con i servizi aggiornati tramite una distribuzione che interessa i seguenti ambienti:
 
@@ -40,10 +44,11 @@ La modifica della configurazione di un servizio determina il provisioning dell�
 
 ## Servizi predefiniti e supportati
 
-L’infrastruttura cloud supporta e distribuisce i seguenti servizi:
+Adobe Commerce su infrastruttura cloud supporta i seguenti servizi, che possono essere configurati per il progetto:
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
+- [Valkey](valkey.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
@@ -54,22 +59,26 @@ L’infrastruttura cloud supporta e distribuisce i seguenti servizi:
 >
 >Dopo l’aggiornamento a una nuova versione di RabbitMQ, attiva una distribuzione completa per garantire che le code di messaggi personalizzate vengano ricreate in RabbitMQ.
 
-È possibile visualizzare le versioni e i valori del disco predefiniti nel [file `services.yaml` predefinito](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) corrente. L&#39;esempio seguente mostra i servizi `mysql`, `redis`, `opensearch` o `elasticsearch`, `rabbitmq` e `activemq-artemis` definiti nel file di configurazione `services.yaml`:
+## Visualizza servizi e versioni configurati
+
+È possibile visualizzare definizioni di servizio di esempio e valori del disco nel file [`services.yaml` del modello corrente](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Le versioni predefinite e supportate effettive dipendono dalla versione di Adobe Commerce e dal modello cloud corrente.
+
+Nell&#39;esempio seguente vengono illustrate le definizioni dei servizi nel file di configurazione `services.yaml`:
 
 ```yaml
 mysql:
-    type: mysql:10.4
+    type: mysql:11.8
     disk: 5120
 
-redis:
-    type: redis:6.2
+cache:
+    type: valkey:9.0
 
 opensearch:
-    type: opensearch:2  # minor version not required; uses latest
+    type: opensearch:3  # minor version not required; uses latest
     disk: 1024
 
 rabbitmq:
-    type: rabbitmq:3.9
+    type: rabbitmq:4.3
     disk: 1024
 
 activemq-artemis:
@@ -142,9 +151,9 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
 
 È possibile recuperare i dati di configurazione per tutte le relazioni di servizio dalla variabile di ambiente [`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md). I dati di configurazione includono il nome del servizio, il tipo e la versione insieme a tutti i dettagli di connessione richiesti, ad esempio il numero di porta e le credenziali di accesso.
 
-**Per verificare le relazioni nell&#39;ambiente locale**:
+**Per verificare le relazioni dall&#39;ambiente di sviluppo locale**:
 
-1. Nell’ambiente locale, mostra le relazioni per l’ambiente attivo.
+1. Dall’ambiente di sviluppo locale, mostra le relazioni per l’ambiente attivo.
 
    ```bash
    magento-cloud relationships
@@ -160,7 +169,7 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
    ...
            type: 'redis:7.0'
            port: 6379
-   elasticsearch:
+   opensearch:
        -
    ...
            type: 'opensearch:2'
@@ -168,7 +177,7 @@ Nei progetti di infrastruttura cloud di Adobe Commerce, il servizio [relazioni](
    database:
        -
    ...
-           type: 'mysql:10.6'
+           type: 'mysql:11.8'
            port: 3306
    ```
 
@@ -225,7 +234,7 @@ Non è possibile eseguire direttamente il downgrade della versione del servizio 
 
    ```yaml
    mysql:
-       type: mysql:10.3
+       type: mysql:11.8
        disk: 2048
    ```
 
@@ -233,7 +242,7 @@ Non è possibile eseguire direttamente il downgrade della versione del servizio 
 
    ```yaml
    mysql:
-       type: mysql:10.4
+       type: mysql:12.3
        disk: 5120
    ```
 
@@ -244,7 +253,7 @@ Non è possibile eseguire direttamente il downgrade della versione del servizio 
    ```
 
    ```bash
-   git commit -m "Upgrade MySQL from MariaDB 10.3 to 10.4."
+   git commit -m "Upgrade MySQL from MariaDB 11.8 to 12.3."
    ```
 
    ```bash
