@@ -56,7 +56,7 @@ Nell’ambiente di integrazione, puoi accedere all’amministratore per modifica
    ![Modifica impostazioni locali](../../assets/locale-options.png)
 
 1. Fai clic su **Salva configurazione**.
-1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
+1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/cache-management).
 1. Esci dall’Admin.
 
 ## Esportare i valori e trasferire config.php nel sistema locale
@@ -159,7 +159,7 @@ Aggiungere i valori di configurazione nell’ambiente di integrazione Admin. In 
 1. Nel riquadro di destra espandere **Impostazioni JavaScript**.
 1. Nell&#39;elenco **Unisci file JavaScript** fare clic su **Sì**.
 1. Fai clic su **Salva configurazione**.
-1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
+1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/cache-management).
 1. Esci dall’Admin.
 
 Eseguendo nuovamente il comando dump, la nuova configurazione viene aggiunta al file.
