@@ -4,7 +4,7 @@ description: Vedi un esempio di come gestire e sincronizzare le impostazioni di 
 hidefromtoc: true
 source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Ad esempio, è possibile impostare le seguenti impostazioni:
 * Abilitare l’ottimizzazione dei file statici negli ambienti di staging e produzione
 * Configurare Fastly in staging e produzione con credenziali specifiche per ciascuno
 
-_Ottimizzazione file statico_ significa unire e minimizzare i fogli di stile di JavaScript e CSS e minimizzare i modelli di HTML. Consulta [Strategie di distribuzione del contenuto statico](../deploy/static-content.md).
+_Ottimizzazione file statico_ significa unire e minimizzare JavaScript e i fogli di stile CSS e minimizzare i modelli HTML. Consulta [Strategie di distribuzione del contenuto statico](../deploy/static-content.md).
 
 ## Prerequisiti
 
@@ -56,7 +56,7 @@ Nell’ambiente di integrazione, puoi accedere all’amministratore per modifica
    ![Modifica impostazioni locali](../../assets/locale-options.png)
 
 1. Fai clic su **Salva configurazione**.
-1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/cache-management).
+1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
 1. Esci dall’Admin.
 
 ## Esportare i valori e trasferire config.php nel sistema locale
@@ -159,7 +159,7 @@ Aggiungere i valori di configurazione nell’ambiente di integrazione Admin. In 
 1. Nel riquadro di destra espandere **Impostazioni JavaScript**.
 1. Nell&#39;elenco **Unisci file JavaScript** fare clic su **Sì**.
 1. Fai clic su **Salva configurazione**.
-1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/cache-management).
+1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
 1. Esci dall’Admin.
 
 Eseguendo nuovamente il comando dump, la nuova configurazione viene aggiunta al file.
