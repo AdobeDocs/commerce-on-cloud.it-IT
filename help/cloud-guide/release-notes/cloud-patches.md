@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
+source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
 workflow-type: tm+mt
-source-wordcount: 2965
+source-wordcount: 3019
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ Il pacchetto `magento/magento-cloud-patches` utilizza la seguente sequenza di ve
 
 <!--Add release notes below-->
 
-## v1.1.16 {#latest}
+## v1.1.17 {#latest}
+
+Data di rilascio: 29 luglio 2026
+
+- ![icona di correzione](../../assets/fix.svg) **Ottimizzazione delle prestazioni, dell&#39;affidabilità e della gestione dei tag della cache Symfony L2**: migliore scalabilità della cache, riduzione degli I/O non necessari del file system, maggiore coerenza della cache e risoluzione delle appartenenze ai tag non aggiornati, scritture remote ridondanti e pulizia dell&#39;eliminazione della cache L1.<!-- ACP2E-5132 -->
+- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Migliorata compatibilità per la patch di sicurezza isolata di luglio 2026.<!-- AC-17674 -->
+
+## v1.1.16
 
 Data di rilascio: 23 luglio 2026
 
