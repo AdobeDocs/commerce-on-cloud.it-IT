@@ -1,8 +1,8 @@
 ---
-source-git-commit: d552a3e05d9cc81ceb546815c12aa52e7a9b1b40
+source-git-commit: c99769c36020dea4b7321c791fd47ee162075ef3
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 2%
+source-wordcount: '122'
+ht-degree: 3%
 
 ---
 # Nuovo modello
@@ -23,7 +23,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.12. Non sono state apportate altre modifiche oltre al numero di versione.</p>
+      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.12. Non sono state apportate altre modifiche oltre al numero di versione.</p>
 </td>
       <td>
         Tecnico
@@ -45,56 +45,12 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornamento di <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/project/user-access">Gestione dell'accesso utente</a> con prerequisiti più chiari, stati degli inviti alla console Cloud, istruzioni per la ridistribuzione e risoluzione dei problemi correlati.</p>
+      <td><p>Aggiornamento di <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">Gestione dell'accesso utente</a> con prerequisiti più chiari, stati degli inviti alla console Cloud, istruzioni per la ridistribuzione e risoluzione dei problemi correlati.</p>
 </td>
       <td>
         Feedback
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/747367a8808b0b22f810f4e26b94a06ee995281d">commit</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 4 giugno 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Descrizione</th>
-      <th>Tipo</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>L'argomento <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Sicurezza avanzata</a> è stato aggiornato con informazioni sulle limitazioni e sull'osservabilità.</p>
-</td>
-      <td>
-        Aggiornamento principale
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/54fcde91fb6fd159edadf85146da375692cce0d6">commit</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2 giugno 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Descrizione</th>
-      <th>Tipo</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>È stata chiarita la configurazione predefinita del blocco e il modo in cui le variabili di ambiente <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> e <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> influiscono sugli ambienti Pro e Starter.</p>
-</td>
-      <td>
-        Tecnico
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/17ecf47f8cad5dcb53ef92b32377a7074e16bb52">commit</a></td>
     </tr>
   </tbody>
 </table>
