@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 643134d5bf2ab03b0c9cace884e9a020a2aebdb7
+source-git-commit: 1a0261c2c7ca9c058e18af5cbc86319501d75e57
 workflow-type: tm+mt
-source-wordcount: 3054
+source-wordcount: 3086
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Il pacchetto `magento/magento-cloud-patches` utilizza la seguente sequenza di ve
 Data di rilascio: 11 agosto 2026
 
 - ![icona di correzione](../../assets/fix.svg) **Gestione delle patch migliorata**. Le patch ora ignorano i moduli di destinazione degli hunk rimossi tramite `composer.json` `replace` e continuano ad applicare le parti installate rimanenti.<!-- MCLOUD-15325 -->
-- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**-Applicate le ultime patch di sicurezza.<!--MCLOUD-15035 -->
+- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**-Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-92](https://helpx.adobe.com/it/security/products/magento/apsb26-92.html).<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -68,7 +68,7 @@ Data di rilascio: 23 luglio 2026
 
 Data di rilascio: 14 luglio 2026
 
-- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**-Applicate le ultime patch di sicurezza.<!--MCLOUD-15066 -->
+- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**-Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-73](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-37421).<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
