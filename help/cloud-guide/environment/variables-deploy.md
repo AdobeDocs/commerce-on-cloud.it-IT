@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
+source-git-commit: f09934f41676922dc4b4001f24ee94062a5e9c0a
 workflow-type: tm+mt
-source-wordcount: 3031
+source-wordcount: 3035
 ht-degree: 0%
 
 ---
@@ -357,7 +357,7 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **Predefinito**: negli ambienti di produzione e di gestione temporanea il valore predefinito è `file`. Per l&#39;integrazione Pro e gli ambienti di avvio, il valore predefinito è `db`.
+- **Predefinito**: negli ambienti di produzione e di gestione temporanea, il valore predefinito è `file` e non può essere modificato. Per l&#39;integrazione Pro e gli ambienti di avvio, il valore predefinito è `db`.
 - **Versione**—Adobe Commerce 2.2.5 e versioni successive
 
 Il provider di blocchi impedisce l&#39;avvio di processi cron e gruppi cron duplicati. Commerce on Cloud supporta solo `file` e `db` provider di blocchi.
@@ -367,7 +367,7 @@ Per gli ambienti di produzione e staging, il valore predefinito `file` è impost
 ```yaml
 stage:
   deploy:
-    LOCK_PROVIDER: "db"
+    LOCK_PROVIDER: "file"
 ```
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
