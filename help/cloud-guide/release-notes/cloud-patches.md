@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 956405dea6be29d239b663f5eebb19a8e043354d
+source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
 workflow-type: tm+mt
-source-wordcount: 2927
+source-wordcount: 2969
 ht-degree: 0%
 
 ---
@@ -44,12 +44,19 @@ Il pacchetto `magento/magento-cloud-patches` utilizza la seguente sequenza di ve
 
 <!--Add release notes below-->
 
-## v1.1.18 {#latest}
+## v1.1.19 {#latest}
+
+Data di rilascio: 19 agosto 2026
+
+- ![icona di correzione](../../assets/fix.svg) **Affidabilità patch**—Gestione delle patch migliorata per implementazioni cloud affidabili.<!-- MCLOUD-15325/ACSEC-561/MCLOUD-15451/MCLOUD-15455 -->
+- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della memorizzazione nella cache**—Supporto avanzato della cache Symfony_l2 per le connessioni slave Redis e Valkey e risoluzione dei problemi di distribuzione statica, di indice dei tag e di precaricamento correlati.<!-- MCLOUD-15433 -->
+
+## v1.1.18
 
 Data di rilascio: 11 agosto 2026
 
 - ![icona di correzione](../../assets/fix.svg) **Gestione delle patch migliorata**. Le patch ora ignorano i moduli di destinazione degli hunk rimossi tramite `composer.json` `replace` e continuano ad applicare le parti installate rimanenti.<!-- MCLOUD-15325 -->
-- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-92](https://helpx.adobe.com/it/security/products/magento/apsb26-92.html).<!--MCLOUD-15035 -->
+- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html).<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -252,7 +259,7 @@ Patch critica per Adobe Commerce 2.3.3-p1 e versioni successive:
 
 Sono state aggiornate le patch per risolvere una vulnerabilità **critica** con conseguente esecuzione di codice remoto non autenticato.<!-- MCLOUD-8479 -->
 
-Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/it/security/products/magento/apsb22-12.html).
+Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.15
 
@@ -269,7 +276,7 @@ Patch critica per Adobe Commerce 2.3.3-p1 e versioni successive:
 
 È stata aggiunta una patch per risolvere una vulnerabilità **critica** con conseguente esecuzione di codice remoto non autenticato.<!-- MCLOUD-8461 -->
 
-Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/it/security/products/magento/apsb22-12.html).
+Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.13
 
