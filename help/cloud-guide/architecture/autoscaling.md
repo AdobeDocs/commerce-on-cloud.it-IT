@@ -31,14 +31,14 @@ Il ridimensionamento automatico aggiunge o rimuove automaticamente le risorse al
 
 ## Abilita ridimensionamento automatico
 
-Per attivare o disattivare il ridimensionamento automatico orizzontale o verticale per il progetto [!DNL Adobe Commerce on cloud infrastructure], [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Scegli i seguenti motivi nel ticket:
+Per attivare o disattivare il ridimensionamento automatico orizzontale o verticale per il progetto [!DNL Adobe Commerce on cloud infrastructure], [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Scegli i seguenti motivi nel ticket:
 
 - **Motivo contatto**: richiesta di modifica dell&#39;infrastruttura
 - **Motivo del contatto per l&#39;infrastruttura Adobe Commerce**: altra richiesta di modifica dell&#39;infrastruttura
 
 >[!IMPORTANT]
 >
->La funzione di ridimensionamento automatico acquisisce gli eventi imprevisti. Anche se è stato abilitato il ridimensionamento automatico, Adobe consiglia di continuare a [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) se si prevede un evento imminente.
+>La funzione di ridimensionamento automatico acquisisce gli eventi imprevisti. Anche se è stato abilitato il ridimensionamento automatico, Adobe consiglia di continuare a [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) se si prevede un evento imminente.
 
 ### Test di carico
 
