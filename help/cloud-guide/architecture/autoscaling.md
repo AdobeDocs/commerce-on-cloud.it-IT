@@ -14,29 +14,54 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: a542dac902dc0de7c0836c1e5e4aece40fc6cbee
 workflow-type: tm+mt
-source-wordcount: 605
+source-wordcount: 979
 ht-degree: 0%
 
 ---
 
 # Ridimensionamento automatico
 
-Il ridimensionamento automatico aggiunge o rimuove automaticamente le risorse all’infrastruttura cloud per mantenere prestazioni ottimali e costi ragionevoli. Attualmente, questa funzione è disponibile solo per i progetti configurati con [Architettura ridimensionata](scaled-architecture.md).
+Il ridimensionamento automatico aggiunge o rimuove automaticamente le risorse all’infrastruttura cloud per mantenere prestazioni ottimali e costi ragionevoli. Adobe offre due tipi di ridimensionamento automatico per [!DNL Adobe Commerce on cloud infrastructure] progetti:
 
-## Nodi del server web
+- [Ridimensionamento automatico orizzontale](#horizontal-auto-scaling) (disponibile solo per l&#39;architettura ridimensionata): aggiunge o rimuove nodi server Web per i progetti di architettura ridimensionata.
+- [Ridimensionamento automatico verticale](#vertical-auto-scaling) (disponibile per l&#39;architettura Pro standard o scalata): consente di ridimensionare la capacità CPU dei nodi esistenti per soddisfare le modifiche della domanda.
+
+
+## Abilita ridimensionamento automatico
+
+Per attivare o disattivare il ridimensionamento automatico orizzontale o verticale per il progetto [!DNL Adobe Commerce on cloud infrastructure], [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Scegli i seguenti motivi nel ticket:
+
+- **Motivo contatto**: richiesta di modifica dell&#39;infrastruttura
+- **Motivo del contatto per l&#39;infrastruttura Adobe Commerce**: altra richiesta di modifica dell&#39;infrastruttura
+
+>[!IMPORTANT]
+>
+>La funzione di ridimensionamento automatico acquisisce gli eventi imprevisti. Anche se è stato abilitato il ridimensionamento automatico, Adobe consiglia di continuare a [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) se si prevede un evento imminente.
+
+### Test di carico
+
+Adobe abilita prima il ridimensionamento automatico nel cluster _staging_ del progetto cloud. Dopo aver eseguito e completato il test di carico nell’ambiente, Adobe abilita il ridimensionamento automatico nel cluster di produzione. Per informazioni sul test di carico, vedere [Test delle prestazioni](../launch/checklist.md#performance-testing).
+
+## Ridimensionamento automatico orizzontale
+
+Attualmente, questa funzione è disponibile solo per i progetti configurati con [Architettura ridimensionata](scaled-architecture.md).
+
+Il ridimensionamento automatico orizzontale aggiunge o rimuove i nodi del server web per i progetti con architettura scalata. In alternativa, [ridimensionamento automatico verticale](#vertical-auto-scaling) ridimensiona la capacità CPU dei nodi esistenti per adattarsi alle modifiche della domanda.
+
+### Nodi del server web
 
 Il [livello Web](scaled-architecture.md#web-tier) viene ridimensionato per soddisfare un aumento delle richieste di elaborazione e requisiti di traffico più elevati. Attualmente, la funzione di ridimensionamento automatico viene ridimensionata solo orizzontalmente aggiungendo o rimuovendo nodi del server web.
 
 Un evento di ridimensionamento automatico si verifica quando l’utilizzo e il traffico di CPU raggiungono una soglia predefinita:
 
-- **Nodi aggiunti**: CPU/core in tutti i nodi Web attivi hanno una capacità del 75% per 1 minuto e il traffico aumenta del 20% per 5 minuti consecutivi.
-- **Nodi rimossi**: CPU/core in tutti i nodi Web attivi vengono caricati al 60% per 20 minuti. I nodi vengono rimossi nell’ordine in cui sono stati aggiunti.
+- **Nodi aggiunti** — CPU/core in tutti i nodi Web attivi hanno una capacità del 75% per 1 minuto e il traffico aumenta del 20% per 5 minuti consecutivi.
+- **Nodi rimossi** — CPU/core in tutti i nodi Web attivi vengono caricati al 60% per 20 minuti. I nodi vengono rimossi nell’ordine in cui sono stati aggiunti.
 
 Le soglie minima e massima sono determinate e impostate in base ai limiti delle risorse contrattuali di ciascun commerciante; ciò riduce il rischio di scalabilità infinita.
 
-## Monitorare le soglie con New Relic
+### Monitorare le soglie con New Relic
 
 È possibile utilizzare il servizio [New Relic](../monitor/new-relic-service.md) per monitorare determinate soglie, ad esempio il numero di host e l&#39;utilizzo di CPU. Le query New Relic seguenti utilizzano una notazione variabile per `cluster-id` solo a scopo esemplificativo.
 
@@ -45,7 +70,7 @@ Le soglie minima e massima sono determinate e impostate in base ai limiti delle 
 >Per un riferimento sulla creazione di query, vedere [Sintassi NRQL, clausole e funzioni](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/) nella documentazione di _New Relic_.
 >Utilizza le tue query per creare una [dashboard di New Relic](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/).
 
-### Numero di host
+#### Numero di host
 
 L’esempio di query New Relic che segue mostra il conteggio degli host all’interno dell’ambiente:
 
@@ -57,7 +82,7 @@ Nella schermata seguente, **Host APM visualizzati** si riferisce al numero di ho
 
 ![Numero host New Relic](../../assets/new-relic/host-count.png)
 
-### Utilizzo di CPU
+#### Utilizzo di CPU
 
 L’esempio di query New Relic seguente mostra l’utilizzo di CPU per i nodi web:
 
@@ -66,21 +91,6 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 ```
 
 ![Nodi Web New Relic - Utilizzo CPU](../../assets/new-relic/web-node-cpu-usage.png)
-
-## Abilita ridimensionamento automatico
-
-Per abilitare o disabilitare il ridimensionamento automatico per il progetto di infrastruttura cloud Adobe Commerce, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket). Scegli i seguenti motivi nel ticket:
-
-- **Motivo contatto**: richiesta di modifica dell&#39;infrastruttura
-- **Motivo del contatto per l&#39;infrastruttura Adobe Commerce**: altra richiesta di modifica dell&#39;infrastruttura
-
->[!IMPORTANT]
->
->La funzione di ridimensionamento automatico acquisisce gli eventi imprevisti. Anche se è stato abilitato il ridimensionamento automatico, Adobe consiglia di continuare a [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) se si prevede un evento imminente.
-
-### Test di carico
-
-Adobe abilita prima il ridimensionamento automatico nel cluster _staging_ del progetto cloud. Dopo aver eseguito e completato il test di carico nell’ambiente, Adobe abilita il ridimensionamento automatico nel cluster di produzione. Per informazioni sul test di carico, vedere [Test delle prestazioni](../launch/checklist.md#performance-testing).
 
 ### IP
 
@@ -92,3 +102,27 @@ Ad esempio:
 - Se il inserisco nell&#39;elenco Consentiti di contiene gli indirizzi IP per i nodi di servizio (1, 2 e 3) e i nodi web (4, 5 e 6), in questo caso tutti e sei i nodi, non è richiesta alcuna azione.
 - Se il inserisco nell&#39;elenco Consentiti di contiene gli indirizzi IP _only_ per i nodi Web (4, 5 e 6), è necessario aggiornare il inserisco nell&#39;elenco Consentiti di per includere gli indirizzi IP per i nodi di servizio.
 
+## Ridimensionamento automatico verticale
+
+Oltre al tradizionale [ridimensionamento automatico orizzontale](#auto-scaling), [!DNL Adobe Commerce on cloud infrastructure] offre anche il ridimensionamento automatico verticale sia per i progetti di architettura pro standard che per quelli con architettura scalata.
+
+Invece di aggiungere o rimuovere nodi, il ridimensionamento automatico verticale ridimensiona la capacità CPU dei nodi esistenti per adattarsi alle modifiche della domanda. Questo integra il ridimensionamento automatico orizzontale, che aggiunge o rimuove i nodi del server web per i progetti con architettura ridimensionata.
+
+- **Nodi aggiunti**: non applicabile. Il ridimensionamento automatico verticale ridimensiona i nodi esistenti anziché aggiungerne di nuovi.
+- **Dimensione nodo in eccesso**: un nodo viene ridimensionato alla successiva dimensione di istanza superiore quando la pressione di memoria supera la soglia definita. Per ogni evento di scalatura viene applicato un solo aumento di dimensione.
+- **Riduzione dimensioni nodo**: i nodi vengono ridimensionati automaticamente dopo la riduzione della domanda. Le dimensioni minima e massima vengono impostate in base al modello di utilizzo di ciascun progetto e ai limiti delle risorse contrattuali, riducendo il rischio di inutili ridimensionamenti.
+
+### Ridimensionamento automatico delle soglie
+
+Gli eventi di ridimensionamento automatico verticale vengono attivati utilizzando Pressure Stall Information (PSI) per la memoria su Linux, che misura quanto tempo un sistema trascorre in stallo a causa della pressione della memoria. Adobe imposta le soglie in base ai limiti delle risorse previste dal contratto e ai modelli di utilizzo del progetto; gli esercenti non possono attualmente configurarle.
+
+### Monitorare le soglie con New Relic
+
+È possibile utilizzare il servizio [!DNL New Relic] per monitorare i dettagli dell&#39;istanza dell&#39;infrastruttura, incluse le dimensioni e il tipo dell&#39;istanza. Configura gli avvisi in New Relic in modo che vengano notificati ogni volta che un evento di ridimensionamento automatico verticale cambia le dimensioni o il tipo di un’istanza.
+
+### Impatto sull’ambiente
+
+Il ridimensionamento automatico verticale ha il seguente impatto sull’ambiente:
+
+- **Tempo di inattività**: non è previsto alcun tempo di inattività quando un nodo viene ridimensionato.
+- **Intervallo**: il ridimensionamento di un nodo richiede in genere 20-30 minuti. Il nodo viene temporaneamente rimosso dal load balancer mentre è in corso il ridimensionamento.
