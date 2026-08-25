@@ -21,4 +21,4 @@ ht-degree: 0%
 + [Accedi a  [!DNL Cloud Console]](cloud-console.md)
 + [Accedi alla vetrina](access-storefront.md)
 + [Prepararsi per lo sviluppo](prepare-workspace.md)
-+ [Torna alla guida dell’infrastruttura cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
++ [Torna alla guida dell’infrastruttura cloud](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview)

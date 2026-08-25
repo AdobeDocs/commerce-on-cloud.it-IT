@@ -25,7 +25,7 @@ ht-degree: 1%
 
 Il servizio `mysql` fornisce l&#39;archiviazione dei dati persistenti in base alle versioni da 10.2 a 10.4 di [MariaDB](https://mariadb.com/), che supportano il motore di archiviazione [XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) e le funzionalità reimplementate di MySQL 5.6 e 5.7.
 
-La reindicizzazione su MariaDB 10.4 richiede più tempo rispetto ad altre versioni di MariaDB o MySQL. Consulta [Indicizzatori](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers) nella _Guida alle best practice per le prestazioni_.
+La reindicizzazione su MariaDB 10.4 richiede più tempo rispetto ad altre versioni di MariaDB o MySQL. Consulta [Indicizzatori](https://experienceleague.adobe.com/it/docs/commerce-operations/performance-best-practices/configuration#indexers) nella _Guida alle best practice per le prestazioni_.
 
 >[!WARNING]
 >
@@ -84,7 +84,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-`properties` nell&#39;esempio precedente modifica le impostazioni predefinite di `optimizer` come [consigliato nella guida alle best practice per le prestazioni](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers).
+`properties` nell&#39;esempio precedente modifica le impostazioni predefinite di `optimizer` come [consigliato nella guida alle best practice per le prestazioni](https://experienceleague.adobe.com/it/docs/commerce-operations/performance-best-practices/configuration#indexers).
 
 **Opzioni di configurazione MariaDB**:
 
@@ -100,7 +100,7 @@ mysql:
 
 In alternativa, è possibile impostare più utenti con autorizzazioni diverse per accedere al database `main`.
 
-Per impostazione predefinita, un endpoint denominato `mysql` dispone dell&#39;accesso di amministratore al database. Per impostare più utenti del database, è necessario definire più endpoint nel file `services.yaml` e dichiarare le relazioni nel file `.magento.app.yaml`. Per gli ambienti di staging e produzione Pro, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere l&#39;utente aggiuntivo.
+Per impostazione predefinita, un endpoint denominato `mysql` dispone dell&#39;accesso di amministratore al database. Per impostare più utenti del database, è necessario definire più endpoint nel file `services.yaml` e dichiarare le relazioni nel file `.magento.app.yaml`. Per gli ambienti di staging e produzione Pro, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere l&#39;utente aggiuntivo.
 
 Utilizza un array nidificato per definire gli endpoint per l’accesso utente specifico. Ogni endpoint può designare l&#39;accesso a uno o più schemi (database) e livelli di autorizzazione diversi per ciascuno di essi.
 
@@ -224,13 +224,13 @@ Per accedere direttamente al database MariaDB è necessario utilizzare un SSH pe
 >
 >Questa funzione è disponibile solo nei cluster Pro Production e Staging.
 
-A volte è necessario connettersi al database secondario per migliorare le prestazioni del database o risolvere i problemi di blocco del database. Se questa configurazione è necessaria, utilizzare `"port" : 3304` per stabilire la connessione. Consulta l&#39;argomento [Best practice per configurare la connessione slave MySQL](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration) nella _Guida alle best practice per l&#39;implementazione_.
+A volte è necessario connettersi al database secondario per migliorare le prestazioni del database o risolvere i problemi di blocco del database. Se questa configurazione è necessaria, utilizzare `"port" : 3304` per stabilire la connessione. Consulta l&#39;argomento [Best practice per configurare la connessione slave MySQL](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration) nella _Guida alle best practice per l&#39;implementazione_.
 
 ## Risoluzione dei problemi
 
 Consulta i seguenti articoli di supporto Adobe Commerce per assistenza nella risoluzione dei problemi di MySQL:
 
-- [Verifica delle query lente ed elabora MySQL](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
-- [Crea dump del database su Cloud](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
+- [Verifica delle query lente ed elabora MySQL](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
+- [Crea dump del database su Cloud](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
 - [Risoluzione dei problemi relativi allo strumento di migrazione dei dati](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
-- [Aggiornamento Adobe Commerce: da compatto a tabelle dinamiche 2.2.x, da 2.3.x a 2.4.x](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)
+- [Aggiornamento Adobe Commerce: da compatto a tabelle dinamiche 2.2.x, da 2.3.x a 2.4.x](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Variables, proprietà
 
-È possibile utilizzare variabili di ambiente basate su applicazioni per personalizzare le configurazioni degli archivi. Queste variabili utilizzano una sintassi specifica. Vedi [Ignora impostazioni di configurazione](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/override-config-settings) nella _Guida alla configurazione_.
+È possibile utilizzare variabili di ambiente basate su applicazioni per personalizzare le configurazioni degli archivi. Queste variabili utilizzano una sintassi specifica. Vedi [Ignora impostazioni di configurazione](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/paths/override-config-settings) nella _Guida alla configurazione_.
 
 Le seguenti variabili di ambiente incluse nel file `.magento.app.yaml` sono necessarie per versioni specifiche dell&#39;applicazione [!DNL Commerce].
 

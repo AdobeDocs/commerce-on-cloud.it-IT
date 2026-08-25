@@ -193,7 +193,7 @@ stage:
 - **Predefinito**—`quick`
 - **Versione**—Adobe Commerce 2.2.0 e versioni successive
 
-Personalizzare la [strategia di distribuzione](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) per il contenuto statico. Vedere [Distribuire i file di visualizzazione statici](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
+Personalizzare la [strategia di distribuzione](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) per il contenuto statico. Vedere [Distribuire i file di visualizzazione statici](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
 
 Utilizza queste opzioni _only_ se hai più di una lingua:
 
