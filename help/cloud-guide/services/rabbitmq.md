@@ -14,16 +14,16 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c43a709ee9c3b974cef08e36170dbb2ab240564f
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 572
+source-wordcount: 573
 ht-degree: 0%
 
 ---
 
 # Configura il servizio [!DNL RabbitMQ]
 
-[MQF](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=it) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
+[MQF](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework) è un sistema di Adobe Commerce che consente a un [modulo](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/glossary#module) di pubblicare messaggi nelle code. Definisce inoltre i consumatori che ricevono i messaggi in modo asincrono.
 
 MQF utilizza [RabbitMQ](https://www.rabbitmq.com/) come broker di messaggistica, che fornisce una piattaforma scalabile per l&#39;invio e la ricezione di messaggi. Include inoltre un meccanismo per l’archiviazione dei messaggi non consegnati. [!DNL RabbitMQ] è basato sulla specifica AMQP 0.9.1.
 

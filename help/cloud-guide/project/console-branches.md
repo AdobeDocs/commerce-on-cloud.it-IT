@@ -17,9 +17,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1638
+source-wordcount: 1642
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ La strategia di diramazione utilizza un flusso di lavoro Git comune in cui puoi 
 
 Il tuo account supporta un numero limitato di ![rami attivi](../../assets/icon-active.png){width="32"} (attivi) e un numero illimitato di ![rami inattivi](../../assets/icon-inactive.png){width="32"} (inattivi). Gestire i rami attivi e inattivi aggiungendo o eliminando un ramo utilizzando solo [!DNL Cloud Console] o Cloud CLI. Prima di eliminare un ramo, disattivalo, che rimane nell&#39;elenco _Ambienti_ come _inattivo_. Puoi riattivare il ramo in un secondo momento oppure [eliminare il ramo](../dev-tools/cloud-cli-overview.md#) nelle impostazioni dell&#39;ambiente o utilizzando Cloud CLI.
 
-Se hai bisogno di altri ambienti attivi per lo sviluppo, invia un [ticket di supporto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket).
+Se hai bisogno di altri ambienti attivi per lo sviluppo, invia un [ticket di supporto](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
 **Per aggiungere un ramo**:
 

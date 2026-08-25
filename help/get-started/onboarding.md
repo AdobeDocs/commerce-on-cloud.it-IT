@@ -11,9 +11,9 @@ feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 517
+source-wordcount: 521
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Puoi aggiungere utenti registrati al tuo Adobe Commerce solo a progetti e ambien
 
 ### Accesso all’account condiviso
 
-Il proprietario della licenza può impostare l’accesso condiviso per l’account. L’accesso condiviso consente a dipendenti e fornitori di servizi affidabili di utilizzare il Centro assistenza per inviare e tenere traccia dei ticket di supporto relativi ai progetti di infrastruttura cloud di Adobe Commerce. Per istruzioni sull&#39;installazione, vedere l&#39;articolo [Accesso condiviso](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#shared-access) nell&#39;Help Center.
+Il proprietario della licenza può impostare l’accesso condiviso per l’account. L’accesso condiviso consente a dipendenti e fornitori di servizi affidabili di utilizzare il Centro assistenza per inviare e tenere traccia dei ticket di supporto relativi ai progetti di infrastruttura cloud di Adobe Commerce. Per istruzioni sull&#39;installazione, vedere l&#39;articolo [Accesso condiviso](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access) nell&#39;Help Center.
 
 ### [!DNL Cloud Console]
 

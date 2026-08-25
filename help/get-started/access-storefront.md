@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 362
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Dopo aver inviato la richiesta di modifica della password, controllare l&#39;e-m
 
 >[!TIP]
 >
->Se la reimpostazione della password non riesce o non è possibile accedere al pannello Amministratore, un utente con accesso amministratore può connettersi al progetto utilizzando SSH e aggiungere un utente amministratore utilizzando il comando CLI `admin:user:create`. Consulta [Creare, modificare o sbloccare un account amministratore](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=it) nella _Guida all&#39;installazione_.
+>Se la reimpostazione della password non riesce o non è possibile accedere al pannello Amministratore, un utente con accesso amministratore può connettersi al progetto utilizzando SSH e aggiungere un utente amministratore utilizzando il comando CLI `admin:user:create`. Consulta [Creare, modificare o sbloccare un account amministratore](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/tutorials/admin) nella _Guida all&#39;installazione_.
 
 ## Monitorare lo stato del sito
 

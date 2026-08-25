@@ -1,8 +1,8 @@
 ---
-source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
+source-git-commit: eab32e2f5155e3aa6c0924fa332cbef6e4dc502d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 # Contribuire
@@ -13,13 +13,13 @@ Di seguito è riportato un set di linee guida da seguire quando si contribuisce 
 
 ## Codice di condotta
 
-Il progetto aderisce al [Codice di condotta](code-of-conduct.md) di Adobe. Partecipando,
+Il progetto aderisce al [codice di condotta](code-of-conduct.md) di Adobe. Partecipando,
 è previsto che tu mantenga questo codice. Segnala eventuali condotte scorrette a
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Documentazione della Guida per i collaboratori
 
-Consulta la [Guida per i collaboratori](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
+Consulta la [Guida per i collaboratori](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
 ## Hai una domanda?
 
@@ -59,7 +59,7 @@ I problemi di sicurezza non devono essere segnalati in questo Issue tracker. [se
 
 ## Novità
 
-Se le modifiche introducono nuovi argomenti, aggiornamenti significativi o correzioni che devono essere evidenziati, puoi aggiungere una breve descrizione alla [sezione Novità](https://experienceleague.adobe.com/it/docs/commerce-cloud-service/user-guide/overview#whats-new) direttamente dal corpo della richiesta di pull.
+Se le modifiche introducono nuovi argomenti, aggiornamenti significativi o correzioni che devono essere evidenziati, puoi aggiungere una breve descrizione alla [sezione Novità](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview#whats-new) direttamente dal corpo della richiesta di pull.
 
 Per aggiungere un&#39;evidenziazione Novità:
 
@@ -67,29 +67,29 @@ Per aggiungere un&#39;evidenziazione Novità:
 
    ```text
    whatsnew
-   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html).
+   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html).
    ```
 
    oppure, se sono presenti più argomenti:
 
    ```text
    whatsnew
-   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/third-target-topic.html).
+   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/third-target-topic.html).
    ```
 
    è inoltre possibile utilizzare gli elenchi per evidenziare più elementi:
 
    ```text
    whatsnew
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
    ```text
    whatsnew
    The following changes were made to the documentation:
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
 1. Aggiungi le etichette supportate che indicano il tipo di modifica. Le etichette supportate includono etichette per ogni tipo di modifica, ad esempio:
@@ -103,4 +103,4 @@ Per aggiungere un&#39;evidenziazione Novità:
 1. La parte `whatsnew` deve iniziare dal tag `whatsnew` e trovarsi alla fine del corpo della richiesta di pull.
 1. Le descrizioni delle modifiche devono includere collegamenti di lavoro. Verifica che i collegamenti siano corretti e reindirizza agli argomenti previsti. Se l’argomento è nuovo, verifica che i collegamenti funzionino dopo aver unito la richiesta di pull e pubblicato il nuovo argomento. È consentito correggere i collegamenti dopo l’unione della richiesta di pull.
 
-Ad esempio, cerca nelle richieste pull chiuse nell&#39;archivio di per vedere come vengono formattati gli elementi di rilievo esistenti e confrontarli con la [sezione Novità](https://experienceleague.adobe.com/it/docs/commerce-cloud-service/user-guide/overview#whats-new) per vedere come appaiono nella documentazione.
+Ad esempio, cerca nelle richieste pull chiuse nell&#39;archivio di per vedere come vengono formattati gli elementi di rilievo esistenti e confrontarli con la [sezione Novità](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview#whats-new) per vedere come appaiono nella documentazione.

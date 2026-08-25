@@ -11,16 +11,16 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 502
+source-wordcount: 503
 ht-degree: 0%
 
 ---
 
 # Installazione senza downtime
 
-Adobe Commerce su infrastruttura cloud esegue l&#39;applicazione in modalità [_manutenzione_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=it#production-mode) durante la fase di distribuzione, che porta il sito offline fino al completamento della distribuzione. Il periodo di tempo in cui il sito di produzione è in modalità di manutenzione dipende dalle dimensioni del sito, dal numero di modifiche applicate durante la distribuzione e dalla configurazione per la distribuzione di contenuto statico. È possibile configurare il progetto in modo che venga distribuito con un effetto di downtime **zero**.
+Adobe Commerce su infrastruttura cloud esegue l&#39;applicazione in modalità [_manutenzione_](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/setup/application-modes#production-mode) durante la fase di distribuzione, che porta il sito offline fino al completamento della distribuzione. Il periodo di tempo in cui il sito di produzione è in modalità di manutenzione dipende dalle dimensioni del sito, dal numero di modifiche applicate durante la distribuzione e dalla configurazione per la distribuzione di contenuto statico. È possibile configurare il progetto in modo che venga distribuito con un effetto di downtime **zero**.
 
 Durante il processo di distribuzione, tutte le connessioni si accodano per un massimo di 5 minuti mantenendo tutte le sessioni attive e le azioni in sospeso, ad esempio l’aggiunta al carrello o l’estrazione. Dopo la distribuzione, la coda viene rilasciata e le connessioni continuano senza interruzioni. Per utilizzare questo _blocco della connessione_ a tuo vantaggio e ridurre la distribuzione a _zero_ tempi di inattività, devi configurare il progetto per utilizzare la strategia di distribuzione più efficiente.
 

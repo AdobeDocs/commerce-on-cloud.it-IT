@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 768
+source-wordcount: 860
 ht-degree: 0%
 
 ---
@@ -52,9 +52,9 @@ La generazione di contenuto statico durante la fase di build con HTML minimizzat
 La generazione di contenuto statico richiede l’accesso a temi e impostazioni internazionali. Adobe Commerce memorizza i temi nel file system, che è accessibile durante la fase di build; tuttavia, Adobe Commerce memorizza le lingue nel database. Il database è _non_ disponibile durante la fase di compilazione. Per generare il contenuto statico durante la fase di compilazione, è necessario utilizzare il comando `config:dump` nel pacchetto `ece-tools` per spostare le impostazioni internazionali nel file system. Legge le impostazioni locali e le salva nel file `app/etc/config.php`.
 
 >[!NOTE]
->Dopo aver eseguito il comando `config:dump` nel pacchetto `ece-tools`, le configurazioni scaricate nel file `config.php` [&#x200B; sono bloccate (disattivate) nel dashboard di amministrazione](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). L&#39;unico modo per aggiornare tali configurazioni nell&#39;amministratore è eliminarle dal file localmente e ridistribuire il progetto.
+>Dopo aver eseguito il comando `config:dump` nel pacchetto `ece-tools`, le configurazioni scaricate nel file `config.php` [&#x200B; sono bloccate (disattivate) nel dashboard di amministrazione](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-26879). l’unico modo per aggiornare tali configurazioni nell’amministratore è eliminarle dal file localmente e ridistribuire il progetto.
 >Inoltre, ogni volta che si aggiunge un nuovo store/gruppo di store/sito Web all&#39;istanza, è necessario ricordarsi di eseguire il comando `config:dump` per assicurarsi che il database sia sincronizzato. Puoi anche scegliere [quali configurazioni scaricare](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) nel file `config.php`.
->Se si elimina la configurazione del gruppo di store/sito Web dal file `config.php` perché i campi sono disattivati ma non vengono eseguiti, le nuove entità che non sono state scaricate verranno eliminate dal database nella distribuzione successiva.
+>Se si elimina la configurazione del gruppo store/sito Web dal file `config.php` perché i campi sono disattivati ma non vengono eseguiti, le nuove entità che non sono state scaricate verranno eliminate dal database nella distribuzione successiva.
 
 **Per configurare il progetto in modo da generare SCD sulla build**:
 

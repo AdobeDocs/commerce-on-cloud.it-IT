@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1155
+source-wordcount: 1180
 ht-degree: 0%
 
 ---
@@ -85,7 +85,8 @@ Quando sei pronto per avviare il sito, devi aggiornare la configurazione DNS per
 
 >[!IMPORTANT]
 >
->Le istruzioni DNS in [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sezione 2.4**) indicano che:>_Un record CNAME non può coesistere con altri dati. In altre parole, se suzy.podunk.xx è un alias per sue.podunk.xx, non è possibile avere un record MX per suzy.podunk.edu, un record A o persino un record TXT._
+>Le istruzioni DNS in [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sezione 2.4**) indicano che:
+>_Un record CNAME non può coesistere con altri dati. In altre parole, se suzy.podunk.xx è un alias per sue.podunk.xx, non è possibile avere un record MX per suzy.podunk.edu, un record A o persino un record TXT._
 >
 >Per questo motivo, i record DNS devono essere di tipo `CNAME` per i sottodomini e di tipo `A` per i domini APEX (domini radice). L’eliminazione di questa regola può causare interruzioni del servizio di posta o della propagazione DNS, perché non è più possibile aggiungere altri record, ad esempio MX o NS. Alcuni provider DNS possono aggirare questo problema utilizzando personalizzazioni interne, ma il rispetto dello standard garantisce stabilità e flessibilità (ad esempio la modifica del provider DNS).
 
@@ -103,7 +104,7 @@ Quando sei pronto per avviare il sito, devi aggiornare la configurazione DNS per
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **NOTA**: puoi anche aggiornare l&#39;URL di base dall&#39;amministratore. Consulta [URL store](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=it) nella _Guida agli store e all&#39;esperienza di acquisto di Adobe Commerce_.
+   **NOTA**: puoi anche aggiornare l&#39;URL di base dall&#39;amministratore. Consulta [URL store](https://experienceleague.adobe.com/it/docs/commerce-admin/stores-sales/site-store/store-urls) nella _Guida agli store e all&#39;esperienza di acquisto di Adobe Commerce_.
 
 1. Attendi alcuni minuti per l’aggiornamento del sito.
 
@@ -155,7 +156,7 @@ Puoi eseguire il test anche utilizzando le seguenti opzioni di terze parti:
 
 - [Rimuovere gli utenti che non fanno più parte del progetto di infrastruttura cloud di Adobe Commerce](../project/user-access.md)
 
-- [Configurare l’autenticazione a due fattori](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
+- [Configurare l’autenticazione a due fattori](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication)
 
 ## Monitoraggio delle prestazioni
 

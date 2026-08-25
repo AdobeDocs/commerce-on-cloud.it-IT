@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2168
+source-wordcount: 2170
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ Quando sviluppi funzioni, aggiungi estensioni e progetta temi, è utile disporre
 
 Per facilitare l’esportazione dei dati di produzione come dati di test da utilizzare negli ambienti di staging e integrazione:
 
-- [Esegui i comandi CLI delle utilità di supporto](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=it) (scelta consigliata) durante l&#39;esportazione di un backup protetto dei dati del cliente e dell&#39;archivio utilizzando la chiave di crittografia Adobe Commerce
+- [Esegui i comandi CLI delle utilità di supporto](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/run-support-utilities) (scelta consigliata) durante l&#39;esportazione di un backup protetto dei dati del cliente e dell&#39;archivio utilizzando la chiave di crittografia Adobe Commerce
 
 - Strumento [Raccolta dati](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/support#data-collector) per la generazione e l&#39;esportazione di dati
 
@@ -185,7 +185,7 @@ Per eseguire la migrazione di questi dati, vedere [Eseguire la migrazione e dist
 
 >[!NOTE]
 >
->Prima di inviare i dati a un altro ambiente, è consigliabile bonificare i dati. Sono disponibili alcune opzioni, tra cui [utilizzare le utilità di supporto](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=it) o sviluppare uno script per eliminare i dati dei clienti.
+>Prima di inviare i dati a un altro ambiente, è consigliabile bonificare i dati. Sono disponibili alcune opzioni, tra cui [utilizzare le utilità di supporto](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/run-support-utilities) o sviluppare uno script per eliminare i dati dei clienti.
 
 >[!WARNING]
 >

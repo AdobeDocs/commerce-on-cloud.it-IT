@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 873
+source-wordcount: 874
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Il seguente codice snippet VCL personalizzato (formato JSON) mostra la logica pe
 }
 ```
 
-Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=it#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
+Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
 
 - `name` — Nome dello snippet VCL. Per questo esempio, `allowlist`.
 

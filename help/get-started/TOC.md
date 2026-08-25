@@ -5,9 +5,9 @@ user-guide-description: Avvia la configurazione iniziale dell'applicazione  [!DN
 feature: Cloud
 product: magento
 recommendations: noDisplay, noCatalog
-source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '53'
 ht-degree: 0%
 
 ---
@@ -21,4 +21,4 @@ ht-degree: 0%
 + [Accedi a  [!DNL Cloud Console]](cloud-console.md)
 + [Accedi alla vetrina](access-storefront.md)
 + [Prepararsi per lo sviluppo](prepare-workspace.md)
-+ [Torna alla guida dell’infrastruttura cloud](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=it)
++ [Torna alla guida dell’infrastruttura cloud](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/overview)

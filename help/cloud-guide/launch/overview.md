@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 966
+source-wordcount: 970
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Come parte della sottoscrizione di Adobe Commerce sull’infrastruttura cloud, A
 
 >[!NOTE]
 >
->Se desideri distribuire il tuo certificato SSL di convalida estesa per la tua società invece di utilizzare il certificato Let&#39;s Encrypt, contatta il tuo CTA o [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket).
+>Se desideri distribuire il tuo certificato SSL di convalida estesa per la tua società invece di utilizzare il certificato Let&#39;s Encrypt, contatta il tuo CTA o [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
 ## Configurare lo strumento Security Scan
 

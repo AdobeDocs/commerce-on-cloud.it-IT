@@ -18,9 +18,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1982
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Esamina le best practice e le considerazioni seguenti per il processo di distrib
 
 - **Verificare le versioni e le relazioni del servizio e la possibilità di connettersi**
 
-  Verifica i servizi disponibili per l’applicazione e assicurati di utilizzare la versione più recente e compatibile. Per le versioni consigliate, vedere [Relazioni di servizio](../services/services-yaml.md#service-relationships) e [Requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella _Guida all&#39;installazione_.
+  Verifica i servizi disponibili per l’applicazione e assicurati di utilizzare la versione più recente e compatibile. Per le versioni consigliate, vedere [Relazioni di servizio](../services/services-yaml.md#service-relationships) e [Requisiti di sistema](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) nella _Guida all&#39;installazione_.
 
 - **Eseguire il test in locale e nell&#39;ambiente di integrazione prima di distribuire in staging e produzione**
 
@@ -95,11 +95,11 @@ Esamina le best practice e le considerazioni seguenti per il processo di distrib
 
   Prima di implementare in produzione, completa le seguenti attività:
 
-   - Assicurati di poter connettersi a tutti e tre i nodi nell&#39;ambiente di produzione utilizzando [SSH](../development/secure-connections.md).
+  - Assicurati di poter connettersi a tutti e tre i nodi nell&#39;ambiente di produzione utilizzando [SSH](../development/secure-connections.md).
 
-   - Verificare che gli indicizzatori siano impostati su _Aggiorna secondo pianificazione_. Consulta [Modalità di indicizzazione](https://developer.adobe.com/commerce/php/development/components/indexing/) nella _Guida per gli sviluppatori dell&#39;estensione_.
+  - Verificare che gli indicizzatori siano impostati su _Aggiorna secondo pianificazione_. Consulta [Modalità di indicizzazione](https://developer.adobe.com/commerce/php/development/components/indexing/) nella _Guida per gli sviluppatori dell&#39;estensione_.
 
-   - Prepara l’ambiente aggiornando eventuali variabili specifiche dell’ambiente nel codice di produzione, verificando la disponibilità e la compatibilità del servizio ed apportando eventuali altre modifiche di configurazione richieste.
+  - Prepara l’ambiente aggiornando eventuali variabili specifiche dell’ambiente nel codice di produzione, verificando la disponibilità e la compatibilità del servizio ed apportando eventuali altre modifiche di configurazione richieste.
 
 - **Monitorare il processo di distribuzione**
 
@@ -186,13 +186,13 @@ Se il file `app/etc/config.php` non esiste nel codebase, i file statici vengono 
 
 Sono disponibili due hook di distribuzione. L&#39;hook `pre-deploy.php` completa la pulizia e il recupero necessari delle risorse e del codice generati nell&#39;hook di compilazione. L&#39;hook `php ./vendor/bin/ece-tools deploy` esegue una serie di comandi e script:
 
-- Se Adobe Commerce è **non installato**, viene installato con `bin/magento setup:install`, aggiorna la configurazione di distribuzione, `app/etc/env.php` e il database per l&#39;ambiente specificato, ad esempio Redis e gli URL del sito Web. **Importante:** Quando hai completato la [Prima distribuzione](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=it) durante l&#39;installazione, Adobe Commerce è stato installato e distribuito in tutti gli ambienti.
+- Se Adobe Commerce è **non installato**, viene installato con `bin/magento setup:install`, aggiorna la configurazione di distribuzione, `app/etc/env.php` e il database per l&#39;ambiente specificato, ad esempio Redis e gli URL del sito Web. **Importante:** Quando hai completato la [Prima distribuzione](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/launch/overview) durante l&#39;installazione, Adobe Commerce è stato installato e distribuito in tutti gli ambienti.
 
 - Se Adobe Commerce **è installato**, eseguire gli aggiornamenti necessari. Lo script di distribuzione esegue `bin/magento setup:upgrade` per aggiornare lo schema e i dati del database (necessario dopo gli aggiornamenti dell&#39;estensione o del codice di base) e aggiorna anche la configurazione di distribuzione, `app/etc/env.php` e il database per l&#39;ambiente. Infine, lo script di distribuzione cancella la cache di Adobe Commerce.
 
 - Lo script genera facoltativamente contenuto Web statico utilizzando il comando `magento setup:static-content:deploy`.
 
-- Utilizza gli ambiti (`-s` flag negli script di compilazione) con impostazione predefinita `quick` per la strategia di distribuzione del contenuto statico. È possibile personalizzare la strategia utilizzando la variabile di ambiente [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy). Per informazioni dettagliate su queste opzioni e funzionalità, vedere [Strategie di distribuzione file statici](../deploy/static-content.md) e il flag `-s` per [Distribuire file di visualizzazione statici](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=it).
+- Utilizza gli ambiti (`-s` flag negli script di compilazione) con impostazione predefinita `quick` per la strategia di distribuzione del contenuto statico. È possibile personalizzare la strategia utilizzando la variabile di ambiente [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy). Per informazioni dettagliate su queste opzioni e funzionalità, vedere [Strategie di distribuzione file statici](../deploy/static-content.md) e il flag `-s` per [Distribuire file di visualizzazione statici](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
 
 >[!NOTE]
 >

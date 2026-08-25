@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 672
+source-wordcount: 675
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Anche se questa sezione illustra come ottenere il nome e la versione del Composi
 
 ## Installare un’estensione
 
-Adobe consiglia di lavorare in un ramo di sviluppo quando aggiungi un’estensione all’implementazione. Durante l&#39;installazione di un&#39;estensione, il nome (`<VendorName>_<ComponentName>`) viene inserito automaticamente nel file [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=it). Non è necessario modificare direttamente il file.
+Adobe consiglia di lavorare in un ramo di sviluppo quando aggiungi un’estensione all’implementazione. Durante l&#39;installazione di un&#39;estensione, il nome (`<VendorName>_<ComponentName>`) viene inserito automaticamente nel file [`app/etc/config.php`](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/files/deployment-files). Non è necessario modificare direttamente il file.
 
 **Per installare un&#39;estensione**:
 
@@ -167,7 +167,7 @@ Non abilitare o disabilitare mai un&#39;estensione durante l&#39;accesso agli am
 
 ## Aggiornare un’estensione
 
-Prima di continuare, è necessario il nome e la versione del Compositore per l’estensione. Inoltre, verifica che l’estensione sia compatibile con il progetto e la versione di Adobe Commerce. In particolare, [controlla la versione PHP richiesta](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) prima di iniziare.
+Prima di continuare, è necessario il nome e la versione del Compositore per l’estensione. Inoltre, verifica che l’estensione sia compatibile con il progetto e la versione di Adobe Commerce. In particolare, [controlla la versione PHP richiesta](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) prima di iniziare.
 
 **Per aggiornare un&#39;estensione**:
 
@@ -201,4 +201,4 @@ Prima di continuare, è necessario il nome e la versione del Compositore per l�
    git push origin <branch-names>
    ```
 
-In caso di errori, vedere [Ripristino da errore del componente](../deploy/recover-failed-deployment.md). Per ulteriori informazioni sull&#39;utilizzo delle estensioni con Adobe Commerce, consulta [Estensioni](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=it) nella _Guida per l&#39;amministratore_.
+In caso di errori, vedere [Ripristino da errore del componente](../deploy/recover-failed-deployment.md). Per ulteriori informazioni sull&#39;utilizzo delle estensioni con Adobe Commerce, consulta [Estensioni](https://experienceleague.adobe.com/it/docs/commerce-admin/start/resources/extensions) nella _Guida per l&#39;amministratore_.

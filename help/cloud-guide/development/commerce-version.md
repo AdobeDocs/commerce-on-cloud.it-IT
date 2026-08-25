@@ -15,24 +15,24 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1020
+source-wordcount: 1024
 ht-degree: 0%
 
 ---
 
 # Aggiorna versione Commerce
 
-Puoi aggiornare la base di codice di Adobe Commerce a una versione più recente. Prima di aggiornare l&#39;ambiente, controllare i [requisiti di sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=it) nella _Guida all&#39;installazione_ per i requisiti della versione più recente del software.
+Puoi aggiornare la base di codice di Adobe Commerce a una versione più recente. Prima di aggiornare l&#39;ambiente, controllare i [requisiti di sistema](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) nella _Guida all&#39;installazione_ per i requisiti della versione più recente del software.
 
 A seconda del tipo di ambiente (Sviluppo, Staging o Produzione), le attività di aggiornamento possono includere quanto segue:
 
 - Aggiorna le estensioni di terze parti alla versione più recente supportata.
 - Per i progetti Pro, è necessario inviare un ticket di supporto Adobe Commerce per installare o aggiornare i servizi negli ambienti di staging e produzione.
 - Per i rami di sviluppo/integrazione/PR:
-   - Aggiornare il file `.magento/services.yaml` con le nuove versioni di MariaDB (MySQL), OpenSearch, RabbitMQ e Redis per verificarne la compatibilità con le nuove versioni di Adobe Commerce.
-   - Aggiornare il file `.magento.app.yaml` con le nuove impostazioni per hook e variabili di ambiente.
+  - Aggiornare il file `.magento/services.yaml` con le nuove versioni di MariaDB (MySQL), OpenSearch, RabbitMQ e Redis per verificarne la compatibilità con le nuove versioni di Adobe Commerce.
+  - Aggiornare il file `.magento.app.yaml` con le nuove impostazioni per hook e variabili di ambiente.
 
 {{upgrade-tip}}
 
@@ -156,7 +156,7 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
 
 1. Esaminare le patch attualmente applicate:
 
-   - Se nella directory `m2-hotfixes` sono installate patch, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) e collabora con il supporto Adobe Commerce per verificare quali patch possono ancora essere applicate alla nuova versione. Rimuovere le patch non applicabili dalla directory `m2-hotfixes`.
+   - Se nella directory `m2-hotfixes` sono installate patch, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case) e collabora con il supporto Adobe Commerce per verificare quali patch possono ancora essere applicate alla nuova versione. Rimuovere le patch non applicabili dalla directory `m2-hotfixes`.
 
    - Se nel file `.magento.env.yaml` sono state applicate [patch di qualità], verificare se è ancora possibile applicarle alla nuova versione. Rimuovere le patch non applicabili dalla sezione `QUALITY_PATCHES` del file `.magento.env.yaml`.
 

@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1287
+source-wordcount: 1369
 ht-degree: 0%
 
 ---
@@ -120,13 +120,13 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >[!TIP]
 >
 >Negli ambienti Pro Staging e Pro Production, la rotazione, la compressione e la rimozione automatica dei registri sono attivate per i file di registro con un nome di file fisso. Ogni tipo di file di registro ha un pattern e una durata di rotazione.
->Per informazioni dettagliate sulla rotazione dei registri e sulla durata dei registri compressi dell&#39;ambiente, vedere: `/etc/logrotate.conf` e `/etc/logrotate.d/<various>`.
->Per gli ambienti Pro Staging e Pro Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=it#submit-ticket) per richiedere modifiche alla configurazione della rotazione del registro.
+>I dettagli completi sulla rotazione dei registri dell&#39;ambiente e sulla durata dei registri compressi sono disponibili in: `/etc/logrotate.conf` e `/etc/logrotate.d/<various>`.
+>Per gli ambienti Pro Staging e Pro Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere modifiche alla configurazione della rotazione del registro.
 
 >[!TIP]
 >
 >La rotazione dei registri non può essere configurata negli ambienti di integrazione Pro.
->Per l&#39;integrazione Pro, è necessario implementare una soluzione o uno script personalizzato e [configurare il cron](../application/crons-property.md) per eseguire lo script in base alle esigenze.
+>Per l&#39;integrazione Pro, devi implementare una soluzione o uno script personalizzato e [configurare il cron](../application/crons-property.md) per eseguire lo script in base alle esigenze.
 
 >[!NOTE]
 >
@@ -232,7 +232,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-La maggior parte dei messaggi di errore contiene una descrizione e un’azione suggerita. Utilizza il [Riferimento messaggio di errore per ECE-Tools](../dev-tools/error-reference.md) per cercare il codice di errore per ulteriori indicazioni. Per ulteriori informazioni, utilizzare [Risoluzione dei problemi di distribuzione di Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=it).
+La maggior parte dei messaggi di errore contiene una descrizione e un’azione suggerita. Utilizza il [Riferimento messaggio di errore per ECE-Tools](../dev-tools/error-reference.md) per cercare il codice di errore per ulteriori indicazioni. Per ulteriori informazioni, utilizzare [Risoluzione dei problemi di distribuzione di Adobe Commerce](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-29640).
 
 ## Registri applicazioni
 

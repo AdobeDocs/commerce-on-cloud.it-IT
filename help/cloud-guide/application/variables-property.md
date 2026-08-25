@@ -11,16 +11,16 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 85
+source-wordcount: 86
 ht-degree: 0%
 
 ---
 
 # Variables, proprietà
 
-È possibile utilizzare variabili di ambiente basate su applicazioni per personalizzare le configurazioni degli archivi. Queste variabili utilizzano una sintassi specifica. Vedi [Ignora impostazioni di configurazione](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=it) nella _Guida alla configurazione_.
+È possibile utilizzare variabili di ambiente basate su applicazioni per personalizzare le configurazioni degli archivi. Queste variabili utilizzano una sintassi specifica. Vedi [Ignora impostazioni di configurazione](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/paths/override-config-settings) nella _Guida alla configurazione_.
 
 Le seguenti variabili di ambiente incluse nel file `.magento.app.yaml` sono necessarie per versioni specifiche dell&#39;applicazione [!DNL Commerce].
 

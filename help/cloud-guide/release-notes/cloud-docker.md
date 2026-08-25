@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 4509
 ht-degree: 0%
@@ -475,7 +475,7 @@ Data di rilascio: 5 febbraio 2020
 
   - ![nuova icona](../../assets/new.svg) **Aggiunta di un&#39;opzione di configurazione del servizio per esporre la porta del database all&#39;host**. Utilizzare l&#39;opzione `--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>` per esporre la porta del database all&#39;host durante la creazione del file `docker-compose.yml`: `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-  - ![nuova icona](../../assets/new.svg) **Nuovo comando post-distribuzione**. In precedenza, gli hook post-distribuzione definiti nel file `.magento.app.yaml` venivano eseguiti automaticamente dopo la distribuzione di Adobe Commerce in un contenitore Cloud Docker tramite il comando `cloud-deploy`. Ora è necessario emettere un comando `cloud-post-deploy` separato per eseguire gli hook post-distribuzione dopo la distribuzione. Vedere le istruzioni di avvio aggiornate per la modalità [sviluppatore](https://developer.adobe.com/commerce/cloud-tools/docker/deploy) e [produzione](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode).<!--MAGECLOUD-3996-->
+  - ![nuova icona](../../assets/new.svg) **Nuovo comando post-distribuzione**. In precedenza, gli hook post-distribuzione definiti nel file `.magento.app.yaml` venivano eseguiti automaticamente dopo la distribuzione di Adobe Commerce in un contenitore Cloud Docker tramite il comando `cloud-deploy`. Ora è necessario emettere un comando `cloud-post-deploy` separato per eseguire gli hook post-distribuzione dopo la distribuzione. Vedere le istruzioni di avvio aggiornate per la modalità [sviluppatore](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/) e [produzione](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode).<!--MAGECLOUD-3996-->
 
   - ![nuova icona](../../assets/new.svg) Aggiunta dell&#39;opzione `--rm` ai comandi `./bin/magento-docker` per i contenitori di compilazione e distribuzione. Questo rimuove il contenitore dopo il completamento dell&#39;attività.<!--MAGECLOUD-4205-->
 

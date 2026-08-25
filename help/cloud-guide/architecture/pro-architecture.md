@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -155,10 +155,10 @@ L&#39;ambiente di produzione dispone di tre macchine virtuali (VM) dietro un loa
 
 - **GlusterFS**—file server per la gestione di tutte le distribuzioni di file statici e la sincronizzazione con quattro mount di directory:
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis**: un server per macchina virtuale con un solo server attivo e gli altri due come repliche
 
@@ -225,4 +225,4 @@ Le configurazioni di ridimensionamento del cluster Pro e _calcolo_ variano a sec
 
 L’architettura ridondante consente all’infrastruttura cloud Adobe di eseguire l’upscale senza tempi di inattività. Durante l&#39;upscaling, ciascuna delle tre istanze ruota per aggiornare la capacità senza influire sul funzionamento del sito. Ad esempio, puoi aggiungere altri server web a un cluster esistente se la restrizione si trova a livello PHP anziché a livello di database. In questo modo viene fornita la _scalabilità orizzontale_ per integrare la scalabilità verticale fornita dalle CPU aggiuntive a livello di database. Vedi [Architettura scalata](scaled-architecture.md).
 
-Se prevedi un aumento significativo del traffico per un evento o per un altro motivo, puoi richiedere un aumento temporaneo della capacità. Vedi [Come richiedere un upsize temporaneo](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=it) nel _Centro assistenza Commerce_.
+Se prevedi un aumento significativo del traffico per un evento o per un altro motivo, puoi richiedere un aumento temporaneo della capacità. Vedi [Come richiedere un upsize temporaneo](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize) nel _Centro assistenza Commerce_.
