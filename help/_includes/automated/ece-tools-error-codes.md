@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2714'
 ht-degree: 4%
 
 ---
@@ -53,8 +53,8 @@ Gli errori critici indicano un problema nella configurazione del progetto Commer
 | 104 |  | Impossibile analizzare il file `.magento.env.yaml` | Configurazione non definita nel file `./vendor/magento/ece-tools/config/schema.yaml`. Verifica che il nome della variabile di configurazione sia corretto e che sia definito. |
 | 105 |  | Impossibile leggere il file `.magento.env.yaml` | Impossibile leggere il file `./.magento.env.yaml`. Verificare le autorizzazioni del file. |
 | 106 |  | Impossibile leggere il file `.schema.yaml` |  |
-| 107 | pre-distribuzione: clean-redis-cache | Impossibile pulire la cache Redis | Impossibile pulire la cache Redis. Verificare che la configurazione della cache Redis sia corretta e che il servizio Redis sia disponibile. Vedere [Servizio Redis installazione](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html?lang=it). |
-| 140 | pre-distribuzione: clean-valkey-cache | Impossibile pulire la cache di Valkey | Impossibile pulire la cache di Valkey. Verificare che la configurazione della cache di Valkey sia corretta e che il servizio Valkey sia disponibile. Consulta [Servizio Setup Valkey](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html?lang=it). |
+| 107 | pre-distribuzione: clean-redis-cache | Impossibile pulire la cache Redis | Impossibile pulire la cache Redis. Verificare che la configurazione della cache Redis sia corretta e che il servizio Redis sia disponibile. Vedere [Servizio Redis installazione](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis). |
+| 140 | pre-distribuzione: clean-valkey-cache | Impossibile pulire la cache di Valkey | Impossibile pulire la cache di Valkey. Verificare che la configurazione della cache di Valkey sia corretta e che il servizio Valkey sia disponibile. Consulta [Servizio Setup Valkey](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey). |
 | 108 | pre-distribuzione: set-production-mode | Comando `/bin/magento maintenance:enable` non riuscito | Per ulteriori informazioni, controllare `cloud.log`. Per un output di comando più dettagliato, aggiungere l&#39;opzione `VERBOSE_COMMANDS: '-vvv'` al file `.magento.env.yaml`. |
 | 109 | validate-config | Configurazione del database errata | Verificare che la variabile di ambiente `DATABASE_CONFIGURATION` sia configurata correttamente. |
 | 110 | validate-config | Configurazione di sessione errata | Verificare che la variabile di ambiente `SESSION_CONFIGURATION` sia configurata correttamente. La configurazione deve contenere almeno il parametro `save`. |
@@ -78,7 +78,7 @@ Gli errori critici indicano un problema nella configurazione del progetto Commer
 | 128 | disable-maintenance-mode | Comando `/bin/magento maintenance:disable` non riuscito | Per ulteriori informazioni, controllare `cloud.log`. Aggiungere `VERBOSE_COMMANDS: '-vvv'` in `.magento.env.yaml` per ottenere un output di comando più dettagliato. |
 | 129 | install-update: reset-password | Impossibile leggere il modello di reimpostazione password |  |
 | 130 | install-update: cache_type | Comando non riuscito: `php ./bin/magento cache:enable` | Il comando `php ./bin/magento cache:enable` viene eseguito solo quando è stato installato Adobe Commerce, ma il file `./app/etc/env.php` era assente o vuoto all&#39;inizio della distribuzione. Per ulteriori informazioni, controllare `cloud.log`. Aggiungere `VERBOSE_COMMANDS: '-vvv'` in `.magento.env.yaml` per ottenere un output di comando più dettagliato. |
-| 131 | install-update | Il valore chiave `crypt/key` non esiste nel file `./app/etc/env.php` o nella variabile di ambiente cloud `CRYPT_KEY` | Questo errore si verifica se il file `./app/etc/env.php` non è presente all&#39;inizio della distribuzione di Adobe Commerce o se il valore `crypt/key` non è definito. Se è stata eseguita la migrazione del database da un altro ambiente, recuperare il valore della chiave di crittografia da tale ambiente. Quindi, aggiungi il valore alla variabile di ambiente cloud [CRYPT_KEY](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=it#crypt_key) nell&#39;ambiente corrente. Vedi [Chiave di crittografia Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html?lang=it#gather-credentials). Se il file `./app/etc/env.php` è stato rimosso accidentalmente, utilizzare il comando seguente per ripristinarlo dai file di backup creati da una distribuzione precedente: comando CLI `./vendor/bin/ece-tools backup:restore`.&quot; |
+| 131 | install-update | Il valore chiave `crypt/key` non esiste nel file `./app/etc/env.php` o nella variabile di ambiente cloud `CRYPT_KEY` | Questo errore si verifica se il file `./app/etc/env.php` non è presente all&#39;inizio della distribuzione di Adobe Commerce o se il valore `crypt/key` non è definito. Se è stata eseguita la migrazione del database da un altro ambiente, recuperare il valore della chiave di crittografia da tale ambiente. Quindi, aggiungi il valore alla variabile di ambiente cloud [CRYPT_KEY](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#crypt_key) nell&#39;ambiente corrente. Vedi [Chiave di crittografia Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/overview#gather-credentials). Se il file `./app/etc/env.php` è stato rimosso accidentalmente, utilizzare il comando seguente per ripristinarlo dai file di backup creati da una distribuzione precedente: comando CLI `./vendor/bin/ece-tools backup:restore`.&quot; |
 | 132 |  | Impossibile connettersi al servizio Elasticsearch | Verifica che siano presenti credenziali Elasticsearch valide e che il servizio sia in esecuzione |
 | 137 |  | Impossibile connettersi al servizio OpenSearch | Verificare che siano presenti credenziali OpenSearch valide e che il servizio sia in esecuzione |
 | 133 | validate-config | Rimuovi la configurazione del modulo Braintree di Magento che non è più supportata in Adobe Commerce o Magento Open Source 2.4 e versioni successive. | Il supporto per il modulo Braintree non è più incluso in Adobe Commerce o Magento Open Source 2.4.0 e versioni successive. Rimuovere la variabile CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL dalla sezione Variabili del file `.magento.app.yaml`. Per il supporto di Braintree, utilizza invece un’estensione ufficiale di Braintree Payments di Commerce Marketplace. |
@@ -124,7 +124,7 @@ Gli errori di avvertenza indicano un problema nella configurazione del progetto 
 | Codice di errore | Passaggio build | Descrizione errore (titolo) | Azione suggerita |
 | - | - | - | - |
 | 1001 | validate-config | Il file app/etc/config.php non esiste |  |
-| 1002 | validate-config | Il.Il file /build_options.ini non è più supportato |  |
+| 1002 | validate-config | File ./build_options.ini non più supportato |  |
 | 1003 | validate-config | Sezione dei moduli mancante nel file di configurazione condiviso |  |
 | 1004 | validate-config | Configurazione non compatibile con questa versione di Magento |  |
 | 1005 | validate-config | Opzioni SCD ignorate |  |
@@ -135,11 +135,11 @@ Gli errori di avvertenza indicano un problema nella configurazione del progetto 
 
 | Codice di errore | Passaggio di distribuzione | Descrizione errore (titolo) | Azione suggerita |
 | - | - | - | - |
-| 2001 | pre-distribuire:cache | Cache configurata per un servizio Redis non disponibile. Configurazione ignorata. |  |
-| 2032 | pre-distribuire:cache | Cache configurata per un servizio Valkey non disponibile. Configurazione ignorata. |  |
+| 2001 | pre-distribuzione:cache | Cache configurata per un servizio Redis non disponibile. Configurazione ignorata. |  |
+| 2032 | pre-distribuzione:cache | Cache configurata per un servizio Valkey non disponibile. Configurazione ignorata. |  |
 | 2002 | validate-config | Lo stato configurato non è ideale |  |
 | 2003 | validate-config | Il valore del livello di nidificazione della directory per la segnalazione degli errori non è stato configurato |  |
-| 2004 | validate-config | Configurazione non valida in .file /pub/errors/local.xml. |  |
+| 2004 | validate-config | Configurazione non valida nel file ./pub/errors/local.xml. |  |
 | 2005 | validate-config | I dati di amministrazione vengono utilizzati per creare un utente amministratore solo durante l’installazione iniziale. Eventuali modifiche apportate ai dati dell’amministratore vengono ignorate durante il processo di aggiornamento. | Dopo l’installazione iniziale, puoi rimuovere i dati di amministrazione dalla configurazione. |
 | 2006 | validate-config | L’utente amministratore non è stato creato perché l’e-mail amministratore non è stata impostata | Dopo l’installazione, puoi creare manualmente un utente amministratore: utilizza ssh per connettersi all’ambiente. Eseguire quindi il comando `bin/magento admin:user:create`. |
 | 2007 | validate-config | Aggiorna versione php alla versione consigliata |  |

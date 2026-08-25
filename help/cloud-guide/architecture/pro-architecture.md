@@ -5,22 +5,14 @@ feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
 TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -155,10 +147,10 @@ L&#39;ambiente di produzione dispone di tre macchine virtuali (VM) dietro un loa
 
 - **GlusterFS**—file server per la gestione di tutte le distribuzioni di file statici e la sincronizzazione con quattro mount di directory:
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis**: un server per macchina virtuale con un solo server attivo e gli altri due come repliche
 
@@ -191,7 +183,7 @@ Adobe Commerce su infrastruttura cloud utilizza un’architettura ad alta dispon
 
 >[!NOTE]
 >
->I volumi montati includono/fanno riferimento solo ai [mount scrivibili](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) e non includeranno tutta la directory `app/`. Per quanto riguarda gli altri file, questi vengono creati/generati dal processo di [compilazione e distribuzione](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow) e sarà inoltre necessario controllare l&#39;archivio Git per i file rimanenti.
+>I volumi montati includono/fanno riferimento solo ai [mount scrivibili](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) e non includeranno tutta la directory `app/`. Per quanto riguarda gli altri file, questi vengono creati/generati dal processo di [compilazione e distribuzione](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow) e sarà inoltre necessario controllare l&#39;archivio Git per i file rimanenti.
 
 {{pro-backups}}
 
@@ -225,4 +217,4 @@ Le configurazioni di ridimensionamento del cluster Pro e _calcolo_ variano a sec
 
 L’architettura ridondante consente all’infrastruttura cloud Adobe di eseguire l’upscale senza tempi di inattività. Durante l&#39;upscaling, ciascuna delle tre istanze ruota per aggiornare la capacità senza influire sul funzionamento del sito. Ad esempio, puoi aggiungere altri server web a un cluster esistente se la restrizione si trova a livello PHP anziché a livello di database. In questo modo viene fornita la _scalabilità orizzontale_ per integrare la scalabilità verticale fornita dalle CPU aggiuntive a livello di database. Vedi [Architettura scalata](scaled-architecture.md).
 
-Se prevedi un aumento significativo del traffico per un evento o per un altro motivo, puoi richiedere un aumento temporaneo della capacità. Vedi [Come richiedere un upsize temporaneo](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=it) nel _Centro assistenza Commerce_.
+Se prevedi un aumento significativo del traffico per un evento o per un altro motivo, puoi richiedere un aumento temporaneo della capacità. Vedi [Come richiedere un upsize temporaneo](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize) nel _Centro assistenza Commerce_.

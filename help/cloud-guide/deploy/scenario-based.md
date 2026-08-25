@@ -4,18 +4,13 @@ description: Scopri come personalizzare le implementazioni di Adobe Commerce sul
 feature: Cloud, Configuration, Deploy, Build
 exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
 TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -51,7 +46,7 @@ hooks:
 
 >[!NOTE]
 >
->Con la versione di `ece-tools` 2002.1.x, è disponibile un nuovo formato di [configurazione hook](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=it). Il formato legacy delle versioni `ece-tools` 2002.0.x è ancora supportato. Tuttavia, è necessario eseguire l’aggiornamento al nuovo formato per utilizzare la funzione di distribuzione basata su scenari.
+>Con la versione di `ece-tools` 2002.1.x, è disponibile un nuovo formato di [configurazione hook](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property). Il formato legacy delle versioni `ece-tools` 2002.0.x è ancora supportato. Tuttavia, è necessario eseguire l’aggiornamento al nuovo formato per utilizzare la funzione di distribuzione basata su scenari.
 
 ## Passaggi dello scenario di revisione
 
@@ -92,9 +87,9 @@ Durante la distribuzione, gli scenari personalizzati si fondono con lo scenario 
 
   Nell’esempio, gli scenari hanno la seguente priorità:
 
-   1. `vendor/vendor-name/module-name/deploy2.xml`
-   1. `vendor/vendor-name/module-name/deploy.xml`
-   1. `scenario/deploy.xml` (scenario predefinito o di base)
+  1. `vendor/vendor-name/module-name/deploy2.xml`
+  1. `vendor/vendor-name/module-name/deploy.xml`
+  1. `scenario/deploy.xml` (scenario predefinito o di base)
 
 - I passaggi dello scenario con priorità più alta sostituiscono i passaggi con lo stesso nome negli altri scenari. Vengono aggiunti nuovi passaggi alla configurazione. Le stesse regole si applicano a più di due scenari con ogni scenario con priorità da destra a sinistra, ad esempio (C → B → A).
 

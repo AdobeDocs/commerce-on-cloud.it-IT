@@ -5,19 +5,13 @@ feature: Cloud, Observability
 topic: Performance
 exl-id: b9d806c4-f659-4e10-8dcb-b320a61de5e1
 TQID: https://experienceleague.adobe.com/Ih9Y5JqsurZqdXK-vpPGxVe2erbexdQxAlLpDjCBTCg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 896
 ht-degree: 0%
 
 ---
@@ -42,7 +36,7 @@ Tutti i dati raccolti descrivono il tempo impiegato per le azioni di trasmission
 
 >[!TIP]
 >
->Per informazioni dettagliate sull&#39;utilizzo di questi dati per la risoluzione dei problemi relativi alle prestazioni delle applicazioni, vedere [Risoluzione dei problemi relativi alle prestazioni tramite New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=it) nel _Centro assistenza Adobe Commerce_.
+>Per informazioni dettagliate sull&#39;utilizzo di questi dati per la risoluzione dei problemi relativi alle prestazioni delle applicazioni, vedere [Risoluzione dei problemi relativi alle prestazioni tramite New Relic](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-40830) nel _Centro assistenza Adobe Commerce_.
 
 ## Monitorare le prestazioni con avvisi gestiti
 
@@ -58,7 +52,7 @@ Adobe fornisce i _criteri di avviso gestiti per Adobe Commerce_ per tenere tracc
 | Caricamento query MariaDB | NRI | Pro |
 | Memoria Redis | NRI | Pro |
 
-Quando l’infrastruttura del sito o le condizioni dell’applicazione attivano una soglia di avviso, New Relic invia notifiche di avviso in modo da poter affrontare il problema in modo proattivo. Consulta [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=it) nel _Centro assistenza Adobe Commerce_ per informazioni dettagliate sulle soglie di avviso e sui passaggi di risoluzione dei problemi che hanno attivato l&#39;avviso.
+Quando l’infrastruttura del sito o le condizioni dell’applicazione attivano una soglia di avviso, New Relic invia notifiche di avviso in modo da poter affrontare il problema in modo proattivo. Consulta [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce) nel _Centro assistenza Adobe Commerce_ per informazioni dettagliate sulle soglie di avviso e sui passaggi di risoluzione dei problemi che hanno attivato l&#39;avviso.
 
 >[!TIP]
 >
@@ -88,7 +82,7 @@ Quando l’infrastruttura del sito o le condizioni dell’applicazione attivano 
 
      >[!NOTE]
      >
-     >Se il criterio _Avvisi gestiti per Adobe Commerce_ non è disponibile, vedere [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=it) nel _Centro assistenza Adobe Commerce_.
+     >Se il criterio _Avvisi gestiti per Adobe Commerce_ non è disponibile, vedere [Avvisi gestiti per Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce) nel _Centro assistenza Adobe Commerce_.
 
 1. Fare clic sulla scheda **[!UICONTROL Alert conditions]** per esaminare le condizioni di avviso definite nel criterio.
 
