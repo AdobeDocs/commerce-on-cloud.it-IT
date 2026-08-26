@@ -1,6 +1,6 @@
 ---
 title: Accedere al pannello di amministrazione di Commerce
-description: Scopri come accedere al pannello di amministrazione di Commerce.
+description: Scopri come proteggere l’accesso come amministratore al progetto di infrastruttura cloud Adobe Commerce, reimpostare la password del proprietario della licenza e accedere al pannello di amministrazione.
 recommendations: noDisplay, catalog
 exl-id: 827417b0-9048-44d8-8c82-07befba476c7
 TQID: https://experienceleague.adobe.com/V3BXuCc9aqT5YuyIS8WAZgUdPAYNhQunAgg2i2FCaOs
@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 362
+source-wordcount: 379
 ht-degree: 0%
 
 ---
