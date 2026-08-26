@@ -4,15 +4,11 @@ description: Scopri le impostazioni PHP ottimali per la configurazione delle app
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
 TQID: https://experienceleague.adobe.com/2UjlXGZV6AJQuNf0XOdzZ09aF-23TSk7Q0NqvLyhGRs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-last-update: 2026-05-05
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+last-update: 2026-08-25
+source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
 workflow-type: tm+mt
 source-wordcount: 612
 ht-degree: 0%
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 # Impostazioni PHP
 
-Puoi scegliere quale [versione di PHP](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) eseguire nel file `.magento.app.yaml`:
+Puoi scegliere quale [versione di PHP](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) eseguire nel file `.magento.app.yaml`:
 
 ```yaml
 name: mymagento
@@ -72,7 +68,7 @@ Queste impostazioni consentono ai processi PHP di memorizzare nella cache i perc
 
 >[!NOTE]
 >
->Per un elenco delle impostazioni di configurazione PHP consigliate, vedere [Impostazioni PHP richieste](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/prerequisites/php-settings) nella _Guida all&#39;installazione_.
+>Per un elenco delle impostazioni di configurazione PHP consigliate, vedere [Impostazioni PHP richieste](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/php-settings) nella _Guida all&#39;installazione_.
 
 ### Controllare le impostazioni PHP personalizzate
 
@@ -127,7 +123,7 @@ La tabella seguente mostra le estensioni PHP supportate durante la distribuzione
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-I requisiti del modulo PHP sono legati alla versione Adobe Commerce. Consulta [Requisiti PHP](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/prerequisites/php-settings).
+I requisiti del modulo PHP sono legati alla versione Adobe Commerce. Consulta [Requisiti PHP](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/php-settings).
 
 ### Supporto per le estensioni
 
@@ -145,7 +141,7 @@ sourceguardian.restrict_unencoded = "1"
 
 Consulta la [sezione 3.5 della documentazione di SourceGuardian](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _Collegamento a un PDF_.
 
-[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per assistenza sull&#39;installazione di queste estensioni PHP in tutti gli ambienti di produzione e di staging Pro. Includi il file `.magento/services.yaml` aggiornato, il file `.magento.app.yaml` con la versione PHP aggiornata ed eventuali estensioni PHP aggiuntive. Per le modifiche a un ambiente di produzione live, devi fornire un preavviso minimo di 48 ore. L’aggiornamento del progetto da parte del team di infrastruttura Cloud può richiedere fino a 48 ore.
+[Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per assistenza sull&#39;installazione di queste estensioni PHP in tutti gli ambienti di produzione e di staging Pro. Includi il file `.magento/services.yaml` aggiornato, il file `.magento.app.yaml` con la versione PHP aggiornata ed eventuali estensioni PHP aggiuntive. Per le modifiche a un ambiente di produzione live, devi fornire un preavviso minimo di 48 ore. L’aggiornamento del progetto da parte del team di infrastruttura Cloud può richiedere fino a 48 ore.
 
 >[!WARNING]
 >
