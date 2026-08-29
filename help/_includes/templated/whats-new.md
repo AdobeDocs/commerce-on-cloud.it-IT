@@ -23,7 +23,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.13.</p>
+      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.13.</p>
 </td>
       <td>
         Tecnico
@@ -31,7 +31,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">commit</a></td>
     </tr>
     <tr>
-      <td><p>Aggiunta della disponibilità di <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">scalabilità automatica verticale</a> ad Adobe Commerce su infrastruttura cloud.</p>
+      <td><p>Aggiunta della disponibilità di <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">scalabilità automatica verticale</a> ad Adobe Commerce su infrastruttura cloud.</p>
 </td>
       <td>
         Aggiornamento principale
@@ -53,7 +53,7 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
   </thead>
   <tbody>
     <tr>
-      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.12. Non sono state apportate altre modifiche oltre al numero di versione.</p>
+      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.12. Non sono state apportate altre modifiche oltre al numero di versione.</p>
 </td>
       <td>
         Tecnico
