@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->La cache Redis non è supportata per Adobe Commerce 2.4.9 o versioni patch successive a 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 e 2.4.8-p4. Utilizza [Valkey](valkey.md) per la configurazione della cache in cui Redis non è supportato. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) per i servizi di cache supportati per versione.
+>La cache Redis non è supportata per Adobe Commerce 2.4.9 o versioni patch successive a 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 e 2.4.8-p4. Utilizza [Valkey](valkey.md) per la configurazione della cache in cui Redis non è supportato. Consulta [Requisiti di sistema](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) per i servizi di cache supportati per versione.
 
 {{service-instruction}}
 
@@ -54,7 +54,7 @@ cache:
   type: redis:7.2
 ```
 
-La versione di esempio non è universale. Le versioni predefinite e supportate effettive dipendono dalla versione di Adobe Commerce, dal livello di patch e dal modello Cloud corrente. Verificare la combinazione supportata in [Requisiti di sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) e nel modello di progetto corrente.
+La versione di esempio non è universale. Le versioni predefinite e supportate effettive dipendono dalla versione di Adobe Commerce, dal livello di patch e dal modello Cloud corrente. Verificare la combinazione supportata in [Requisiti di sistema](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) e nel modello di progetto corrente.
 
 ### Configurare la relazione di servizio
 
@@ -142,7 +142,7 @@ Per ulteriori informazioni sulle relazioni tra i servizi, vedere [Configurare i 
 
 ## Personalizzare la configurazione Redis
 
-Per i consigli relativi a cache, sessione, L2 e connessione di replica, vedere [Best practice per la configurazione del servizio Valkey e Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) nella _Guida alle best practice per l&#39;implementazione della playbook_.
+Per i consigli relativi a cache, sessione, L2 e connessione di replica, vedere [Best practice per la configurazione del servizio Valkey e Redis](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) nella _Guida alle best practice per l&#39;implementazione della playbook_.
 
 ## Utilizzo di Redis CLI
 
@@ -203,8 +203,8 @@ I dettagli della versione e della build variano a seconda dell’ambiente. Non t
 
 Consulta i seguenti articoli sul supporto Adobe Commerce per assistenza nella risoluzione dei problemi Redis:
 
-- [Avvisi gestiti su Adobe Commerce: avviso di memoria Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
-- [Avvisi gestiti su Adobe Commerce: Avvisi critici per la memoria Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
+- [Avvisi gestiti su Adobe Commerce: avviso di memoria Redis](https://experienceleague.adobe.com/it/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
+- [Avvisi gestiti su Adobe Commerce: Avvisi critici per la memoria Redis](https://experienceleague.adobe.com/it/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
 
 ### Gli errori di pulizia della cache fanno riferimento a Redis in una cache configurata con Valkey
 
