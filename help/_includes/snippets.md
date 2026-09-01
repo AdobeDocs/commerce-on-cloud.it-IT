@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27242) nel _Centro assistenza Adobe Commerce_.
+>I progetti eseguiti prima del 5 giugno 2020 disponevano di più ambienti di integrazione più piccoli. Se hai bisogno di un ambiente di integrazione più ampio per i test e lo sviluppo, richiedi un aggiornamento per gli ambienti di integrazione avanzata. Per informazioni dettagliate, consulta l&#39;articolo [Richiesta ambiente di integrazione](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27242) nel _Centro assistenza Adobe Commerce_.
 
 ## Opzioni di unione {#merge-options}
 
@@ -41,15 +41,15 @@ Impostare l&#39;opzione `_merge` su una delle opzioni seguenti:
 >Alcuni **progetti Pro** richiedono l&#39;assistenza del supporto Adobe per aggiornare le configurazioni delle route nel file `routes.yaml` e le configurazioni cron nel file `.magento.app.yaml`. Adobe consiglia di apportare e convalidare prima tutte le modifiche di configurazione YAML in un ambiente di integrazione e quindi distribuirle nell’ambiente di staging.
 >
 >
->Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e nel registro non sono presenti messaggi di errore correlati, **è necessario** [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Nel ticket, descrivi chiaramente le modifiche di configurazione tentate e allega eventuali file di configurazione YAML aggiornati.
+>Se le modifiche non vengono applicate ai siti di gestione temporanea dopo la ridistribuzione e nel registro non sono presenti messaggi di errore correlati, **è necessario** [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Nel ticket, descrivi chiaramente le modifiche di configurazione tentate e allega eventuali file di configurazione YAML aggiornati.
 
 ## Backup Pro {#pro-backups}
 
 >[!TIP]
 >
->Per recuperare un backup specifico negli ambienti di staging e produzione Pro, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) indicando la data, l&#39;ora e il fuso orario nel ticket.
+>Per recuperare un backup specifico negli ambienti di staging e produzione Pro, [invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) indicando la data, l&#39;ora e il fuso orario nel ticket.
 >
->Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production).
+>Adobe **non** ripristina alcun ambiente da un backup automatico. Per informazioni su come scegliere un metodo per ripristinare uno snapshot di staging o produzione, vedere [Ripristinare uno snapshot del database da staging o produzione](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production).
 
 ## Avviso di ridistribuzione {#redeploy-warning}
 
@@ -87,7 +87,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!NOTE]
 >
->Per modificare la configurazione del servizio negli ambienti Pro Production e Staging, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Per informazioni sui requisiti di pianificazione e sulla disponibilità dei clienti, vedere [Supporto dei servizi Pro](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support) in _Configurazione dei servizi_.
+>Per modificare la configurazione del servizio negli ambienti Pro Production e Staging, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Per informazioni sui requisiti di pianificazione e sulla disponibilità dei clienti, vedere [Supporto dei servizi Pro](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support) in _Configurazione dei servizi_.
 
 ## Modifica del servizio {#service-change-tip}
 
@@ -99,7 +99,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 >[!TIP]
 >
->Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640) nel _Centro assistenza di Commerce_.
+>Per informazioni sulle distribuzioni bloccate, utilizzare lo strumento di risoluzione dei problemi di distribuzione di [Adobe Commerce](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-29640) nel _Centro assistenza di Commerce_.
 
 ## Aggiornamento a ECE-Tools {#ece-tools-package}
 

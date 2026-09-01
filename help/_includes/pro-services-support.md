@@ -11,11 +11,11 @@ ht-degree: 0%
 
 Per richiedere e completare un aggiornamento del servizio Pro in Staging o Produzione, effettuare le seguenti operazioni:
 
-1. **Per installare o aggiornare [servizi](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml) solo negli ambienti `Staging` e `Production`**, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
+1. **Per installare o aggiornare [servizi](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/services-yaml) solo negli ambienti `Staging` e `Production`**, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
    Nel ticket, specifica le modifiche del servizio richieste, includi i file aggiornati `.magento.app.yaml` e `.magento/services.yaml` e annota la versione PHP di destinazione.
 
-   La versione PHP, gli aggiornamenti del Compositore, le estensioni e le impostazioni di ambiente sono modifiche self-service. Adobe potrebbe dover aggiornare l’agente New Relic per garantire la compatibilità della versione PHP. Vedi [Impostazioni PHP](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings) in _Configurazione applicazione_.
+   La versione PHP, gli aggiornamenti del Compositore, le estensioni e le impostazioni di ambiente sono modifiche self-service. Adobe potrebbe dover aggiornare l’agente New Relic per garantire la compatibilità della versione PHP. Vedi [Impostazioni PHP](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/app/php-settings) in _Configurazione applicazione_.
 
    >[!IMPORTANT]
    >
