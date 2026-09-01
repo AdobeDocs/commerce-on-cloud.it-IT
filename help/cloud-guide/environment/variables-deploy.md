@@ -48,11 +48,11 @@ Per Adobe Commerce sull&#39;infrastruttura cloud, non modificare direttamente `a
 
 Utilizza `VALKEY_BACKEND` o `REDIS_BACKEND` per selezionare la cache supportata o l&#39;implementazione L2 per la versione esatta di Adobe Commerce. Utilizza `CACHE_CONFIGURATION` per personalizzare opzioni quali nuovi tentativi di connessione, timeout di lettura, prefissi di cache o chiavi di precaricamento.
 
-La combinazione di back-end e servizio cache supportata dipende dal livello di versione e patch di Commerce. Redis non è supportato per Adobe Commerce 2.4.9 o per versioni patch successive a 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 e 2.4.8-p4. Utilizza Valkey per le versioni in cui [requisiti di sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) lo richiedono.
+La combinazione di back-end e servizio cache supportata dipende dal livello di versione e patch di Commerce. Redis non è supportato per Adobe Commerce 2.4.9 o per versioni patch successive a 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 e 2.4.8-p4. Utilizza Valkey per le versioni in cui [requisiti di sistema](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements) lo richiedono.
 
 >[!NOTE]
 >
->Per istruzioni più dettagliate sulla configurazione del servizio Redis e Valkey, vedi [Best practice per la configurazione del servizio Valkey e Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
+>Per istruzioni più dettagliate sulla configurazione del servizio Redis e Valkey, vedi [Best practice per la configurazione del servizio Valkey e Redis](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
 
 Per impostazione predefinita, il processo di distribuzione sovrascrive la configurazione della cache corrispondente. Per unire i valori specificati alla configurazione generata, impostare `_merge` su `true`:
 
@@ -91,7 +91,7 @@ stage:
             database: 11
 ```
 
-Nell&#39;esempio seguente viene utilizzata la [funzionalità di precaricamento Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature) definita nella _Guida alla configurazione_. Per le versioni che utilizzano Valkey, utilizza le linee guida di Valkey corrispondenti.
+Nell&#39;esempio seguente viene utilizzata la [funzionalità di precaricamento Redis](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature) definita nella _Guida alla configurazione_. Per le versioni che utilizzano Valkey, utilizza le linee guida di Valkey corrispondenti.
 
 ```yaml
 stage:
@@ -125,7 +125,7 @@ stage:
 
 - **Predefinito**—`true`
 
-Abilita o disabilita la pulizia di [file di contenuto statico](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment) generati durante la fase di compilazione o distribuzione. Utilizza il valore predefinito _true_ nello sviluppo come best practice.
+Abilita o disabilita la pulizia di [file di contenuto statico](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment) generati durante la fase di compilazione o distribuzione. Utilizza il valore predefinito _true_ nello sviluppo come best practice.
 
 - **`true`** - Rimuove tutto il contenuto statico esistente prima di distribuire il contenuto statico aggiornato.
 - **`false`** - La distribuzione sovrascrive i file di contenuto statico esistenti solo se il contenuto generato contiene una versione più recente.
@@ -182,7 +182,7 @@ stage:
       consumers: []
 ```
 
-Per impostazione predefinita, il processo di distribuzione sovrascrive le impostazioni corrispondenti nel file `env.php`. Consulta [Gestione delle code di messaggi](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) nella _Guida alla configurazione di Commerce_ per Adobe Commerce locale.
+Per impostazione predefinita, il processo di distribuzione sovrascrive le impostazioni corrispondenti nel file `env.php`. Consulta [Gestione delle code di messaggi](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) nella _Guida alla configurazione di Commerce_ per Adobe Commerce locale.
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -210,7 +210,7 @@ stage:
 
 >[!WARNING]
 >
->Per evitare di esporre la chiave nell&#39;archivio del codice sorgente, impostare il valore `CRYPT_KEY` tramite [!DNL Cloud Console] anziché il file `.magento.env.yaml`. Consulta [Impostare le variabili di ambiente e di progetto](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview#configure-environment).
+>Per evitare di esporre la chiave nell&#39;archivio del codice sorgente, impostare il valore `CRYPT_KEY` tramite [!DNL Cloud Console] anziché il file `.magento.env.yaml`. Consulta [Impostare le variabili di ambiente e di progetto](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/project/overview#configure-environment).
 
 Quando si sposta il database da un ambiente a un altro senza un processo di installazione, è necessario disporre delle informazioni di crittografia corrispondenti. Adobe Commerce utilizza il valore della chiave di crittografia impostato in [!DNL Cloud Console] come valore `crypt/key` nel file `env.php`.
 
@@ -299,7 +299,7 @@ stage:
 
 >[!NOTE]
 >
->In un cluster Pro Staging/Produzione con tre nodi (o tre nodi di servizio in [Architettura scalata](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)), `indices_settings` deve essere impostato come segue:
+>In un cluster Pro Staging/Produzione con tre nodi (o tre nodi di servizio in [Architettura scalata](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)), `indices_settings` deve essere impostato come segue:
 >
 >```yaml
 >           indices_settings:
@@ -455,7 +455,7 @@ stage:
 
 Specifica la configurazione del modello back-end per la cache Redis.
 
-La cache Redis non è supportata per Adobe Commerce 2.4.9 o per versioni patch successive a 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 e 2.4.8-p4. Per queste versioni, utilizzare Valkey e la configurazione `VALKEY_BACKEND` corrispondente. Verificare sempre il servizio cache supportato nei [requisiti di sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements).
+La cache Redis non è supportata per Adobe Commerce 2.4.9 o per versioni patch successive a 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 e 2.4.8-p4. Per queste versioni, utilizzare Valkey e la configurazione `VALKEY_BACKEND` corrispondente. Verificare sempre il servizio cache supportato nei [requisiti di sistema](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/system-requirements).
 
 Per le versioni supportate da Redis, i modelli di back-end disponibili includono:
 
@@ -522,7 +522,7 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Se si specifica il back-end sincronizzato in remoto, la cache L2 verrà attivata e `ece-tools` genererà automaticamente la configurazione della cache. Vedere il [file di configurazione di esempio](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration). Per personalizzare la configurazione generata, utilizzare [`CACHE_CONFIGURATION`](#cache_configuration).
+Se si specifica il back-end sincronizzato in remoto, la cache L2 verrà attivata e `ece-tools` genererà automaticamente la configurazione della cache. Vedere il [file di configurazione di esempio](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration). Per personalizzare la configurazione generata, utilizzare [`CACHE_CONFIGURATION`](#cache_configuration).
 
 ### Configurare l’implementazione della cache L2 di Symfony moderna
 
@@ -534,7 +534,7 @@ stage:
     VALKEY_BACKEND: 'symfony_l2'
 ```
 
-Se si specifica `symfony_l2` come modello di back-end Valkey, la cache L2 verrà attivata e `ece-tools` genererà automaticamente la configurazione della cache L2 dai dettagli di connessione al servizio Valkey, inclusi i front-end `default` e `stale_cache_enabled`. Definire `CACHE_CONFIGURATION` solo quando è necessario personalizzare le opzioni di back-end supportate, ad esempio la directory della cache locale. Consulta [Implementazione della cache L2 di Symfony](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"} nella _Guida alla configurazione di Adobe Commerce_.
+Se si specifica `symfony_l2` come modello di back-end Valkey, la cache L2 verrà attivata e `ece-tools` genererà automaticamente la configurazione della cache L2 dai dettagli di connessione al servizio Valkey, inclusi i front-end `default` e `stale_cache_enabled`. Definire `CACHE_CONFIGURATION` solo quando è necessario personalizzare le opzioni di back-end supportate, ad esempio la directory della cache locale. Consulta [Implementazione della cache L2 di Symfony](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"} nella _Guida alla configurazione di Adobe Commerce_.
 
 >[!NOTE]
 >
@@ -672,7 +672,7 @@ stage:
 
 - **Predefinito**—`quick`
 
-Consente di personalizzare la [strategia di distribuzione](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) per il contenuto statico. Vedere [Distribuire i file di visualizzazione statici](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
+Consente di personalizzare la [strategia di distribuzione](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) per il contenuto statico. Vedere [Distribuire i file di visualizzazione statici](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
 
 Utilizza queste opzioni _only_ se hai più di una lingua:
 
@@ -749,7 +749,7 @@ stage:
 
 - **Predefinito**—_Non impostato_
 
-Utilizzare `SESSION_CONFIGURATION` per configurare l&#39;archiviazione della sessione. L’esempio seguente utilizza la struttura di configurazione delle sessioni compatibile con Redis. Utilizzala solo con la combinazione di denominazione e servizio archiviazione sessione supportata dalla versione esatta di Commerce. Per le sessioni con Valkey, seguire l&#39;esempio [Sessione Valkey-Storage](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations).
+Utilizzare `SESSION_CONFIGURATION` per configurare l&#39;archiviazione della sessione. L’esempio seguente utilizza la struttura di configurazione delle sessioni compatibile con Redis. Utilizzala solo con la combinazione di denominazione e servizio archiviazione sessione supportata dalla versione esatta di Commerce. Per le sessioni con Valkey, seguire l&#39;esempio [Sessione Valkey-Storage](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations).
 
 Non presumere che le variabili della cache come `VALKEY_BACKEND` o `REDIS_BACKEND` configurino le sessioni. La configurazione della cache e della sessione è indipendente. Nei progetti Cloud, utilizza la relazione di servizio e la configurazione generata laddove possibile; non codificare valori specifici dell’ambiente senza sostituire l’host e la porta di esempio.
 
@@ -857,7 +857,7 @@ stage:
 >
 >In Adobe Commerce 2.4.8, l&#39;impostazione di `USE_LUA_ON_GC: false` può causare un errore invisibile all&#39;utente e richiedere il ripristino di uno svuotamento completo della cache.
 >
->Nella versione 2.4.9 o successiva, seguire le [istruzioni del servizio cache](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache) per la versione installata.
+>Nella versione 2.4.9 o successiva, seguire le [istruzioni del servizio cache](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache) per la versione installata.
 
 ## `VERBOSE_COMMANDS`
 
