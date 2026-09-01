@@ -4,20 +4,13 @@ description: Comprendi i tipi di file di registro disponibili nell’infrastrutt
 last-substantial-update: 2023-05-23T00:00:00.000Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
 TQID: https://experienceleague.adobe.com/VAsmOv6sBa37A2IAubUnWd4UAMRIuKTNt8JGKNJlrCI
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 50c653aa6f78056f3fa8fe300fd224693a4460b0
 workflow-type: tm+mt
-source-wordcount: 1369
+source-wordcount: 1371
 ht-degree: 0%
 
 ---
@@ -121,7 +114,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Negli ambienti Pro Staging e Pro Production, la rotazione, la compressione e la rimozione automatica dei registri sono attivate per i file di registro con un nome di file fisso. Ogni tipo di file di registro ha un pattern e una durata di rotazione.
 >I dettagli completi sulla rotazione dei registri dell&#39;ambiente e sulla durata dei registri compressi sono disponibili in: `/etc/logrotate.conf` e `/etc/logrotate.d/<various>`.
->Per gli ambienti Pro Staging e Pro Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere modifiche alla configurazione della rotazione del registro.
+>Per gli ambienti Pro Staging e Pro Production, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere modifiche alla configurazione della rotazione del registro.
 
 >[!TIP]
 >
@@ -232,7 +225,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-La maggior parte dei messaggi di errore contiene una descrizione e un’azione suggerita. Utilizza il [Riferimento messaggio di errore per ECE-Tools](../dev-tools/error-reference.md) per cercare il codice di errore per ulteriori indicazioni. Per ulteriori informazioni, utilizzare [Risoluzione dei problemi di distribuzione di Adobe Commerce](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-29640).
+La maggior parte dei messaggi di errore contiene una descrizione e un’azione suggerita. Utilizza il [Riferimento messaggio di errore per ECE-Tools](../dev-tools/error-reference.md) per cercare il codice di errore per ulteriori indicazioni. Per ulteriori informazioni, utilizzare [Risoluzione dei problemi di distribuzione di Adobe Commerce](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640).
 
 ## Registri applicazioni
 
@@ -270,7 +263,7 @@ Per impostazione predefinita, i registri dell&#39;applicazione vengono compressi
 
 I file di registro archiviati vengono sempre memorizzati nella directory in cui si trovava il file originale prima della compressione.
 
-Puoi [inviare un ticket di supporto](https://experienceleague.adobe.com/home?lang=it&support-tab=home#support) per richiedere modifiche al periodo di conservazione del registro o alla configurazione di localizzazione. È possibile aumentare il periodo di conservazione fino a un massimo di 365 giorni, ridurlo per risparmiare la quota di archiviazione o aggiungere percorsi di registro aggiuntivi alla configurazione logrotate. Queste modifiche sono disponibili per i cluster Pro Staging e Production.
+Puoi [inviare un ticket di supporto](https://experienceleague.adobe.com/home?support-tab=home#support) per richiedere modifiche al periodo di conservazione del registro o alla configurazione di localizzazione. È possibile aumentare il periodo di conservazione fino a un massimo di 365 giorni, ridurlo per risparmiare la quota di archiviazione o aggiungere percorsi di registro aggiuntivi alla configurazione logrotate. Queste modifiche sono disponibili per i cluster Pro Staging e Production.
 
 Ad esempio, se si crea un percorso personalizzato per archiviare i registri nella directory `var/log/mymodule`, è possibile richiedere la rotazione del registro per questo percorso. Tuttavia, l&#39;infrastruttura corrente richiede nomi di file coerenti affinché Adobe possa configurare correttamente la rotazione del registro. Per evitare problemi di configurazione, Adobe consiglia di mantenere coerenti i nomi dei registri.
 
@@ -283,6 +276,7 @@ Ad esempio, se si crea un percorso personalizzato per archiviare i registri nell
 Poiché ogni servizio viene eseguito in un contenitore separato, i registri del servizio non sono disponibili nell’ambiente di integrazione. Adobe Commerce su infrastruttura cloud fornisce l’accesso al contenitore del server web solo nell’ambiente di integrazione. Le seguenti posizioni dei log di servizio sono per gli ambienti Pro Production e Staging:
 
 - **Registro Redis**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Registro Valkey**: `/var/log/platform/<project-ID>*/valkey-server-<project-ID>*.log`
 - **Registro Elasticsearch**: `/var/log/elasticsearch/elasticsearch.log`
 - **Registro raccolta oggetti inattivi Java**: `/var/log/elasticsearch/gc.log`
 - **Registro posta**: `/var/log/mail.log`

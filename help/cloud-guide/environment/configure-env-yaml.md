@@ -5,15 +5,11 @@ feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
 exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
 TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: c754e69243236bbf862ea636261c6d2a6cae9eb7
 workflow-type: tm+mt
 source-wordcount: 706
 ht-degree: 0%
@@ -33,14 +29,14 @@ Il file `.magento.env.yaml` utilizza le variabili di ambiente per centralizzare 
 Il file `.magento.env.yaml` contiene due sezioni: `stage` e `log`. La sezione `stage` controlla le azioni che si verificano durante le fasi del [processo di distribuzione cloud](../deploy/process.md).
 
 - `stage` - Utilizzare la sezione relativa all&#39;area di visualizzazione per definire determinate azioni per le seguenti fasi della distribuzione:
-   - `global` - Controlla le azioni nelle fasi di compilazione, distribuzione e post-distribuzione. Puoi ignorare queste impostazioni nelle sezioni di build, distribuzione e post-distribuzione.
-   - `build` - Controlla le azioni solo nella fase di compilazione. Se non specifichi impostazioni in questa sezione, la fase di build utilizza le impostazioni della sezione globale.
-   - `deploy` - Controlla le azioni solo nella fase di distribuzione. Se non specifichi impostazioni in questa sezione, la fase di distribuzione utilizza le impostazioni della sezione globale.
-   - `post-deploy`—Controlla le azioni _dopo_ la distribuzione dell&#39;applicazione e _dopo_ il contenitore inizia ad accettare le connessioni.
+  - `global` - Controlla le azioni nelle fasi di compilazione, distribuzione e post-distribuzione. Puoi ignorare queste impostazioni nelle sezioni di build, distribuzione e post-distribuzione.
+  - `build` - Controlla le azioni solo nella fase di compilazione. Se non specifichi impostazioni in questa sezione, la fase di build utilizza le impostazioni della sezione globale.
+  - `deploy` - Controlla le azioni solo nella fase di distribuzione. Se non specifichi impostazioni in questa sezione, la fase di distribuzione utilizza le impostazioni della sezione globale.
+  - `post-deploy`—Controlla le azioni _dopo_ la distribuzione dell&#39;applicazione e _dopo_ il contenitore inizia ad accettare le connessioni.
 - `log` - Utilizzare la sezione del registro per configurare [notifiche](set-up-notifications.md), inclusi i tipi di notifica e il livello di dettaglio.
-   - `slack`—Configurare un messaggio da inviare a un bot Slack.
-   - `email` - Configura un messaggio e-mail da inviare a uno o più destinatari e-mail.
-   - [gestori di log](log-handlers.md): configurare i messaggi delle applicazioni hardware e software inviati a un server di registrazione remoto.
+  - `slack`—Configurare un messaggio da inviare a un bot Slack.
+  - `email` - Configura un messaggio e-mail da inviare a uno o più destinatari e-mail.
+  - [gestori di log](log-handlers.md): configurare i messaggi delle applicazioni hardware e software inviati a un server di registrazione remoto.
 
 ### Variabili di ambiente
 
@@ -172,7 +168,7 @@ Se dopo aver scaricato le configurazioni hai abilitato Gestione configurazione, 
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
 ```
 
 >Dopo aver abilitato Configuration Management, sposta le variabili SCD_* nella fase di build:
@@ -182,10 +178,9 @@ Se dopo aver scaricato le configurazioni hai abilitato Gestione configurazione, 
     CRON_CONSUMERS_RUNNER:
       cron_run: true
       consumers: []
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
   build:
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
 ```
-
