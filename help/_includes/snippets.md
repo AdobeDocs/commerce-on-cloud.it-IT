@@ -107,7 +107,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 >
 >Per rimuovere i pacchetti obsoleti nelle versioni di Adobe Commerce sull&#39;infrastruttura cloud che non contengono il pacchetto `ece-tools`, è necessario eseguire un [aggiornamento una tantum](/help/cloud-guide/dev-tools/install-package.md) al progetto cloud. Se si utilizza il pacchetto `ece-tools` e si desidera aggiornarlo, vedere [Aggiornare il pacchetto ECE-Tools](/help/cloud-guide/dev-tools/update-package.md).
 
-## Suggerimento per l&#39;aggiornamento {#upgrade-tip}
+## Suggerimento per l'aggiornamento {#upgrade-tip}
 
 >[!TIP]
 >
@@ -129,7 +129,7 @@ Utilizzare le istruzioni seguenti per la configurazione del servizio negli ambie
 
 1. [Accedi](/help/get-started/onboarding.md#access-your-admin-panel) all&#39;amministratore.
 
-## Automatizzare l&#39;implementazione di snippet VCL personalizzato {#automate-vcl-snippet-deployment}
+## Automatizzare l'implementazione di snippet VCL personalizzato {#automate-vcl-snippet-deployment}
 
 >[!NOTE]
 >
