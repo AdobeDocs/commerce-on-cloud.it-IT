@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 475
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Nella tabella seguente sono descritti i file inclusi in un progetto cloud:
 | File | Descrizione |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | File di configurazione che reindirizza `www` al dominio apex e applicazione `php` per il server HTTP. Vedere [Configurare le route](../routes/routes-yaml.md). |
-| `/.magento/services.yaml` | File di configurazione che definisce un&#39;istanza MySQL (MariaDB), Redis e OpenSearch o Elasticsearch. Vedere [Configurare i servizi](../services/services-yaml.md). |
+| `/.magento/services.yaml` | File di configurazione che definisce un&#39;istanza MySQL (MariaDB), Redis o Valkey e OpenSearch o Elasticsearch. Vedere [Configurare i servizi](../services/services-yaml.md). |
 | `/app` | La cartella `code` è utilizzata per i moduli personalizzati. La cartella `design` è utilizzata per [temi personalizzati](../store/custom-theme.md). La cartella `etc` contiene i file di configurazione per l&#39;applicazione. |
 | `/m2-hotfixes` | Utilizzato per patch personalizzate. |
 | `/update` | Cartella di servizio utilizzata dal modulo di supporto. |

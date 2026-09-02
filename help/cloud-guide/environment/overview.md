@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 284
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Puoi configurare le impostazioni dell’applicazione, i percorsi, le azioni di b
 | [Applicazione](../application/configure-app-yaml.md) | `.magento.app.yaml` | Definisce come generare e distribuire Adobe Commerce, inclusi servizi, hook e processi cron. |
 | [Ambiente](configure-env-yaml.md) | `.magento.env.yaml` | Centralizza la gestione delle azioni di generazione e implementazione in tutti gli ambienti, inclusi Pro Staging e Produzione, utilizzando variabili di ambiente. |
 | [Route](../routes/routes-yaml.md) | `.magento/routes.yaml` | Configura la memorizzazione in cache, i reindirizzamenti e le inclusioni lato server. |
-| [Servizio](../services/services-yaml.md) | `.magento/services.yaml` | Definisce i servizi utilizzati da Adobe Commerce per nome e versione. Ad esempio, questo file può includere versioni di MariaDB, estensioni PHP, Redis, RabbitMQ e Elasticsearch o OpenSearch. È necessario aprire un ticket di supporto per inviare queste modifiche agli ambienti Pro plan di staging e produzione. |
+| [Servizio](../services/services-yaml.md) | `.magento/services.yaml` | Definisce i servizi utilizzati da Adobe Commerce per nome e versione. Ad esempio, questo file può includere versioni di MariaDB, estensioni PHP, Redis o Valkey, RabbitMQ e Elasticsearch o OpenSearch. È necessario aprire un ticket di supporto per inviare queste modifiche agli ambienti Pro plan di staging e produzione. |
 | [Impostazioni PHP](../application/php-settings.md#configure-php) | `php.ini` | File facoltativo che può essere aggiunto al progetto. Le impostazioni contenute in questo file vengono aggiunte a quelle gestite dall’infrastruttura cloud. |
 
 {style="table-layout:auto"}

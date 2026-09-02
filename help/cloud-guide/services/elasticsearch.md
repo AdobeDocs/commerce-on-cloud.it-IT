@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 739
+source-wordcount: 783
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Il supporto per la versione del servizio e la compatibilità per l’infrastrutt
 
    - Modificare la versione del servizio Elasticsearch nel file `services.yaml` in una versione compatibile con il client Elasticsearch PHP.
 
-     {{pro-update-service}}
+     Per informazioni sui requisiti di pianificazione degli aggiornamenti del servizio Pro e sulla disponibilità dei clienti, vedere [Supporto dei servizi Pro](services-yaml.md#pro-services-support) in _Configurazione dei servizi_.
 
 ## Riavvia il servizio Elasticsearch
 

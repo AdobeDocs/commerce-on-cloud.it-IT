@@ -1,6 +1,6 @@
 ---
 title: Applicare le patch
-description: Scopri come applicare le patch nel progetto Adobe Commerce su infrastruttura cloud.
+description: Scopri come applicare le patch richieste, opzionali e personalizzate a un progetto Adobe Commerce on Cloud Infrastructure utilizzando ECE-Tools e lo strumento Quality Patches.
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
 workflow-type: tm+mt
-source-wordcount: 911
+source-wordcount: 922
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ La tabella di stato contiene i seguenti tipi di informazioni:
 
 **Per applicare singole patch in un ambiente di sviluppo locale**:
 
-1. Aggiungere la variabile &#39;QUALITY_PATCHES&#39; al file `.magento.env.yaml` ed elencare le patch richieste al di sotto di essa.
+1. Aggiungere la variabile `QUALITY_PATCHES` al file `.magento.env.yaml` ed elencare le patch richieste al di sotto.
 
    ```yaml
    stage:
@@ -194,7 +194,7 @@ Durante la distribuzione, ECE-Tools applica tutte le patch di Adobe ed eventuali
 
 **Per applicare e testare una patch personalizzata in un ambiente cloud**:
 
-1. Nella directory principale del progetto, creare una directory denominata `m2-hotfixes` se non esiste
+1. Nella directory principale del progetto creare una directory denominata `m2-hotfixes` se non esiste.
 
    ```bash
    mkdir m2-hotfixes

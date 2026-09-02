@@ -12,9 +12,9 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 344
+source-wordcount: 340
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Le variabili di ambiente specifiche di Adobe Commerce sull&#39;infrastruttura cl
 | `MAGENTO_CLOUD_ROUTES` | Descrivere le route definite nel file di ambiente `.magento/routes.yaml`. |
 | `MAGENTO_CLOUD_TREE_ID` | L’ID della struttura per l’applicazione, che corrisponde all’SHA della struttura in Git. |
 | `MAGENTO_CLOUD_VARIABLES` | Oggetto JSON con codifica base64 con coppie chiave-valore, ad esempio `"key":"value"`. |
-| `MAGENTO_CLOUD_LOCKS_DIR` | Fornisce il percorso del punto di montaggio per il provider di blocchi nell’infrastruttura cloud. Il provider di blocchi impedisce l&#39;avvio di processi cron e gruppi cron duplicati.<br><br>Sono supportati solo i provider di blocco `file` e `db`.<br><br>**Gli ambienti di produzione e staging Pro** sono predefiniti nel provider di blocchi `file`. Questo valore non può essere modificato.<br><br>**Integrazione Pro e ambienti Starter**, non utilizzare la variabile `MAGENTO_CLOUD_LOCKS_DIR`. Il provider del blocco `db` è applicato per impostazione predefinita. È possibile modificare il valore predefinito aggiornando la variabile di distribuzione dell&#39;ambiente `[LOCK_PROVIDER](variables-deploy.md#lock_provider` nel file `.magento.env.yaml`. |
+| `MAGENTO_CLOUD_LOCKS_DIR` | Fornisce il percorso del punto di montaggio per il provider di blocchi nell’infrastruttura cloud. Il provider di blocchi impedisce l&#39;avvio di processi cron e gruppi cron duplicati.<br><br>Sono supportati solo i provider di blocco `file` e `db`.<br><br>**Gli ambienti di produzione e staging Pro** sono predefiniti nel provider di blocchi `file`. Questo valore non può essere modificato.<br><br>**Integrazione Pro e ambienti Starter**, non utilizzare la variabile `MAGENTO_CLOUD_LOCKS_DIR`. Il provider del blocco `db` è applicato per impostazione predefinita. È possibile modificare il valore predefinito aggiornando la variabile di distribuzione dell&#39;ambiente [`LOCK_PROVIDER`](variables-deploy.md#lock_provider) nel file `.magento.env.yaml`. |
 
 >[!WARNING]
 >
@@ -43,7 +43,7 @@ Le variabili di ambiente specifiche di Adobe Commerce sull&#39;infrastruttura cl
 >
 >![Esempio di variabile di ambiente](../../assets/set-env-variable-ui.png)
 
-Poiché i valori possono cambiare nel tempo, è consigliabile esaminare la variabile in fase di esecuzione e utilizzarla per configurare l’applicazione. Ad esempio, utilizzare la variabile `MAGENTO_CLOUD_RELATIONSHIPS` per recuperare le relazioni relative all&#39;ambiente nel modo seguente:
+Poiché i valori possono cambiare nel tempo, esamina la variabile in fase di esecuzione e utilizzala per configurare l’applicazione. Ad esempio, utilizzare la variabile `MAGENTO_CLOUD_RELATIONSHIPS` per recuperare le relazioni relative all&#39;ambiente nel modo seguente:
 
 ```php
 <?php

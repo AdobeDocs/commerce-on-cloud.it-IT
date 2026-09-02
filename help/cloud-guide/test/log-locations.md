@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 50c653aa6f78056f3fa8fe300fd224693a4460b0
 workflow-type: tm+mt
-source-wordcount: 1369
+source-wordcount: 1371
 ht-degree: 0%
 
 ---
@@ -283,6 +283,7 @@ Ad esempio, se si crea un percorso personalizzato per archiviare i registri nell
 Poiché ogni servizio viene eseguito in un contenitore separato, i registri del servizio non sono disponibili nell’ambiente di integrazione. Adobe Commerce su infrastruttura cloud fornisce l’accesso al contenitore del server web solo nell’ambiente di integrazione. Le seguenti posizioni dei log di servizio sono per gli ambienti Pro Production e Staging:
 
 - **Registro Redis**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Registro Valkey**: `/var/log/platform/<project-ID>*/valkey-server-<project-ID>*.log`
 - **Registro Elasticsearch**: `/var/log/elasticsearch/elasticsearch.log`
 - **Registro raccolta oggetti inattivi Java**: `/var/log/elasticsearch/gc.log`
 - **Registro posta**: `/var/log/mail.log`

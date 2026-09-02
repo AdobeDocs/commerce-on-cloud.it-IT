@@ -3,16 +3,16 @@ title: Sicurezza avanzata di Adobe Commerce
 description: Scopri in che modo la sicurezza avanzata aggiunge la gestione dei bot, la limitazione avanzata della velocità e la protezione DDoS di Livello 7 ad Adobe Commerce su infrastruttura cloud.
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2487'
 ht-degree: 0%
 
 ---
 
 # [!DNL Adobe Commerce Advanced Security]
 
-[!DNL Adobe Commerce Advanced Security] è un prodotto che funziona con [!DNL Adobe Commerce on Cloud Infrastructure] per mantenere il tuo negozio online veloce, disponibile e sicuro. In questo modo è possibile proteggere i ricavi, ridurre i tempi di inattività e mantenere la fiducia dei clienti durante i picchi di traffico e gli attacchi automatizzati.
+[!DNL Adobe Commerce Advanced Security] è un prodotto che funziona con [!DNL Adobe Commerce on Cloud Infrastructure] per mantenere il tuo negozio online veloce, disponibile e sicuro. Queste funzionalità consentono di proteggere i ricavi, ridurre i tempi di inattività e mantenere la fiducia dei clienti durante i picchi di traffico e gli attacchi automatizzati.
 
 [!DNL Adobe Commerce on Cloud Infrastructure] include la protezione integrata [Layer 3 e 4 DDoS](./fastly.md#ddos-protection) e un [Firewall applicazione Web (WAF)](./fastly-waf-service.md). Nel [modello di responsabilità condivisa](https://experienceleague.adobe.com/it/docs/commerce-operations/security-and-compliance/shared-responsibility), il rilevamento dei dati DDoS di Layer 7, la protezione dei bot e il blocco proattivo degli indirizzi IP sono responsabilità degli esercenti, che [!DNL Adobe Commerce Advanced Security] è progettato per gestire.
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 - **[Protezione DDoS](https://docs.fastly.com/products/fastly-ddos-protection)**: fornisce protezione DDoS di livello 7 (livello applicazione) oltre la protezione Layer 3 e 4 esistente inclusa in tutti i [!DNL Adobe Commerce on Cloud Infrastructure] progetti. Il servizio di protezione DDoS assorbe gli attacchi volumetrici su larga scala e garantisce la disponibilità continua delle applicazioni durante gli eventi Distributed Denial of Service (DDoS), proteggendo i ricavi durante i periodi di traffico di picco.
 
-- **[Limitazione avanzata velocità](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)**—Fornisce regole di limitazione della velocità configurabili che proteggono da abusi URL specifici, endpoint API e risorse dell&#39;applicazione. Il servizio Advanced Rate Limiting va oltre il [limite di velocità di base](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md) disponibile tramite il modulo Fastly CDN per indirizzare specifici modelli di traffico e vettori di attacco, riducendo la tensione dell&#39;infrastruttura e i costi cloud.
+- **[Limitazione avanzata velocità](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)**—Fornisce regole di limitazione della velocità configurabili che proteggono da abusi URL specifici, endpoint API e risorse dell&#39;applicazione. Il servizio Advanced Rate Limiting estende il [limite di velocità di base](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md) disponibile tramite il modulo Fastly CDN per indirizzare specifici modelli di traffico e vettori di attacco, riducendo la tensione dell&#39;infrastruttura e i costi cloud.
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ Le seguenti protezioni di base per la gestione dei bot sono disponibili tramite 
 | Sfida dinamica per API o pattern URL specifici | Configurato solo se necessario in collaborazione con il cliente | Il traffico bloccato è visibile nei registri di New Relic in `Agent_response` |
 | Sfida browser | Configurato solo se necessario in collaborazione con il cliente | Il traffico bloccato è visibile nei registri di New Relic in `Agent_response` |
 
-## Osservabilità: monitoraggio della protezione dei bot e delle attività NGWAF
+## Monitorare la protezione dei bot e le attività NGWAF
 
 I registri CDN vengono inoltrati automaticamente all’account New Relic del cliente. Per ulteriori dettagli, consulta [Gestione registro](../monitor/log-management.md).
 
@@ -139,10 +139,10 @@ Il componente aggiuntivo [!DNL Advanced Security] funziona in aggiunta alla rete
 
 ### Funzionalità aggiuntive
 
-- **Sfide dinamiche**: assegna automaticamente la sfida ottimale al traffico sospetto. Sfrutta i Private Access Tokens (PAT) per convalidare facilmente una parte delle richieste senza influire sull’esperienza utente.
+- **Sfide dinamiche**: assegna automaticamente la sfida ottimale al traffico sospetto. Sfrutta i Private Access Tokens (PAT) per convalidare una parte delle richieste senza alcun impatto sull’esperienza utente.
 - **Tecnologia dell&#39;inganno** - Indirizza i tentativi di acquisizione dell&#39;account restituendo informazioni false agli aggressori, mitigando il loro attacco e interrompendo la loro capacità di operare su larga scala.
 
-## Scelta della protezione giusta
+## Scegli la protezione giusta
 
 Segui questa guida per determinare se [!DNL Advanced Security] è la soluzione giusta per le tue esigenze di protezione della vetrina o se le protezioni esistenti o le soluzioni alternative sono più appropriate.
 
@@ -198,7 +198,7 @@ I seguenti scenari sono meglio gestiti con protezioni alternative che possono in
 - **[Mascheramento origine](./fastly.md#origin-cloaking)**: assicura tutte le route di traffico attraverso Fastly, bloccando l&#39;accesso diretto ai server di origine.
 - **[Frammenti di sicurezza basati su VCL](./fastly-vcl-custom-snippets.md)**—Regole VCL (Custom Varnish Configuration Language) per il blocco IP, la inserire nell&#39;elenco Consentiti di e il filtro delle richieste.
 
-### [!DNL Advanced Security]
+### Protezione aggiuntiva da Advanced Security
 
 [!DNL Advanced Security] fornisce una protezione maggiore rispetto alle protezioni incorporate incluse in [!DNL Adobe Commerce on Cloud Infrastructure], ma a un costo aggiuntivo:
 
@@ -269,7 +269,7 @@ Per richiedere [!DNL Advanced Security]:
 [!DNL Advanced Security] fornisce la protezione della vetrina edge-layer. Le seguenti funzionalità non sono disponibili e sono meglio gestite con soluzioni complementari:
 
 - **Il punteggio di frode a livello di transazione**—[!DNL Advanced Security] non valuta le singole transazioni di pagamento per il rischio di frode. Utilizza una piattaforma dedicata di prevenzione delle frodi per il punteggio a livello di transazione.
-- **Gestione degli accessi e delle identità (IAM)**—[!DNL Advanced Security] non gestisce l&#39;autenticazione utente, l&#39;autorizzazione o la gestione delle sessioni. Queste rimangono responsabilità del cliente.
+- **Gestione degli accessi e delle identità (IAM)**—[!DNL Advanced Security] non gestisce l&#39;autenticazione utente, l&#39;autorizzazione o la gestione delle sessioni. Questi articoli rimangono responsabilità del cliente.
 - **Il test di sicurezza delle applicazioni statiche e dinamiche (SAST/DAST)**—[!DNL Advanced Security] non include il test di penetrazione o l&#39;analisi delle vulnerabilità a livello di codice.
 - **Sicurezza API**: mentre la limitazione avanzata della velocità consente di proteggere gli endpoint API da abusi, non vengono fornite funzionalità di sicurezza API complete quali la convalida dello schema e la gestione del gateway API.
 - **Prevenzione completa delle frodi**—[!DNL Advanced Security] si concentra sulla protezione della vetrina edge-layer e non è una piattaforma completa di gestione delle frodi.

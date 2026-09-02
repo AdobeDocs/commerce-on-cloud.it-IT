@@ -15,9 +15,9 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 2defc3f82cdada4e9576721ae7a7b3dd25a84adc
 workflow-type: tm+mt
-source-wordcount: 828
+source-wordcount: 807
 ht-degree: 0%
 
 ---
@@ -36,27 +36,27 @@ Storicamente, l’architettura Pro era costituita da tre nodi, ciascuno contenen
 
 ### Livello di servizio
 
-Esistono tre nodi di servizio per l&#39;archiviazione dei dati, la cache e i servizi: **OpenSearch** o **Elasticsearch**, **MariaDB**, **Redis** e altro ancora. Quando il livello di servizio si avvicina alla capacità, l&#39;unico modo per scalare è aumentare le dimensioni del server, ad esempio aumentando la potenza e la memoria del CPU. La capacità è limitata alla dimensione del nodo disponibile. Poiché il cluster di database è progettato per un&#39;elevata disponibilità, non è possibile scalare orizzontalmente in modo affidabile con le tecnologie utilizzate.
+Ognuno dei tre nodi di servizio esegue lo stesso set di servizi: **OpenSearch** o **Elasticsearch** per la ricerca, **MariaDB** per il database e **Redis** o **Valkey** per la memorizzazione nella cache, tra gli altri. Quando il livello di servizio si avvicina alla capacità, è possibile scalare solo verticalmente, aumentando le dimensioni del server (CPU e memoria). La capacità è limitata alla dimensione del nodo più grande disponibile. Poiché il cluster di database è progettato per l&#39;elevata disponibilità, non è possibile scalare i nodi del database in modo affidabile con le tecnologie utilizzate.
 
 ![Scalabilità livello servizio](../../assets/scaling-service.png)
 
-Si consideri un esempio che il tipo di istanza del nodo di servizio è _m5.2xlarge_ con 32 Gb di RAM. Un servizio, come il database, utilizza una notevole quantità di memoria (30 Gb). Il ridimensionamento alla successiva dimensione dell&#39;istanza disponibile _m5.4xlarge_ fornisce una RAM da 64 Gb, che raddoppia la memoria e soddisfa le crescenti esigenze del database.
+Si consideri un esempio in cui il tipo di istanza del nodo di servizio è _m5.2xlarge_ con 32 Gb di RAM. Un servizio, come il database, utilizza una notevole quantità di memoria (30 Gb). Il ridimensionamento alla successiva dimensione dell&#39;istanza disponibile _m5.4xlarge_ fornisce una RAM da 64 Gb, che raddoppia la memoria e soddisfa le crescenti esigenze del database.
 
 È possibile ottimizzare ulteriormente le prestazioni del livello servizio instradando il traffico in base al tipo di nodo. Per impostazione predefinita, il nodo del database è isolato dal traffico web. Ad esempio, puoi scegliere di gestire il traffico web sul nodo del database.
 
 ### Livello web
 
-Sono disponibili tre nodi Web per l&#39;elaborazione delle richieste e del traffico Web: **php-fpm** e **NGINX**. Oltre al ridimensionamento verticale aumentando la potenza e la memoria, il livello web può essere scalato orizzontalmente aggiungendo server web a un cluster esistente quando è limitato a livello PHP. Per informazioni sulla scalabilità automatica dei nodi Web, vedere [Ridimensionamento automatico](autoscaling.md).
+Sono disponibili tre nodi Web per l&#39;elaborazione delle richieste e del traffico Web: **php-fpm** e **NGINX**. Oltre al ridimensionamento verticale aumentando la potenza e la memoria, il livello web può essere scalato orizzontalmente aggiungendo server web a un cluster esistente quando è limitato a livello PHP. Per informazioni sul ridimensionamento automatico dei nodi Web, vedere [Ridimensionamento automatico](autoscaling.md).
 
 ![Ridimensionamento livello Web](../../assets/scaling-web.png)
 
-Questa funzione integra la scalabilità verticale fornita dal livello di servizio. Con la scalabilità del livello di servizio in termini di dimensioni e potenza per soddisfare un crescente utilizzo di database e servizi, il livello web viene scalato in termini di dimensioni, potenza e istanze per soddisfare un aumento delle richieste di processi e requisiti di traffico più elevati.
+Questa funzione integra la scalabilità verticale fornita dal livello di servizio. Con il livello di servizio scalabile per adattarsi a un database in crescita, il livello web viene scalato per gestire un aumento delle richieste e del traffico.
 
-Si consideri un esempio di tipo di istanza del nodo Web _C5.2xlarge con otto CPU e 16 Gb di RAM_. Il numero di richieste al sito è aumentato notevolmente. È possibile aggiungere un nodo C5.2xlarge per gestire l&#39;aumento dei processi php-fpm oppure cambiare ogni tipo di istanza in _C5.4xlarge con 16 CPU e 32 Gb di RAM_. L’aggiunta di un nodo riduce il rischio di una capacità di sovratensione insufficiente.
+Si consideri un esempio in cui il tipo di istanza del nodo Web è _C5.2xlarge con otto CPU e 16 Gb di RAM_. Il numero di richieste al sito è aumentato notevolmente. Per gestire l&#39;aumento dei processi php-fpm, è possibile aggiungere un nodo C5.2xlarge oppure modificare ogni tipo di istanza in _C5.4xlarge con 16 CPU e 32 Gb di RAM_. L’aggiunta di un nodo riduce il rischio di una capacità di sovratensione insufficiente.
 
 ## Struttura del progetto
 
-In minima parte, i progetti Pro con architettura Scaled dispongono di sei nodi.
+I progetti Pro con architettura Scalata dispongono di sei nodi.
 
 - 3 nodi web c5.2xlarge (8 CPU, 16 Gb di RAM)
 
@@ -114,7 +114,6 @@ project-id@server-id:~$
 
 ### Posizioni del registro
 
-Le posizioni del registro variano leggermente a seconda del nodo. Un registro di database, ad esempio **Registro errori MySQL**, è disponibile in un nodo di servizio (`/var/log/mysql/mysql-error.log`), ma non in un nodo Web.
+Le posizioni del registro variano leggermente a seconda del nodo. Ad esempio, il **Registro errori MySQL** (`/var/log/mysql/mysql-error.log`) è disponibile in un nodo di servizio, ma non in un nodo Web.
 
 Ogni account Pro include il servizio [Registri di New Relic](../monitor/new-relic-service.md), che si connette automaticamente ai dati di registro dell&#39;applicazione per fornire una gestione dinamica dei registri. I dati di registro aggregati da tutti i nodi vengono visualizzati nell’applicazione Registri di New Relic in modo da poter risolvere i problemi di prestazioni su nodi specifici da un singolo dashboard.
-

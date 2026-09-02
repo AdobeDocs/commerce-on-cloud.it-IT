@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 1024
+source-wordcount: 1050
 ht-degree: 0%
 
 ---
@@ -29,18 +29,18 @@ Puoi aggiornare la base di codice di Adobe Commerce a una versione più recente.
 A seconda del tipo di ambiente (Sviluppo, Staging o Produzione), le attività di aggiornamento possono includere quanto segue:
 
 - Aggiorna le estensioni di terze parti alla versione più recente supportata.
-- Per i progetti Pro, è necessario inviare un ticket di supporto Adobe Commerce per installare o aggiornare i servizi negli ambienti di staging e produzione.
-- Per i rami di sviluppo/integrazione/PR:
-  - Aggiornare il file `.magento/services.yaml` con le nuove versioni di MariaDB (MySQL), OpenSearch, RabbitMQ e Redis per verificarne la compatibilità con le nuove versioni di Adobe Commerce.
-  - Aggiornare il file `.magento.app.yaml` con le nuove impostazioni per hook e variabili di ambiente.
+- Aggiornare il file `.magento/services.yaml` con le versioni di servizio richieste per MariaDB (MySQL), OpenSearch, RabbitMQ e Redis o Valkey in modo che rimangano compatibili con la versione di Adobe Commerce di destinazione.
+  - Per i rami di sviluppo/integrazione/PR, queste modifiche vengono utilizzate direttamente come parte della configurazione dell’ambiente.
+  - Per gli ambienti di staging e produzione Pro, il supporto Adobe Commerce esegue l&#39;installazione o l&#39;aggiornamento effettivo del servizio, ma è necessario mantenere `.magento/services.yaml` corrente, completo e valido, perché il suo contenuto viene convalidato durante la distribuzione.
+- Aggiornare il file `.magento.app.yaml` con le nuove impostazioni per hook e variabili di ambiente.
 
 {{upgrade-tip}}
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## File di configurazione
 
-Prima di aggiornare l’applicazione, è necessario aggiornare i file di configurazione del progetto per tenere conto delle modifiche alle impostazioni di configurazione predefinite per Adobe Commerce sull’infrastruttura cloud o l’applicazione. Le impostazioni predefinite più recenti si trovano nell&#39;archivio GitHub [magento-cloud](https://github.com/magento/magento-cloud).
+Per tenere conto delle modifiche apportate alle impostazioni di configurazione predefinite di Adobe Commerce sull’infrastruttura cloud o sull’applicazione, aggiorna i file di configurazione del progetto prima di aggiornare l’applicazione. Le impostazioni predefinite più recenti si trovano nell&#39;archivio GitHub [magento-cloud](https://github.com/magento/magento-cloud).
 
 ### compositore.json
 
@@ -84,7 +84,7 @@ Per aggiornare il file `composer.json` per Adobe Commerce versione 2.4.4 e succe
 
 ## Backup dell’ambiente
 
-È consigliabile creare un backup dell’istanza prima di un aggiornamento. Utilizza i seguenti passaggi per eseguire il backup degli ambienti di integrazione, staging e produzione.
+Adobe consiglia di creare un backup dell’istanza prima di un aggiornamento. Utilizza i seguenti passaggi per eseguire il backup degli ambienti di integrazione, staging e produzione.
 
 **Per eseguire il backup del database e del codice dell&#39;ambiente di integrazione**:
 
@@ -164,7 +164,7 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
 
    **Metodo 2**: [Visualizzare le patch e lo stato disponibili](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **Metodo 3**: [Cerca patch](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=it)
+   **Metodo 3**: [Cerca patch](https://experienceleague.adobe.com/it/tools/commerce-quality-patches)
 
 
 1. Aggiungi, conferma e invia modifiche al codice.
@@ -185,7 +185,7 @@ Prima di aggiornare l&#39;applicazione, esaminare le informazioni sulle [version
 
    I file che Composer marshalling appartengono alla nuova versione di Adobe Commerce, per sovrascrivere la versione obsoleta degli stessi file. Attualmente, il marshalling è disabilitato in Adobe Commerce, pertanto è necessario aggiungere i file marshallati al controllo del codice sorgente.
 
-1. Attendere il completamento della distribuzione.
+1. Per completare l’aggiornamento, attendi la distribuzione.
 
 1. Verifica l’aggiornamento nell’ambiente di integrazione, staging o produzione utilizzando SSH per accedere e controllare la versione.
 
@@ -213,9 +213,9 @@ Controlla le pagine delle estensioni e dei moduli di terze parti nel Marketplace
 
 1. Effettua il push e il test nell’ambiente di integrazione.
 
-1. Effettua il push all’ambiente di staging per il test in un ambiente di pre-produzione.
+1. Per eseguire il test in un ambiente di pre-produzione, invia all’ambiente di staging.
 
-Adobe consiglia vivamente di aggiornare l&#39;ambiente di produzione _prima_, incluse le estensioni aggiornate nel processo di avvio del sito.
+Adobe consiglia di aggiornare l&#39;ambiente di produzione _prima_, incluse le estensioni aggiornate nel processo di avvio del sito.
 
 >[!NOTE]
 >
@@ -223,7 +223,7 @@ Adobe consiglia vivamente di aggiornare l&#39;ambiente di produzione _prima_, in
 
 ## Risoluzione dei problemi di aggiornamento
 
-Se l’aggiornamento non è riuscito, viene visualizzato un messaggio di errore nel browser che indica che non è possibile accedere alla vetrina o al pannello di amministrazione:
+Se l’aggiornamento non riesce, viene visualizzato un messaggio di errore nel browser che indica che non è possibile accedere alla vetrina o al pannello di amministrazione:
 
 ```
 There has been an error processing your request
