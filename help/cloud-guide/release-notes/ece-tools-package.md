@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 3631
+source-wordcount: 3685
 ht-degree: 0%
 
 ---
@@ -40,11 +40,19 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v2002.2.13 {#latest}
+## v2002.2.14 {#latest}
+
+Data di rilascio: 08 settembre 2026
+
+- ![icona correzione](../../assets/fix.svg) **Copertura test funzionale Valkey 8.5**—Copertura migliorata per la configurazione della cache L2 di Symfony.<!-- MCLOUD-15487 -->
+- ![icona correzione](../../assets/fix.svg) **Miglioramenti apportati alla memorizzazione nella cache**—È stato risolto un problema di isolamento della cache delle pagine.<!-- MCLOUD-15509 -->
+- ![icona di correzione](../../assets/fix.svg) **Miglioramenti a Redis e Valkey**—Gestione avanzata di `REDIS_BACKEND` e `VALKEY_BACKEND` per supportare le configurazioni della cache di Redis e Valkey sia legacy che moderna (cache di Symfony, versione 2.4.9+).<!-- MCLOUD-15546 -->
+
+## v2002.2.13
 
 Data di rilascio: 19 agosto 2026
 
-- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della memorizzazione nella cache** Supporto avanzato della cache Symfony_l2 per le connessioni slave Redis e Valkey e risoluzione dei problemi di distribuzione statica, di indicizzazione dei tag e di precaricamento correlati.<!-- MCLOUD-15433 -->
+- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della memorizzazione nella cache**—Supporto avanzato della cache Symfony_l2 per le connessioni slave Redis e Valkey e risoluzione dei problemi di distribuzione statica, di indice dei tag e di precaricamento correlati.<!-- MCLOUD-15433 -->
 
 ## v2002.2.12
 
