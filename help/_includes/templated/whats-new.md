@@ -1,8 +1,8 @@
 ---
-source-git-commit: d729c35577a141701e5aa20ad06ee2f7f3306ba6
+source-git-commit: d82eee385906c4cf6119a1b0b846f8f794163186
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 2%
+source-wordcount: '310'
+ht-degree: 1%
 
 ---
 # Nuovo modello
@@ -10,6 +10,36 @@ ht-degree: 2%
 ## Novità
 
 Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo elenco sono esclusi tutti gli aggiornamenti minori, ad esempio la modifica della copia.
+
+### 1 settembre 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descrizione</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>È stata aggiornata la documentazione del servizio Redis e Valkey per riflettere la versione corrente e il supporto a livello di patch. Sono stati aggiunti riferimenti Valkey nelle pagine dell'architettura e dei servizi della Guida Cloud, tra cui <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/redis">Configurazione del servizio Redis</a>, <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/valkey">Configurazione del servizio Valkey</a> e <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">Distribuzione delle variabili</a>.</p>
+</td>
+      <td>
+        Feedback, aggiornamento principale
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/89a9594b50dfeacc4e0e7765f195d9bade00413d">commit</a></td>
+    </tr>
+    <tr>
+      <td><p>Sono state aggiunte indicazioni sui requisiti di disponibilità dei clienti durante le finestre di aggiornamento di Commerce e sono state chiarite la richiesta di aggiornamento del servizio Pro e il processo di pianificazione in <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Aggiornamento di Commerce versione</a> e <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/configure/service/services-yaml">Configurazione dei servizi</a>.</p>
+</td>
+      <td>
+        Feedback
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ea46582388a9afaf94eb9ced6b61dbef0044370d">commit</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 24 agosto 2026
 
