@@ -5,20 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +454,7 @@ Data di rilascio: 6 febbraio 2020
 
   - ![nuova icona](../../assets/new.svg) **È stato aggiunto un pacchetto separato per Cloud Docker per Commerce**. Il pacchetto Docker è stato separato dal pacchetto `ece-tools` per mantenere la qualità del codice e fornire versioni indipendenti. Gli aggiornamenti e le correzioni relativi a `ece-tools` sono gestiti dall&#39;archivio GitHub [magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
-  - ![nuova icona](../../assets/new.svg) **Funzionalità di applicazione delle patch aggiornate**—La funzionalità di applicazione delle patch è stata spostata dal pacchetto ECE-Tools a un pacchetto [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) separato. Durante la distribuzione, `ece-tools` utilizza il nuovo pacchetto per applicare le patch. Consulta le [note sulla versione delle patch cloud](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![nuova icona](../../assets/new.svg) **Funzionalità di applicazione delle patch aggiornate**—La funzionalità di applicazione delle patch è stata spostata dal pacchetto ECE-Tools a un pacchetto `magento-cloud-patches` separato. Durante la distribuzione, `ece-tools` utilizza il nuovo pacchetto per applicare le patch. Consulta le [note sulla versione delle patch cloud](cloud-patches.md).<!--MAGECLOUD-4567-->
 
   - ![nuova icona](../../assets/new.svg) **Sono state aggiornate le dipendenze del Compositore**—È stato aggiornato il file `composer.json` per Adobe Commerce nell&#39;infrastruttura cloud con una dipendenza per il pacchetto `magento/magento-cloud-docker`. Ora `ece-tools` include le dipendenze per tutti i pacchetti in [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md). Questi pacchetti vengono installati e aggiornati automaticamente quando si installa o si aggiorna `ece-tools`.
 
