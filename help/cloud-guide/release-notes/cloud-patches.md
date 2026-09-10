@@ -52,13 +52,13 @@ Il pacchetto `magento/magento-cloud-patches` utilizza la seguente sequenza di ve
 
 Data di rilascio: 08 settembre 2026
 
-- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-146](https://helpx.adobe.com/security/products/magento/apsb26-146.html).<!--MCLOUD-15587 -->
+- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-146](https://helpx.adobe.com/it/security/products/magento/apsb26-146.html).<!--MCLOUD-15587 -->
 
 ## v1.1.20
 
 Data di rilascio: 08 settembre 2026
 
-- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Supporto incluso per le patch di sicurezza isolate di settembre 2026 a cui si fa riferimento in [Adobe Commerce Security Update APSB26-138](https://helpx.adobe.com/security/products/magento/apsb26-138.html).<!-- MCLOUD-15053 -->
+- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Supporto incluso per le patch di sicurezza isolate di settembre 2026 a cui si fa riferimento in [Adobe Commerce Security Update APSB26-138](https://helpx.adobe.com/it/security/products/magento/apsb26-138.html).<!-- MCLOUD-15053 -->
 
 ## v1.1.19
 
@@ -72,7 +72,7 @@ Data di rilascio: 19 agosto 2026
 Data di rilascio: 11 agosto 2026
 
 - ![icona di correzione](../../assets/fix.svg) **Gestione delle patch migliorata**. Le patch ora ignorano i moduli di destinazione degli hunk rimossi tramite `composer.json` `replace` e continuano ad applicare le parti installate rimanenti.<!-- MCLOUD-15325 -->
-- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html).<!--MCLOUD-15035 -->
+- ![icona correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-92](https://helpx.adobe.com/it/security/products/magento/apsb26-92.html).<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -91,7 +91,7 @@ Data di rilascio: 23 luglio 2026
 
 Data di rilascio: 14 luglio 2026
 
-- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-73](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-37421).<!--MCLOUD-15066 -->
+- ![icona di correzione](../../assets/fix.svg) **Miglioramenti della sicurezza**—Sono state applicate le correzioni di sicurezza a cui si fa riferimento in [Adobe Commerce Security Update APSB26-73](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-37421).<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
@@ -113,7 +113,7 @@ Data di rilascio: 05 marzo 2026
 Data di rilascio: 13 novembre 2025
 
 - ![icona correzione](../../assets/fix.svg) **Pacchetto Symfony**—È stato aggiunto il supporto per i pacchetti Symfony YAML più recenti.<!-- MCLOUD-14020 -->
-- ![icona di correzione](../../assets/fix.svg) **Patch**—Correzione di [Errore di estrazione quando la minimizzazione JS e il bundling sono abilitati](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997) problema descritto nella *Knowledge Base di Commerce*.
+- ![icona di correzione](../../assets/fix.svg) **Patch**—Correzione di [Errore di estrazione quando la minimizzazione JS e il bundling sono abilitati](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27997) problema descritto nella *Knowledge Base di Commerce*.
 - ![icona correzione](../../assets/fix.svg) **Visualizzazione categorie migliorata**—MCLOUD-13752: miglioramento della visualizzazione categorie.<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
@@ -145,13 +145,13 @@ Data di rilascio: 03 giugno 2025
 
 Data di rilascio: 05 maggio 2025
 
-- ![nuova icona](../../assets/new.svg) **È stata aggiornata la patch per Commerce da 2.4.4 a 2.4.8**. Questo aggiornamento rivede la patch per [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27148), rilasciata nella versione 1.1.7<!-- MCLOUD-13619 -->
+- ![nuova icona](../../assets/new.svg) **È stata aggiornata la patch per Commerce da 2.4.4 a 2.4.8**. Questo aggiornamento rivede la patch per [CVE-2025-24434](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27148), rilasciata nella versione 1.1.7<!-- MCLOUD-13619 -->
 
 ## v1.1.6
 
 Data di rilascio: 24 aprile 2025
 
-- ![nuova icona](../../assets/new.svg) **È stata aggiornata la patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento è una patch aggiornata per [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149), rilasciata in 1.1.4<!-- MCLOUD-13240 -->
+- ![nuova icona](../../assets/new.svg) **È stata aggiornata la patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento è una patch aggiornata per [CVE-2025-24434](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27149), rilasciata in 1.1.4<!-- MCLOUD-13240 -->
 
 ## v1.1.5
 
@@ -163,7 +163,7 @@ Data di rilascio: 15 aprile 2025
 
 Data di rilascio: 13 febbraio 2025
 
-- ![nuova icona](../../assets/new.svg) **È stata aggiunta la patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento prevede l&#39;aggiunta delle patch [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149).<!-- MCLOUD-13240     - -->
+- ![nuova icona](../../assets/new.svg) **È stata aggiunta la patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento prevede l&#39;aggiunta delle patch [CVE-2025-24434](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27149).<!-- MCLOUD-13240     - -->
 
 ## v1.1.3
 
@@ -175,13 +175,13 @@ Data di rilascio: 6 febbraio 2025
 
 Data di rilascio: 5 novembre 2024
 
-- ![icona correzione](../../assets/fix.svg) **Aggiunta patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento corregge una vulnerabilità critica di [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27151) per Adobe Commerce quando si utilizza il modulo B2B.<!-- MCLOUD-12980 - -->
+- ![icona correzione](../../assets/fix.svg) **Aggiunta patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento corregge una vulnerabilità critica di [CVE-2024-45115](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27151) per Adobe Commerce quando si utilizza il modulo B2B.<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 Data di rilascio: 5 novembre 2024
 
-- ![icona correzione](../../assets/fix.svg) **Aggiunta patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento corregge una vulnerabilità critica di [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting.<!-- MCLOUD-12980 - -->
+- ![icona correzione](../../assets/fix.svg) **Aggiunta patch per Commerce da 2.4.4 a 2.4.7**. Questo aggiornamento corregge una vulnerabilità critica di [CVE-2024-34102](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting.<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -259,7 +259,7 @@ Patch critica per Adobe Commerce 2.4.5:
 
 - **Problema con gli ordini che utilizzano i pagamenti di Braintree**. Questa patch risolve un problema critico che impedisce agli amministratori di inserire nuovi ordini o riordini.<!-- MCLOUD-9137 -->
 
-Vedi [L&#39;amministratore non può creare un ordine o riordinare se il pagamento Braintree è abilitato](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27169).
+Vedi [L&#39;amministratore non può creare un ordine o riordinare se il pagamento Braintree è abilitato](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-27169).
 
 ## v1.0.17
 
@@ -275,7 +275,7 @@ Patch critica per Adobe Commerce 2.3.3-p1 e versioni successive:
 
 Sono state aggiornate le patch per risolvere una vulnerabilità **critica** con conseguente esecuzione di codice remoto non autenticato.<!-- MCLOUD-8479 -->
 
-Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
+Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/it/security/products/magento/apsb22-12.html).
 
 ## v1.0.15
 
@@ -292,7 +292,7 @@ Patch critica per Adobe Commerce 2.3.3-p1 e versioni successive:
 
 È stata aggiunta una patch per risolvere una vulnerabilità **critica** con conseguente esecuzione di codice remoto non autenticato.<!-- MCLOUD-8461 -->
 
-Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
+Consulta [Bollettino sulla sicurezza di Adobe APSB22-12](https://helpx.adobe.com/it/security/products/magento/apsb22-12.html).
 
 ## v1.0.13
 
@@ -308,7 +308,7 @@ Data di rilascio: 12 agosto 2021
 
 Patch critica per Adobe Commerce 2.4.3 e 2.3.7-p1:
 
-- **Problema con il limite di velocità API**. Questa patch corregge un limite di velocità predefinito che impediva alle API Web di elaborare richieste con più di 20 elementi in un array. Questa patch aumenta il valore predefinito del limite di velocità. Consulta le note sulla versione di Adobe Commerce [2.4.3](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **Problema con il limite di velocità API**. Questa patch corregge un limite di velocità predefinito che impediva alle API Web di elaborare richieste con più di 20 elementi in un array. Questa patch aumenta il valore predefinito del limite di velocità. Consulta le note sulla versione di Adobe Commerce [2.4.3](https://experienceleague.adobe.com/it/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
