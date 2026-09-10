@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +461,7 @@ Data di rilascio: 6 febbraio 2020
 
   - ![nuova icona](../../assets/new.svg) **È stato aggiunto un pacchetto separato per Cloud Docker per Commerce**. Il pacchetto Docker è stato separato dal pacchetto `ece-tools` per mantenere la qualità del codice e fornire versioni indipendenti. Gli aggiornamenti e le correzioni relativi a `ece-tools` sono gestiti dall&#39;archivio GitHub [magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
-  - ![nuova icona](../../assets/new.svg) **Funzionalità di applicazione delle patch aggiornate**—La funzionalità di applicazione delle patch è stata spostata dal pacchetto ECE-Tools a un pacchetto [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) separato. Durante la distribuzione, `ece-tools` utilizza il nuovo pacchetto per applicare le patch. Consulta le [note sulla versione delle patch cloud](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![nuova icona](../../assets/new.svg) **Funzionalità di applicazione delle patch aggiornate**—La funzionalità di applicazione delle patch è stata spostata dal pacchetto ECE-Tools a un pacchetto `magento-cloud-patches` separato. Durante la distribuzione, `ece-tools` utilizza il nuovo pacchetto per applicare le patch. Consulta le [note sulla versione delle patch cloud](cloud-patches.md).<!--MAGECLOUD-4567-->
 
   - ![nuova icona](../../assets/new.svg) **Sono state aggiornate le dipendenze del Compositore**—È stato aggiornato il file `composer.json` per Adobe Commerce nell&#39;infrastruttura cloud con una dipendenza per il pacchetto `magento/magento-cloud-docker`. Ora `ece-tools` include le dipendenze per tutti i pacchetti in [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md). Questi pacchetti vengono installati e aggiornati automaticamente quando si installa o si aggiorna `ece-tools`.
 

@@ -10,9 +10,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 32426a82db5a81306c1dcc670a8268a9f5959874
 workflow-type: tm+mt
-source-wordcount: 450
+source-wordcount: 449
 ht-degree: 0%
 
 ---
@@ -101,5 +101,5 @@ Consulta le [note sulla versione per gli strumenti ece](../release-notes/cloud-t
 
 ## Patch e patch personalizzate di Adobe
 
-Il pacchetto `ece-tools` include una dipendenza per il pacchetto [magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches), che fornisce patch e hotfix di Adobe che migliorano l&#39;integrazione di tutte le versioni di Adobe Commerce con gli ambienti Cloud e supportano la distribuzione rapida di correzioni critiche. &quot;offre anche patch personalizzate da aggiungere al progetto di infrastruttura cloud di Adobe Commerce. Vedi [Applicare le patch](../development/apply-patches.md).
+Il pacchetto `ece-tools` include una dipendenza per il pacchetto Compositore `magento/magento-cloud-patches` (vedi le [note sulla versione delle patch cloud per Commerce](../release-notes/cloud-patches.md)), che fornisce patch e hotfix di Adobe che migliorano l&#39;integrazione di tutte le versioni di Adobe Commerce con gli ambienti Cloud e supportano la distribuzione rapida di correzioni critiche. Il pacchetto fornisce anche patch personalizzate da aggiungere al progetto di infrastruttura cloud di Adobe Commerce on. Vedi [Applicare le patch](../development/apply-patches.md).
 
