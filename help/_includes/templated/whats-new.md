@@ -1,9 +1,8 @@
 ---
-source-git-commit: 8370be461f731f73fcb382d74f5e20886abde2db
+source-git-commit: ad0b2ef144a1ad8579eb5e8d0c5a98690fd91fdd
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '454'
 ht-degree: 1%
-
 ---
 # Nuovo modello
 
@@ -133,28 +132,6 @@ Questa pagina contiene le modifiche apportate negli ultimi 60 giorni. Da questo 
         Aggiornamento principale
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/cd222546c1c57f5250408d9e423dc586284a34fc">commit</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 20 luglio 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Descrizione</th>
-      <th>Tipo</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Aggiornato <a href="https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">riferimento CLI</a> dopo il rilascio ECE-Tools, v2002.2.12. Non sono state apportate altre modifiche oltre al numero di versione.</p>
-</td>
-      <td>
-        Tecnico
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/136f8312d1c125a49538ee050394c722ab68d9b6">commit</a></td>
     </tr>
   </tbody>
 </table>
