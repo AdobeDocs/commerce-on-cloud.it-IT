@@ -1,9 +1,8 @@
 ---
 source-git-commit: fddcfdb97aede07b2cd6ef12bda6d7998f941951
 workflow-type: tm+mt
-source-wordcount: '13721'
-ht-degree: 0%
-
+source-wordcount: '14749'
+ht-degree: 6%
 ---
 # magento-cloud (Adobe Commerce su infrastruttura cloud)
 
@@ -819,7 +818,7 @@ Accedi a Magento Cloud utilizzando un token API
 Use this command to log in to your Magento Cloud account using an API token.
 
 You can create an account at:
-    https://business.adobe.com/it/products/magento/magento-commerce.html
+    https://business.adobe.com/products/magento/magento-commerce.html
 
 If you have an account, but you do not already have an API token, you can create one here:
     https://accounts.magento.cloud/user/api-tokens
@@ -4430,7 +4429,7 @@ Copia in una directory di build, invece di eseguire il collegamento simbolico da
 
 #### `--clone`
 
-Utilizza Git per clonare il HEAD corrente nella directory di build
+Utilizza Git per clonare l’HEAD corrente nella directory di build
 
 - Predefinito: `false`
 - Non accetta un valore
