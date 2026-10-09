@@ -1,32 +1,37 @@
 ---
 title: Crons, proprietà
-description: Vedi esempi su come configurare la proprietà "crons" nel file di configurazione dell'applicazione  [!DNL Commerce] .
+description: Vedi esempi su come configurare la proprietà "crons" nel file di configurazione dell'applicazione [!DNL Commerce].
 feature: Cloud, Configuration
 exl-id: ff176cb1-5b6c-48a0-ad3c-56cc1d606c97
-TQID: https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo
+TQID: 'https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1190
+source-wordcount: '1191'
 ht-degree: 0%
-
 ---
-
 # Crons, proprietà
 
 Adobe Commerce utilizza la proprietà `crons` per pianificare attività ripetitive. È ideale per pianificare un&#39;attività specifica da eseguire in determinati momenti della giornata. A causa della natura degli ambienti di sola lettura, è possibile eseguire un solo processo cron alla volta sull’istanza web per i progetti di infrastruttura cloud di Adobe Commerce. È consigliabile suddividere le attività con tempi di esecuzione lunghi in attività più piccole e in coda. In alternativa, è possibile creare un&#39;istanza di [worker](workers-property.md).
 
-Adobe consiglia di eseguire `crons` come [proprietario del file system](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions). _not_ esegui `crons` come `root` o come utente del server Web.
+Adobe consiglia di eseguire `crons` come [proprietario del file system](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions). _not_ esegui `crons` come `root` o come utente del server Web.
 
-Questa configurazione è diversa dalle distribuzioni locali di Adobe Commerce, che hanno più processi cron predefiniti. Consulta [Configurare i processi cron](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs) nella _Guida alla configurazione_.
+Questa configurazione è diversa dalle distribuzioni locali di Adobe Commerce, che hanno più processi cron predefiniti. Consulta [Configurare i processi cron](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs) nella _Guida alla configurazione_.
 
 ## Imposta processi cron
 
@@ -66,7 +71,7 @@ Sebbene sia possibile utilizzare `crontab` per rivedere la configurazione nei pr
 
    >[!NOTE]
    >
-   >Se il comando `crontab -l` restituisce un errore `Command not found` (solo negli ambienti Pro Staging e Production), è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per abilitare l&#39;opzione di configurazione self-service di Auto-Crons nel progetto.
+   >Se il comando `crontab -l` restituisce un errore `Command not found` (solo negli ambienti Pro Staging e Production), è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per abilitare l&#39;opzione di configurazione self-service di Auto-Crons nel progetto.
 
 L&#39;esempio seguente mostra l&#39;output `crontab` per un ambiente con solo la configurazione predefinita `crons`:
 
@@ -134,7 +139,7 @@ In Adobe Commerce su piattaforma infrastruttura cloud, è possibile aggiungere p
 >
 >Per gli ambienti Starter e gli ambienti Pro `integration`, l&#39;intervallo minimo è una volta ogni cinque minuti. Per gli ambienti di staging e produzione Pro, l’intervallo minimo è una volta al minuto. Non è possibile configurare intervalli più frequenti dei valori minimi predefiniti.
 
-Nei progetti Adobe Commerce Pro, la funzionalità [auto-crons](#set-up-cron-jobs) deve essere abilitata nel progetto prima di poter aggiungere processi cron personalizzati agli ambienti di staging e produzione utilizzando il file `.magento.app.yaml`. Se questa funzione non è abilitata, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per abilitare i cronisti automatici.
+Nei progetti Adobe Commerce Pro, la funzionalità [auto-crons](#set-up-cron-jobs) deve essere abilitata nel progetto prima di poter aggiungere processi cron personalizzati agli ambienti di staging e produzione utilizzando il file `.magento.app.yaml`. Se questa funzione non è abilitata, [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per abilitare i cronisti automatici.
 
 **Per aggiungere processi cron personalizzati**:
 
@@ -208,7 +213,7 @@ Adobe ha aggiornato il pacchetto sull’infrastruttura cloud di Adobe Commerce p
 
 Consulta i seguenti articoli sul supporto Adobe Commerce per assistenza nella risoluzione dei problemi correlati ai cron:
 
-- [Le attività di controllo bloccano le attività da altri gruppi](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
+- [Le attività di controllo bloccano le attività da altri gruppi](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
 
-- [Ripristina manualmente i processi cron bloccati sul cloud](https://experienceleague.adobe.com/it/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
+- [Ripristina manualmente i processi cron bloccati sul cloud](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
 

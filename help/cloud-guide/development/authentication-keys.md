@@ -4,29 +4,35 @@ description: Scopri come applicare le chiavi di autenticazione a un progetto di 
 feature: Cloud, Security
 topic: Security
 exl-id: b5a24fcd-9b43-4ec9-8a0c-52956a74e45e
-TQID: https://experienceleague.adobe.com/nYBr0uvw1SZPSQqAU6uHTiitjZ0kcudsLdWagiWRLP8
+TQID: 'https://experienceleague.adobe.com/nYBr0uvw1SZPSQqAU6uHTiitjZ0kcudsLdWagiWRLP8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 319
+source-wordcount: '319'
 ht-degree: 0%
-
 ---
-
 # Chiavi di autenticazione
 
 È necessario disporre di una chiave di autenticazione per accedere all’archivio di Adobe Commerce e abilitare i comandi di installazione e aggiornamento per il progetto di infrastruttura cloud Adobe Commerce. Esistono due metodi per specificare le credenziali di autorizzazione del Compositore.
 
-- **file di autenticazione**—Un file che contiene le [credenziali di autorizzazione](https://experienceleague.adobe.com/it/docs/commerce-operations/installation-guide/prerequisites/authentication-keys) di Adobe Commerce nella directory principale dell&#39;infrastruttura cloud di Adobe Commerce.
+- **file di autenticazione**—Un file che contiene le [credenziali di autorizzazione](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys) di Adobe Commerce nella directory principale dell&#39;infrastruttura cloud di Adobe Commerce.
 - **variabile di ambiente**: variabile di ambiente per impostare le chiavi di autenticazione nel progetto Adobe Commerce on cloud infrastructure per evitare l&#39;esposizione accidentale.
 
 >[!BEGINSHADEBOX]

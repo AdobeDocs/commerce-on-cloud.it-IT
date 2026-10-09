@@ -3,28 +3,47 @@ title: Distribuzione a staging e produzione
 description: Scopri come implementare il codice dell’infrastruttura cloud Adobe Commerce negli ambienti di staging e produzione per ulteriori test.
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
-TQID: https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM
+TQID: 'https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
 subfeature_v2:
   - id: b01a71b7-d17a-42b2-a9ac-af4b8d9d2ef5
+    internal-label: 2FA
+  - id: c4af0798-d497-5e6b-8380-19812c26d00a
+    internal-label: Console
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1374
+source-wordcount: '1374'
 ht-degree: 0%
-
 ---
-
 # Distribuzione a staging e produzione
 
 Il processo per la distribuzione e la pubblicazione inizia con lo sviluppo, continua con la gestione temporanea e termina con la pubblicazione in produzione. Adobe fornisce una soluzione di ambiente end-to-end per garantire configurazioni coerenti. Ogni ambiente supporta l’accesso diretto agli URL della vetrina e l’accesso amministratore e SSH per i comandi CLI.
@@ -155,7 +174,7 @@ Cloud CLI fornisce i comandi per distribuire il codice. Hai bisogno dell’acces
 
 ## Migrazione di file statici
 
-[I file statici](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/glossary) sono archiviati in `mounts`. Esistono due metodi per migrare i file da una posizione di montaggio di origine, ad esempio l&#39;ambiente locale, a una posizione di montaggio di destinazione. Entrambi i metodi utilizzano l&#39;utilità `rsync`, ma Adobe consiglia di utilizzare l&#39;interfaccia della riga di comando `magento-cloud` per spostare i file tra l&#39;ambiente locale e remoto. Adobe consiglia inoltre di utilizzare il metodo `rsync` per spostare i file da un&#39;origine remota a un&#39;altra posizione remota.
+[I file statici](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) sono archiviati in `mounts`. Esistono due metodi per migrare i file da una posizione di montaggio di origine, ad esempio l&#39;ambiente locale, a una posizione di montaggio di destinazione. Entrambi i metodi utilizzano l&#39;utilità `rsync`, ma Adobe consiglia di utilizzare l&#39;interfaccia della riga di comando `magento-cloud` per spostare i file tra l&#39;ambiente locale e remoto. Adobe consiglia inoltre di utilizzare il metodo `rsync` per spostare i file da un&#39;origine remota a un&#39;altra posizione remota.
 
 ### Eseguire la migrazione dei file tramite CLI
 

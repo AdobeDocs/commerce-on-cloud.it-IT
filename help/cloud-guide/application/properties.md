@@ -1,23 +1,36 @@
 ---
 title: Proprietà
-description: Utilizzare l'elenco delle proprietà come riferimento durante la configurazione dell'applicazione  [!DNL Commerce]  per la compilazione e la distribuzione nell'infrastruttura cloud.
+description: Utilizzare l'elenco delle proprietà come riferimento durante la configurazione dell'applicazione [!DNL Commerce] per la compilazione e la distribuzione nell'infrastruttura cloud.
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
-TQID: https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y
+TQID: 'https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: e439352c-5b67-587d-b34e-d2a0aa5a0242
+    internal-label: Roles/Permissions
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 330a8bbd9298a28b5c007f4a79f684ce7adca9ff
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 858
+source-wordcount: '859'
 ht-degree: 0%
-
 ---
-
 # Proprietà per la configurazione dell&#39;applicazione
 
 Il file `.magento.app.yaml` utilizza le proprietà per gestire il supporto dell&#39;ambiente per l&#39;applicazione [!DNL Commerce].
@@ -147,7 +160,7 @@ La dimensione minima consigliata del disco è 256 MB. Se viene visualizzato l&#3
 
 >[!NOTE]
 >
->Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
+>Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
 >
 >Non è possibile aumentare temporaneamente lo storage su disco in Staging o Produzione; questo processo non è reversibile.
 
@@ -198,7 +211,7 @@ Il formato per l&#39;aggiunta del montaggio all&#39;elenco è il seguente:
 
 >[!NOTE]
 >
->Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
+>Per gli ambienti di produzione e staging Pro, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per aggiornare la configurazione `mounts` e `disk` per l&#39;applicazione. Quando si invia il ticket, indicare le modifiche di configurazione richieste e includere una versione aggiornata del file `.magento.app.yaml`.
 
 È possibile rendere accessibile il mount web aggiungendolo al blocco di posizioni [`web`](web-property.md).
 

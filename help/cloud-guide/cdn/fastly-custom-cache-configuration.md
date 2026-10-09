@@ -3,24 +3,39 @@ title: Personalizza configurazione cache
 description: Scopri come rivedere e personalizzare le impostazioni di configurazione della cache al termine della configurazione del servizio Fastly.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-TQID: https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU
+TQID: 'https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2130
+source-wordcount: '2130'
 ht-degree: 0%
-
 ---
-
 # Personalizza configurazione cache
 
 Dopo aver configurato e testato il servizio Fastly negli ambienti di staging e produzione, rivedi e personalizza le impostazioni di configurazione della cache. Ad esempio, puoi aggiornare le impostazioni per forzare TLS a reindirizzare le richieste HTTP a Fastly, aggiornare le impostazioni di rimozione e abilitare l’autenticazione di base per proteggere il sito tramite password durante lo sviluppo.
@@ -29,11 +44,11 @@ Le sezioni seguenti forniscono una panoramica e istruzioni per la configurazione
 
 >[!IMPORTANT]
 >
->Le opzioni di amministrazione disponibili per la configurazione della cache Fastly dipendono dalla versione installata del modulo CDN Fastly per Magento 2. Adobe consiglia di [aggiornare il modulo Fastly](fastly-configuration.md#upgrade) il modulo Fastly negli ambienti di staging e produzione alla versione più recente. Per informazioni aggiornate, vedere le [Note sulla versione per Fastly CDN per il modulo Magento2](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md).
+>Le opzioni di amministrazione disponibili per configurare la cache Fastly dipendono dalla versione installata del modulo CDN Fastly per Magento 2. Adobe consiglia di [aggiornare il modulo Fastly](fastly-configuration.md#upgrade) il modulo Fastly negli ambienti di staging e produzione alla versione più recente. Per informazioni aggiornate, vedere le [Note sulla versione per Fastly CDN per il modulo Magento2](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md).
 
 ## Forza TLS
 
-Fastly fornisce l&#39;opzione _Force TLS_ per reindirizzare le richieste non crittografate (HTTP) a Fastly. Dopo aver eseguito il provisioning dell&#39;ambiente di staging o produzione con un [certificato SSL/TLS valido](fastly-configuration.md#provision-ssltls-certificates), puoi aggiornare la configurazione Fastly per l&#39;archivio per abilitare l&#39;opzione Force TLS. Consulta la [Guida di Force TLS](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md) in _Fastly CDN Module per Magento 2_.
+Fastly fornisce l&#39;opzione _Force TLS_ per reindirizzare le richieste non crittografate (HTTP) a Fastly. Dopo aver eseguito il provisioning dell&#39;ambiente di staging o produzione con un [certificato SSL/TLS valido](fastly-configuration.md#provision-ssltls-certificates), puoi aggiornare la configurazione Fastly per l&#39;archivio per abilitare l&#39;opzione Force TLS. Consulta la [guida Force TLS](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md) in _Fastly CDN Module per Magento 2_.
 
 >[!NOTE]
 >
@@ -73,7 +88,7 @@ Recupera il percorso di amministrazione per la generazione del file VCL dal file
 
 ## Configurare le opzioni di eliminazione
 
-In Fastly fornisce diversi tipi di opzioni di eliminazione nella pagina Gestione cache di Magento, tra cui opzioni per rimuovere la categoria di prodotto, le risorse di prodotto e il contenuto. Quando questa opzione è attivata, Fastly controlla la presenza di eventi per eliminare automaticamente tali cache. Se disattivi un’opzione di eliminazione, puoi rimuovere manualmente le cache Fastly dopo aver completato gli aggiornamenti tramite la pagina Gestione cache.
+In Fastly fornisce diversi tipi di opzioni di eliminazione nella pagina Gestione cache di Magento, tra cui opzioni per eliminare categoria di prodotto, risorse di prodotto e contenuto. Quando questa opzione è attivata, Fastly controlla la presenza di eventi per eliminare automaticamente tali cache. Se disattivi un’opzione di eliminazione, puoi rimuovere manualmente le cache Fastly dopo aver completato gli aggiornamenti tramite la pagina Gestione cache.
 
 Le opzioni di eliminazione includono:
 
@@ -202,7 +217,7 @@ Per i progetti Starter e Pro è possibile utilizzare l&#39;opzione [!UICONTROL D
 
 - Per i progetti iniziali, vai all&#39;URL del progetto nella scheda [!UICONTROL Domains] in [!DNL Cloud Console] per aggiungere l&#39;URL del progetto.
 
-- Per i progetti Pro, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per aggiungere il dominio alla configurazione del progetto cloud. Il team di supporto aggiorna anche la configurazione dell’account Adobe Commerce Fastly per aggiungere il dominio.
+- Per i progetti Pro, invia un [ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per aggiungere il dominio alla configurazione del progetto cloud. Il team di supporto aggiorna anche la configurazione dell’account Adobe Commerce Fastly per aggiungere il dominio.
 
 **Per gestire la configurazione Fastly Domain dall&#39;amministratore**:
 

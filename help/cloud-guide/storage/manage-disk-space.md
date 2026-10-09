@@ -3,24 +3,32 @@ title: Gestione dello spazio su disco
 description: Scopri come gestire lo spazio su disco utilizzando l’interfaccia della riga di comando.
 feature: Cloud, Storage
 exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
-TQID: https://experienceleague.adobe.com/645o-d3ZvMtaYOwy0IKwAjSxUyUgkrI36OGLWtZR--g
+TQID: 'https://experienceleague.adobe.com/645o-d3ZvMtaYOwy0IKwAjSxUyUgkrI36OGLWtZR--g'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 806
+source-wordcount: '806'
 ht-degree: 0%
-
 ---
-
 # Gestione dello spazio su disco
 
 Puoi trovare la capacità di archiviazione totale per il progetto Cloud nel tuo contratto per l&#39;infrastruttura cloud di Adobe Commerce e nella [pagina dell&#39;account](https://accounts.magento.cloud/user). Ogni scheda del progetto nel tuo account mostra il numero di _ambienti_, la capacità di _archiviazione_ in GB e il numero di _utenti_. In alternativa, puoi utilizzare il seguente comando Cloud:
@@ -143,7 +151,7 @@ Due [file di configurazione](../environment/overview.md) controllano l&#39;alloc
 
 >[!IMPORTANT]
 >
->- Per gli ambienti Pro Production e Staging, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per modificare l&#39;allocazione dello spazio su disco. Poiché è possibile aumentare le dimensioni degli ambienti di produzione e staging di Pro solo a determinati intervalli, a seconda dell&#39;utilizzo attuale dello spazio su disco, il supporto potrebbe consigliare di aumentare l&#39;allocazione dello spazio su disco di almeno 10 GB. Una volta allocato, non è possibile ripristinare l&#39;aumento dello storage per lo staging e la produzione Pro. Impossibile riallocare o ridistribuire lo storage tra le risorse. Per aggiungere più spazio di archiviazione file, ridurre lo spazio su disco allocato per MySQL.
+>- Per gli ambienti Pro Production e Staging, è necessario [inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per modificare l&#39;allocazione dello spazio su disco. Poiché è possibile aumentare le dimensioni degli ambienti di produzione e staging di Pro solo a determinati intervalli, a seconda dell&#39;utilizzo attuale dello spazio su disco, il supporto potrebbe consigliare di aumentare l&#39;allocazione dello spazio su disco di almeno 10 GB. Una volta allocato, non è possibile ripristinare l&#39;aumento dello storage per lo staging e la produzione Pro. Impossibile riallocare o ridistribuire lo storage tra le risorse. Per aggiungere più spazio di archiviazione file, ridurre lo spazio su disco allocato per MySQL.
 >- Gli ambienti di produzione e staging professionali ospitati su AWS hanno un [intervallo di tempo obbligatorio di 6 ore](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html) che si applica agli aumenti di spazio su disco. Dopo aver aumentato lo spazio su disco in un montaggio, è necessario attendere 6 ore prima di poter aumentare nuovamente lo spazio su disco in tale montaggio.
 
 ### Spazio su disco dell&#39;applicazione
@@ -178,7 +186,7 @@ Il file `.magento/services.yaml` controlla lo spazio su disco disponibile per og
 
 1. Nell&#39;ambiente di sviluppo locale, aprire il file di configurazione `.magento/services.yaml`.
 
-1. Aggiungi o trova un servizio nel file. Per ulteriori informazioni sulla configurazione dei servizi, consulta [&#128279;](../services/services-yaml.md).
+1. Aggiungi o trova un servizio nel file. Per ulteriori informazioni sulla configurazione dei servizi, consulta [](../services/services-yaml.md).
 
 1. Impostare un nuovo valore per la proprietà del disco (in MB).
 
@@ -200,7 +208,7 @@ Il file `.magento/services.yaml` controlla lo spazio su disco disponibile per og
 
 ## Monitorare lo spazio su disco
 
-Negli ambienti di produzione Pro, è possibile monitorare lo spazio su disco e altri indicatori di prestazioni utilizzando gli avvisi gestiti per i criteri di avviso di Adobe Commerce per New Relic. Per ulteriori dettagli, vedere [Monitorare le prestazioni con avvisi gestiti](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Per ulteriori informazioni, vedere [Best practice per risolvere i problemi di prestazioni del database](https://experienceleague.adobe.com/it/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues).
+Negli ambienti di produzione Pro, è possibile monitorare lo spazio su disco e altri indicatori di prestazioni utilizzando gli avvisi gestiti per i criteri di avviso di Adobe Commerce per New Relic. Per ulteriori dettagli, vedere [Monitorare le prestazioni con avvisi gestiti](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Per ulteriori informazioni, vedere [Best practice per risolvere i problemi di prestazioni del database](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues).
 
 ## Nessuno spazio disponibile
 

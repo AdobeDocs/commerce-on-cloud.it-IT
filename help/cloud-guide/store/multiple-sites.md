@@ -3,22 +3,31 @@ title: Configurazione di più siti Web o store
 description: Scopri come configurare più siti web o store per Adobe Commerce sull’infrastruttura cloud.
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
-TQID: https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc
+TQID: 'https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
+  - id: 48c59cc5-3c2e-5df1-8756-f5c139a28932
+    internal-label: Site Navigation
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1105
+source-wordcount: '1105'
 ht-degree: 0%
-
 ---
-
 # Configurazione di più siti Web o store
 
 Puoi configurare Adobe Commerce in modo che abbia più siti web o store, ad esempio uno in inglese, uno in francese e uno in tedesco. Consulta [Informazioni su siti Web, store e visualizzazioni dello store](best-practices.md#store-views).
@@ -45,7 +54,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->Per aggiungere una visualizzazione archivio all&#39;URL di base del sito, non è necessario creare più directory. Vedere [Aggiungere il codice dell&#39;archivio all&#39;URL di base](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/multi-sites/ms-admin) nella _Guida alla configurazione_.
+>Per aggiungere una visualizzazione archivio all&#39;URL di base del sito, non è necessario creare più directory. Vedere [Aggiungere il codice dell&#39;archivio all&#39;URL di base](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin) nella _Guida alla configurazione_.
 
 ## Aggiungi domini
 
@@ -55,15 +64,15 @@ Il processo di aggiunta di un dominio dipende dal tipo di account Cloud:
 
 - Produzione e staging Pro
 
-  Aggiungi il nuovo dominio a Fastly, consulta [Gestisci domini](../cdn/fastly-custom-cache-configuration.md#manage-domains) oppure apri un ticket di supporto per richiedere assistenza. È inoltre necessario [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere l&#39;aggiunta di nuovi domini a un cluster.
+  Aggiungi il nuovo dominio a Fastly, consulta [Gestisci domini](../cdn/fastly-custom-cache-configuration.md#manage-domains) oppure apri un ticket di supporto per richiedere assistenza. È inoltre necessario [Inviare un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere l&#39;aggiunta di nuovi domini a un cluster.
 
 - Solo per la produzione iniziale
 
-  Aggiungi il nuovo dominio a Fastly. Consulta [Gestione domini](../cdn/fastly-custom-cache-configuration.md#manage-domains) oppure [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/it/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere assistenza. È inoltre necessario aggiungere il nuovo dominio alla scheda **Domini** in [!DNL Cloud Console]: `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  Aggiungi il nuovo dominio a Fastly. Consulta [Gestione domini](../cdn/fastly-custom-cache-configuration.md#manage-domains) oppure [Invia un ticket di supporto Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) per richiedere assistenza. È inoltre necessario aggiungere il nuovo dominio alla scheda **Domini** in [!DNL Cloud Console]: `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## Configurare l’installazione locale
 
-Per configurare l&#39;installazione locale per l&#39;utilizzo di più archivi, vedere [Più siti Web o archivi](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/multi-sites/ms-overview) nella _Guida alla configurazione_.
+Per configurare l&#39;installazione locale per l&#39;utilizzo di più archivi, vedere [Più siti Web o archivi](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-overview) nella _Guida alla configurazione_.
 
 Dopo aver creato e testato correttamente l’installazione locale per utilizzare più archivi, è necessario preparare l’ambiente di integrazione:
 
@@ -222,7 +231,7 @@ Dove la configurazione dei percorsi definisce la modalità di elaborazione degli
 
 ### Configurare siti Web, store e visualizzazioni dello store
 
-Nell&#39;_interfaccia utente amministratore_, configura i **siti Web**, **archivi** e **visualizzazioni archivio** di Adobe Commerce. Consulta [Configurare più siti Web, store e visualizzazioni dello store in Admin](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/multi-sites/ms-admin) nella _Guida alla configurazione_.
+Nell&#39;_interfaccia utente amministratore_, configura i **siti Web**, **archivi** e **visualizzazioni archivio** di Adobe Commerce. Consulta [Configurare più siti Web, store e visualizzazioni dello store in Admin](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin) nella _Guida alla configurazione_.
 
 È importante usare lo stesso nome e lo stesso codice dei siti web, degli store e delle visualizzazioni dello store dall’amministratore quando configuri l’installazione locale. Per aggiornare il file `magento-vars.php` sono necessari questi valori.
 

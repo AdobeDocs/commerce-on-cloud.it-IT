@@ -3,25 +3,34 @@ title: Flusso di lavoro progetto iniziale
 description: Scopri come utilizzare i flussi di lavoro di sviluppo e distribuzione Starter.
 feature: Cloud, Paas
 exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
-TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
+TQID: 'https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Data collection
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2170
+source-wordcount: '2170'
 ht-degree: 0%
-
 ---
-
 # Flusso di lavoro progetto iniziale
 
 L&#39;infrastruttura cloud di Adobe Commerce include un unico archivio Git con un ramo `master` per l&#39;ambiente di produzione che può essere suddiviso in rami per creare uno staging e più ambienti di integrazione per il lavoro di test e sviluppo. È possibile avere fino a quattro ambienti attivi, incluso un ambiente `master` per il server di produzione. Per una panoramica, consulta [Architettura Starter](starter-architecture.md).
@@ -117,9 +126,9 @@ Quando si è pronti a configurare l&#39;archivio, inviare tutto il codice all&#3
 Per informazioni sulle configurazioni, consulta la documentazione di Adobe Commerce e delle estensioni installate. Di seguito sono riportati alcuni collegamenti e idee utili per iniziare:
 
 - [Best practice per la configurazione dell&#39;archivio](../store/best-practices.md) per best practice specifiche nel cloud
-- [Configurazione di base](https://experienceleague.adobe.com/it/docs/commerce-admin/start/setup/store-details) per accesso amministratore archivio, nome, lingue, valute, branding, siti, visualizzazioni archivio e altro ancora
-- [Tema](https://experienceleague.adobe.com/it/docs/commerce-admin/content-design/content-menu#design-features) per il tuo aspetto del sito e dei negozi, inclusi CSS e layout
-- [Configurazione del sistema](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/guide-overview) per ruoli, strumenti, notifiche e la chiave di crittografia per il database
+- [Configurazione di base](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details) per accesso amministratore archivio, nome, lingue, valute, branding, siti, visualizzazioni archivio e altro ancora
+- [Tema](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features) per il tuo aspetto del sito e dei negozi, inclusi CSS e layout
+- [Configurazione del sistema](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview) per ruoli, strumenti, notifiche e la chiave di crittografia per il database
 - Impostazioni delle estensioni utilizzando la relativa documentazione
 
 Oltre alle impostazioni di solo archivio, puoi configurare ulteriormente più siti e archivi, servizi configurati e altro ancora. Consulta [Configurare l&#39;archivio](../store/overview.md).
@@ -175,9 +184,9 @@ Quando sviluppi funzioni, aggiungi estensioni e progetta temi, è utile disporre
 
 Per facilitare l’esportazione dei dati di produzione come dati di test da utilizzare negli ambienti di staging e integrazione:
 
-- [Esegui i comandi CLI delle utilità di supporto](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/run-support-utilities) (scelta consigliata) durante l&#39;esportazione di un backup protetto dei dati del cliente e dell&#39;archivio utilizzando la chiave di crittografia Adobe Commerce
+- [Esegui i comandi CLI delle utilità di supporto](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/run-support-utilities) (scelta consigliata) durante l&#39;esportazione di un backup protetto dei dati del cliente e dell&#39;archivio utilizzando la chiave di crittografia Adobe Commerce
 
-- Strumento [Raccolta dati](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/support#data-collector) per la generazione e l&#39;esportazione di dati
+- Strumento [Raccolta dati](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) per la generazione e l&#39;esportazione di dati
 
 Per eseguire la migrazione di questi dati, vedere [Eseguire la migrazione e distribuire file e dati statici](../deploy/staging-production.md#migrate-static-files).
 
@@ -185,7 +194,7 @@ Per eseguire la migrazione di questi dati, vedere [Eseguire la migrazione e dist
 
 >[!NOTE]
 >
->Prima di inviare i dati a un altro ambiente, è consigliabile bonificare i dati. Sono disponibili alcune opzioni, tra cui [utilizzare le utilità di supporto](https://experienceleague.adobe.com/it/docs/commerce-operations/configuration-guide/cli/run-support-utilities) o sviluppare uno script per eliminare i dati dei clienti.
+>Prima di inviare i dati a un altro ambiente, è consigliabile bonificare i dati. Sono disponibili alcune opzioni, tra cui [utilizzare le utilità di supporto](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/run-support-utilities) o sviluppare uno script per eliminare i dati dei clienti.
 
 >[!WARNING]
 >

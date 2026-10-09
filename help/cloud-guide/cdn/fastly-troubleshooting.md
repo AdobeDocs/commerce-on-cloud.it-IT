@@ -3,26 +3,41 @@ title: Risoluzione rapida dei problemi
 description: Scopri come risolvere e gestire i problemi relativi al modulo e ai servizi Fastly CDN per Adobe Commerce.
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+TQID: 'https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1911
+source-wordcount: '1911'
 ht-degree: 0%
-
 ---
-
 # Risoluzione rapida dei problemi
 
 Utilizza le seguenti informazioni per risolvere e gestire i problemi relativi al modulo Fastly CDN per Magento 2 nell’ambiente di progetto Adobe Commerce on Cloud Infrastructure. Ad esempio, puoi analizzare i valori delle intestazioni di risposta e il comportamento di caching per risolvere i problemi di servizio e prestazioni Fastly.
@@ -55,9 +70,9 @@ Utilizza il seguente elenco per identificare e risolvere i problemi relativi all
 
 - **La navigazione superiore non funziona**. La navigazione superiore si basa sull&#39;elaborazione ESI (Edge Side Includes) abilitata quando si caricano i frammenti VCL Fastly di Magento predefiniti. Se la navigazione non funziona, [carica Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly) e ricontrolla il sito.
 
-- **Geolocalizzazione/GeoIP non funziona**. Gli snippet Magento Fastly VCL predefiniti aggiungono il codice del paese all&#39;URL. Se il codice del paese non funziona, [carica il file VCL](fastly-configuration.md#upload-vcl-to-fastly) Fastly e controlla nuovamente il sito.
+- **Geolocalizzazione/GeoIP non funziona**. Gli snippet predefiniti di Magento Fastly VCL aggiungono il codice del paese all&#39;URL. Se il codice del paese non funziona, [carica il file VCL](fastly-configuration.md#upload-vcl-to-fastly) Fastly e controlla nuovamente il sito.
 
-- **Le pagine non sono memorizzate in cache**. Per impostazione predefinita, Fastly non memorizza in cache le pagine con l&#39;intestazione `Set-Cookies`. Adobe Commerce imposta i cookie anche su pagine memorizzabili in cache (TTL > 0). Il file Magento Fastly VCL predefinito elimina tali cookie dalle pagine memorizzabili in cache. Se le pagine non vengono memorizzate in cache, [carica Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly) e ricontrolla il sito.
+- **Le pagine non sono memorizzate in cache**. Per impostazione predefinita, Fastly non memorizza in cache le pagine con l&#39;intestazione `Set-Cookies`. Adobe Commerce imposta i cookie anche su pagine memorizzabili in cache (TTL > 0). Il valore predefinito di Magento Fastly VCL elimina tali cookie dalle pagine memorizzabili in cache. Se le pagine non vengono memorizzate in cache, [carica Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly) e ricontrolla il sito.
 
   Questo problema può verificarsi anche se un blocco di pagina in un modello è contrassegnato come non memorizzabile in cache. In tal caso, il problema è probabilmente causato da un modulo o da un’estensione di terze parti che blocca o rimuove le intestazioni di Adobe Commerce. Per risolvere il problema, vedere [X-Cache contiene solo messaggi non recapitati, nessun HIT](#x-cache-contains-only-miss-no-hit).
 
@@ -69,8 +84,8 @@ Utilizza il seguente elenco per identificare e risolvere i problemi relativi all
 
   Questo problema può essere causato da uno dei seguenti problemi:
 
-   - Credenziali Fastly non valide nella configurazione del servizio Fastly per l’ambiente di progetto Adobe Commerce su infrastruttura cloud
-   - Codice non valido in uno snippet VCL personalizzato
+  - Credenziali Fastly non valide nella configurazione del servizio Fastly per l’ambiente di progetto Adobe Commerce su infrastruttura cloud
+  - Codice non valido in uno snippet VCL personalizzato
 
   Per risolvere il problema, vedere [Errore durante l&#39;eliminazione della cache Fastly su Cloud](https://support.magento.com/hc/en-us/articles/115001853194-Error-purging-Fastly-cache-on-Cloud-The-purge-request-was-not-processed-successfully-) nel Centro assistenza di Adobe Commerce.
 
@@ -189,7 +204,7 @@ Verifica che la risposta restituita contenga le seguenti informazioni:
 
 - Include l&#39;intestazione `X-Magento-Tags`
 
-- Il valore dell&#39;intestazione `Fastly-Module-Enabled` è `Yes` o il numero di versione del modulo Fastly for CDN Magento 2 installato nell&#39;ambiente del progetto
+- Il valore dell&#39;intestazione `Fastly-Module-Enabled` è `Yes` o il numero di versione del modulo Fastly per CDN Magento 2 installato nell&#39;ambiente del progetto
 
 - [Cache-Control: max-age](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) è maggiore di 0
 

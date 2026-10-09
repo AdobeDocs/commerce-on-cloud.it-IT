@@ -3,25 +3,31 @@ title: Blocca spam di riferimento
 description: Blocca lo spam di riferimento dal sito utilizzando il dizionario Fastly Edge e uno snippet VCL personalizzato.
 feature: Cloud, Configuration, Security
 exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
-TQID: https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA
+last-update: 2025-01-29T00:00:00.000Z
+TQID: 'https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 725
+source-wordcount: '725'
 ht-degree: 0%
-
 ---
-
 # Blocca spam di riferimento
 
 Nell&#39;esempio seguente viene illustrato come configurare il [dizionario Fastly Edge](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api) con uno snippet VCL personalizzato per bloccare lo spam di riferimento dal sito Adobe Commerce sul sito dell&#39;infrastruttura cloud.
@@ -92,7 +98,7 @@ Prima di creare uno snippet basato su questo esempio, esaminare i valori per det
 
 - `dynamic` — Il valore 0 indica un [frammento normale](https://docs.fastly.com/en/guides/using-regular-vcl-snippets) da caricare nella VCL con versione per la configurazione Fastly.
 
-- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per eseguire questo codice snippet prima che a uno qualsiasi dei snippet VCL predefiniti di Magento (`magentomodule_*`) sia assegnata una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
+- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per eseguire questo codice snippet prima che uno qualsiasi dei frammenti VCL predefiniti di Magento (`magentomodule_*`) abbia assegnato una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
 
 - `type` — specifica un percorso in cui inserire lo snippet nella versione VCL. In questo esempio, lo snippet VCL è uno snippet `recv`. Quando il frammento viene inserito nella versione VCL, viene aggiunto alla subroutine `vcl_recv`, sotto il codice VCL Fastly predefinito e sopra qualsiasi oggetto.
 

@@ -1,14 +1,20 @@
 ---
 title: Esempio di gestione delle impostazioni specifiche del sistema
 description: Vedi un esempio di come gestire e sincronizzare le impostazioni di configurazione dell’archivio in tutti gli ambienti Adobe Commerce sull’infrastruttura cloud.
-hidefromtoc: true
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+hidefromtoc: 'yes'
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
-
 ---
-
 
 # Esempio di gestione delle impostazioni specifiche del sistema
 
@@ -56,7 +62,7 @@ Nell’ambiente di integrazione, puoi accedere all’amministratore per modifica
    ![Modifica impostazioni locali](../../assets/locale-options.png)
 
 1. Fai clic su **Salva configurazione**.
-1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/cache-management).
+1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
 1. Esci dall’Admin.
 
 ## Esportare i valori e trasferire config.php nel sistema locale
@@ -159,7 +165,7 @@ Aggiungere i valori di configurazione nell’ambiente di integrazione Admin. In 
 1. Nel riquadro di destra espandere **Impostazioni JavaScript**.
 1. Nell&#39;elenco **Unisci file JavaScript** fare clic su **Sì**.
 1. Fai clic su **Salva configurazione**.
-1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/it/docs/commerce-admin/systems/tools/cache-management).
+1. Se richiesto, [svuotare la cache](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
 1. Esci dall’Admin.
 
 Eseguendo nuovamente il comando dump, la nuova configurazione viene aggiunta al file.
