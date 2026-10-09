@@ -3,25 +3,31 @@ title: VCL personalizzato per consentire le richieste
 description: Filtra le richieste in arrivo e consenti l’accesso per indirizzo IP ai siti Adobe Commerce tramite un elenco ACL Fastly Edge e uno snippet VCL personalizzato.
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+last-update: 2026-08-25T00:00:00.000Z
+TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: '874'
 ht-degree: 0%
-
 ---
-
 # VCL personalizzato per consentire le richieste
 
 Puoi utilizzare un elenco Fastly Edge ACL con uno snippet di codice VCL personalizzato per filtrare le richieste in ingresso e consentire l’accesso per indirizzo IP. L&#39;elenco ACL specifica gli indirizzi IP da consentire.
@@ -91,7 +97,7 @@ Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/
 
 - `name` — Nome dello snippet VCL. Per questo esempio, `allowlist`.
 
-- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per l&#39;esecuzione immediata e verificare se le richieste dell&#39;amministratore provengono da un indirizzo IP consentito. Il frammento viene eseguito prima di qualsiasi altro frammento predefinito di Magento VCL (`magentomodule_*`) a cui è stata assegnata una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
+- `priority` — Determina quando viene eseguito lo snippet VCL. La priorità è `5` per l&#39;esecuzione immediata e verificare se le richieste dell&#39;amministratore provengono da un indirizzo IP consentito. Il frammento viene eseguito prima di uno qualsiasi dei frammenti VCL predefiniti di Magento (`magentomodule_*`) a cui è stata assegnata una priorità di 50. Impostare la priorità per ogni frammento personalizzato su un valore maggiore o minore di 50 a seconda di quando si desidera eseguire il frammento. I frammenti con numeri di priorità inferiore vengono eseguiti per primi.
 
 - `type` — Specifica una posizione in cui inserire lo snippet nel codice VCL con versione. Questo VCL è un tipo di snippet `recv` che aggiunge il codice del snippet alla subroutine `vcl_recv` sotto il codice VCL Fastly predefinito e sopra qualsiasi oggetto.
 

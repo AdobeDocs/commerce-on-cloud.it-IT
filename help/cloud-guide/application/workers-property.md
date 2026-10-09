@@ -1,23 +1,27 @@
 ---
 title: Lavoratori
-description: Scopri come configurare la proprietà worker nel file di configurazione dell'applicazione  [!DNL Commerce] .
+description: Scopri come configurare la proprietà worker nel file di configurazione dell'applicazione [!DNL Commerce].
 feature: Cloud, Configuration
 exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
-TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
+TQID: 'https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: '362'
 ht-degree: 0%
-
 ---
-
 # Proprietà Workers
 
 È possibile definire un processo di lavoro da eseguire indipendentemente dall&#39;istanza Web senza un&#39;istanza Nginx in esecuzione. Tuttavia, il processo di lavoro utilizza la stessa archiviazione di rete utilizzata dall&#39;applicazione [!DNL Commerce]. Non è necessario configurare un server Web sull&#39;istanza di lavoro (utilizzando Node.js o Go) perché il router non può indirizzare le richieste pubbliche al worker. Questo rende l’istanza di lavoro ideale per le attività in background o in esecuzione continua che rischiano di bloccare una distribuzione.

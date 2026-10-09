@@ -7,22 +7,27 @@ exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
+    internal-label: Data management
+source-git-commit: a0962ad43c0f496dbd687460ef1d4dbd0da4dacb
 workflow-type: tm+mt
-source-wordcount: 3676
+source-wordcount: '3715'
 ht-degree: 0%
-
 ---
-
 # Note sulla versione di ECE-Tools
 
 Il pacchetto [ece-tools](https://github.com/magento/ece-tools) è un insieme di script e strumenti progettati per gestire e distribuire progetti Cloud. Queste note sulla versione descrivono gli ultimi miglioramenti apportati a questo pacchetto, che fa parte della [suite di strumenti cloud per Commerce](cloud-tools-suite.md).
@@ -40,7 +45,14 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v2002.2.14 {#latest}
+## v2002.2.15 {#latest}
+
+Data di rilascio: 08 ottobre 2026
+
+- ![nuova icona](../../assets/new.svg) **Test funzionali per i servizi**-Aggiunta copertura dei test funzionali di Magento 2.4.10 per ActiveMQ Artemis, OpenSearch, RabbitMQ, MariaDB e Valkey.<!-- MCLOUD-15399 -->
+- ![icona di correzione](../../assets/fix.svg) **convalida EOL**-Aggiornate date di fine del ciclo di vita (EOL) dei servizi per Opensearch.<!-- MCLOUD-15384 -->
+
+## v2002.2.14
 
 Data di rilascio: 08 settembre 2026
 

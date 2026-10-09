@@ -5,26 +5,38 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-TQID: https://experienceleague.adobe.com/H-A-2jStZ7GuPn2oE-OrZWhScp1GsjEUU1NHDQKhRBU
+TQID: 'https://experienceleague.adobe.com/H-A-2jStZ7GuPn2oE-OrZWhScp1GsjEUU1NHDQKhRBU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 8b9bbb36-cedc-5e11-a32c-96dd81cfc81d
+    internal-label: Docker
+  - id: adedf70c-c1e1-5734-acdc-c5c43b114964
+    internal-label: Release Notes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 4509
+source-wordcount: '4535'
 ht-degree: 0%
-
 ---
-
 # Pacchetto Docker cloud
 
 Il pacchetto [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker) fornisce funzionalità e immagini Docker per distribuire Adobe Commerce in un ambiente cloud locale. Queste note sulla versione descrivono gli ultimi miglioramenti apportati a questo pacchetto, che è un componente di [Cloud Tools Suite per Commerce](cloud-tools-suite.md).
@@ -38,7 +50,13 @@ Le note sulla versione includono:
 
 <!--Add release notes below-->
 
-## v1.4.9 {#latest}
+## v1.4.10 {#latest}
+
+Data di rilascio: 08 ottobre 2026
+
+- ![nuova icona](../../assets/new.svg) **Test funzionali per i servizi**-Aggiunta copertura dei test funzionali di Magento 2.4.10 per ActiveMQ Artemis, OpenSearch, RabbitMQ, MariaDB e Valkey.<!-- MCLOUD-15399 -->
+
+## v1.4.9
 
 Data di rilascio: 20 luglio 2026
 
@@ -433,7 +451,7 @@ Data di rilascio: 5 febbraio 2020
 
     - ![nuova icona](../../assets/new.svg) **Certificati NGINX generati automaticamente**. Il file di configurazione Docker include ora la configurazione per la generazione automatica dei certificati NGINX per il contenitore Web.<!--MAGECLOUD-4258-->
 
-  - ![nuova icona](../../assets/new.svg) **Nuovo contenitore Selenium**. Aggiunta di un [contenitore Selenium](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container) per supportare il test delle applicazioni Adobe Commerce tramite Magento Functional Testing Framework (MFTF).<!--MAGECLOUD-4040-->
+  - ![nuova icona](../../assets/new.svg) **Nuovo contenitore Selenium**. Aggiunta di un [contenitore Selenium](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container) per supportare il test delle applicazioni Adobe Commerce tramite il framework di test funzionali di Magento (MFTF).<!--MAGECLOUD-4040-->
 
   - ![nuova icona](../../assets/new.svg) **[!DNL RabbitMQ]supporto versione**—Aggiornamento della configurazione del contenitore [!DNL RabbitMQ] per supportare [!DNL RabbitMQ] versione 3.8.<!--MAGECLOUD-4674-->
 

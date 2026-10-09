@@ -1,9 +1,8 @@
 ---
 source-git-commit: fddcfdb97aede07b2cd6ef12bda6d7998f941951
 workflow-type: tm+mt
-source-wordcount: '13721'
-ht-degree: 0%
-
+source-wordcount: '14749'
+ht-degree: 6%
 ---
 # magento-cloud (Adobe Commerce su infrastruttura cloud)
 
@@ -4430,7 +4429,7 @@ Copia in una directory di build, invece di eseguire il collegamento simbolico da
 
 #### `--clone`
 
-Utilizza Git per clonare il HEAD corrente nella directory di build
+Utilizza Git per clonare l’HEAD corrente nella directory di build
 
 - Predefinito: `false`
 - Non accetta un valore
