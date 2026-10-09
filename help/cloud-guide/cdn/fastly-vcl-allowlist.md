@@ -3,7 +3,7 @@ title: VCL personalizzato per consentire le richieste
 description: Filtra le richieste in arrivo e consenti l’accesso per indirizzo IP ai siti Adobe Commerce tramite un elenco ACL Fastly Edge e uno snippet VCL personalizzato.
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-last-update: 2026-08-25T00:00:00.000Z
+last-update: 2026-08-25
 TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -23,7 +23,7 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Il seguente codice snippet VCL personalizzato (formato JSON) mostra la logica pe
 }
 ```
 
-Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/it/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
+Prima di [creare uno snippet personalizzato](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet) da questo esempio, controlla i valori per determinare se è necessario apportare modifiche. Immettere quindi ogni valore nei rispettivi campi, ad esempio `type` nel campo Tipo e `content` nel campo Contenuto.
 
 - `name` — Nome dello snippet VCL. Per questo esempio, `allowlist`.
 
