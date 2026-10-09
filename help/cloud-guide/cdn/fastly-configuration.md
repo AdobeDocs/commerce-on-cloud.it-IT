@@ -132,7 +132,7 @@ Per abilitare e configurare i servizi Fastly sono necessari i seguenti component
 
    ![Espandi per selezionare Fastly](../../assets/cdn/fastly-menu.png)
 
-1. Nella sezione _[!UICONTROL Caching Application]_, rimuovere la selezione da **[!UICONTROL Use system value]**, quindi selezionare **[!UICONTROL Fastly CDN]**dall&#39;elenco a discesa.
+1. Nella sezione _[!UICONTROL Caching Application]_, rimuovere la selezione da **[!UICONTROL Use system value]**, quindi selezionare **[!UICONTROL Fastly CDN]**&#x200B;dall&#39;elenco a discesa.
 
    ![Scegli in modo rapido](../../assets/cdn/fastly-enable-admin.png)
 
@@ -178,7 +178,7 @@ Dopo aver abilitato il modulo Fastly, caricare il codice [VCL predefinito](https
 
 **Per caricare Fastly VCL**:
 
-1. Nella sezione _[!UICONTROL Fastly Configuration]_, fare clic su **[!UICONTROL Upload VCL to Fastly]**come illustrato nella figura seguente.
+1. Nella sezione _[!UICONTROL Fastly Configuration]_, fare clic su **[!UICONTROL Upload VCL to Fastly]**&#x200B;come illustrato nella figura seguente.
 
    ![Carica un file VCL di Magento in Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
