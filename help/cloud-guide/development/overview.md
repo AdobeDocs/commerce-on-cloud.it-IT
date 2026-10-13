@@ -25,9 +25,9 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: f25bd014c1b6f546d3395db1691128b3e63bfa85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '555'
 ht-degree: 0%
 ---
 # Panoramica sullo sviluppo
@@ -75,7 +75,6 @@ I pacchetti principali di questo metapackage sono i seguenti:
 - **vendor/magento/ece-tools** - Il pacchetto `ece-tools` è compatibile con Adobe Commerce versione 2.1.4 e successive per fornire un set completo di funzionalità che è possibile utilizzare per gestire il progetto Adobe Commerce on cloud infrastructure. Contiene script e comandi di Adobe Commerce on cloud infrastructure progettati per facilitare la gestione del codice e la creazione e distribuzione automatica dei progetti. Vedere la panoramica del pacchetto [`ece-tools`](../dev-tools/package-overview.md).
 - **vendor/magento/product-enterprise-edition**: questo metapackage richiede componenti dell&#39;applicazione, inclusi moduli, framework, temi e altro ancora.
 - **vendor/fastly2/magento2**: questo modulo gestisce la rete CDN e i servizi Fastly per gli ambienti di staging e produzione Pro e di produzione Starter. Vedi [Servizi Fastly](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2).
-- **vendor/magento/module-paypal-on-boarding**—Questo modulo fornisce il pagamento tramite checkout del gateway PayPal tramite la connessione al tuo conto PayPal. Consulta [Strumento di registrazione PayPal](../store/paypal.md).
 - **vendor/aem/rum** - Questo modulo gestisce lo strumento di raccolta dati [Operational Telemetry](../monitor/operational-telemetry.md).
 
 >[!TIP]
