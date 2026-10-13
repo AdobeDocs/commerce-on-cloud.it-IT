@@ -24,7 +24,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 3%
@@ -36,7 +36,7 @@ Queste informazioni sulla versione descrivono gli ultimi miglioramenti apportati
 | Note sulla versione | Versione | Descrizione | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
 | [pacchetto di strumenti ece](ece-tools-package.md) | 2002.2.15 | Un set di script e strumenti progettati per gestire e distribuire progetti Cloud | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.15) |
-| [Patch cloud per Commerce](cloud-patches.md) | 1.1.21 | Un set di patch che migliorano l’integrazione di tutte le versioni di Adobe Commerce con gli ambienti Cloud. Questo pacchetto include patch di Adobe Commerce e hotfix disponibili applicati quando si utilizza `ece-tools` per la distribuzione | `magento/magento-cloud-patches`, tramite l&#39;archivio del Compositore Commerce all&#39;indirizzo `repo.magento.com` (è necessario un Adobe Commerce su infrastrutture cloud con adesione; consulta [Note sulla versione delle patch cloud per Commerce](cloud-patches.md)) |
+| [Patch cloud per Commerce](cloud-patches.md) | 1.1.22 | Un set di patch che migliorano l’integrazione di tutte le versioni di Adobe Commerce con gli ambienti Cloud. Questo pacchetto include patch di Adobe Commerce e hotfix disponibili applicati quando si utilizza `ece-tools` per la distribuzione | `magento/magento-cloud-patches`, tramite l&#39;archivio del Compositore Commerce all&#39;indirizzo `repo.magento.com` (è necessario un Adobe Commerce su infrastrutture cloud con adesione; consulta [Note sulla versione delle patch cloud per Commerce](cloud-patches.md)) |
 | [Docker cloud per Commerce](cloud-docker.md) | 1.4.10 | Funzionalità e file di configurazione per le immagini Docker per distribuire Adobe Commerce in un ambiente cloud locale | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.10) |
 | [Componenti cloud di Commerce](cloud-components.md) | 1.1.4 | Funzionalità Adobe Commerce di base estesa per i siti distribuiti nell’infrastruttura Cloud | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
 
