@@ -18,9 +18,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 800e5c27d4d0879bafd32101fd70ec0f00f1880c
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2599'
 ht-degree: 0%
 ---
 # [!DNL Adobe Commerce Advanced Security]
@@ -57,11 +57,11 @@ ht-degree: 0%
 >
 >**Limitazioni correnti**
 >
->Fino alla fine del terzo trimestre 2026, i clienti non possono modificare o gestire direttamente le regole di gestione dei bot.
+>Attualmente, i clienti non possono modificare o gestire direttamente le regole di gestione bot.
 >
 >Per eventuali aggiunte, modifiche o regolazioni delle regole, contatta il supporto Adobe Commerce tramite un [ticket di supporto](https://experienceleague.adobe.com/home?lang=it&support-tab=home#support). Il team di supporto implementerà le modifiche richieste.
 >
->A partire dal quarto trimestre 2026, Fastly rilascerà una funzionalità aggiuntiva che consentirà ai clienti di gestire le regole di gestione dei bot nel pannello di amministrazione di Commerce.
+>A partire dal primo trimestre 2027, Fastly rilascerà una funzionalità aggiuntiva che consentirà ai clienti di gestire le regole di gestione dei bot in Commerce Admin.
 
 ## Regole e protezioni predefinite
 
@@ -174,6 +174,12 @@ Gli scenari seguenti sono più adatti con [!DNL Advanced Security]:
 | Gli URL o gli endpoint API specifici sono interessati da un traffico distribuito di volumi elevati che non può essere bloccato da IP | Advanced Rate Limiting fornisce controlli granulari per endpoint e pattern di traffico specifici |
 | Desideri gestire i crawler di intelligenza artificiale e i recuperatori che accedono al contenuto della vetrina | La gestione dei bot include regole configurabili per il rilevamento e l’applicazione di bot basati sull’intelligenza artificiale |
 | È necessaria una soluzione di sicurezza Edge supportata da Adobe integrata con la rete CDN Fastly esistente | [!DNL Advanced Security] viene eseguito sulla stessa piattaforma Fastly Edge che serve già la tua vetrina |
+
+#### Linee guida per le implementazioni headless
+
+Se il sito Adobe Commerce utilizza un’implementazione headless, dove la vetrina non è la vetrina Adobe Commerce predefinita, ma è ospitata o distribuita tramite un provider di vetrine separato, considera dove viene distribuito il traffico interessato prima di selezionare una soluzione di protezione da bot.
+
+Per il traffico storefront, se l’attività bot o di crawler è principalmente indirizzata a pagine storefront front front-end, come pagine di dettagli del prodotto (PDP), pagine di elenco dei prodotti (PLP) o pagine di categorie, rivolgiti al provider storefront per valutare le funzionalità di gestione o sicurezza dei bot disponibili per tale storefront.
 
 ### Quando utilizzare le protezioni esistenti
 
