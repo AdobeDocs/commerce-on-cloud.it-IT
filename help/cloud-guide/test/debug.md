@@ -57,7 +57,7 @@ Per aggiungere [!DNL Xdebug], Adobe consiglia di lavorare in [un ramo di svilupp
 
 È possibile abilitare [!DNL Xdebug] direttamente in tutti gli ambienti Starter e gli ambienti di integrazione Pro. Questo passaggio di configurazione non è necessario per gli ambienti di produzione e staging Pro. Consulta [Debug per Pro Staging e Produzione](#debug-for-pro-staging-and-production).
 
->[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505682?captions=ita&learn=on)
 
 Per abilitare [!DNL Xdebug] per il progetto, aggiungere `xdebug` alla sezione `runtime:extensions` del file `.magento.app.yaml`.
 
@@ -97,7 +97,7 @@ Quando viene implementato in ambienti Starter e Pro Integration, [!DNL Xdebug] �
 
 ### Configurare il server PhpStorm
 
->[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505700?captions=ita&learn=on)
 
 L&#39;IDE [PhpStorm](https://www.jetbrains.com/phpstorm/) deve essere configurato per funzionare correttamente con [!DNL Xdebug].
 
@@ -137,7 +137,7 @@ L&#39;IDE [PhpStorm](https://www.jetbrains.com/phpstorm/) deve essere configurat
 
 In questo modo l’applicazione disporrà delle impostazioni di debug corrette per gestire la richiesta dall’applicazione Adobe Commerce.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437426?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505745?captions=ita&learn=on)
 
 1. Aprire l&#39;applicazione PHPStorm e fare clic su **[!UICONTROL Add Configuration]** in alto a destra.
 
@@ -154,7 +154,7 @@ In questo modo l’applicazione disporrà delle impostazioni di debug corrette p
 
 ### Configurare l’inoltro delle porte
 
->[!VIDEO](https://video.tv.adobe.com/v/3437410?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505691?captions=ita&learn=on)
 
 Mappa la connessione `XDEBUG` dal server al sistema locale. Per eseguire qualsiasi tipo di debug, è necessario inoltrare la porta 9000 dal server Adobe Commerce su infrastruttura cloud al computer locale. Vedere una delle sezioni seguenti:
 
@@ -323,7 +323,7 @@ Sono necessari i seguenti elementi:
 
 Questa è una dimostrazione delle configurazioni utilizzate e del parametro GET per avviare una sessione di debug remoto.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505721?captions=ita&learn=on)
 
 1. Abilitare il debug remoto; visitare il sito nel browser e aggiungere quanto segue all&#39;URL in cui `KEY` è il valore per `xdebug_key`.
 
